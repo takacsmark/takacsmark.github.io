@@ -1,14 +1,11 @@
 ---
 layout: post
 title:  "Our 9+1 Problems During Our Windows 10 Free Upgrade"
+description: "I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations. I provide tips and solutions in this post."
 date:   2016-01-31 16:38:44 +0100
-categories: jekyll update
-videothumb: '<iframe width="100%" height="auto" src="https://www.youtube.com/embed/iQHpNjobhJ8" frameborder="0" allowfullscreen></iframe>'
+categories: Hobby
+thumbnail: "/assets/images/window-10-install-post.png"
 ---
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/iQHpNjobhJ8" frameborder="0" allowfullscreen></iframe>
-
-thumbnail: "/assets/Screenshot_code.png"
-
 **I created this post, because I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations.**
 
 **Still, some solutions I found on-line are not meant for the average user.**
@@ -17,7 +14,7 @@ thumbnail: "/assets/Screenshot_code.png"
 
 **If you are looking for tips and solutions, I'll provide them in this post.**
 
->This post is not against Microsoft, as you'll see most of our problems are caused by external circumstances. I think it's still worth reading for MS folks, maybe you guys can improve our experience by addressing some of this stuff.
+*This post is not against Microsoft, as you'll see most of our problems are caused by external circumstances. I think it's still worth reading for MS folks, maybe you guys can improve our experience by addressing some of this stuff.*
 
 This story happened to me and my father-in-law just yesterday. He's always been a very accurate person, like most 74 year olds, he takes technical warnings seriously and he is very keen to keep deadlines.
 
@@ -54,7 +51,7 @@ Let me show you the nature of the problem by quoting the official explanation:
 
 Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215).
 
-![]({{ site.url }}/assets/2705065.png)
+![Windows regisrty edit]({{ site.url }}/assets/images/ms-registry-edit.png)
 
 Finally I could log on after rebooting and face the real challenge.
 
@@ -133,13 +130,13 @@ The free Windows 10 upgrade starts by downloading the package, getting some stuf
 Then suddenly a screen popped up asking for the Windows 10 product key. This screen was not supposed to come, because we were upgrading a legal, rightful copy.
 The Windows 7 product key didn't work here and we have no Windows 10 product key in the process.
 
->You can only upgrade a registered copy of Windows 7 to Windows 10. Giving the product key during Windows 7 installation is not enough. You have to explicitly run Windows registration from the start menu on Windows 7.
+**You can only upgrade a registered copy of Windows 7 to Windows 10. Giving the product key during Windows 7 installation is not enough. You have to explicitly run Windows registration from the start menu on Windows 7.**
 
->It takes about 3 seconds.
+**It takes about 3 seconds.**
 
->If you do not register your copy of Windows 7 the upgrade will not check at the beginning, but won't let you proceed after a 2 hours process. Registering your copy during the process won't work, the upgrade process won't pick it up. You'll have to start over.
+**If you do not register your copy of Windows 7 the upgrade will not check at the beginning, but won't let you proceed after a 2 hours process. Registering your copy during the process won't work, the upgrade process won't pick it up. You'll have to start over.**
 
-> AND GUESS WHAT!? WINDOWS WON'T USE THE UPGRADE FILES THAT IT JUST DOWNLOADED FOR TWO HOURS, IT WILL START ALL OVER AGAIN. FOR ANOTHER TWO HOURS, UNTIL YOU SEE IF YOUR REGISTRATION WORKED.
+**AND GUESS WHAT!? WINDOWS WON'T USE THE UPGRADE FILES THAT IT JUST DOWNLOADED FOR TWO HOURS, IT WILL START ALL OVER AGAIN. FOR ANOTHER TWO HOURS, UNTIL YOU SEE IF YOUR REGISTRATION WORKED.**
 
 Finally we got past the product key point only to see a new problem.
 
@@ -155,10 +152,10 @@ Ctr+Shift+Esc for Task manager! I found that the upgrade process was not using a
 
 After some desparate googling on my Mac I found the following [answer on Microsoft answers](http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399):
 
-> * open cmd
-> * type "net stop wuauserv"  (this will stop windows update service)
-> * wait for a few minutes
-> * type "net start "wuauserv"  (this will start windows update service).
+* open cmd
+* type "net stop wuauserv"  (this will stop windows update service)
+* wait for a few minutes
+* type "net start "wuauserv"  (this will start windows update service).
 
 WOW...
 
@@ -192,15 +189,15 @@ You have two options:
 
 I spent a few minutes looking for IE 11 download on the internet, but could not find anything. From the google hints I saw that I was not the only one. Finally I found out the truth about IE 11 by accidentally clicking a jnlp (java network launch protocol) file.
 
-> IE 11 comes with Windows 10. It is part of the bundle, so if you want to run it besides Edge, you should be looking for it on your on PC.
+**IE 11 comes with Windows 10. It is part of the bundle, so if you want to run it besides Edge, you should be looking for it on your on PC.**
 
 I put the IE icon next to the Edge icon and pinned it to the system tray. These two look so ugly next to each other.
 
-Edge and Internet Explorer logos in system tray
+![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/edge-ie-icons.png)
 
 [Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912)
 
->So I installed Firefox.
+**So I installed Firefox.**
 
 ## Some nice words to Microsoft
 

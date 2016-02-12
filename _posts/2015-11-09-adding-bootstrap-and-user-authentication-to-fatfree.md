@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Adding Bootstrap and User Authentication to Fatfree PHP MVC Project"
-date:   2015-11-9 16:38:44 +1458
-categories: jekyll update
+description: "This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP."
+date:   2015-11-09 14:58:00 +0100
+categories: tutorials
+videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/2vNijEnRBfg" frameborder="0" allowfullscreen></iframe>'
 ---
 Welcome back fellow developers and beloved students! In this lesson I will share the logical first steps towards a usable web application based on Bootstrap and the Fat-Free PHP Framework.
 
@@ -18,37 +20,43 @@ Sort of a framework on top of the framework. The first 4 lessons in the Fat-Free
 
 We are still laying down the basics, but now we will add functional components, i.e. the base features that most web applications need to implement.
 
-This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP.
+**This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP.**
 
 If you are not working with Fat-Free, but you are interested in the basics of the above features, feel free to join, I believe you can benefit from this video, too.
 
 Please make sure to follow the video, that is the only way to follow step by step. The description in the post contains some explanation and reference links, but it's definitely not a step-by-step description.
 
-Bootstrap
+##Bootstrap
 
-Bootstrap is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
+[Bootstrap](http://getbootstrap.com) is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
 
 Most front-end frameworks feature a grid system, which is absolutely essential when laying out columns and rows on your web pages.
 
 Bootstrap has a pretty good grid system and an easy to use and easy to understand documentation and notation. Bootstrap is based on css and javascript.
 
-I checked out other alternatives, too, like Foundation, HTML5 Boilerplate and Pure.
+I checked out other alternatives, too, like [Foundation](http://foundation.zurb.com/), [HTML5 Boilerplate](http://html5boilerplate.com/) and [Pure](http://purecss.io/).
 
 I decided to stay with Bootstrap, because it's the most widely used framework for some good reasons. The documentation is simple and very rich. The learning curve is manageable and bootstrap is available through several methods including CDN.
 
 Other frameworks have similar features, but Bootstrap has all of these in one place with easy access.
 
-Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js file to be added to your site. If you don't need the features supported by javascript, you may even skip javascript and add it later.
+Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js file to be added to your site. If you don't need the features supported by Javascript, you may even skip Javascript and add it later.
 
-In order to add the css, just copy the below line into the &lt;head&gt; section of your html file.
+In order to add the css, just copy the below line into the `&lt;head&gt;` section of your html file.
 
+{% highlight html %}
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-In order to add Bootstrap javascript copy and paste the below code right before your closing &lt;/body&gt; tag.
+{% endhighlight %}
 
+In order to add Bootstrap javascript copy and paste the below code right before your closing `&lt;/body&gt;` tag.
+
+{% highlight html %}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the Getting Started page on the Bootstrap site.
+{% endhighlight %}
 
-Authentication
+The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](http://getbootstrap.com/getting-started/)
+
+##Authentication
 
 One reason why we added Bootstrap in this lesson, is to lay out the sign-in page of our sample website.
 
@@ -58,30 +66,31 @@ I can keep unwanted visitors out of our super sophisticated and super confidenti
 
 Adding authentication to the Fat-Free MVC site requires a couple of new components and modifications. These are the following:
 
-a User table in the database
-a new user in the User table
-a User model object in PHP
-a User Controller in PHP
-a new view login.htm based on Bootstrap
-signin.css stylesheet from the Bootstrap sign-in example
-new routes for login and authentication
-turn on cache in config.ini to enable cache based sessions
-start a new session in index.php
-add security restrictions to the application's parent controller
+1. a User table in the database
+2. a new user in the User table
+3. a User model object in PHP
+4. a User Controller in PHP
+5. a new view login.htm based on Bootstrap
+6. signin.css stylesheet from the Bootstrap sign-in example
+7. new routes for login and authentication
+8. turn on cache in config.ini to enable cache based sessions
+9. start a new session in index.php
+10. add security restrictions to the application's parent controller
 This looks like a lot of work, but it's just a series of small tasks. Nonetheless you need to complete each and every one to make authentication work.
 
 Let's take these one by one!
 
-1 Create the User table
+##1 Create the User table
 
 Use your favorite database management tool to create a new table called User in the database. (Please have a look at previous lessons to see what database we're using).
 
 Add the following structure:
 
-id, int(11) - auto increment, primary key, not null
-username, varchar(45) - utf8, not null
-password, varchar(95) - utf8, not null
-Please note that I set the password field to be 95 characters long. The reason for this is that we are not going to store the password as is. We'll store an encrypted version of the password and that's gonna be longer.
+* id, int(11) - auto increment, primary key, not null
+* username, varchar(45) - utf8, not null
+* password, varchar(95) - utf8, not null
+
+Please note that I set the password field to be 95 characters long. The reason for this is that we are not going to store the password as is. **We'll store an encrypted version of the password and that's gonna be longer.**
 
 You can even specify a higher length if you like.
 
@@ -91,13 +100,13 @@ Comparison between the stored password and the password entered by the user work
 
 Let's see how to create an encrypted password.
 
-2 Create a new user in the database
+##2 Create a new user in the database
 
 Let's create a user in the database with the name f3user, and let's create the encrypted password as follows:
 
-open up Terminal on your computer
-launch PHP in interactive shell mode by typing php -a
-at the php> prompt type and execute the command echo password_hash('f3password', PASSWORD_DEFAULT);
+1. open up Terminal on your computer
+2. launch PHP in interactive shell mode by typing php -a
+3. at the php> prompt type and execute the command echo password_hash('f3password', PASSWORD_DEFAULT);
 What's just happened here? The interactive PHP shell lets you execute PHP commands in Terminal in a command line fashion.
 
 We used PHP's password_hash function to encrypt our password string.
@@ -106,10 +115,10 @@ PASSWORD_DEFAULT is the default hashing algorithm used by PHP, it changes over t
 
 Please copy and paste the hashed password, i.e. the long, messy looking string returned by PHP, into the password field of the database and save your user.
 
-3 Create the user model object
+##3 Create the user model object
 
 Let's create a new file called User.php under our app/models/ directory with the familiar model class implementation.
-
+{% highlight php %}
 <?php
 
 class User extends DB\SQL\Mapper{
@@ -148,12 +157,14 @@ class User extends DB\SQL\Mapper{
         $this->erase();
     }
 }
+{% endhighlight %}
+
 We discussed the above code in details in previous lessons, please have a look at those if you need clarification.
 
-4 Create the User Controller in PHP
+##4 Create the User Controller in PHP
 
 Add a new file under the app/controllers/ folder, called UserController.php with the following contents:
-
+{% highlight php %}
 <?php
 
 class UserController extends Controller{
@@ -186,6 +197,8 @@ class UserController extends Controller{
         }
     }
 }
+{% endhighlight %}
+
 This is an important point. The render method will render the login page that we add later. I hope this is easy to understand by now.
 
 Let's see what's going on in the authenticate method!
@@ -198,10 +211,11 @@ If the user exists, we verify the password with PHP's password_verify function. 
 
 If the password does not match, we redirect the user to the login page.
 
-5 Login html based on Bootstrap
+##5 Login html based on Bootstrap
 
 Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm.  The contents should be like this:
 
+{% highlight html %}
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -238,12 +252,15 @@ Copy and paste the code of the login page from the Bootstrap example to a new fi
 
 </body>
 </html>
+{% endhighlight %}
+
 Note that we included a dedicated signin.css, see the next point for details.
 
-6 Add signin.css stylesheet from the Bootstrap sign-in example
+##6 Add signin.css stylesheet from the Bootstrap sign-in example
 
 Copy the contents of the signin.css from the Bootstrap example using developer tools as seen in the video. Copy the code into a new file under app/css/signin.css. Please see the contents of the file below for reference:
 
+{% highlight css %}
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -284,10 +301,13 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-7 New routes for login and authentication
+{% endhighlight %}
+
+##7 New routes for login and authentication
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
+{% highlight php %}
 [routes]
 
 ;base routes
@@ -295,12 +315,15 @@ GET /=MainController->render
 
 GET /login=UserController->render
 POST /authenticate=UserController->authenticate
-8 Turn on CACHE in config.ini to enable cache based sessions
+{% endhighlight %}
+
+##8 Turn on CACHE in config.ini to enable cache based sessions
 
 Use the Fat-Free cache setting on line 6 to turn on caching. We need this feature because we will store session information in a file based cache. You can, of course store session info in a database, but that's your homework to implement.
 
 If you are wondering what session information I'm talking about see point 4 about the user controller.
 
+{% highlight php %}
 [globals]
 
 DEBUG=3
@@ -312,9 +335,11 @@ devdb = "mysql:host=127.0.0.1;port=3306;dbname=f3MVC"
 devdbusername = "f3MVCadmin"
 devdbpassword = "f3MVCadmin"
 9 Start a new session in index.php
+{% endhighlight %}
 
 In order to make authentication work as described in point 4, we need to start a new session for the user request. It's done in your index.php as highlighted.
 
+{% highlight php %}
 <?php
 
 require_once("vendor/autoload.php");
@@ -327,10 +352,13 @@ $f3->config('routes.ini');
 new Session();
 
 $f3->run();
-10 Add security restrictions to the application's parent controller
+{% endhighlight %}
+
+##10 Add security restrictions to the application's parent controller
 
 To close the loop, we need to make sure that users without an active session cannot access restricted routes. In order to achieve this we add some logic to the beforeroute method of the parent controller in Controller.php.
 
+{% highlight php %}
 <?php
 
 class Controller {
@@ -365,9 +393,11 @@ class Controller {
     }
 
 }
+{% endhighlight %}
+
 Please note that we have overridden the beforeroute method in UserController.php, so login features are available for users without an active session.
 
-Wrap-up
+##Wrap-up
 
 In this lesson we started adding functional elements to our Fat-Free MVC sample project.
 
