@@ -12,6 +12,9 @@ github_username:  takacsmark
 # Build settings
 markdown: kramdown
 
-permalink: "/:title/"
+kramdown:
+    syntax_highlighter: rouge
+
+permalink: "/:title"
 
 author: Mark
