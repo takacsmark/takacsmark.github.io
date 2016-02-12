@@ -9,8 +9,13 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
+        {% if post.thumbnail %}
+            <img src="{{ site.url }}{{ post.thumbnail }}" />
+        {% elsif post.videothumb %}
+            <div class="video-thumb">{{ post.videothumb }}</div>          
+        {% endif %}
+        
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>		
-        {{post.thumbnail}}
         <h2>            
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
               {{ post.title }}</a>

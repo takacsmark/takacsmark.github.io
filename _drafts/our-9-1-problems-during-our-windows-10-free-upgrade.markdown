@@ -3,7 +3,7 @@ layout: post
 title:  "Our 9+1 Problems During Our Windows 10 Free Upgrade"
 date:   2016-01-31 16:38:44 +0100
 categories: jekyll update
-thumbnail: '<div class="video-thumb"><iframe width="100%" height="auto" src="https://www.youtube.com/embed/iQHpNjobhJ8" frameborder="0" allowfullscreen></iframe></div>'
+videothumb: '<iframe width="100%" height="auto" src="https://www.youtube.com/embed/iQHpNjobhJ8" frameborder="0" allowfullscreen></iframe>'
 ---
 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/iQHpNjobhJ8" frameborder="0" allowfullscreen></iframe>
 

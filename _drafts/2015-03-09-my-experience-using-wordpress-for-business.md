@@ -3,7 +3,7 @@ layout: post
 title:  "My experience using Wordpress for business"
 description: "The story of why I decided to use WordPress for business purposes. My approach to product selection, challenges and great discoveries along the way."
 date:   2015-03-09 07:48:00 +0100
-thumbnail: '<img src="/assets/images/wordpress-on-table.jpg" />'
+thumbnail: "/assets/images/wordpress-on-table.jpg"
 categories: Wordpress, web economy
 ---
 I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](http://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
