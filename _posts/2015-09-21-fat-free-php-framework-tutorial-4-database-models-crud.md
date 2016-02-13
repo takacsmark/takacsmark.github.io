@@ -4,6 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial – 4 DBs, Models & CRUD"
 description: "4th lesson in our tutorial series covers Fat-Free models, database connections and CRUD. This makes the MVC sample project ready for you to start your own."
 date:   2015-09-21 17:36:00 +0100
 categories: tutorials
+thumbnail: /assets/images/Fatfree_PHP_Framework_Tutorial_-_4_-_YouTube.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/XydAAp3ZF-M" frameborder="0" allowfullscreen></iframe>'
 ---
 It's time we add 'M' to MVC and complete the core of our Fat-Free MVC sample project. In this lesson we will create a new database, connect to it from our project and set up models with f3's ORM functionality.
@@ -48,8 +49,8 @@ Next, we add a new record to this table. You can do this from the Query window i
 
 ###config.ini
 
-First, let's add the database to the config.ini file, the full contents of the file should look like this, with the new lines highlighted:
-{% highlight php %}
+First, let's add the database to the config.ini file, the full contents of the file should look like this:
+{% highlight php linenos=table %}
 [globals]
 
 DEBUG=3
@@ -67,7 +68,7 @@ Note that the global variable names (devdb, devdbusername and devdbpassword were
 In the next step, we move on to our controller parent class and add the database connection to the constructor. This way, every controller in our application will have access to the same database connection without any further coding.
 
 Our new controller.php should look like this:
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class Controller {
@@ -100,7 +101,7 @@ class Controller {
 
 }
 {% endhighlight %}
-A couple of thing happened here, see the highlight. We added an f3 variable to our parent controller, we set its value in the constructor. This is the f3 instance we have seen in the previous lectures. It's a singleton, so it's the very same instance we use in our index.php. We add it to our parent controller as a class variable for easy access in our controllers.
+A couple of thing happened here. We added an f3 variable to our parent controller, we set its value in the constructor. This is the f3 instance we have seen in the previous lectures. It's a singleton, so it's the very same instance we use in our index.php. We add it to our parent controller as a class variable for easy access in our controllers.
 
 Additionally our parent controller will have now a $db variable that we use in all of our controllers to manipulate data in our database. Please note line 21, where we added an option to f3 telling the framework to raise db exceptions. This way SQL exception from the database will be propagated to our error handling mechanism. This will be a life saver during debugging tasks.
 
@@ -111,7 +112,7 @@ See how we use the global variables from config.ini to establish the connection.
 Let's create the 'models' folder under our project's app folder and let's create a new empty file under models, called Messages.php. This is our first model in our MVC.
 
 In the file we will create something called a DB\SQL\Mapper. This is the heart of f3's ORM, it will neatly map our table to a PHP object. Here is how:
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class Messages extends DB\SQL\Mapper{
@@ -133,7 +134,7 @@ Right now we have only one function that will read all messages. $this simply re
 ###Including models
 
 Now we need to make sure that f3 will include our model classes. We do this in the config.ini file, by adding the models folder to the AUTOLOAD global variable. Remember from previous lectures how we separate folders with the pipe (`|`) symbol.
-{% highlight php %}
+{% highlight php linenos=table %}
 [globals]
 
 DEBUG=3
@@ -150,7 +151,7 @@ devdbpassword = "f3admin"
 ###MainController.php
 
 Let's go to our MainController.php now and change the render function.
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class MainController extends Controller{
@@ -179,7 +180,7 @@ We pass the entire object to the template and take care of the individual fields
 ###template.htm
 
 There is one thing left to do now. We have to change our message in the template on line 7. f3 lets us use the handy dot notation to access object properties.
-{% highlight html %}
+{% highlight html linenos=table %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -200,7 +201,7 @@ This tutorial would not be complete without a comprehensive CRUD example. I usua
 ###Method 1. Model functions
 
 Let's update our Messages.php model file with the below functions:
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class Messages extends DB\SQL\Mapper{
@@ -250,7 +251,7 @@ Remember, you can use the 'POST' array and also other arrays in the copyFrom fun
 ###Method 2. Setting object attributes
 
 Let's add some code to our MainController and create a new message in the database and display it on our screen.
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class MainController extends Controller{

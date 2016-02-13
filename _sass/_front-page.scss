@@ -1,0 +1,43 @@
+/**
+ * Greeting box with large image on front page
+ */
+.greeting-box {
+    background-image: url('/assets/images/mark-takacs-home.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px;
+    background-position: right bottom;
+    height: 750px;    
+
+    #top-bar {
+        border-bottom: 1px solid $top-bar-color-right;
+        height: auto;
+    }
+
+    .site-title {
+                    
+        &,
+        &:visited {
+            color: $top-bar-color-right;
+            font-weight: 400;
+        }
+    }
+    
+    .page-link {
+        color: $top-bar-color-right;    
+    }
+       
+    .greeting-msg {
+        position: absolute;
+        display: inline-block;
+        padding: 30px;
+        color: $top-bar-color-right;
+        font-size: 450%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 150px;
+        font-weight: 500;
+        background-color: rgba(0,0,0,0.5);        
+    }
+
+}
+

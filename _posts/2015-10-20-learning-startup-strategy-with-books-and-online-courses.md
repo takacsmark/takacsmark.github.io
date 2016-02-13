@@ -2,13 +2,13 @@
 layout: post
 title:  "Learning Startup Strategy With Books and Online Courses"
 description: "In this post I give you the books and courses that are helpful when you are in the process of defining the goals and plans building your startup strategy."
-date:   2015-10-20 16:50:00 +0100
-thumbnail: "/assets/images/learning-startup-strategy-online.jpg"
+date: 2015-10-20 16:50:00 +0100
 categories: 'Online learning'
+thumbnail: "/assets/images/learning-startup-strategy-online.jpg"
 ---
 In this post I give you the books and courses that are helpful when you are in the process of defining the goals and plans building your startup strategy.
 
-## What is a strategy and why do I need it?
+## What is a strategy and why do I need it? 
 My goal is to give a helping hand to anyone who finds my experience useful. So I'll start with the absolute basics. **What the hell is strategy?**
 Strategy covers various areas around business studies, game theory and even computer science. A business strategy is usually thought of as a sequence of steps that you wanna execute to reach your goals.
 
@@ -27,6 +27,7 @@ While these skills are obviously useful, there is something else you have to fin
 
 **What do I mean?** I learnt a good deal of competitive thinking and market analysis during my career.
 These techniques come as a reflex to me now. They are very rational and apply cold and rigorous logic.
+
 > Starting a business, however, comes from personal motivation, vision, passion and skills you already have. These factors are less rational, and seem to be much softer than a corporate decision.
 
 On top of this, you have to live with your decision for long years to come and you'd better pick a domain for your startup that will keep you passionate and energetic even during hard times.

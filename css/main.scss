@@ -21,14 +21,16 @@ $brand-color:      #2a7ae2;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$top-bar-color-right: $background-color;
 
 // Width of the content area
-$content-width:    800px;
+$site-max-width:   1920px;
+$content-width:    1024px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+$article-width:    800px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -49,23 +51,8 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
-;
-
-
-.video-thumb {
-	float: none;
-	clear: both;
-	width: 100%;
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
-}
-.video-thumb iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+        "front-page",
+        "syntax-highlights",
+        "svg-icons";
+        
+// "syntax-highlighting"

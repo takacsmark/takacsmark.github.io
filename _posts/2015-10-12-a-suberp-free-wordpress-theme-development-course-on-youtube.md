@@ -3,6 +3,7 @@ layout: post
 title:  "A Suberp Free WordPress Theme Development Course On Youtube"
 description: "Learn basic WordPress theme development on YOUTUBE for FREE through well explained examples, and learn the basics of web development at the same time."
 date:   2015-10-12 11:53:00 +0100
+thumbnail: /assets/images/web-design-for-beginners-course.jpg
 videothumb: '<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5" frameborder="0" allowfullscreen></iframe>'
 categories: 'Online learning'
 ---

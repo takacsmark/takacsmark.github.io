@@ -115,9 +115,9 @@ I had to repeat this step twice, before finally I was able to boot from the new 
 
 I thought we are ready for the upgrade, but the internet connection was not working on the shiny new instance. Our ISP gave my father-in-law a USB Wi-Fi dongle that Windows 7 won't recognize out of the box.
 
-No problem, we killed bigger problems today. Just googled "usb wifi dongle windows 7 driver" on my Mac, and copied a couple of drivers to my USB stick (yeah the one that won't boot).
+No problem, we killed bigger problems today. Just googled "usb wi-fi dongle windows 7 driver" on my Mac, and copied a couple of drivers to my USB stick (yeah the one that won't boot).
 
->It's always a good idea to have another internet connected computer with you if you are installing a new operating system on a new disk.
+**It's always a good idea to have another internet connected computer with you if you are installing a new operating system on a new disk.**
 
 Device manager automatically found and installed the right driver from the USB. Now we were really ready to start the upgrade.
 
@@ -193,7 +193,7 @@ I spent a few minutes looking for IE 11 download on the internet, but could not 
 
 I put the IE icon next to the Edge icon and pinned it to the system tray. These two look so ugly next to each other.
 
-![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/edge-ie-icons.png)
+![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/edge-ie-icons.png) 
 
 [Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912)
 
@@ -209,6 +209,6 @@ I have written this post using [Microsoft Visual Studio Code](https://code.visua
 
 I dumped my $70 sublime license for Code. Code is a fantastic product and I really love the way you can do markdown editing with an immediate preview.
 
-I use it for programming tasks in my own venture and it does a fantastic job for node, javascript, php, react and a lot of other stuff.
+I use it for programming tasks in my own venture and it does a fantastic job for node, Javascript, PHP, react and a lot of other stuff.
 
-Arch Linux with Visual Studio Code
+![Arch Linux with Visual Studio Code]({{ site.url }}/assets/images/window-10-install-post.png)

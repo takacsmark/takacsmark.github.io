@@ -4,6 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial - 1 Basics"
 description: "First lecture of my video tutorial series on solving web programming challenges with Fat-Free. Lecture 1 covers installation, project setup and routing."
 date:   2015-08-12 16:06:00 +0100
 categories: tutorials
+thumbnail: /assets/images/Fat-Free_PHP_Framework_Tutorial_-_1_Basics_and_1__markgyorgyiimac_Mark-es-Gyorgyi____Documents_Development_Tutorials_fatfree_1_base__zsh_.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/R-ydcTTrR5s" frameborder="0" allowfullscreen></iframe>'
 ---
 I published the first 3 videos of the Fat-Free PHP Framework Tutorial a few weeks ago. Now that my vacation is over, it's time to add the related posts that will give you additional information about concepts covered in the video.
@@ -46,9 +47,9 @@ Please follow the questions of the composer project initiation process, you can 
 
 `composer.json`
 
-The file has contents that are similar to the below code sample. Please add the lines highlighted in yellow below to your own composer.json file. This is the configuration file of composer. By adding the highlighted lines, we are telling composer to download and add the Fat-Free Framework to our project.
+The file has contents that are similar to the below code sample. By adding the below lines, we are telling composer to download and add the Fat-Free Framework to our project.
 
-{% highlight json lineno %}
+{% highlight json linenos=table %}
 {
     "name": "takacsmark/fatfreetutorial1",
     "authors": [
@@ -65,7 +66,7 @@ The file has contents that are similar to the below code sample. Please add the 
 
 In order to make this effective, please issue the following command from under your project folder in terminal.
 
-`compser update`
+`composer update`
 
 After you've done this step a new folder called vendor should appear under your project folder. The vendor folder contains the third party libraries installed by composer. Now the fun begins.
 
@@ -81,7 +82,7 @@ Fat-Free's official site has great online resources and documentation, you can f
 
 In order to run Fat-Free, all you need to do is to create a file called index.php under your project directory. This file should reside immediately in your project folder, not in a subfolder. When your file is ready, open your code editor and add the following source code. Don't worry, I'll explain what the lines mean.
 
-{% highlight php lineno %}
+{% highlight php linenos=table %}
 <?php
 
 require_once("vendor/autoload.php");

@@ -1,20 +1,23 @@
-title: Your awesome title
-email: mark@takacsmark.com
+
+title: takacsmark.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site
+permalink: "/:title"
+
+author: Mark
+
+email: mark@takacsmark.com
 twitter_username: takacsmark
 github_username:  takacsmark
+
+disqus: takacsmark
+google_analytics: UA-41064919-3
 
 # Build settings
 markdown: kramdown
 
-kramdown:
-    syntax_highlighter: rouge
-
-permalink: "/:title"
-
-author: Mark

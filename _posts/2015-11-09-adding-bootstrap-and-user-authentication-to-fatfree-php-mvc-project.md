@@ -4,6 +4,7 @@ title:  "Adding Bootstrap and User Authentication to Fatfree PHP MVC Project"
 description: "This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP."
 date:   2015-11-09 14:58:00 +0100
 categories: tutorials
+thumbnail: /assets/images/Adding_Bootstrap_and_User_Authentication_to_Fatfree_PHP_MVC_Project.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/2vNijEnRBfg" frameborder="0" allowfullscreen></iframe>'
 ---
 Welcome back fellow developers and beloved students! In this lesson I will share the logical first steps towards a usable web application based on Bootstrap and the Fat-Free PHP Framework.
@@ -44,13 +45,13 @@ Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js fil
 
 In order to add the css, just copy the below line into the `&lt;head&gt;` section of your html file.
 
-{% highlight html %}
+{% highlight html linenos=table %}
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 {% endhighlight %}
 
 In order to add Bootstrap javascript copy and paste the below code right before your closing `&lt;/body&gt;` tag.
 
-{% highlight html %}
+{% highlight html linenos=table %}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 {% endhighlight %}
 
@@ -118,7 +119,7 @@ Please copy and paste the hashed password, i.e. the long, messy looking string r
 ##3 Create the user model object
 
 Let's create a new file called User.php under our app/models/ directory with the familiar model class implementation.
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class User extends DB\SQL\Mapper{
@@ -164,7 +165,7 @@ We discussed the above code in details in previous lessons, please have a look a
 ##4 Create the User Controller in PHP
 
 Add a new file under the app/controllers/ folder, called UserController.php with the following contents:
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class UserController extends Controller{
@@ -215,7 +216,7 @@ If the password does not match, we redirect the user to the login page.
 
 Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm.  The contents should be like this:
 
-{% highlight html %}
+{% highlight html linenos=table %}
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -260,7 +261,7 @@ Note that we included a dedicated signin.css, see the next point for details.
 
 Copy the contents of the signin.css from the Bootstrap example using developer tools as seen in the video. Copy the code into a new file under app/css/signin.css. Please see the contents of the file below for reference:
 
-{% highlight css %}
+{% highlight css linenos=table %}
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -307,7 +308,7 @@ body {
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
-{% highlight php %}
+{% highlight php linenos=table %}
 [routes]
 
 ;base routes
@@ -323,7 +324,7 @@ Use the Fat-Free cache setting on line 6 to turn on caching. We need this featur
 
 If you are wondering what session information I'm talking about see point 4 about the user controller.
 
-{% highlight php %}
+{% highlight php linenos=table %}
 [globals]
 
 DEBUG=3
@@ -337,9 +338,9 @@ devdbpassword = "f3MVCadmin"
 9 Start a new session in index.php
 {% endhighlight %}
 
-In order to make authentication work as described in point 4, we need to start a new session for the user request. It's done in your index.php as highlighted.
+In order to make authentication work as described in point 4, we need to start a new session for the user request. It's done in your index.php.
 
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 require_once("vendor/autoload.php");
@@ -358,7 +359,7 @@ $f3->run();
 
 To close the loop, we need to make sure that users without an active session cannot access restricted routes. In order to achieve this we add some logic to the beforeroute method of the parent controller in Controller.php.
 
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class Controller {

@@ -1,3 +1,9 @@
+html {
+    max-width: $site-max-width;
+    margin: 0 auto;
+}
+
+
 /**
  * Site header
  */
@@ -17,7 +23,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
+          
     &,
     &:visited {
         color: $grey-color-dark;
@@ -192,9 +198,38 @@
 .post-link {
     display: block;
     font-size: 24px;
+    
+    &:hover,
+    &:visited:hover{
+        text-decoration: none;
+    }
 }
-
-
+/* tmdc customizations */
+.home .post-thumb {
+    width: 25%;
+    display: block;
+    float: left;
+}
+.home .post-teaser {
+    width: 75%;
+    display: block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+.post-list li {
+    @extend %clearfix;
+}
+.home ul li {
+    border-top: 1px solid rgb(221, 221, 221);
+    padding-top: $spacing-unit / 2;
+    padding-bottom: $spacing-unit / 2;   
+    margin-bottom: 0; 
+    &:hover {
+        background-color: #eee;
+    }
+}
 
 /**
  * Posts
@@ -239,4 +274,32 @@
             font-size: 18px;
         }
     }
+}
+
+.post-author-img {
+    width: 10%;
+    border-radius: 2%;
+    display: block;
+    float: left;
+    margin-bottom: $spacing-unit / 2;    
+}
+.post-title-container {
+    @extend %clearfix;
+    float: left;
+    display: block;
+    width: 90%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 15px;    
+}
+.post-title-container .post-title,
+.post-title-container .post-meta {
+    // display: block;
+    // float: left;
+    // width: 90%;
+    // box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // -webkit-box-sizing: border-box;
+    // padding-left: 15px;
 }

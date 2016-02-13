@@ -3,19 +3,42 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">       
-        {% if page.thumbnail %}
-            <img src="{{ site.url }}{{ page.thumbnail }}" />
-        {% elsif page.videothumb %}
-            <div class="video-thumb">{{ page.videothumb }}</div>          
-        {% endif %}        
+    <header class="post-header">
+        <div class="post-thumb">                              
+            {% if page.videothumb %}
+                <div class="video-thumb">{{ page.videothumb }}</div>          
+            {% elsif page.thumbnail %}
+                <img src="{{ site.url }}{{ page.thumbnail }}" />
+            {% endif %}        
+        </div>
         
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+        
+        <img class="post-author-img" src="{{ sijte.url }}/assets/images/Mark.jpg" />
+
+        <div class="post-title-container">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>        
+            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>            
+        </div>
+        
     </header>
 
-    <div class="post-content" itemprop="articleBody">
+    <div class="article-wrapper post-content" itemprop="articleBody">
         {{ content }}
     </div>
+
+    {% if site.disqus %}
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = '{{ site.disqus }}';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    {% endif %}
 
 </article>

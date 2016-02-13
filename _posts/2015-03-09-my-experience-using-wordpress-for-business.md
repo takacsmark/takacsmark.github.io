@@ -19,11 +19,11 @@ I installed WordPress, Joomla and Drupal, knowing that all three are widely used
 
 All three contenders were still on my list, so I took my corporate business experience to ask the next question.
 
-**Which product will best support my strategic objectives?**
+>Which product will best support my strategic objectives?
 
 Wow, sounds like real corporate bullshit, right? So what are those mysterious objectives?
 
-**I want to use my smart, in-house algorithms to find, present and sell men's clothing items in a new and unique way on-line.**
+> I want to use my smart, in-house algorithms to find, present and sell men's clothing items in a new and unique way on-line.
 
 Now, this sounds helpful. If I want to be competitive and build this unique capability I will need to build a smart back-end and integrate it to my CMS. All three platforms are written in PHP, so it seems that this skill is a must.
 
@@ -66,7 +66,7 @@ I moved on and purchased a WordPress theme called [the7](http://themeforest.net/
 
 Dream Theme provides something I call consultative support. If I ask a question they come back with alternatives and give me an opportunity to make a decision. My experience is that other vendors often take their virtual hammer and "fix" something on your site without you knowing what's going on. The hammer approach may work with some users, but I am building a business and I wanna run a meaningful discussion with partners and I prefer to take my own decisions regarding changes.
 
-**When using WordPress for business, it is very important to find theme and plugin vendors with excellent, consultative support.**
+> When using WordPress for business, it is very important to find theme and plugin vendors with excellent, consultative support.
 
 ##Plugins
 
@@ -91,7 +91,7 @@ There are several fundamental plugins a small WordPress based business needs. I 
 
 Most plugins are free and available on [Wordpress.org](https://wordpress.org/plugins/). The security and performance plugins were suggested by [A2hosting](http://www.a2hosting.com/6278-0-3-18.html), where I host my sites. Premium SEO pack is the only commercial plugin. I tried four different SEO plugins and stayed with this one, although I am not completely happy with it, but this is for another post.
 
-**I found that I can add most critical corporate IT support capabilities to my site with free plugins. I have backup/restore, speed metrics, caching, security and monitoring all available.**
+> I found that I can add most critical corporate IT support capabilities to my site with free plugins. I have backup/restore, speed metrics, caching, security and monitoring all available.
 
 **I spent money only on the plugin that I believe is the key to my first steps on-line: SEO.**
 

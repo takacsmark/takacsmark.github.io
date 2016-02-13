@@ -1,29 +1,33 @@
 ---
 layout: default
 ---
-
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <!--<h1 class="page-heading">Posts</h1>-->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% if post.thumbnail %}
-            <img src="{{ site.url }}{{ post.thumbnail }}" />
-        {% elsif post.videothumb %}
-            <div class="video-thumb">{{ post.videothumb }}</div>          
-        {% endif %}
-        
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>		
-        <h2>            
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>      
+            <h2>            
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                    <div class="post-thumb">                       
+                        {% if post.thumbnail %}
+                            <img src="{{ site.url }}{{ post.thumbnail }}" />
+                        {% endif %}
+                    </div>
+                </a>
+                <div class="post-teaser">
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">                             
+                        {{ post.title }}                
+                        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+                    </a>                    
+                </div>		
+                
+            </h2>
+        </li>
+        {% endfor %}
+    </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

@@ -4,6 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial – 3 MVC Project Structure"
 description: "This the third video in our Fat-Free Tutorial series. The time has come, we will use what we learnt so far to create our first Fat-Free MVC project."
 date:   2015-09-15 16:11:31 +0100
 categories: tutorials
+thumbnail: /assets/images/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/DQT5sDO1_Ck" frameborder="0" allowfullscreen></iframe>'
 ---
 The time has come, we will use what we learnt so far to create our first Fat-Free MVC project.  This is the third video in our Fat-Free PHP Framework Tutorial series. As usual, let me ask you to follow the video, because it contains all the steps and therefore it is the ultimate resource to teach you how to build the MVC project structure. This writeup summarizes the key takeaways and this is the place where I give you code snippets that you can copy and paste into your own projects, so that you don't need to type so much.
@@ -11,7 +12,7 @@ The time has come, we will use what we learnt so far to create our first Fat-Fre
 ##The MVC Project Structure
 
 Unlike in previous posts in this tutorial series, this time let me start with the end result and explain the structure. Later on, I will come back to each file in detail.
-{% highlight terminal %}
+{% highlight terminal linenos=table %}
 ➜  1 base  ll
 total 40
 drwxr-xr-x  4 markgyorgyiimac  staff   136B Júl 20 20:02 app
@@ -37,7 +38,7 @@ This is the structure of our MVC web application project folder now.
 The 'app' folder, the 'config.ini' and 'routes.ini' files were created by me, so you should also create these files and the directory for your own project. 'index.php' should already be there. The other files and folders are managed by Composer or f3, so don't worry about them.
 
 Let's have a look at the structure of the app folder, now. This is where MVC will take place:
-{% highlight terminal %}
+{% highlight terminal linenos=table %}
 ➜  app  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 .
 |____controllers
@@ -63,7 +64,7 @@ So let's make this work. I have moved the functionality from the previous lesson
 ##Files under the root folder
 
 ###index.php
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 require_once("vendor/autoload.php");
@@ -77,14 +78,14 @@ $f3->run();
 {% endhighlight %}
 We know this file very well. As you can see its contents have significantly decreased, because we moved our "business" functions to the files in the MVC files. This file contains the inclusion of Composer autoload and the initiation of the f3 instance, that we know from the first lesson.
 
-There are two new lines, 7 and 8, highlighted. These lines tell f3 to use the 'config.ini' and 'routes.ini' files as config files of the system. This way config variabless and routing info have their dedicated place.
+There are two new lines, 7 and 8. These lines tell f3 to use the 'config.ini' and 'routes.ini' files as config files of the system. This way config variabless and routing info have their dedicated place.
 
 The last line tells f3 to listen to http requests and respond to them.
 
 Now that we told f3 to use the config files, let's move on to these files in the next step.
 
 ###routes.ini
-{% highlight php %}
+{% highlight php linenos=table %}
 [routes]
 
 ;base routes
@@ -96,7 +97,7 @@ This file contains the route definitions. This is the same info we used to add t
 `;` on line 3 denotes a comment, while the [routes] tag on line 1 tells f3 that this is the section where routes are defined. This is important because you could have only one file for all of your config needs in f3, in that scenario you would separate different config sections with different tags. You'll see that our config.ini starts with the tag [globals], because that's where we define global variables.
 
 ###config.ini
-{% highlight php %}
+{% highlight php linenos=table %}
 [globals]
 
 DEBUG=3
@@ -106,13 +107,13 @@ AUTOLOAD=app/controllers/
  This is the config file of global variables. Right now we have set three crucial variables.
 
 * DEBUG specifies the debug level from 0 to 3, 0 being the least informative meant for production systems.
-* UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory!
-* AUTOLOAD takes care of automatic inclusion of our classes. This is where we tell f3 to find the controller classes under app/controllers/. Sooner than later you'll need more than one entry in this setting. Use | to separate entries. (e.g. app/controllers/|app/models/)
+* UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory
+* AUTOLOAD takes care of automatic inclusion of our classes. This is where we tell f3 to find the controller classes under `app/controllers/`. Sooner than later you'll need more than one entry in this setting. Use `|` to separate entries. (e.g. `app/controllers/|app/models/`)
 
 ##Files under app/controllers/
 
 ###Controller.php
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class Controller {
@@ -129,7 +130,7 @@ class Controller {
 The Controller class is the superclass of all of our controllers in this application. It implements the beforeroute and afterroute functions, that we discussed before. These functions will be available in all controllers in the application. As I said before beforeroute is the ideal place for checking session information.
 
 ###MainController.php
-{% highlight php %}
+{% highlight php linenos=table %}
 <?php
 
 class MainController extends Controller{
@@ -166,7 +167,7 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 ##Files under app/views/
 
 ###template.htm
-{% highlight html %}
+{% highlight html linenos=table %}
 <!DOCTYPE html>
 <html>
 <head>
