@@ -4,6 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
     Hacking your way through web economy with 15 years of high-end consulting experience is super exciting. You know a lot, and there is a lot to learn. My site is all about this. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://takacsmark.com" # the base hostname & protocol for your site
+url: "http://takacsmark.github.io" # the base hostname & protocol for your site
 permalink: "/:title"
 
 author: Mark
