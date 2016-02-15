@@ -212,8 +212,8 @@ pre .code {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
         vertical-align: middle;
 
         path {
@@ -252,3 +252,28 @@ pre .code {
  .hidden {
      display: none;
  }
+ 
+ 
+// img:not(:only-of-type) {
+//     width: 45%;
+// }
+
+article img {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    float: left;
+    padding: 3px;
+}
+
+/**
+ * Awesome, simple gallery layout taken from here
+ * http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
+ */
+@for $i from 1 through 4 {
+    article img:first-child:nth-last-child(#{$i}),
+    article img:first-child:nth-last-child(#{$i}) ~ img {
+        width: #{100% / $i} 
+    } 
+
+} 

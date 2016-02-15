@@ -28,7 +28,7 @@ $site-max-width:   1920px;
 $content-width:    1024px;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        960px;
 
 $article-width:    800px;
 
@@ -46,13 +46,18 @@ $article-width:    800px;
 }
 
 
+@mixin box-shadow-left-bottom() {
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+}
+
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "front-page",
-        "syntax-highlights",
-        "svg-icons";
+        "syntax-highlighting";
         
-// "syntax-highlighting"

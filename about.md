@@ -31,66 +31,54 @@ The IT related articles on the blog come from this family project experience and
 ##Contact
 
 <ul class="social-media-list">
+    {% if site.linkedin_username %}
+    <li>
+        {% include icon-linkedin.html username=site.linkedin_username %}
+    </li>
+    {% endif %}
+
+    {% if site.facebook_page %}
+    <li>
+        {% include icon-facebook.html username=site.facebook_page %}
+    </li>
+    {% endif %}
+    {% if site.twitter_username %}
+    <li>
+        {% include icon-twitter.html username=site.twitter_username %}
+    </li>
+    {% endif %}
+    {% if site.youtube_channel %}
+    <li>
+        {% include icon-youtube.html username=site.youtube_channel %}
+    </li>
+    {% endif %}
+
     {% if site.github_username %}
     <li>
         {% include icon-github.html username=site.github_username %}
     </li>
     {% endif %}
-
-    {% if site.twitter_username %}
+    {% if site.stackoverflow_username %}
     <li>
-    // {% include icon-twitter.html username=site.twitter_username %}
+        {% include icon-stackoverflow.html username=site.stackoverflow_username %}
     </li>
     {% endif %}
-    
-    
-    {% if site.footer-links.dribbble %}
-        <a href="https://dribbble.com/{{ site.footer-links.dribbble }}"><i class="svg-icon dribbble"></i></a>
+    {% if site.instagram_username %}
+    <li>
+        {% include icon-instagram.html username=site.instagram_username %}
+    </li>
+    {% endif %}    
+    {% if site.googleplus_username %}
+    <li>
+        {% include icon-googleplus.html username=site.googleplus_username %}
+    </li>
     {% endif %}
-    
-    {% if site.footer-links.email %}
-        <a href="mailto:{{ site.footer-links.email }}"><i class="svg-icon email"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.facebook %}
-        <a href="https://www.facebook.com/{{ site.footer-links.facebook }}"><i class="svg-icon facebook"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.github %}
-        <a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.instagram %}
-        <a href="https://instagram.com/{{ site.footer-links.instagram }}"><i class="svg-icon instagram"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.linkedin %}
-        <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.pinterest %}
-        <a href="https://www.pinterest.com/{{ site.footer-links.pinterest }}"><i class="svg-icon pinterest"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.rss %}
-        <a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.twitter %}
-        <a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><i class="svg-icon twitter"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.stackoverflow %}
-        <a href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.youtube %}
-        <a href="https://youtube.com/{{ site.footer-links.youtube }}"><i class="svg-icon youtube"></i></a>
-    {% endif %}
-
-    {% if site.footer-links.googleplus %}
-        <a href="https://plus.google.com/{{ site.footer-links.googleplus }}"><i class="svg-icon googleplus"></i></a>
-    {% endif %}
-
-    
+    <li>
+        {% include icon-rss.html %}
+    </li>
+    {% if site.email %}
+    <li>
+        {% include icon-email.html username=site.email %}
+    </li>
+    {% endif %}    
 </ul>

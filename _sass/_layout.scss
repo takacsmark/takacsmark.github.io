@@ -167,7 +167,9 @@ html {
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
 }
-
+.footer-copyright {
+    font-size: 80%;
+}
 
 
 /**
@@ -185,10 +187,11 @@ html {
     margin-left: 0;
     list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+    // > li {
+    //     margin-bottom: $spacing-unit;
+    // }
 }
+
 
 .post-meta {
     font-size: $small-font-size;
@@ -206,36 +209,57 @@ html {
 }
 /* tmdc customizations */
 .home .post-thumb {
-    width: 25%;
     display: block;
     float: left;
+    
+    img {
+        margin-bottom: 0;	        
+    }
 }
 .home .post-teaser {
-    width: 75%;
     display: block;
     float: left;
-    padding-left: 25px;
+    padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
-}
-.post-list li {
-    @extend %clearfix;
+    background-color: white;
+    padding-bottom: $spacing-unit / 2;       
+    padding-bottom: $spacing-unit / 2;   
+    @include box-shadow-left-bottom;
 }
 .home ul li {
-    border-top: 1px solid rgb(221, 221, 221);
+    border: 2px solid $background-color;    
     padding-top: $spacing-unit / 2;
     padding-bottom: $spacing-unit / 2;   
-    margin-bottom: 0; 
+    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;	        
+    
+    display: block;
+    box-sizing: border-box;
+    width: 33.3332%;
+    float: left;  
+
+    @include media-query($on-laptop) {
+        width: 50%;
+    }  
+
+    @include media-query($on-palm) {
+        width: 100%;
+        float: none;       
+    }   
+    
     &:hover {
         background-color: #eee;
     }
 }
-
 /**
  * Posts
  */
+.post-thumb img {
+    margin-bottom: $spacing-unit / 2;	        
+}
 .post-header {
-    margin-bottom: $spacing-unit;
+    // margin-bottom: $spacing-unit;
 }
 
 .post-title {
@@ -292,14 +316,4 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding-left: 15px;    
-}
-.post-title-container .post-title,
-.post-title-container .post-meta {
-    // display: block;
-    // float: left;
-    // width: 90%;
-    // box-sizing: border-box;
-    // -moz-box-sizing: border-box;
-    // -webkit-box-sizing: border-box;
-    // padding-left: 15px;
 }

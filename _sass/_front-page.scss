@@ -23,7 +23,12 @@
     }
     
     .page-link {
-        color: $top-bar-color-right;    
+        color: $top-bar-color-right;
+        
+        @include media-query($on-palm) {
+            color: $text-color;
+        }   
+            
     }
        
     .greeting-msg {
@@ -36,8 +41,16 @@
         margin-right: 10%;
         margin-top: 150px;
         font-weight: 500;
-        background-color: rgba(0,0,0,0.5);        
+        background-color: rgba(0,0,0,0.5); 
+ 
+         @include media-query($on-laptop) {
+            font-size: 350%;
+        }   
+ 
+        @include media-query($on-palm) {
+            font-size: 250%;
+        }
+               
     }
 
 }
-

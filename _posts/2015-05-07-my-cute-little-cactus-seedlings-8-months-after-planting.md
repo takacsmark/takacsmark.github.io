@@ -17,8 +17,11 @@ Maybe I was just lucky, anyway I tend to believe that you can learn anything  on
 I guess people have different reasons for growing cactus from seeds. Mine was a little desperate when I first started out.
 
 I have a cactus that got injured when it was young, you can tell by the large brown spot on its body. I love this cactus a lot, because it is one of my first ones and it brings white flowers and little red fruits every year.
+
+
 ![Damaged cactus]({{ site.url }}/assets/images/damaged-cactus.jpg)
 ![Junior cactus]({{ site.url }}/assets/images/junior-cactus.jpg) 
+
  							 						
 So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](http://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf).
 

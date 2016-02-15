@@ -1,38 +1,73 @@
 <footer class="site-footer">
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        {% if site.linkedin_username %}
+            <li>
+                {% include icon-linkedin.html username=site.linkedin_username %}
+            </li>
+            {% endif %}
+            {% if site.instagram_username %}
+            <li>
+                {% include icon-instagram.html username=site.instagram_username %}
+            </li>
+            {% endif %}    
+            {% if site.googleplus_username %}
+            <li>
+                {% include icon-googleplus.html username=site.googleplus_username %}
+            </li>
+            {% endif %}
+            <li>
+                {% include icon-rss.html %}
+            </li>
+            {% if site.email %}
+            <li>
+                {% include icon-email.html username=site.email %}
+            </li>
+            {% endif %}    
         </ul>
       </div>
-
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+            </li>
+                {% if site.facebook_page %}
+                    <li>
+                        {% include icon-facebook.html username=site.facebook_page %}
+                    </li>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <li>
+                        {% include icon-twitter.html username=site.twitter_username %}                 
+                {% endif %}
+                {% if site.youtube_channel %}
+                <li>
+                    {% include icon-youtube.html username=site.youtube_channel %}
+                </li>
+                {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
+                {% if site.github_username %}
+                <li>
+                    {% include icon-github.html username=site.github_username %}
+                </li>
+                {% endif %}
+                {% if site.stackoverflow_username %}
+                <li>
+                    {% include icon-stackoverflow.html username=site.stackoverflow_username %}
+                </li>
+                {% endif %}                  
         </ul>
       </div>
-
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
       </div>
     </div>
 
+    <p class="footer-copyright">&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - hosted on <a href="https://pages.github.com/" target="_blank">Github pages</a> - created with <a href="http://jekyllrb.com/">Jekyll</a>
+       
+    </p>
+    
   </div>
 
 </footer>

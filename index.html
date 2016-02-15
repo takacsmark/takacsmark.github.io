@@ -5,9 +5,9 @@ layout: default
 
     <!--<h1 class="page-heading">Posts</h1>-->
 
-    <ul class="post-list">
+    <ul class="post-list grid">
         {% for post in site.posts %}
-        <li>      
+        <li class="grid-item">      
             <h2>            
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                     <div class="post-thumb">                       
@@ -27,7 +27,4 @@ layout: default
         </li>
         {% endfor %}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
