@@ -4,11 +4,30 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-        {% if site.linkedin_username %}
+            {% if site.linkedin_username %}
             <li>
                 {% include icon-linkedin.html username=site.linkedin_username %}
             </li>
+            {% endif %}            
+            {% if site.facebook_page %}
+            <li>
+                {% include icon-facebook.html username=site.facebook_page %}
+            </li>
             {% endif %}
+            {% if site.twitter_username %}
+            <li>
+                {% include icon-twitter.html username=site.twitter_username %}                 
+            {% endif %}
+            {% if site.youtube_channel %}
+            <li>
+                {% include icon-youtube.html username=site.youtube_channel %}
+            </li>
+            {% endif %}
+            {% if site.github_username %}
+            <li>
+                {% include icon-github.html username=site.github_username %}
+            </li>
+            {% endif %}                  
             {% if site.instagram_username %}
             <li>
                 {% include icon-instagram.html username=site.instagram_username %}
@@ -30,37 +49,15 @@
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-            </li>
-                {% if site.facebook_page %}
-                    <li>
-                        {% include icon-facebook.html username=site.facebook_page %}
-                    </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
-                    <li>
-                        {% include icon-twitter.html username=site.twitter_username %}                 
-                {% endif %}
-                {% if site.youtube_channel %}
-                <li>
-                    {% include icon-youtube.html username=site.youtube_channel %}
-                </li>
-                {% endif %}
 
-                {% if site.github_username %}
-                <li>
-                    {% include icon-github.html username=site.github_username %}
-                </li>
-                {% endif %}
-                {% if site.stackoverflow_username %}
-                <li>
-                    {% include icon-stackoverflow.html username=site.stackoverflow_username %}
-                </li>
-                {% endif %}                  
-        </ul>
+
+        <div class="fb-page" data-href="https://www.facebook.com/takacsmarkdotcom/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/takacsmarkdotcom/"><a href="https://www.facebook.com/takacsmarkdotcom/">takacsmark.com</a></blockquote></div></div>
+
       </div>
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+
+        <p>{{ site.description }}</p>          
+
       </div>
     </div>
 

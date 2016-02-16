@@ -133,18 +133,18 @@ html {
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(33.3332% - (#{$spacing-unit} / 2));
+    width:         calc(33.3332% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(33.3332% - (#{$spacing-unit} / 2));
+    width:         calc(33.3332% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(33.3332% - (#{$spacing-unit} / 2));
+    width:         calc(33.3332% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -274,7 +274,7 @@ html {
 
 .post-content {
     margin-bottom: $spacing-unit;
-
+    
     h2 {
         font-size: 32px;
 
@@ -316,4 +316,9 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding-left: 15px;    
+}
+
+
+.fb-share-button {
+    top: -6px;
 }
