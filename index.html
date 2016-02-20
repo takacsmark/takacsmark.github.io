@@ -12,7 +12,12 @@ layout: default
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                     <div class="post-thumb">                       
                         {% if post.thumbnail %}
-                            <img src="{{ site.url }}{{ post.thumbnail }}" />
+                            <picture>
+                                {% assign pl = post.thumbnail | size | minus: 4 %}
+                                <source srcset="{{ post.thumbnail | slice: 0, pl }}_300{{ post.thumbnail | slice: -4, 4 }}" media="(min-width: 960px)">
+                                <source srcset="{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" media="(max-width: 960px)">                                
+                                <img src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
+                            </picture>    
                         {% endif %}
                     </div>
                 </a>

@@ -3,7 +3,7 @@ layout: post
 title:  "A Suberp Free WordPress Theme Development Course On Youtube"
 description: "Learn basic WordPress theme development on YOUTUBE for FREE through well explained examples, and learn the basics of web development at the same time."
 date:   2015-10-12 11:53:00 +0100
-thumbnail: /assets/images/web-design-for-beginners-course.jpg
+thumbnail: /assets/images/post-thumbs/web-design-for-beginners-course.jpg
 videothumb: '<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5" frameborder="0" allowfullscreen></iframe>'
 categories: 'Online learning'
 ---
@@ -40,7 +40,7 @@ If you like the style and pace of the course and feel you'd like to learn more a
 I took Brad's Udemy course, too. I'm very thankful, because he helped me to clean the concepts around HTML grids and some practices in CSS and HTML. This course is payable, but there are often promotions, so it's worth to have a look.
 
 Another important resource that I used during my theme development is the below figure by Wordpress. It explains the Wordpress theme template hierarchy and it speeds up your design process a lot.
-[![wordpress theme template hierarchy]({{ site.url }}/assets/images/wordpress-template-hierarchy.png)](https://developer.wordpress.org/files/2014/10/template-hierarchy.png)
+[![wordpress theme template hierarchy]({{ site.url }}/assets/images/in-content/wordpress-template-hierarchy.png)](https://developer.wordpress.org/files/2014/10/template-hierarchy.png)
 
 ##Wrap-up
 

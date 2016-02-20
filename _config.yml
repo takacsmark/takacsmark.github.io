@@ -29,3 +29,8 @@ markdown: kramdown
 
 gems:
     - jekyll-sitemap
+
+sass:
+    style: compressed
+    
+exclude: [static, node_modules, .babelrc, .gulpfile.babel.js, package.json, docs]    

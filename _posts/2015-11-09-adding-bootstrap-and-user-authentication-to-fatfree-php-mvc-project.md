@@ -4,7 +4,7 @@ title:  "Adding Bootstrap and User Authentication to Fatfree PHP MVC Project"
 description: "This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP."
 date:   2015-11-09 14:58:00 +0100
 categories: tutorials
-thumbnail: /assets/images/Adding_Bootstrap_and_User_Authentication_to_Fatfree_PHP_MVC_Project.jpg
+thumbnail: /assets/images/post-thumbs/Adding_Bootstrap_and_User_Authentication_to_Fatfree_PHP_MVC_Project.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/2vNijEnRBfg" frameborder="0" allowfullscreen></iframe>'
 ---
 Welcome back fellow developers and beloved students! In this lesson I will share the logical first steps towards a usable web application based on Bootstrap and the Fat-Free PHP Framework.

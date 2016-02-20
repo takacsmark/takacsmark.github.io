@@ -3,7 +3,7 @@ layout: post
 title:  "Are online courses good enough to change careers?"
 description: "Shall I start learning on-line? Is it feasible to acquire the required knowledge in on-line courses? Can I change careers with the help of on-line courses?"
 date:   2015-08-21 18:29:00 +0100
-thumbnail: "/assets/images/change-careers-with-online-courses.jpg"
+thumbnail: "/assets/images/post-thumbs/change-careers-with-online-courses.jpg"
 categories: 'Online learning'
 ---
 This is the start of a new blog category on tmdc today. This is the first post in a section where I'll share my e-learning learnings on my journey towards becoming an on-line entrepreneur.

@@ -3,7 +3,7 @@ layout: post
 title:  "Startupper Curriculum - Starting Your On-Line Training Plan"
 description: "This the first step towards your startupper curriculum. These are the guiding principles we'll use to put together your on-line training plan."
 date:   2015-09-16 17:06:00 +0100
-thumbnail: "/assets/images/startupper-online-curriculum.jpg"
+thumbnail: "/assets/images/post-thumbs/startupper-online-curriculum.jpg"
 categories: 'Online learning'
 ---
 I promised in my previous post, ["Are online courses good enough to change careers?"](http://takacsmark.com/are-online-courses-good-enough-to-change-careers/), that I will start a series of posts and help you build your own online training curriculum. I decided to call this Startupper Curriculum.

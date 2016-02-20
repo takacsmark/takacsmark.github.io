@@ -4,7 +4,7 @@ title:  "Our 9+1 Problems During Our Windows 10 Free Upgrade"
 description: "I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations. I provide tips and solutions in this post."
 date:   2016-01-31 16:38:44 +0100
 categories: Hobby
-thumbnail: "/assets/images/window-10-install-post.png"
+thumbnail: "/assets/images/post-thumbs/window-10-install-post.png"
 ---
 **I created this post, because I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations.**
 
@@ -51,7 +51,7 @@ Let me show you the nature of the problem by quoting the official explanation:
 
 Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215).
 
-![Windows regisrty edit]({{ site.url }}/assets/images/ms-registry-edit.png)
+![Windows regisrty edit]({{ site.url }}/assets/images/in-content/ms-registry-edit.png)
 
 Finally I could log on after rebooting and face the real challenge.
 
@@ -193,7 +193,7 @@ I spent a few minutes looking for IE 11 download on the internet, but could not 
 
 I put the IE icon next to the Edge icon and pinned it to the system tray. These two look so ugly next to each other.
 
-![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/edge-ie-icons.png) 
+![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/in-content/edge-ie-icons.png) 
 
 [Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912)
 
@@ -211,4 +211,4 @@ I dumped my $70 sublime license for Code. Code is a fantastic product and I real
 
 I use it for programming tasks in my own venture and it does a fantastic job for node, Javascript, PHP, react and a lot of other stuff.
 
-![Arch Linux with Visual Studio Code]({{ site.url }}/assets/images/window-10-install-post.png)
+![Arch Linux with Visual Studio Code]({{ site.url }}/assets/images/in-content/window-10-install-post.png)

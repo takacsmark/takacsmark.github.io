@@ -7,8 +7,13 @@ layout: default
         <div class="post-thumb">                              
             {% if page.videothumb %}
                 <div class="video-thumb">{{ page.videothumb }}</div>          
-            {% elsif page.thumbnail %}
-                <img src="{{ site.url }}{{ page.thumbnail }}" />
+            {% elsif page.thumbnail %}            
+                <picture>
+                    {% assign pl = page.thumbnail | size | minus: 4 %}
+                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" media="(min-width: 600px)">
+                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_570{{ page.thumbnail | slice: -4, 4 }}" media="(max-width: 600px)">                                
+                    <img src="{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" alt="{{ page.title }}">
+                </picture>                         
             {% endif %}        
         </div>
         

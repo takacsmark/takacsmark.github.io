@@ -4,7 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial - 1 Basics"
 description: "First lecture of my video tutorial series on solving web programming challenges with Fat-Free. Lecture 1 covers installation, project setup and routing."
 date:   2015-08-12 16:06:00 +0100
 categories: tutorials
-thumbnail: /assets/images/Fat-Free_PHP_Framework_Tutorial_-_1_Basics_and_1__markgyorgyiimac_Mark-es-Gyorgyi____Documents_Development_Tutorials_fatfree_1_base__zsh_.jpg
+thumbnail: /assets/images/post-thumbs/Fat-Free_PHP_Framework_Tutorial_-_1_Basics_and_1__markgyorgyiimac_Mark-es-Gyorgyi____Documents_Development_Tutorials_fatfree_1_base__zsh_.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/R-ydcTTrR5s" frameborder="0" allowfullscreen></iframe>'
 ---
 I published the first 3 videos of the Fat-Free PHP Framework Tutorial a few weeks ago. Now that my vacation is over, it's time to add the related posts that will give you additional information about concepts covered in the video.

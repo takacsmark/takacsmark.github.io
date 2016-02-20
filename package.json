@@ -1,0 +1,35 @@
+{
+  "name": "takacsmark.github.io",
+  "version": "1.0.0",
+  "description": "takacsmark.com hosted on github pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takacsmark/takacsmark.github.io.git"
+  },
+  "keywords": [
+    "takacsmark.com",
+    "github",
+    "pages"
+  ],
+  "author": "Mark Takacs <mark@takacsmark.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takacsmark/takacsmark.github.io/issues"
+  },
+  "homepage": "https://github.com/takacsmark/takacsmark.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.7.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-tap": "^0.1.3",
+    "imagemin-pngquant": "^4.2.1"
+  }
+}

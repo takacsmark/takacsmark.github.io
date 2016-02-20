@@ -3,7 +3,7 @@ layout: post
 title:  "My experience using Wordpress for business"
 description: "The story of why I decided to use WordPress for business purposes. My approach to product selection, challenges and great discoveries along the way."
 date:   2015-03-09 07:48:00 +0100
-thumbnail: "/assets/images/wordpress-on-table.jpg"
+thumbnail: "/assets/images/post-thumbs/wordpress-on-table.jpg"
 categories: Wordpress, web economy
 ---
 I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](http://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
@@ -37,7 +37,7 @@ In order to be fair, I moved on to Joomla. Finding a theme for Joomla proved to 
 
 I made my decision anyway when I found out about the Skimlinks WordPress plugin.
 
-![]({{ site.url }}/assets/images/wordpress-logo-and-hand.jpg)
+![]({{ site.url }}/assets/images/in-content/wordpress-logo-and-hand.jpg)
 
 ##The WordPress theme
 

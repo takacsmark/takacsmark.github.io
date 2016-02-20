@@ -4,7 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial – 3 MVC Project Structure"
 description: "This the third video in our Fat-Free Tutorial series. The time has come, we will use what we learnt so far to create our first Fat-Free MVC project."
 date:   2015-09-15 16:11:31 +0100
 categories: tutorials
-thumbnail: /assets/images/Fat-Free-PHP-Tutorial-3.jpg
+thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/DQT5sDO1_Ck" frameborder="0" allowfullscreen></iframe>'
 ---
 The time has come, we will use what we learnt so far to create our first Fat-Free MVC project.  This is the third video in our Fat-Free PHP Framework Tutorial series. As usual, let me ask you to follow the video, because it contains all the steps and therefore it is the ultimate resource to teach you how to build the MVC project structure. This writeup summarizes the key takeaways and this is the place where I give you code snippets that you can copy and paste into your own projects, so that you don't need to type so much.
