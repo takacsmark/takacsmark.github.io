@@ -11,7 +11,7 @@ I have started using WordPress for business a little more than a year ago, when 
 **I found that using WordPress for business purposes is a great way to start my on-line journey. Here is the story.**
 
 
-##Platform choice
+## Platform choice
 
 Using WordPress for business came as the result of my business goals. This was my first attempt to start an on-line venture, so my priorities were a quick start, availability of related resources, like documentation and plugins and the ability to focus on more crucial stuff, like content creation, SEO skill building and our product portfolio.
 
@@ -39,7 +39,7 @@ I made my decision anyway when I found out about the Skimlinks WordPress plugin.
 
 ![]({{ site.url }}/assets/images/in-content/wordpress-logo-and-hand.jpg)
 
-##The WordPress theme
+## The WordPress theme
 
 I had to take care of some basic stuff to get started. I thought the first thing should be to find a good theme for my site. At that time I thought it should look good and support the brand image I have in mind. Today I am wise enough to know that brand image will grow and shape with time and there are many more important theme features than style.
 
@@ -68,7 +68,7 @@ Dream Theme provides something I call consultative support. If I ask a question 
 
 > When using WordPress for business, it is very important to find theme and plugin vendors with excellent, consultative support.
 
-##Plugins
+## Plugins
 
 There are several fundamental plugins a small WordPress based business needs. I guess I will create another post about my story behind Plugin selection. Here is the list of plugins that I use at the moment:
 
@@ -95,7 +95,7 @@ Most plugins are free and available on [Wordpress.org](https://wordpress.org/plu
 
 **I spent money only on the plugin that I believe is the key to my first steps on-line: SEO.**
 
-##Wordpress hosting
+## Wordpress hosting
 
 In the beginning my approach was to use whatever is available and upgrade as we grow. I have a shared hosting account with Webhostinghub valid until mid 2016, so I just created my site there.
 
@@ -109,7 +109,7 @@ I took a quick decision and made the upgrade to A2hosting with dedicated IP and 
 
 **A2 hosting is fully based on high-speed SSD storage and has excellent support with WordPress specialists.**
 
-##Is it a good idea to use WordPress for business?
+## Is it a good idea to use WordPress for business?
 
 As you see from my experience, I am happy with my decision. In my case, where I have a small, family business, WordPress gives me all the right basics so that I can focus on the real differentiators for my venture.
 

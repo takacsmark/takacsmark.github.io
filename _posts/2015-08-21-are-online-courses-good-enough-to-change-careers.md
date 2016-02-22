@@ -10,7 +10,7 @@ This is the start of a new blog category on tmdc today. This is the first post i
 
 **Shall I start learning on-line? Is it feasible at all to acquire the required knowledge in on-line courses? Can I change careers with the help of on-line courses? If questions like these keep you awake at night, read on.**
 
-##Are you looking for a change?
+## Are you looking for a change?
 
 Let's start at the beginning. I started online courses because I moved away from my corporate career and started my own on-line venture. It just came naturally to look for web knowledge on the web.
 
@@ -18,7 +18,7 @@ You may have different reasons. Some people just want to add new skills that the
 
 For whatever reason you are here, one thing is clear. Online education has definitely become a place to change careers. Many of us have started the transition years ago and now it's time to share the takeaways and see how well online courses are doing in the career game.
 
-##It DOES matter where you're coming from
+## It DOES matter where you're coming from
 
 If you have previous corporate experience or work experience, chances are high that you also took part in corporate training programs. If you have work experience you have an idea of different activities and departments of a company, and this may give you a good idea of the new skills you should be looking for.
 
@@ -30,7 +30,7 @@ I believe that the success of your online studies greatly depends on your abilit
 
 In order to give you a better understanding let's take my case.
 
-##Career change is more than just courses, it's a course journey
+## Career change is more than just courses, it's a course journey
 
 I used to work in a large corporation before I started my independent on-line journey. I had 15 years of professional experience in various fields and a masters degree in computer science from 1998. I worked in an executive role, I had solid knowledge of most corporate functions like, marketing, sales, finance, IT, fields service and so on.
 
@@ -54,7 +54,7 @@ If you are just starting out to chase your dreams as an employee, a university s
 
 I've seen success stories on the internet of people who made it. Fact is, that there are tens of thousands of people taking online courses every day. Will they all make it?
 
-##Why curriculum is important
+## Why curriculum is important
 
 I think if you are looking for the answer for the above questions, my key learning is this one.
 
@@ -78,7 +78,7 @@ Some courses give really low value. Most of the time I can tell by the ratings o
 
 Picking the wrong course or the right courses but at the wrong time may cost you a lot of great opportunities and you'll lose time and money. It may take months of trying before you realize that you picked the wrong SEO course, for example. This one was one of my biggest mistakes.
 
-##Working out your curriculum
+## Working out your curriculum
 
 If you're watching the news of the on-line learning arena, you see a good number of new players appearing on the market. There are websites like [lynda.com](http://lynda.com), [Treehouse](https://teamtreehouse.com/) and [Udemy](http://udemy.com), just to name a few, who offer short on-line courses for people who want to build new skills.
 
@@ -96,7 +96,7 @@ Are these good enough to change careers? Well, for a someone starting a business
 
 People who are looking for a career in those fields offered in the degree bundles, this is a very good option. Especially if there are such big names behind the courses like GitHub, At&t or Google.
 
-##What is the risk of a nano degree?
+## What is the risk of a nano degree?
 
 This is a good time to start a career in software development. There is a global shortage of developers. If you wanna get a job in a brick and mortar company, please note that the big names are still looking for people with higher education degrees from brick and mortar schools.
 
@@ -110,7 +110,7 @@ This may lead to an erosion of prices in your niche. Especially if that niche is
 
 And now you'll be left with the same question? What course to take next?
 
-##Wrap up
+## Wrap up
 
 Now that we analyzed the challenges of changing careers on-line, it's time for me to write what I have in mind. **I set out to create a series of blog posts and create a training plan for an on-line entrepreneur.**
 

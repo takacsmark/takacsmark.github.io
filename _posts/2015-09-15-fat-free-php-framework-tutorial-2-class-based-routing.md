@@ -13,7 +13,7 @@ This is the writeup of the second video in the Fat-Free PHP Framework Tutorial s
 
 Let's get started!
 
-##Global variables
+## Global variables
 
 I found that global variables in Fat-Free are very useful for certain purposes, like storing application config information, or passing variables from controller to views and other miscellaneous stuff. Let's learn  how we can set global variables. It's actually pretty simple.
 {% highlight php linenos=table %}
@@ -37,7 +37,7 @@ Look at lines 7 and 11 above. On line 7 we use f3's set method to create a new c
 
 I would also point out line 10, where we have to apply some change to make this work. We had to pass $f3 to the routing function.
 
-##Class based routing
+## Class based routing
 
 **This section is super important.** This is the point where you can move away from function based programming to classes. Without class based routing we would not be able to create the MVC project you will see in this tutorial. It is not complicated, but it's crucial that you follow along now (and watch the video, of course).
 
@@ -170,6 +170,6 @@ Now our Main class extends AppController which means that AppController is Main'
 
 I added another class called AboutController, this will render our imaginary about us page. I changed it's name from AboutPage in the video to AboutController, because this is what it is. It's gonna be an MVC controller pretty soon in a future lesson.
 
-##Wrap-up
+## Wrap-up
 
 Thanks for following the steps in the tutorial. Now we are ready to give structure to our Fat-Free based MVC project. We will do it in the next lesson.

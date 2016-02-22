@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-##The blog
+## The blog
 
 This is the second time that I am starting this blog. I launched the original version when my career took a new turn and I moved to India for a short assignment.
 
@@ -12,7 +12,7 @@ Then my life took some more turns and I was busy re-building everything around m
 
 I am sitting here today thinking that I wanna write about practical things of life, no big philosophy. Things like, how I grow cactus from seeds, what are the best on-line courses I attended or which tools I found useful building my on-line business.
 
-##Bio
+## Bio
 
 Mark is a guy turning 40 these days.  He is happily married and he is fond of computers.
 
@@ -28,7 +28,7 @@ Mark and his wife live and work in Budapest, Hungary.
 
 The IT related articles on the blog come from this family project experience and some hobby projects.
 
-##Contact
+## Contact
 
 <ul class="social-media-list">
     {% if site.linkedin_username %}

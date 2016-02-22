@@ -27,7 +27,7 @@ If you are not working with Fat-Free, but you are interested in the basics of th
 
 Please make sure to follow the video, that is the only way to follow step by step. The description in the post contains some explanation and reference links, but it's definitely not a step-by-step description.
 
-##Bootstrap
+## Bootstrap
 
 [Bootstrap](http://getbootstrap.com) is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
 
@@ -57,7 +57,7 @@ In order to add Bootstrap javascript copy and paste the below code right before 
 
 The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](http://getbootstrap.com/getting-started/)
 
-##Authentication
+## Authentication
 
 One reason why we added Bootstrap in this lesson, is to lay out the sign-in page of our sample website.
 
@@ -81,7 +81,7 @@ This looks like a lot of work, but it's just a series of small tasks. Nonetheles
 
 Let's take these one by one!
 
-##1 Create the User table
+## 1 Create the User table
 
 Use your favorite database management tool to create a new table called User in the database. (Please have a look at previous lessons to see what database we're using).
 
@@ -101,7 +101,7 @@ Comparison between the stored password and the password entered by the user work
 
 Let's see how to create an encrypted password.
 
-##2 Create a new user in the database
+## 2 Create a new user in the database
 
 Let's create a user in the database with the name f3user, and let's create the encrypted password as follows:
 
@@ -116,7 +116,7 @@ PASSWORD_DEFAULT is the default hashing algorithm used by PHP, it changes over t
 
 Please copy and paste the hashed password, i.e. the long, messy looking string returned by PHP, into the password field of the database and save your user.
 
-##3 Create the user model object
+## 3 Create the user model object
 
 Let's create a new file called User.php under our app/models/ directory with the familiar model class implementation.
 {% highlight php linenos=table %}
@@ -162,7 +162,7 @@ class User extends DB\SQL\Mapper{
 
 We discussed the above code in details in previous lessons, please have a look at those if you need clarification.
 
-##4 Create the User Controller in PHP
+## 4 Create the User Controller in PHP
 
 Add a new file under the app/controllers/ folder, called UserController.php with the following contents:
 {% highlight php linenos=table %}
@@ -212,7 +212,7 @@ If the user exists, we verify the password with PHP's password_verify function. 
 
 If the password does not match, we redirect the user to the login page.
 
-##5 Login html based on Bootstrap
+## 5 Login html based on Bootstrap
 
 Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm.  The contents should be like this:
 
@@ -257,7 +257,7 @@ Copy and paste the code of the login page from the Bootstrap example to a new fi
 
 Note that we included a dedicated signin.css, see the next point for details.
 
-##6 Add signin.css stylesheet from the Bootstrap sign-in example
+## 6 Add signin.css stylesheet from the Bootstrap sign-in example
 
 Copy the contents of the signin.css from the Bootstrap example using developer tools as seen in the video. Copy the code into a new file under app/css/signin.css. Please see the contents of the file below for reference:
 
@@ -265,7 +265,7 @@ Copy the contents of the signin.css from the Bootstrap example using developer t
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background-color: # eee;
 }
 
 .form-signin {
@@ -304,7 +304,7 @@ body {
 }
 {% endhighlight %}
 
-##7 New routes for login and authentication
+## 7 New routes for login and authentication
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
@@ -318,7 +318,7 @@ GET /login=UserController->render
 POST /authenticate=UserController->authenticate
 {% endhighlight %}
 
-##8 Turn on CACHE in config.ini to enable cache based sessions
+## 8 Turn on CACHE in config.ini to enable cache based sessions
 
 Use the Fat-Free cache setting on line 6 to turn on caching. We need this feature because we will store session information in a file based cache. You can, of course store session info in a database, but that's your homework to implement.
 
@@ -355,7 +355,7 @@ new Session();
 $f3->run();
 {% endhighlight %}
 
-##10 Add security restrictions to the application's parent controller
+## 10 Add security restrictions to the application's parent controller
 
 To close the loop, we need to make sure that users without an active session cannot access restricted routes. In order to achieve this we add some logic to the beforeroute method of the parent controller in Controller.php.
 
@@ -398,7 +398,7 @@ class Controller {
 
 Please note that we have overridden the beforeroute method in UserController.php, so login features are available for users without an active session.
 
-##Wrap-up
+## Wrap-up
 
 In this lesson we started adding functional elements to our Fat-Free MVC sample project.
 

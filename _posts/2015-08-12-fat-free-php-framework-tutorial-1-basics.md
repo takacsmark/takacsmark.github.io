@@ -11,7 +11,7 @@ I published the first 3 videos of the Fat-Free PHP Framework Tutorial a few week
 
 This description is not the writeup of everything I said in the tutorial video. On the contrary, this post is meant to enrich your video experience with information that I cannot give you verbally. So please do watch the video and use this article as a summary of key concepts and the source of relevant links and code.
 
-##So why learn the Fat-Free PHP Framework in the first place?
+## So why learn the Fat-Free PHP Framework in the first place?
 
 I use Fat-Free to support my online venture called Vanitysocks. The site is a guide to men's socks from all over the internet. The idea is to describe and present thousands of quality socks in one place. This segment has been booming in the last years and today there are more men's socks brands than one would think. As a socks lover I decided to understand the world of modern socks and share my learnings with people online.
 
@@ -25,7 +25,7 @@ I started the work in node.js, but moved away from it quickly. The learning curv
 
 I googled the issue and found Fat-Free. The best thing it gave me on top of the above requirements is that it works so well together with 3rd party libraries when used with Composer. It gives me the basics and just the basics, so I can focus on my own desired functionality my own way.
 
-##What to expect from the tutorials?
+## What to expect from the tutorials?
 
 It's not a beginner's tutorial in the sense that I assume you already have some knowledge of PHP, HTML, Javascript and CSS, so I won't describe these concepts in detail. We will work on a higher level and I will explain how to solve typical web programming challenges with Fat-Free. In the first 3 tutorials we cover these topics:
 
@@ -35,7 +35,7 @@ It's not a beginner's tutorial in the sense that I assume you already have some 
 
 In later tutorials we'll move on to create a complex project with extensive use of 3rd party libraries, Bootstrap, we will add our own library, add session management, cookies, call APIs, add web scraping and DOM processing.
 
-##Where to start?
+## Where to start?
 
 In order to use the Fat-Free Framework, you need to install it into your project. I prefer to use the Composer package management solution, so this is what we use for the tutorials. [You can find installation instructions using this link.](https://getcomposer.org/doc/00-intro.md)
 
@@ -70,7 +70,7 @@ In order to make this effective, please issue the following command from under y
 
 After you've done this step a new folder called vendor should appear under your project folder. The vendor folder contains the third party libraries installed by composer. Now the fun begins.
 
-##Running f3 for the first time
+## Running f3 for the first time
 
 This is the part of the video where I explain why I do the things I do, where I get the information from and where you can find support online.
 
@@ -111,7 +111,7 @@ In order to achieve this you need to run a web server on your machine or in the 
 
 If you use a different web server you'll be required to activate an URL rewriting mechanism. [You can find detailed instructions for Apache, Nginx, Lighttpd and IIS on the Fat-Free routing page.](http://fatfreeframework.com/routing-engine)
 
-##Wrap-up
+## Wrap-up
 
 This first part gives you the details to get started. We will explore advanced topics in the next videos.
 

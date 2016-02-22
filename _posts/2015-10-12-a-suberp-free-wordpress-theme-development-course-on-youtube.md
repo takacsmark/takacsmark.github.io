@@ -13,7 +13,7 @@ This course is ideal for beginners and experienced programmers, who are new to W
 
 With the help of this course I was able to create the Wordpress theme of this website (the one you are reading now) in one afternoon.
 
-##Learning experience
+## Learning experience
 
 We may have different reasons to start learning Wordpress theme development. When I started out with my online ventures I thought I'll focus on the core functionality building my back-end, and use a more-or-less out of the box Wordpress site with a commercial theme as my customer front-end.
 
@@ -25,7 +25,7 @@ Good news is that there is a way to do everything, and there are only a few ways
 
 The second point is really important because it can really blow up your learning curve if there are too many choices to choose from and you'll have to do a lot of research to understand which way is the best for your situation. It is of-course often worth the effort to learn such things, but Wordpress theme development does not fall into this category. At least not in my case.
 
-##Way to success
+## Way to success
 
 I think the course is very helpful for beginners and experienced programmers, too. Beginners will see every step on the screen so you can literally copy and mimic the same code at home. Most things are explained, the course does not make assumptions regarding your previous knowledge that would keep you away from success.
 
@@ -42,7 +42,7 @@ I took Brad's Udemy course, too. I'm very thankful, because he helped me to clea
 Another important resource that I used during my theme development is the below figure by Wordpress. It explains the Wordpress theme template hierarchy and it speeds up your design process a lot.
 [![wordpress theme template hierarchy]({{ site.url }}/assets/images/in-content/wordpress-template-hierarchy.png)](https://developer.wordpress.org/files/2014/10/template-hierarchy.png)
 
-##Wrap-up
+## Wrap-up
 
 This course is a great free way to learn Wordpress theme development. If you wanna stay on the right track, the attached Udemy HTML and CSS course is well worth its price.
 

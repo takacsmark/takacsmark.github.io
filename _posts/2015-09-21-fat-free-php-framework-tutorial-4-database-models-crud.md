@@ -13,7 +13,7 @@ It's time we add 'M' to MVC and complete the core of our Fat-Free MVC sample pro
 
 After this lesson you'll be able to build the cool functionality you have in mind on top of your own Fat-Free kick-start project. Let's see how to do it!
 
-##Creating a database
+## Creating a database
 
 I assume that people who are learning f3 are skilled enough to set up a database locally. Anyway, there's no point in doing a poor job in a tutorial (or anywhere at all), so I'll drive you through the steps.
 
@@ -35,7 +35,7 @@ Create a new database, i.e. a new database schema as shown in the screenshot.
 
 Let's add a new admin user to the new database, please look at the video to see how to do this.
 
-##Prepare test data
+## Prepare test data
 
 Click the db schema indicator in the left pane and right click Tables. Let's create a new table with the create table menu. (see video for details). Let's just create a table called 'messages', where we store messages we want to display on our website.
 
@@ -45,9 +45,9 @@ Next, we add a new record to this table. You can do this from the Query window i
 
 ![MySQLWorkbench edit table data]({{ site.url }}/assets/images/in-content/MySQL_Workbench-edit-table-data.jpg)
 
-##Connecting Fat-Free to the database
+## Connecting Fat-Free to the database
 
-###config.ini
+### config.ini
 
 First, let's add the database to the config.ini file, the full contents of the file should look like this:
 {% highlight php linenos=table %}
@@ -63,7 +63,7 @@ devdbpassword = "sbf3MVC"
 {% endhighlight %}
 Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](http://fatfreeframework.com/databases)
 
-###controller.php
+### controller.php
 
 In the next step, we move on to our controller parent class and add the database connection to the constructor. This way, every controller in our application will have access to the same database connection without any further coding.
 
@@ -107,7 +107,7 @@ Additionally our parent controller will have now a $db variable that we use in a
 
 See how we use the global variables from config.ini to establish the connection. I think it's a good idea to visit our site at this stage and see what it does. The expected result is that it will display the same message that we had at the end of the last lecture.
 
-##Creating the model
+## Creating the model
 
 Let's create the 'models' folder under our project's app folder and let's create a new empty file under models, called Messages.php. This is our first model in our MVC.
 
@@ -131,7 +131,7 @@ Our model class extends DB\SQL\Mapper. On line 6 we specify the name of the db t
 
 Right now we have only one function that will read all messages. $this simply refers to the PHP object that is the mapping of our database table to PHP.
 
-###Including models
+### Including models
 
 Now we need to make sure that f3 will include our model classes. We do this in the config.ini file, by adding the models folder to the AUTOLOAD global variable. Remember from previous lectures how we separate folders with the pipe (`|`) symbol.
 {% highlight php linenos=table %}
@@ -146,9 +146,9 @@ devdbusername = "f3admin"
 devdbpassword = "f3admin"
 {% endhighlight %}
 
-##Displaying test data from the db
+## Displaying test data from the db
 
-###MainController.php
+### MainController.php
 
 Let's go to our MainController.php now and change the render function.
 {% highlight php linenos=table %}
@@ -177,7 +177,7 @@ Next we take the first record from the result set (number [0], of course) and pa
 
 We pass the entire object to the template and take care of the individual fields there. We do this because most of the time this is the way we use it with more complex data.
 
-###template.htm
+### template.htm
 
 There is one thing left to do now. We have to change our message in the template on line 7. f3 lets us use the handy dot notation to access object properties.
 {% highlight html linenos=table %}
@@ -194,11 +194,11 @@ There is one thing left to do now. We have to change our message in the template
 {% endhighlight %}
 If all goes well you should see the new Hello World message coming from the database. :)
 
-##CRUD
+## CRUD
 
 This tutorial would not be complete without a comprehensive CRUD example. I usually use two alternative methods to handle CRUD.
 
-###Method 1. Model functions
+### Method 1. Model functions
 
 Let's update our Messages.php model file with the below functions:
 {% highlight php linenos=table %}
@@ -248,7 +248,7 @@ These functions to the following:
 
 Remember, you can use the 'POST' array and also other arrays in the copyFrom function. But what if, you don't wanna copy an entire array? You can set object attributes.
 
-###Method 2. Setting object attributes
+### Method 2. Setting object attributes
 
 Let's add some code to our MainController and create a new message in the database and display it on our screen.
 {% highlight php linenos=table %}
@@ -284,7 +284,7 @@ I use a mixture of the above two methods, depending which one is more convenient
 
 Regular object manipulation, on the other hand is completely feasible with standard mapper functions immediately in the controller.
 
-##Wrap-up
+## Wrap-up
 
 Now we have covered the MVC basics in the Fat-Free PHP Framework. I hope you found it helpful and you'll find a good use for the structure presented in this tutorial.
 

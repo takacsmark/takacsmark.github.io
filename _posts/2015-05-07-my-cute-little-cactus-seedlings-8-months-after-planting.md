@@ -12,7 +12,7 @@ Maybe I was just lucky, anyway I tend to believe that you can learn anything  on
 
 "Cactusmain" (the author) explained everything I needed to know about cactus seedlings in a 12 minute video. Don't worry the video is embedded down here. This knowledge helped me survive the first couple of months and brought me here. I had some difficulties on the way, that I managed to solve alone.
 
-##How I began?
+## How I began?
 
 I guess people have different reasons for growing cactus from seeds. Mine was a little desperate when I first started out.
 
@@ -33,7 +33,7 @@ So I harvested the fruits and extracted the seeds with a swiss knife. I ate the 
 
  <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/4m7JMH6uzyg" frameborder="0" allowfullscreen></iframe></div>
  
-##Seed planting considerations
+## Seed planting considerations
 
 I planted my seeds into the little pots you see on the pictures, these are about 6 cm wide (little more than 2 inches) and I put a good number of seeds in there, like 6 or more. I wanted to make sure I have some contingency, I expected that some seeds will not germinate.
 
@@ -49,7 +49,7 @@ At the same time I started an A B testing sort of thing and put a few seeds that
 
 My wife was so nice to give me one of her very valuable plastic boxes that are part of the family treasury and travel all the time bringing the joy of cookies and cakes to some more distant relatives. This specific box was exposed to the plague of fish smell and could not be used for sweet delights any more.
 
-##So now the plastic box vs. the Petri dish
+## So now the plastic box vs. the Petri dish
 
 ![Cactus greenhouse in plastic box]({{ site.url }}/assets/images/in-content/cactus-greenhouse-plastic-box.jpg) 
 ![Petri dish]({{ site.url }}/assets/images/in-content/petri-dish.jpg)  					 
@@ -57,7 +57,7 @@ I poured water into the plastic box so that it covered the entire surface and re
 
 This happened sometime in November. My cactus seeds had a long way to go, but I was relaxed to see the moisture on the walls of the box all the time. Same with the Petri dish, so I left things alone and waited.
 
-##The first glimpse of my cactus seedlings
+## The first glimpse of my cactus seedlings
 
 It happened unexpectedly on a February morning. I started growing some early plants for our balcony, and I saw the first sunflowers emerging from my little tabletop lighthouse.
 
@@ -69,7 +69,7 @@ The miracle has happened and I knew I have come to the point that was not covere
 
 What happened to the Petri dish, you may ask? Meanwhile I gave up on that experiment and dumped the whole thing.
 
-##Where to go from here?
+## Where to go from here?
 
 First I kept on with the same daily routine as before. The cactus seedlings were growing and looked a healthy green. I had no idea when to bring them to the real world, all I knew I had to do it gradually.
 
