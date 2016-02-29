@@ -112,7 +112,7 @@ a {
  */
 blockquote {
     color: $grey-color;
-    font-size: 150%;
+    font-size: 130%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 25px !important;
@@ -121,7 +121,8 @@ blockquote {
     padding-left: $spacing-unit / 2;
     // font-size: 18px;
     letter-spacing: -1px;
-    font-style: italic;
+    // font-style: italic;
+    font-weight: 200;
 
     > :last-child {
         margin-bottom: 0;

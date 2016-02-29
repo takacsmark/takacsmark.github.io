@@ -200,11 +200,17 @@ html {
 
 .post-link {
     display: block;
-    font-size: 24px;
+    margin-top: 10px;
+    line-height: 1.3em;
+    font-size: 90%;
     
     &:hover,
     &:visited:hover{
         text-decoration: none;
+    }
+    
+    .post-meta {
+        margin-top: 10px;
     }
 }
 /* tmdc customizations */
@@ -321,4 +327,18 @@ html {
 
 .fb-share-button {
     top: -6px;
+}
+
+#markdown-toc::before {
+    content: "Table of contents";
+    padding-bottom: 5px;
+    font-size: 120%;
+    display: inline-block;
+    margin-left: -20px;
+}
+
+#markdown-toc {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 95%;
 }

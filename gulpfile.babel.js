@@ -65,6 +65,7 @@ gulp.task('img:generatesizes:featured', () => {
     }
 })
 
+/** Only used for initial migration */
 gulp.task('img:copy', () => {
     gulp.src('static/images/**')
         .pipe(gulp.dest('assets/images/'));    
