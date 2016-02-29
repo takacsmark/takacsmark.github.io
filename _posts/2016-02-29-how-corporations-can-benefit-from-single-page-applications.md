@@ -125,7 +125,7 @@ You can use your Angular and React components to build Electron applications. El
 
 I'm doing my best to keep my environment stable, still I'm using packages with React that publish new releases every other day on GitHub. Following up with changes is a continuous effort and requires attention.
 
-> The trick is probably the open-source nature of Angular and React. They are not created for users to be used as-is. They are co-created with users. This may be a big step for traditional corporations. Instead of expecting a mature product, you assign people to extend a great open source product to suit your needs. 
+> The trick is probably the open-source nature of Angular and React. They are not created for users to be used as-is. They are co-created with users. This may be a big step for traditional corporations. Instead of expecting a mature product, you assign people to extend a great open source product to suit your needs ... and you open-source the stuff you added. 
 
 ## How can I get started? 
 
