@@ -23,7 +23,7 @@ html {
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-          
+
     &,
     &:visited {
         color: $grey-color-dark;
@@ -203,12 +203,12 @@ html {
     margin-top: 10px;
     line-height: 1.3em;
     font-size: 90%;
-    
+
     &:hover,
     &:visited:hover{
         text-decoration: none;
     }
-    
+
     .post-meta {
         margin-top: 10px;
     }
@@ -217,9 +217,9 @@ html {
 .home .post-thumb {
     display: block;
     // float: left;
-    
+
     img {
-        margin-bottom: 0;	        
+        margin-bottom: 0;
     }
 }
 .home .post-teaser {
@@ -229,31 +229,31 @@ html {
     padding-right: 15px;
     box-sizing: border-box;
     background-color: white;
-    padding-bottom: $spacing-unit / 2;       
-    padding-bottom: $spacing-unit / 2;   
+    padding-bottom: $spacing-unit / 2;
+    padding-bottom: $spacing-unit / 2;
     @include box-shadow-left-bottom;
 }
 .home ul li {
-    border: 2px solid $background-color;    
+    border: 2px solid $background-color;
     padding-top: $spacing-unit / 2;
-    padding-bottom: $spacing-unit / 2;   
+    padding-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
-    padding-right: $spacing-unit / 2;	        
-    
+    padding-right: $spacing-unit / 2;
+
     display: block;
     box-sizing: border-box;
     width: 33.3332%;
-    float: left;  
+    float: left;
 
     @include media-query($on-laptop) {
         width: 50%;
-    }  
+    }
 
     @include media-query($on-palm) {
         width: 100%;
-        float: none;       
-    }   
-    
+        float: none;
+    }
+
     &:hover {
         background-color: #eee;
     }
@@ -262,7 +262,7 @@ html {
  * Posts
  */
 .post-thumb img {
-    margin-bottom: $spacing-unit / 2;	        
+    margin-bottom: $spacing-unit / 2;
 }
 .post-header {
     // margin-bottom: $spacing-unit;
@@ -280,7 +280,7 @@ html {
 
 .post-content {
     margin-bottom: $spacing-unit;
-    
+
     h2 {
         font-size: 32px;
 
@@ -311,7 +311,7 @@ html {
     border-radius: 2%;
     display: block;
     float: left;
-    margin-bottom: $spacing-unit / 2;    
+    margin-bottom: $spacing-unit / 2;
 }
 .post-title-container {
     @extend %clearfix;
@@ -321,7 +321,7 @@ html {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    padding-left: 15px;    
+    padding-left: 15px;
 }
 
 
