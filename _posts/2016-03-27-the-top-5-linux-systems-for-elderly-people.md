@@ -224,7 +224,7 @@ I think Ubuntu would be a great option for easy going, flexible seniors.
 ![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png)
 
 
-Lubuntu is a lightweight port of Ubuntu. It's main purpose is to run on less powerful hardware and provide more simplicity than its big brother.
+Lubuntu is a lightweight port of Ubuntu. Its main purpose is to run on less powerful hardware and it provides more simplicity than its big brother.
 It comes with a simple set of software products installed in the base package.
 It comes with the LXDE desktop, that we have seen also in the Debian chapter above.
 
