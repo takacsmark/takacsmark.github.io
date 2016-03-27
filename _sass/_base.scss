@@ -33,7 +33,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
-%vertical-rhythm, 
+%vertical-rhythm,
 article .post-thumb  {
     margin-bottom: $spacing-unit / 2;
 }
@@ -188,7 +188,7 @@ pre .code {
 .article-wrapper {
     @extend .wrapper;
     max-width: -webkit-calc(#{$article-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$article-width} - (#{$spacing-unit} * 2));    
+    max-width:         calc(#{$article-width} - (#{$spacing-unit} * 2));
 }
 
 
@@ -253,8 +253,8 @@ pre .code {
  .hidden {
      display: none;
  }
- 
- 
+
+
 // img:not(:only-of-type) {
 //     width: 45%;
 // }
@@ -274,7 +274,7 @@ article img {
 @for $i from 1 through 4 {
     article img:first-child:nth-last-child(#{$i}),
     article img:first-child:nth-last-child(#{$i}) ~ img {
-        width: #{100% / $i} 
-    } 
+        width: #{100% / $i}
+    }
 
 } 

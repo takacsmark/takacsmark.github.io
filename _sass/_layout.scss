@@ -283,6 +283,7 @@ html {
 
     h2 {
         font-size: 32px;
+        margin-top: 32px;
 
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -291,6 +292,7 @@ html {
 
     h3 {
         font-size: 26px;
+        margin-top: 16px;
 
         @include media-query($on-laptop) {
             font-size: 22px;
@@ -299,6 +301,7 @@ html {
 
     h4 {
         font-size: 20px;
+        margin-top: 16px;
 
         @include media-query($on-laptop) {
             font-size: 18px;
@@ -341,4 +344,16 @@ html {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 95%;
+}
+
+article table, article thead {
+    background-color: #eee;
+}
+article td {
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+}
+
+article img {
+    margin-bottom: 16px;
 }
