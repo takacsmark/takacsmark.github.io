@@ -173,26 +173,26 @@ This is the classic version of Gnome. It does not have the Launchpad, it has a t
 
 The menu is located on the top of the screen, it requires configuration to move to the bottom, if needed.
 
-#### Debian with Gnome KDE
+#### Debian with KDE
 
 ![Debian 8 with KDE desktop](/assets/images/in-content/Debian8-KDE.png)
 
 KDE is more XP like than Gnome. The "start" menu may be a bit confusing though, because it's not a laid out tree, so it's hard to follow where we are.
 The file manager is different here, it does not have the media folder shortcuts.
 
-#### Debian with Gnome Mate
+#### Debian with Mate
 
 ![Debian 8 with Mate](/assets/images/in-content/Debian8-Mate.png)
 
 Mate is clean and simple, it's at level with Gnome classic. The file manager also has the media folder shortcuts. Seems to be a great option.
 
-#### Debian with Gnome Xfce
+#### Debian with Xfce
 
 ![Debian8 with Xfce desktop](/assets/images/in-content/Debian8-default-Xfce-desktop.png)
 
 Xfce is a simple, light desktop. The menu is logical, the bottom dock is great for tech savvy users, but may be confusing for the elderly. Also the file manager window lacks the media folders. It requires some configuration to add them.
 
-#### Debian with Gnome LXDE
+#### Debian with LXDE
 
 ![Debian8 with LXDE](/assets/images/in-content/Debian8-LXDE.png)
 
