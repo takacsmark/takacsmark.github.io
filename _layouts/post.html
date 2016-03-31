@@ -4,29 +4,29 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-        <div class="post-thumb">                              
+        <div class="post-thumb">
             {% if page.videothumb %}
-                <div class="video-thumb">{{ page.videothumb }}</div>          
-            {% elsif page.thumbnail %}            
+                <div class="video-thumb">{{ page.videothumb }}</div>
+            {% elsif page.thumbnail %}
                 <picture>
                     {% assign pl = page.thumbnail | size | minus: 4 %}
                     <source srcset="{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" media="(min-width: 600px)">
-                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_570{{ page.thumbnail | slice: -4, 4 }}" media="(max-width: 600px)">                                
+                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_570{{ page.thumbnail | slice: -4, 4 }}" media="(max-width: 600px)">
                     <img src="{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" alt="{{ page.title }}">
-                </picture>                         
-            {% endif %}        
+                </picture>
+            {% endif %}
         </div>
-        
+        <meta itemprop="image" content="{{ site.url }}{{ page.thumbnail}}">
         
         <img class="post-author-img" src="{{ site.url }}/assets/images/Mark.jpg" />
 
         <div class="post-title-container">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>        
-            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>            
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
         </div>
-        
+
     </header>
-    
+
 
     <div class="article-wrapper post-content" itemprop="articleBody">
         {% include social-share.html %}
