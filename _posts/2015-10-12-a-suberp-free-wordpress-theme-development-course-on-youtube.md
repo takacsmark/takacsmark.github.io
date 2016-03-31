@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Suberp Free WordPress Theme Development Course On Youtube"
+title:  "A Superb Free WordPress Theme Development Course On Youtube"
 description: "Learn basic WordPress theme development on YOUTUBE for FREE through well explained examples, and learn the basics of web development at the same time."
 date:   2015-10-12 11:53:00 +0100
 thumbnail: /assets/images/post-thumbs/web-design-for-beginners-course.jpg
@@ -33,7 +33,7 @@ If you are an experienced programmer, but new to Wordpress, I think this is the 
 
 If you like the style and pace of the course and feel you'd like to learn more about HTML and CSS you can take [this Udemy course by the same person.](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
 
-[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/web-design-for-beginners-course.jpg)](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
+[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/post-thumbs/web-design-for-beginners-course.jpg)](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
 
 [Web Design for Beginners: Real World Coding in HTML & CSS by Brad Schiff](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
 
