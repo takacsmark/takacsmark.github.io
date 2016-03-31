@@ -10,6 +10,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% assign pl = page.thumbnail | size | minus: 4 %}
     <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}" />
     <meta property="og:image:url" content="{% if page.thumbnail %}{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}" />
     <meta property="og:image:type" content="image/jpeg" />
