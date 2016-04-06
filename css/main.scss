@@ -1,14 +1,14 @@
 ---
 # Main sass file of takacsmark.com
 ---
-@import "../assets/foundation-sites/scss/foundation";
+@import "foundation-sites/scss/foundation";
 @import "syntax-highlighting";
 $topbar-background: $white;
 $topbar-submenu-background: $topbar-background;
 
 // @include top-bar-container;
 
-$font-path: "../assets/foundation-icons/foundation-icons";
+$font-path: "foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
   src: url("#{$font-path}.eot");
@@ -20,7 +20,7 @@ $font-path: "../assets/foundation-icons/foundation-icons";
   font-style: normal;
 }
 
-@import "../assets/foundation-icons/foundation-icons.css";
+@import "foundation-icons/foundation-icons.css";
 
 
 @include foundation-everything;
