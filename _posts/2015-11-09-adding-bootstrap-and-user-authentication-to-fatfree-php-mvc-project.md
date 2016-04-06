@@ -43,13 +43,13 @@ Other frameworks have similar features, but Bootstrap has all of these in one pl
 
 Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js file to be added to your site. If you don't need the features supported by Javascript, you may even skip Javascript and add it later.
 
-In order to add the css, just copy the below line into the `&lt;head&gt;` section of your html file.
+In order to add the css, just copy the below line into the `<head>` section of your html file.
 
 {% highlight html linenos=table %}
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 {% endhighlight %}
 
-In order to add Bootstrap javascript copy and paste the below code right before your closing `&lt;/body&gt;` tag.
+In order to add Bootstrap javascript copy and paste the below code right before your closing `</body>` tag.
 
 {% highlight html linenos=table %}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
@@ -127,7 +127,7 @@ class User extends DB\SQL\Mapper{
     public function __construct(DB\SQL $db) {
         parent::__construct($db,'user');
     }
-    
+
     public function all() {
         $this->load();
         return $this->query;
@@ -146,13 +146,13 @@ class User extends DB\SQL\Mapper{
         $this->copyFrom('POST');
         $this->save();
     }
-    
+
     public function edit($id) {
         $this->load(array('id=?',$id));
         $this->copyFrom('POST');
         $this->update();
     }
-    
+
     public function delete($id) {
         $this->load(array('id=?',$id));
         $this->erase();
@@ -330,7 +330,7 @@ If you are wondering what session information I'm talking about see point 4 abou
 DEBUG=3
 UI=app/views/
 AUTOLOAD=app/controllers/|app/models/
-CACHE=true 
+CACHE=true
 
 devdb = "mysql:host=127.0.0.1;port=3306;dbname=f3MVC"
 devdbusername = "f3MVCadmin"
@@ -363,7 +363,7 @@ To close the loop, we need to make sure that users without an active session can
 <?php
 
 class Controller {
-    
+
     protected $f3;
     protected $db;
 
@@ -379,7 +379,7 @@ class Controller {
     }
 
     function __construct() {
-        
+
         $f3=Base::instance();
         $this->f3=$f3;
 
