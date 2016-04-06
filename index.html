@@ -1,35 +1,34 @@
 ---
 layout: default
 ---
-<div class="home">
+<section class="row expanded greeting-box">
+    <div class="small-8 medium-9 large-12 columns greeting-label"><i class="fi-paw"></i> Adventures in a digital world</div>
+    <img src="assets/images/site-greeting/mark-takacs-home.jpg" alt="">
+</section>
 
-    <!--<h1 class="page-heading">Posts</h1>-->
+<section class="row">
+    <!--  Main content -->
+    <section class="small-12 large-9 columns">
+        <div class="row">
+            {% for post in site.posts %}
+            <a href="{{ post.url | prepend: site.baseurl }}" class="small-12 medium-4 columns card">
+                <div>
+                    {% assign pl = post.thumbnail | size | minus: 4 %}
+                    <img class="thumbnail" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
+                </div>
+                <div class="info">
+                    <h2>{{ post.title }}</h2>
+                    <p class="description">{{ post.description }}</p>
+                    <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+                    <hr>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
 
-    <ul class="post-list grid">
-        {% for post in site.posts %}
-        <li class="grid-item">      
-            <h2>            
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                    <div class="post-thumb">                       
-                        {% if post.thumbnail %}
-                            <picture>
-                                {% assign pl = post.thumbnail | size | minus: 4 %}
-                                <source srcset="{{ post.thumbnail | slice: 0, pl }}_300{{ post.thumbnail | slice: -4, 4 }}" media="(min-width: 960px)">
-                                <source srcset="{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" media="(max-width: 960px)">                                
-                                <img src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
-                            </picture>    
-                        {% endif %}
-                    </div>
-                </a>
-                <div class="post-teaser">
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">                             
-                        {{ post.title }}                
-                        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-                    </a>                    
-                </div>		
-                
-            </h2>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    <!--  Sidebar -->
+    <section class="large-3 columns show-for-large">
+        {% include sidebar.html %}
+    </section>
+</section>

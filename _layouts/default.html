@@ -22,15 +22,13 @@
 
         {% include header.html %}
 
-        <div class="page-content">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </div>
+        {{ content }}
 
         {% include footer.html %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script>
+        <script src="/assets/js/app.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js"></script>
         <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>

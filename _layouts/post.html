@@ -1,55 +1,64 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="row" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">
-        <div class="post-thumb">
-            {% if page.videothumb %}
-                <div class="video-thumb">{{ page.videothumb }}</div>
-            {% elsif page.thumbnail %}
-                <picture>
-                    {% assign pl = page.thumbnail | size | minus: 4 %}
-                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" media="(min-width: 600px)">
-                    <source srcset="{{ page.thumbnail | slice: 0, pl }}_570{{ page.thumbnail | slice: -4, 4 }}" media="(max-width: 600px)">
-                    <img src="{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" alt="{{ page.title }}">
-                </picture>
-            {% endif %}
-        </div>
+    <!--  Post thumbnail and title -->
+    <section class="row">
         <meta itemprop="image" content="{{ site.url }}{{ page.thumbnail}}">
-        
-        <img class="post-author-img" src="{{ site.url }}/assets/images/Mark.jpg" />
+        {% if page.videothumb %}
+            <section>&nbsp;</section>
+        {% else %}
+            {% assign pl = page.thumbnail | size | minus: 4 %}
+            <img class="thumb" src="{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" alt="{{ page.title }}">
+        {% endif %}
 
-        <div class="post-title-container">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+        <div class="columns">
+            <div class="small-1 columns show-for-medium">
+                <img class="post-author-img" src="{{ site.url }}/assets/images/Mark.jpg" />
+            </div>
+            <div class="small-12 medium-11 columns">
+                <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+                <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+            </div>
+        </div>
+    </section>
+
+    <!--  Main content -->
+    <section class="small-12 medium-7 columns">
+        {% if page.videothumb %}
+            <div class="flex-video">
+              {{ page.videothumb }}
+            </div>
+        {% endif %}
+
+        <div class="row" itemprop="articleBody">
+            <section class="columns">{% include social-share.html %}</section>
+            <hr>
+            <section class="columns">{{ content }}</section>
+            <hr>
+            <section class="columns">{% include social-share.html %}</section>
         </div>
 
-    </header>
+    </section>
 
-
-    <div class="article-wrapper post-content" itemprop="articleBody">
-        {% include social-share.html %}
-        {{ content }}
-    </div>
-
-    <div class="article-wrapper post-content" itemprop="articleBody">
-        {% include social-share.html %}
-    </div>
-
-    {% if site.disqus %}
-    <div class="comments">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            var disqus_shortname = '{{ site.disqus }}';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-    {% endif %}
-
+    <!--  Sidebar -->
+    <section class="medium-3 columns show-for-medium">
+        {% include sidebar.html %}
+    </section>
 </article>
+
+{% if site.disqus %}
+<div class="comments row">
+    <div id="disqus_thread" class="columns"></div>
+    <script type="text/javascript">
+        var disqus_shortname = '{{ site.disqus }}';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+{% endif %}

@@ -30,55 +30,90 @@ The IT related articles on the blog come from this family project experience and
 
 ## Contact
 
-<ul class="social-media-list">
+<ul class="no-bullet">
     {% if site.linkedin_username %}
     <li>
-        {% include icon-linkedin.html username=site.linkedin_username %}
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+            <i class="fi-social-linkedin"></i>
+            <span>{{ site.linkedin_username }}</span>
+            <!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
+        </a>
     </li>
     {% endif %}
 
     {% if site.facebook_page %}
     <li>
-        {% include icon-facebook.html username=site.facebook_page %}
+        <a href="https://facebook.com/{{ site.facebook_page }}">
+            <i class="fi-social-facebook"></i>
+            <span>{{ site.facebook_page }}</span>
+            <!--[if lt IE 9]><em>Facebook</em><![endif]-->
+        </a>
     </li>
     {% endif %}
+
     {% if site.twitter_username %}
     <li>
-        {% include icon-twitter.html username=site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}">
+            <i class="fi-social-twitter"></i>
+            <span>{{ site.twitter_username }}</span>
+        </a>
     </li>
     {% endif %}
+
     {% if site.youtube_channel %}
     <li>
-        {% include icon-youtube.html username=site.youtube_channel %}
+        <a href="https://youtube.com/{{ site.youtube_channel}}">
+            <i class="fi-social-youtube"></i>
+            <span>{{ site.youtube_channel }}</span>
+            <!--[if lt IE 9]><em>Youtube</em><![endif]-->
+        </a>
     </li>
     {% endif %}
 
     {% if site.github_username %}
     <li>
-        {% include icon-github.html username=site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}">
+            <i class="fi-social-github"></i>
+            <span>{{ site.github_username }}</span>
+        </a>
     </li>
     {% endif %}
-    {% if site.stackoverflow_username %}
-    <li>
-        {% include icon-stackoverflow.html username=site.stackoverflow_username %}
-    </li>
-    {% endif %}
+
     {% if site.instagram_username %}
     <li>
-        {% include icon-instagram.html username=site.instagram_username %}
-    </li>
-    {% endif %}    
-    {% if site.googleplus_username %}
-    <li>
-        {% include icon-googleplus.html username=site.googleplus_username %}
+        <a href="https://instagram.com/{{ site.instagram_username }}">
+            <i class="fi-social-instagram"></i>
+            <span>{{ site.instagram_username}}</span>
+            <!--[if lt IE 9]><em>Instagram</em><![endif]-->
+        </a>
     </li>
     {% endif %}
+
+    {% if site.googleplus_username %}
     <li>
-        {% include icon-rss.html %}
+        <a href="https://plus.google.com/{{ site.googleplus_username }}">
+            <i class="fi-social-google-plus"></i>
+            <span>{{ site.googleplus_username }}</span>
+            <!--[if lt IE 9]><em>Google Plus</em><![endif]-->
+        </a>
     </li>
+    {% endif %}
+
+    <li>
+        <a href="{{ site.url }}/feed.xml">
+            <i class="fi-rss"></i>
+            <span>rss</span>
+            <!--[if lt IE 9]><em>RSS</em><![endif]-->
+        </a>
+    </li>
+
     {% if site.email %}
     <li>
-        {% include icon-email.html username=site.email %}
+        <a href="mailto:{{ site.email }}">
+            <i class="fi-mail"></i>
+            <span>{{ site.email }}</span>
+            <!--[if lt IE 9]><em>Email</em><![endif]-->
+        </a>
     </li>
-    {% endif %}    
+    {% endif %}
 </ul>

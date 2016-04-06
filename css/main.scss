@@ -1,63 +1,254 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Main sass file of takacsmark.com
 ---
-@charset "utf-8";
+@import "../node_modules/foundation-sites/scss/foundation";
+@import "syntax-highlighting";
+$topbar-background: $white;
+$topbar-submenu-background: $topbar-background;
+
+// @include top-bar-container;
+
+$font-path: "../assets/foundation-icons/foundation-icons";
+@font-face {
+  font-family: "foundation-icons";
+  src: url("#{$font-path}.eot");
+  src: url("#{$font-path}.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}.woff") format("woff"),
+       url("#{$font-path}.ttf") format("truetype"),
+       url("#{$font-path}.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "../assets/foundation-icons/foundation-icons.css";
 
 
+@include foundation-everything;
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+.top-bar {
 
-$spacing-unit:     30px;
+    @media screen and (max-width: 39.9375em) {
+        .top-bar-title span {
+            text-align: center;
+        }
+    }
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+.greeting-box {
+    position: relative;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-$top-bar-color-right: $background-color;
+    .greeting-label {
+        position: absolute;
+        bottom: 1em;
+        left: .5em;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
 
-// Width of the content area
-$site-max-width:   1920px;
-$content-width:    1024px;
+    @media screen and (min-width: 40em) {
+        font-size: 2.5em;
+    }
 
-$on-palm:          600px;
-$on-laptop:        960px;
+}
 
-$article-width:    800px;
+.card {
+    margin-top: 1em;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+    .thumbnail {
+        width: 100%;
+        height: 11em;
+        object-fit: cover;
+        border: none;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+
+    .info {
+        background-color: white;
+        padding-left: .5em;
+        padding-right: .5em;
+        padding-top: .5em;
+    }
+
+    p {
+        color: $body-font-color;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.3em;
+        font-weight: 500;
+        color: $body-font-color;
+        overflow: hidden;
+    }
+
+    .description{
+        font-size: .9em;
+        overflow: hidden;
+    }
+
+    .meta {
+        font-size: .8em;
+        color: $dark-gray;
+    }
+
+    @media screen and (min-width: 40em) {
+        h2 {
+            height: 4.5em;
+        }
+
+        .description{
+            height: 8em;
+        }
+
+        .meta {
+            height: 2em;
+        }
+    }
+}
+
+.sidebar.callout {
+    margin-top: 1em;
+    background-color: white;
+
+    font-size: 0.9em;
+
+    .sidebar-title {
+        color: $dark-gray;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+    }
+
+    li {
+        margin-bottom: 1em;
+        line-height: 1.4em;
+    }
+
+}
+
+.sidebar.social i {
+    font-size: 2em;
+    margin-right: .2em;
+}
+
+article{
+    .thumb {
+        object-fit: cover;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        max-height: 16em;
+
+        @media screen and (min-width: 40em) {
+            max-height: 38em;
+        }
+    }
+
+    .post-author-img{
+        margin-top: 1em;
+    }
+
+    h2,h3,h4 {
+        margin-top: 2em;
+    }
+
+    @media screen and (min-width: 40em) {
+        h2,h3,h4 {
+            margin-top: 1em;
+        }
+    }
+
+    .post-meta {
+        font-size: .8em;
+    }
+
+    .gallery {
+        margin-bottom: .5em;
+    }
+}
+
+.fb-share-button {
+    top: -6px;
+}
+
+figure.highlight {
+    margin: 0;
+    text-overflow: word-wrap;
+
+    tbody {
+        // background-color: $light-gray;
+    }
+
+    code {
+        background-color: transparent;
+        border: none;
+        font-size: .8em;
+    }
+}
+
+footer {
+    margin-top: 2em;
+    padding-top: 2em;
+    background-color: $medium-gray;
+    color: $white;
+
+    // a:link,
+    // a:visited {
+    //     color: $white;
+    // }
+
+    .columns {
+        margin-bottom: 1em;
+    }
+
+    .footer-copyright {
+        background-color: $black;
+        font-size: .75em;
     }
 }
 
 
-@mixin box-shadow-left-bottom() {
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
-}
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "front-page",
-        "syntax-highlighting";
-        
+// Sass utilities
+// @import 'foundation/util/util';
+//
+// // Global variables and styles
+// @import 'foundation/global';
+//
+// // Components
+// @import 'foundation/grid/grid';
+// @import 'foundation/typography/typography';
+// @import 'foundation/forms/forms';
+// @import 'foundation/components/visibility';
+// @import 'foundation/components/float';
+// @import 'foundation/components/button';
+// @import 'foundation/components/button-group';
+// @import 'foundation/components/accordion-menu';
+// @import 'foundation/components/accordion';
+// @import 'foundation/components/badge';
+// @import 'foundation/components/breadcrumbs';
+// @import 'foundation/components/callout';
+// @import 'foundation/components/close-button';
+// @import 'foundation/components/drilldown';
+// @import 'foundation/components/dropdown-menu';
+// @import 'foundation/components/dropdown';
+// @import 'foundation/components/flex';
+// @import 'foundation/components/flex-video';
+// @import 'foundation/components/label';
+// @import 'foundation/components/media-object';
+// @import 'foundation/components/menu';
+// @import 'foundation/components/menu-icon';
+// @import 'foundation/components/off-canvas';
+// @import 'foundation/components/orbit';
+// @import 'foundation/components/pagination';
+// @import 'foundation/components/progress-bar';
+// @import 'foundation/components/reveal';
+// @import 'foundation/components/slider';
+// @import 'foundation/components/sticky';
+// @import 'foundation/components/switch';
+// @import 'foundation/components/table';
+// @import 'foundation/components/tabs';
+// @import 'foundation/components/title-bar';
+// @import 'foundation/components/top-bar';
+// @import 'foundation/components/thumbnail';
+// @import 'foundation/components/tooltip';
