@@ -21,6 +21,7 @@ I'm going to share our findings in this post. You'll learn
 - What are the most common desktop use-cases of senior people?
 - Which proved to be the right Linux distribution and why?
 
+ <div class="video-thumb"><iframe width="420" height="315" src="https://www.youtube.com/embed/uFL0J8-_M0U" frameborder="0" allowfullscreen></iframe></div>
 
 ## Motivation
 
