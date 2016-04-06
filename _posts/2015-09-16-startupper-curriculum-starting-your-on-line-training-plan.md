@@ -22,7 +22,7 @@ I found that on-line training sites are largely product (meaning course) focused
 
 My goal is to help you with this task.
 
-##Business vs. technical skills
+## Business vs. technical skills
 
 We often think that startups are built around tech innovation. In many cases this is true. My company ([Savalera](http://savalera.com)) is built on a platform  that acquires product data from the web and presents the products in a smart shop.
 
@@ -36,7 +36,7 @@ I know a lot of technical folks who know what's the most effective way of implem
 
 **Therefore I recommend that both business and tech oriented people look at all the courses and materials in the upcoming posts.**
 
-##The Importance of Strategy
+## The Importance of Strategy
 
 You may think that I'm trying to sell some bullshit mentioning strategy. This is not the case.
 
@@ -50,7 +50,7 @@ Therefore I'll start the journey with a short and practical post about asking th
 
 Choose wisely and stick with your decision!
 
-##Business training
+## Business training
 
 The first and most important thing on the business side of your startupper curriculum is to acquire the skills that will put your product or service in front of other people. This is called marketing. :)
 
@@ -72,7 +72,7 @@ My experience is that you can learn these skills from a great mentor or coach. S
 
 Another crucial area is legal. Find a good lawyer and consult her/him regularly and involve her/him in your big decisions.
 
-##Tech training
+## Tech training
 
 Tech skill building can be daunting. Choosing a tech platform, programming language or academic discipline is not easy, because there are really way too many choices today.
 
@@ -94,12 +94,12 @@ There are fantastic courses out there that introduce languages. There are others
 
 I will write about the best tech trainings I found for the above areas, while I'm also a maker of tech trainings that are available on my site here.
 
-##Wrap-up
+## Wrap-up
 
 This post was meant to give you an overview of what to expect from the Startupper Curriculum series. I will create an on-line training plan of the best trainings that I found on-line. I will also include some books that I found useful.
 
 While this post does not give you any specific course references now, please expect the the future posts will be very factual.
 
-**The message in this post is that if you're looking for a change in careers or if you're about to start a business, you should consider both business and tech trainings online.** 
+**The message in this post is that if you're looking for a change in careers or if you're about to start a business, you should consider both business and tech trainings online.**
 
 Hope to see you soon on takacsmark.com on your journey.

@@ -9,7 +9,7 @@ videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed
 ---
 The time has come, we will use what we learnt so far to create our first Fat-Free MVC project.  This is the third video in our Fat-Free PHP Framework Tutorial series. As usual, let me ask you to follow the video, because it contains all the steps and therefore it is the ultimate resource to teach you how to build the MVC project structure. This writeup summarizes the key takeaways and this is the place where I give you code snippets that you can copy and paste into your own projects, so that you don't need to type so much.
 
-##The MVC Project Structure
+## The MVC Project Structure
 
 Unlike in previous posts in this tutorial series, this time let me start with the end result and explain the structure. Later on, I will come back to each file in detail.
 {% highlight terminal linenos=table %}
@@ -61,9 +61,9 @@ The 'views' folder contains the web view templates in the form of .htm files. Th
 
 So let's make this work. I have moved the functionality from the previous lesson to the new structure. Here are the files.
 
-##Files under the root folder
+## Files under the root folder
 
-###index.php
+### index.php
 {% highlight php linenos=table %}
 <?php
 
@@ -84,7 +84,7 @@ The last line tells f3 to listen to http requests and respond to them.
 
 Now that we told f3 to use the config files, let's move on to these files in the next step.
 
-###routes.ini
+### routes.ini
 {% highlight php linenos=table %}
 [routes]
 
@@ -96,7 +96,7 @@ This file contains the route definitions. This is the same info we used to add t
 
 `;` on line 3 denotes a comment, while the [routes] tag on line 1 tells f3 that this is the section where routes are defined. This is important because you could have only one file for all of your config needs in f3, in that scenario you would separate different config sections with different tags. You'll see that our config.ini starts with the tag [globals], because that's where we define global variables.
 
-###config.ini
+### config.ini
 {% highlight php linenos=table %}
 [globals]
 
@@ -110,14 +110,14 @@ AUTOLOAD=app/controllers/
 * UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory
 * AUTOLOAD takes care of automatic inclusion of our classes. This is where we tell f3 to find the controller classes under `app/controllers/`. Sooner than later you'll need more than one entry in this setting. Use `|` to separate entries. (e.g. `app/controllers/|app/models/`)
 
-##Files under app/controllers/
+## Files under app/controllers/
 
-###Controller.php
+### Controller.php
 {% highlight php linenos=table %}
 <?php
 
 class Controller {
-	
+
 	function beforeroute(){
 		echo 'Before routing - ';
 	}
@@ -129,7 +129,7 @@ class Controller {
 {% endhighlight %}
 The Controller class is the superclass of all of our controllers in this application. It implements the beforeroute and afterroute functions, that we discussed before. These functions will be available in all controllers in the application. As I said before beforeroute is the ideal place for checking session information.
 
-###MainController.php
+### MainController.php
 {% highlight php linenos=table %}
 <?php
 
@@ -148,7 +148,7 @@ class MainController extends Controller{
 {% endhighlight %}
 This is our main controller class. Its parent class is Controller. As you see, we moved the functions from the previous lesson from 'index.php' into this class. Render will render the main page of our web application. Sayhello is a function that will simply say hello.
 
-###How does f3  invoke these class functions? 
+### How does f3  invoke these class functions?
 
 It all starts in index.php, where we defined where to find the config files. The routes config points the address '/' to MainController->render, therefore f3 will create an instance of MainController and invoke the render function.
 
@@ -156,7 +156,7 @@ How will f3 find MainController? Based on the AUTOLOAD entry in 'config.ini'.
 
 Hope this clarifies how these files and entries are related. Makes sense, right?
 
-###How does template rendering work?
+### How does template rendering work?
 
 In the render function you can see that first we set a global variable called 'name' to have the value 'world'. You can pass variables to be used in templates by using globals. So we are basically passing a key-value pair to the template.
 
@@ -164,9 +164,9 @@ Then we create an instance of f3's Template class, that's part of the framework.
 
 Then we tell f3 to render the template called 'template.htm'. f3 will use the UI setting in 'config.ini' to find the template.
 
-##Files under app/views/
+## Files under app/views/
 
-###template.htm
+### template.htm
 {% highlight html linenos=table %}
 <!DOCTYPE html>
 <html>
@@ -185,7 +185,7 @@ You should use double curly braces to access globals. Variable names must be pre
 
 [There is lot more to templating than this, you can read more about it on the Fat-Free site.](http://fatfreeframework.com/views-and-templates)
 
-##Wrap-up
+## Wrap-up
 
 In this lesson we defined a basic MVC project structure.  This way you have all the tools you need to start your own web application based on the Fat-Free Framework. You can create really complex solutions with f3.
 
