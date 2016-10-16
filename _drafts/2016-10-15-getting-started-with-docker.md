@@ -295,9 +295,80 @@ What do you need to do about this? If you change some data in a container during
 
 Code behaves in a similar way. You can copy your code when you build your image (I'll show that later) and start a container from it. When your code changes you have to re-build the image, destroy your containers and start new ones with the new images.
 
-In order manage data, both code and business data in a meaningful way, we can share volumes (meaning data volumes) between the host and the containers. This is super important and I use this in all containers that I have. Here is how it works:
+In order manage data, both code and business data in a meaningful way, we can share volumes (meaning data volumes) between the host and the containers. This is super important and I use this in all containers that I have. We will use a config file on the host computer in our Nginx server.
+
+Let's create a directory for this test and create a file called `nginx.conf` inside. The absolute path of my `nginx.conf` file is this `/Users/marktakacs/Development/tutorials/docker/nginx.conf`.
+
+For the sake of the tutorial let's copy the default configuration from the container into the `nginx.conf` file on the host. Please deep dive into nginx configuration to actually make meaningful changes to the config. Let's use this content:
+
+{% highlight html linenos=table %}
+user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
 
 
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+{% endhighlight %}
+
+We'll map this file as a volume into our container. The result will be that our nginx.conf file on the host machine will be shared with the container. If you change the file on the host, the container will see the changes immediately.
+
+ Let's `docker stop my-nginx` and `docker rm my-nginx` and then recreate the continer with the following command:
+
+ `docker run --name my-nginx -d  -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro  nginx:1.10.1-alpine`
+
+I added the part that that starts with `-v`, this maps the local directory to the container. Make sure that you use your own local path as the first item on the list. `/etc/nginx/nginx.conf` is the path of the nginx.conf file in the container, you can find this information on the image's page on the Docker Hub.
+
+`:ro` means that we mount the volume in read only mode.
+
+Now our container uses the config file on the local machine. How can you test this? Open the `nginx.conf` file locally and remove the `#` from the line that says `#gzip  on;`. You just uncommented the gzip feature of nginx, now nginx will send the responses compressed.
+
+Restart the container so it will pick up the new configuration with `docker restart my-nginx`.
+
+You can check compression in Chrome developer tools, under Network. This my response before and after the change.
+
+![Nginx without compression]({{ site.url }}/assets/images/in-content/nginx-without-gzip-response-chrome.jpg)
+
+![Nginx with compression]({{ site.url }}/assets/images/in-content/nginx-with-gzip-response-chrome.jpg)
+
+We changed the configuration of our nginx container from the outside.
+
+Let's add a webpage to nginx with another volume. Create a directory called `src` and create a file called `index.html` in that directory. Copy this inside:
+{% highlight html linenos=table %}
+<p>Hello world</p>
+{% endhighlight %}
+
+`docker stop my-nginx` and `docker rm my-nginx` before we recreate it. Use a command similar to mine:
+
+`docker run --name my-nginx -d  -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro -v /Users/marktakacs/Development/tutorials/docker/src:/usr/share/nginx/html:ro  nginx:1.10.1-alpine`
+
+We added a new volume `-v` parameter to the command. It points to the `src` folder on the host (please use full path) and mounts it to `/usr/share/nginx/html` on the container. Again I got the path of the location of html files on Docker Hub. If you go to `http://localhost` now, you should see a familiar hello world page.
+
+![Hello word with nginx]({{ site.url }}/assets/images/in-content/hello-word-nginx.jpg)
 
 
 
