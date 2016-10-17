@@ -491,4 +491,4 @@ I hope you feel more confident now and ready to move on with your projects. I wi
 
 You can drop me a comment if you have a question or suggestion. Follow me on Facebook and Twitter, I'm working on more tutorials on Docker and some other stuff.
 
-If you are still reading this, sorry for the long post, here is a potato :).
+If you are still reading this, sorry for the long post, here is a potato :)).
