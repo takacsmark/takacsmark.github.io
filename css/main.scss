@@ -27,6 +27,10 @@ $font-path: "foundation-icons/foundation-icons";
 
 .top-bar {
 
+    .top-bar-title {
+        margin-top: .45em;
+    }
+
     @media screen and (max-width: 39.9375em) {
         .top-bar-title span {
             text-align: center;
