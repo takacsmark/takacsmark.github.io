@@ -9,6 +9,12 @@ categories: Web development, Docker
 * TOC
 {:toc}
 
+****Update********
+Now you can follow along the video and learn with my youtube tutorial. 
+
+ <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/Vyp5_F42NGs" frameborder="0" allowfullscreen></iframe></div>
+
+
 So you decided to learn Docker? This tutorial, unlike other tutorials, takes a solution focused approach, rather than a toolkit focused approach. We start from the big picture, understanding what problems Docker is meant to solve and start using Docker as we make progress.  
 
 I will use an experience from a recent project and solve common computing challenges I had to face. I think I could have solved such challenges with much less headache if I had this tutorial. So I decided to write it.
