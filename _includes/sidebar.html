@@ -48,6 +48,25 @@
     </div>
 </div>
 
+<div class="row callout sidebar secondary">
+    <div class="columns">
+        <p class="sidebar-title">Computers I recommend for elderly people</p>
+        <ul class="no-bullet">
+            {% for item in site.data.promos.computers-elderly.items %}
+            <li>
+                <a href="{{ item.url }}" target="_blank">
+                    <img src="{{ item.image }}"/></li>
+                </a>
+            <li>
+                <a href="{{ item.url }}" target="_blank">
+                    {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
 <div>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- takacsmark.com sidebar -->
