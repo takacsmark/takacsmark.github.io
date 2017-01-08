@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up a docker Wordpress development environment on Mac"
+title:  "Setting up a Docker Wordpress development environment on Mac"
 description: "Looking for a good practice to set up a Docker development environment with Wordpress and MariaDB? Here we go..."
 date:   2017-01-08 08:07:00 +0100
 thumbnail: "/assets/images/post-thumbs/docker-wordpress-mariadb.png"
