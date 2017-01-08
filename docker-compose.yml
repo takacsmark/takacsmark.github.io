@@ -6,4 +6,4 @@ services:
      - "4000:4000"
     volumes:
      - .:/srv/jekyll
-    command: bundle exec jekyll serve --drafts --config _config.yml, _config_dev.yml
+    command: bundle exec jekyll serve --drafts --config _config.yml,_config_dev.yml
