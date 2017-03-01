@@ -1,0 +1,24 @@
+items:
+  - title: Udemy - very practical, full of code-along coding courses
+    image: https://www.udemy.com/staticx/udemy/images/v5/logo-green.svg
+    url: https://www.udemy.com/
+
+  - title: Edureka - instructor lead live on-line courses
+    image: http://analyticsindiamag.com/wp-content/uploads/2015/10/edureka-logo.png
+    url: https://www.edureka.co/
+
+  - title: Lynda - lot of courses about coding, design and SEO
+    image: https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0001/9770/brand.gif?itok=Q9uFKTbg
+    url: https://www.lynda.com
+
+  - title: Pluralshight - you have it all - dev, ops, data, architecture, creative and a lot more
+    image: https://www.pluralsight.com/content/dam/pluralsight/newsroom/brand-assets/logos/pluralsight-logo-vrt-blk-2@2x.png
+    url: https://www.lynda.com    
+
+  - title: Treehouse - get a job in web development with these guys
+    image: https://d3q6qq2zt8nhwv.cloudfront.net/platform/65298ade01f74811be237a3731df26ba.png
+    url: https://teamtreehouse.com
+
+
+
+    
