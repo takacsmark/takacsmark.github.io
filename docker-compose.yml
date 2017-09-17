@@ -1,9 +1,10 @@
-version: '2'
+version: '3'
 services:
-  takacsmark:
-    build: .
-    ports:
-     - "4000:4000"
-    volumes:
-     - .:/srv/jekyll
-    command: bundle exec jekyll serve --drafts --config _config.yml,_config_dev.yml
+    jekyll:
+        image: jekyll/jekyll:pages
+        container_name: takacsmark-dot-com
+        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+        ports:
+            - 4000:4000
+        volumes:
+            - .:/srv/jekyll
