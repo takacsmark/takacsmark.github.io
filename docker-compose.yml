@@ -12,9 +12,7 @@ services:
         build: .
         image: takacsmark/node-automation:jekyll
         container_name: node-automation
-        command: /bin/sh
-        stdin_open: true
-        tty: true
+        command: /bin/bash
         volumes:
             - .:/usr/src/app
             - /usr/src/app/node_modules
