@@ -3,7 +3,10 @@ services:
     jekyll:
         image: jekyll/jekyll:pages
         container_name: takacsmark-dot-com
-        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+        # Using incremental will only refresh the file that was changed and won't refersh dependencies
+        # i.e. changing a post will refresh the post but not index.html, therefore this version is commented out and kept for reference
+        # command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml 
         ports:
             - 4000:4000
         volumes:

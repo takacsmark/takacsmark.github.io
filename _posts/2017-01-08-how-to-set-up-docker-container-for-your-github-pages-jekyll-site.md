@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How to set up a Docker container for your GithHub Pages site?"
+title: "How to set up a Docker container for your GithHub Pages site?"
 description: "Serving my existing GitHub Pages Jekyll sites from a Docker container was not easy. Here is how I fixed the issue."
-date:   2017-01-08 10:07:00 +0100
+date: 2017-01-08 10:07:00 +0100
 thumbnail: "/assets/images/post-thumbs/docker-jekyll.png"
 categories: Web development, Docker
 ---
@@ -16,25 +16,25 @@ Watch the video that I created for this post on Youtube. I show you what issue I
 
  <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/6UAf8b_2juk" frameborder="0" allowfullscreen></iframe></div>
 
-This article is the writeup of the video tutorial, meaning I created the video first and I'm adding the details in written form now. 
+This article is the writeup of the video tutorial, meaning I created the video first and I'm adding the details in written form now.
 
 ## Overview
 
 This article is about serving existing GitHub Pages sites from a Docker container.
 
-When I bought my new Mac recently, I decided to use Docker development environments exclusively. I host 2 sites on GitHub Pages, so I started setting up my containers with the official Jekyll Docker image. 
+When I bought my new Mac recently, I decided to use Docker development environments exclusively. I host 2 sites on GitHub Pages, so I started setting up my containers with the official Jekyll Docker image.
 
-The official images seems to be working with new sites, I saw people on forums who were able to start up a new site with the official image. 
+The official images seems to be working with new sites, I saw people on forums who were able to start up a new site with the official image.
 
 There are many of us, who are facing issues with existing sites. **The main issue being "permission denied" error messages when starting up a container.**
 
-Let's see what is the cause of these issues and let's see how to fix it. 
+Let's see what is the cause of these issues and let's see how to fix it.
 
 ## Understanding the problem
 
-Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll). 
+Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll).
 
-Unlike other images on the Docker Store, this one has a very poor documentation. I know, I can always contribute to the project, instead of bitching about poor documentation on my blog, so let's just take my remark as a statement of an obvious fact. 
+Unlike other images on the Docker Store, this one has a very poor documentation. I know, I can always contribute to the project, instead of bitching about poor documentation on my blog, so let's just take my remark as a statement of an obvious fact.
 
 If you want to understand how to use the Jekyll image, you can directly [go the Wiki](https://github.com/jekyll/docker/wiki/Usage:-Running). It would be nice to bring this information in front of new users, instead of hiding it behind a couple of links. (OK, I stop whining.)
 
@@ -224,7 +224,7 @@ sh: can't kill pid 455: No such process
 {% endhighlight %}
 
 
-It seems that the "jekyll" user does not have permission to install these gems. 
+It seems that the "jekyll" user does not have permission to install these gems.
 
 ## Making it work
 
@@ -250,11 +250,11 @@ EXPOSE 4000
 
 This Dockerfile will copy `Gemfile` and `Gemfile.lock` into your custom image and run the installation of the gems when building the image. The Linux packages (the ones added with apk) are the ones required for the installation of the Gems.
 
-I Googled every single error message along every single build and added the Linux packages and gem config for Nokogiri to make this work. So this is basically the result of a try and fail approach. 
+I Googled every single error message along every single build and added the Linux packages and gem config for Nokogiri to make this work. So this is basically the result of a try and fail approach.
 
 As I said I have two sites and this config works with both of them.
 
-In case you still get issues you may want to add more packages to your specific case. 
+In case you still get issues you may want to add more packages to your specific case.
 
 In order to build and run the image I added a docker-compose.yml file to my project with the following content:
 {% highlight yml linenos=table %}
@@ -269,9 +269,8 @@ services:
     command: bundle exec jekyll serve --drafts --config _config.yml,_config_dev.yml
 {% endhighlight %}
 
-If I execute `docker-compose up -d` from terminal, the image will be built and the site comes up on `http://localhost:4000`. 
+If I execute `docker-compose up -d` from terminal, the image will be built and the site comes up on `http://localhost:4000`.
 
 [If you wanna check out the entire source, please feel free to read it on GitHub.](https://github.com/takacsmark/takacsmark.github.io)
 
 Please note that I'm using stuff like Gulp on my blog, but I haven't added Gulp to the Dockerfile yet, so you won't find it there.
-
