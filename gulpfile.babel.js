@@ -68,7 +68,7 @@ gulp.task('img:minimize', () => {
         entry.state === 'left' ? files.push(entry.path1 + '/' + entry.name1) : null
     }
 
-    console.log('Moving ' + files.length + ' new images.')
+    console.log('Moving ' + files.length + ' new image(s).')
 
     return gulp.src(files, {base: 'static/images/'})
         .pipe(imagemin([
@@ -130,6 +130,8 @@ gulp.task('img:generatesizes', () => {
             }
         }
 
+        // console.log(fileList)
+
         return Promise.all(
             fileList.map(checkFileSizesExist)
         )
@@ -145,6 +147,7 @@ gulp.task('img:generatesizes', () => {
             return missing
         }, [])
 
+        // console.log(res)
 
         res.map((item) => {
             gulp.src(item[1])

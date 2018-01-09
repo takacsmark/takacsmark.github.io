@@ -81,12 +81,125 @@ In the first video you'll find the key concepts, Dockerfile examples, I teach yo
 
 ### Dockerfile example
 
+Let's start with an example and see what's in a Dockerfile. I attached the below Dockerfile from GitHub, this file is part of the [official PHP image distribution on the Docker store](https://store.docker.com/images/php).
 
-<script src="http://gist-it.appspot.com/https://github.com/docker-library/php/blob/32313ea407379d70259e14414ec8aa0311c0a4c4/7.1/jessie/apache/Dockerfile"></script>
+You can access the file directly via this url: [https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile](https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile).
+
+Please browse through the file, it's enough for now if you note the key structural elements, skim trough the comments and see how the file is built up on a high level.
+
+<script src="http://gist-it.appspot.com/https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile"></script>
+
+At this point I would like you to understand the following key points based on the example file:
+1. The Dockerfile is a text file that contains the instructions that you would execute on the command line to create an image.
+2. A Dockerfile is a step by step set of instructions.
+3. Docker provides a set of standard instructions to be used in the Dockerfile, like `FROM`, `COPY`, `RUN`, `ENV`, `EXPOSE`, `CMD` just to name a few basic ones.
+4. Docker will build a Docker image automatically by reading these instructions from the Dockerfile.
+
+So from a developer, or tech user perspective you'll be basically describing the build steps of your environment in the Dockerfile. Then you'll build your image from the Dockerfile and start up your containers.
+
+This also implies that understanding Dockerfile instructions is not enough to build create your Dockerfile, you need to also understand the context of the technology you are building for. If, for example, you are bulding a Dockerfile to be used in a PHP project, you'll need to dive into PHP specific knowledge, like configuration methods, PHP extensions, environment settings and such.
+
+The good news is that you can save a lot of time when starting out experimenting with a new technology, because you can you an image prepared by someone else, without understanding the details immediately. Once you are up for some more complex stuff you can start adding to the knowledge that you can extract and learn from other people's Dockerfiles.
+
+>Reading Dockerfiles prepared by others is a great way to learn about technology.
+
+### Listing Docker images on your computer
+
+Let's do some hands-on magic. Before building your own Docker images, let's how to manage images on your computer.
+
+You can follow the video for this part at around 8:00, I'll provide a summary here.
+
+Use the command `docker images` in your terminal to list the images you currently have on your computer. Remember that images are stored on your computer once you pull them from a registry like the docker store, or once you build them on your computer.
+
+If you have not pulled any images yet, your list may be empty. This my computer today (please note that the list is different from the list in the video, because I'm writing this article later in time).
+
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-docker-images.png)
+
+These are the images that I'm currently using on my computer. I pulled most of them from the docker store, and I have built my own, too. The images that have a nametag in the form of `takacsmark/<image_name>` are the ones that I have built from my own Dockerfiles.
+
+Please note that I usually don't keep all the images that I use, I try to keep everything nice and clean, because images take up a lot of space. I'll show you the exact amount of space images will take from your computer later on. That's why it's very important to learn how to clean up your images (will show you in a minute).
+
+It is worthwhile to check the image sizes in the picture. You'll find that some images have a very small footprint, like the Alpine linux image, while more complex image take up a lot of space, like anaconda3.
+
+### Let's create your first image
+
+Let's start the journey by creating a modified Alpine Linux image. We'll take the base Alpine image from the docker store and modify it by installing a few Linux packages. Please execute the following in terminal:
+
+#### 1. Create the Dockerfile
+
+Create an empty directory for this task and create an empty file in that directory with the name `Dockerfile`. You can do this easily by issuing the command `touch Dockerfile` in your empty directory.
+
+Congratulations, you just created your first Dockerfile! Let's open the file in your favourite text editor.
+
+The Alpine image does not have git, vim and curl by default, as you can see in the video. So let's create a custom image from Alpine that has git, vim and curl included. This will be your first custom Docker image.
+
+#### 2. Define the base image with FROM
+
+Every Dockerfile must start with the `FROM` instruction. The idea behind is that you need a starting point to build your image. You can start `FROM scratch`, scratch is an explicitly empty image on the docker store that is used to build base images like Alpine, Debian and so on.
+
+I start my images mostly from other images. You can start you Docker images from any valid image that you pull from public registries. The image you start from is called you base image. In our case let's add `FROM alpine:3.4` to the Dockerfile.
+
+Right now your Dockerfile should look like this:
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+{% endhighlight %}
+
+#### 3. Add the lines to install packages
+
+Please add the lines to install vim and curl like this:
+
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+
+RUN apk update
+RUN apk add vim
+RUN apk add curl
+{% endhighlight %}
+
+This is not best practice, these are just a few lines to get started. Don't worry, you'll learn the best practices in this article.
+
+#### 4. Build your image
+
+Please run the following in terminal:
+`docker build -t takacsmark/alpine-smarter:1.0 .`
+
+This command is structured as follows:
+- docker build is the command to build a docker image from a Dockerfile
+- -t takacsmark/alpine-smarter:1.0 defines the tag (hence -t) of the image, which will be basically the name of the image. As the first part I put my own name `takacsmark`, because I'm the maintainer of the image, then I gave it a human readable name `alpine-smarter` and provided a version number `1.0`.
+- please note the `.` (dot) at the end of the line. You need to specify the directory where docker build should be looking for a Dockerfile. Therefore `.` tells docker build to look for the file in the current directory.
+
+You should see a similar output in terminal now:
+
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-build_750.png)
 
 
+#### 5. Enjoy the results
 
+Let's check what's inside our new image, let's run the following command and check out vim and curl:
+`docker run --rm -ti takacsmark/alpine-smarter:1.0 /bin/sh`
 
+Right now you should be in the shell of your running container, so let issue the following commands:
+`vim --v` and `curl --version`. You should be seeing the version of vim and curl in your terminal.
+
+We have successfully added two packages to the Alpine base image. Let's not stop here, there is more!
+
+### Understand image layering
+
+If you look at the above screen shot again that I added at the end of image building you can notice that `docker build` provided the build output in for steps, namely Step 1/4, Step 2/4, Step 3/4 and Step 4/4.
+
+At the headline of each step you can see the corresponding line in your Dockerfile. This is because `docker build` executes the lines in the Dockerfile one at a time.
+
+What is more important that with every step in the build process docker will create an intermediary image for the specific step. This means that docker will take the base image (alpine:3.4), then execute `RUN apk update` and then docker will add the resulting files from that step as another layer on top of the base image.
+
+You can follow the concept by following the line in the output that start with `---->` these lines denote the image ids of intermediary images.
+
+This means that the final docker image consist of 4 layers and the intermediary layers are also stored on your system as standalone images. This is useful because docker will use the intermediary images as image cache, which means your future builds will be much faster for those Dockerfile steps that you do not modify.
+
+Let's first see all the images that were created. Please issue the command
+`docker images -a` in terminal.
+
+You should see something like this:
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-layers.png)
 
 
 
