@@ -51,7 +51,7 @@ Let me show you the nature of the problem by quoting the official explanation:
 
 Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215).
 
-![Windows regisrty edit]({{ site.url }}/assets/images/in-content/ms-registry-edit.png)
+![Windows regisrty edit](/assets/images/in-content/ms-registry-edit.png)
 
 Finally I could log on after rebooting and face the real challenge.
 
@@ -212,3 +212,4 @@ I dumped my $70 sublime license for Code. Code is a fantastic product and I real
 I use it for programming tasks in my own venture and it does a fantastic job for node, Javascript, PHP, react and a lot of other stuff.
 
 ![Arch Linux with Visual Studio Code]({{ site.url }}/assets/images/in-content/window-10-install-post.png)
+

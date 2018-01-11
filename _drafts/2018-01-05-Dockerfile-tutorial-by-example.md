@@ -201,8 +201,286 @@ Let's first see all the images that were created. Please issue the command
 You should see something like this:
 ![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-layers.png)
 
+We used `-a` to list all images on your computer including intermediary images. Please note how the image ids are the same as the ones you see during the build process.
 
+This also implies that your intermediary images will take up space on your computer, which may get painful sometimes. I have a nice collection of 2.5GB intermediary images on my computer for python anaconda3. We'll come back to this later.
+
+The main advantage of image layering lies in image caching.
+
+If you build your Dockerfile again now with the same command `docker build -t takacsmark/alpine-smarter:1.0 .`, you'll notice that the build was almost instantaneous and the output for every step says that the build was done from cache.
+
+This behavior makes our lives a lot easier. Since image layers are built on top of each other docker will use images cache during the build process up to the line where the first change occurs in your Dockerfile. Every later step will be re-built.
+
+#### Image cache example
+
+ Let's play with the cache a little bit. Let's change our Dockerfile to see the behavior. Let's change the list line from adding curl to adding git. This is the resulting file:
+
+ {% highlight Dockerfile linenos=table %}
+ FROM alpine:3.4
+
+ RUN apk update
+ RUN apk add vim
+ RUN apk add git
+ {% endhighlight %}
+
+Let's issue our build command again: `docker build -t takacsmark/alpine-smarter:1.0 .`.
+
+You'll see that the first 3 steps run using cache and only the last step will be re-run, as shown in the picture.
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-cache-example.png)
+
+Please note that if you change an early step in the Dockerfile, for example you add one line after `apk update` like this:
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+
+RUN apk update
+RUN apk add curl
+RUN apk add vim
+RUN apk add git
+{% endhighlight %}
+
+In this case every step after change will be re-built. Which means that the steps to install curl, vim and git will be run from scratch, no caching will be available beyond the point where the change occured.
+
+#### Dangling images
+
+If you execute `docker images` now in terminal, you'll see something nasty.
+
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-dangling-images.png)
+
+Our freshly built image is ready to use, but the previous image that we built with curl is still hanging around and it does not have a proper tag or name right now. (You can check the image ids to see that this is the same image we built previously).
+
+Docker calls such images dangling images.
+
+You can use the following command to list dangling images:
+
+`docker images --filter "dangling=true"`
+
+I personally don't like it images are just hangin around without a purpose, so here is how to remove them:
+
+`docker rmi $(docker images -q --filter "dangling=true")`
+
+
+
+## Dockerfile best practices
+
+### Minimize the number of steps in the Dockerfile
+
+We have seen that layer caching may eat up your space drastically, especially if you are working with large components. Therefore it's a cool best practice to combine several steps into one line, so that they'll create only one intermediary image.
+
+We can reformulate our Dockerfile like this:
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+
+RUN apk update && \
+    apk add curl && \
+    apk add vim && \
+    apk add git
+{% endhighlight %}
+
+After building this Dockerfile the usual way you'll find that this time it has only taken 2 steps instead of 4, which will result in 1 new image, instead of 3 images, which saves space.
+
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-line-optimization.png)
+
+Keep in mind that only `RUN`, `COPY` and `ADD` instructions create layers.
+
+### Sort multi-line instructions
+
+It's a good idea to sort multiline instructions in a human readable manner. My example above is not optimal, because I'm installing packages in no order at all. I should write a file like this instead, where I order packages in alphabetical order. This is very useful when you work with a long list.
+
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+
+RUN apk update && \
+    apk add curl && \
+    apk add git && \
+    apk add vim
+{% endhighlight %}
+
+(Yes you can remove `apk add from the last 3 lines like this`):
+
+{% highlight Dockerfile linenos=table %}
+FROM alpine:3.4
+
+RUN apk update && apk add \
+    curl \
+    git \
+    vim
+{% endhighlight %}
+
+### Start your Dockerfile with the steps that are least likely to change
+
+This is easier said than done. Anyway your image will stabilize after a while and changes will be less likely in your foundation. The best practice is to structure your Dockerfile according to the following:
+1. install tools that are needed to build your application
+2. install dependencies, libraries and packages
+3. build your application
+
+
+### Clean up your Dockerfile
+
+Always review your steps in the Dockerfile and only keep the minimum set of steps that are needed by your application. Always remove unnecessary component.
+
+### Use a `.dockerignore` file
+
+The directory where you issue the `docker build` command is called the build context. Docker will send all of the files and directories in your build directory to the Docker daemon as part of the build context. If you have stuff in your directory that is not needed by your build you'll have an unnecessarily larger build context that results in a larger image size.
+
+You can remedy this situation by adding a `.dockerignore` file that works similarly to `.gitignore`. You can specify the list of folders and files that should be ignored in the build context.
+
+
+If you want to have a look at the size of your build context just check out the first line of your `docker build` output. My alpine build output for example says: `Sending build context to Docker daemon  2.048kB`.
+
+### Containers should be ephemeral
+
+This would belong to generic docker guidelines, but it's never enough to stress this point. It is your best interest to design and build docker images that can be destroyed and recreated/replaced automatically or minimal configuration.
+
+Which means that you should create Dockerfiles that define stateless images. Any state, like data, should be kept outside of your containers.
+
+### One container should have one concern
+
+Think of containers as entities that take responsibility of one aspect of your project. So design your application in a way that your web server, your database, your cache and other components have their own dedicated containers.
+
+You'll see the benefits of such a design when scaling your app horizontally. We'll look into interoperability of containers and container networking in a future tutorial.
+
+It's a good idea to check out [the official Dockerfile best practices page](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) for more info.
+
+## Dockerfile key instructions
+
+Docker documentation is usually very easy to follow and easy to understand. What I learnt from your comments is that the stuff that most people need is some insight into others' experience to see the big picture. So I usually focus on this aspect.
+
+The reason why I'll give you some insight into the key instructions is to share my experience and give you hints how to use them. I'll not give you the specs, for exact specs please check the [Dockerfile reference page](https://docs.docker.com/engine/reference/builder/).
+
+We'll cover the following basic instructions to get you started:
+- `FROM` - every Dockerfile starts with `FROM`, with the introduction of multi-stage builds as of version 17.05, you can have more than one `FROM` instruction in one Dockerfile.
+- `COPY` vs `ADD` - these two are often confused, so I'll explain the difference.
+- `ENV` - well, setting environment variables is pretty important.
+- `RUN` - let's run commands.
+- `VOLUME` - another source of confusion, what's the difference between Dockerfile `VOLUME` and container volumes?
+- `USER` - when root is too mainstream.
+- `WORKDIR` - set the working directory.
+- `EXPOSE` - get your ports right.
+- `ONBUILD` - give more flexibility to your team and clients.
+
+
+### FROM
+
+For beginners it's enough to understand that every Dockerfile must start with the `FROM` instruction in the form of `FROM <image>[:tag]`. This will set the base image for your Dockerfile, which means that subsequent instructions will be applied to this base image.
+
+The `tag` value is optional, if you don't specify the `tag` docker will use the tag `latest` and will try and use or pull the latest version of the base image during build.
+
+On the little bit more advanced side, let's note the following:
+- there is one instruction that you can put before `FROM` into your Dockerfile. This instruction is `ARG`. `ARG` is used to specify arguments for the `docker build` command with the `--build-arg <varname>=<value>` flag.
+- you can have more than one `FROM` instructions in your Dockerfile. You would one to use this feature when you use on base image to build your app and another base image to run it.
+
+    It's called a multi-stage build and you can read about it [here](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
+
+    This is why every section that starts with `FROM` in your Dockerfile is called a build stage (even in the simle case of having one `FROM` instruction). You can specify the name of the build stage in the form `FROM <image>[:tag] [AS <name>]`.
+
+### COPY vs ADD
+
+Both `ADD` and `COPY` are designed to add directories and files to your Docker image in the form of `ADD <src>... <dest>` or `COPY <src>... <dest>`. Most resources, including myself, suggest to use `COPY`.
+
+The reason behind this is that `ADD` has extra features compared to `COPY` that make `ADD` more unpredictable and a bit over-designed. `ADD` can pull files from url sources, which `COPY` cannot. `ADD` can also extract compressed files assuming it can recognize and handle the format. You cannot extract archives with `COPY`.
+
+The `ADD` instruction was added to Docker first, and `COPY` was added later to provide a straightforward, rock solid solution for copying files and directories from <src> into your container's file system.
+
+If you want to pull files from the web into your image I would suggest to use `RUN` and `curl` and uncompress your files with `RUN` and commands you would use on the command line.
+
+### ENV
+
+`ENV` is used to define environment variables. The interesting thing about `ENV` is that it does two things:
+1. You can use it to define environment variables that will be available in your container. So when you build and image and start up a container with that image you'll find that the environment variable is available and is set to the value you specified in the Dockerfile.  
+2. You can use the variables that you specify by `ENV` in the Dockerfile itself. So in subsequent instructions the environment variable will be available.
+
+### RUN
+
+`RUN` will execute commands, so it's one of the most-used instructions. I would like to highlight two points:
+1. You'll use a lot of `apt-get` type of commands to add new packages to your image. It's always advisable to put `apt-get update` and `apt-get install` commands on the same line.
+    This is important because of layer caching. Having these on two separate lines would mean that if you add a new package to your install list, the layer with `apt-get update` will not be invalidated in the layer cache and you might end up in a mess. [Read more here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#run).
+2. `RUN` has two forms; `RUN <command>` (called shell form) and `RUN ["executable", "param1", "param2"]` called exec form. Please note that `RUN <command>` will invoke a shell automatically (`/bin/sh -c` by default), while the exec form will not invoke a command shell. [If you want to tackle a problem around this read here](https://docs.docker.com/engine/reference/builder/#run).  
+
+### VOLUME
+
+This is where I found Docker documentation not so easy to follow. So let me put it in plain English.
+
+You can use the `VOLUME` instruction in a Dockerfile to tell Docker that the stuff you store in that specific directory should be stored on the host file system not in the container file system. This implies that stuff stored in the volume will persist and be available also after you destroy the container.
+
+In other words it is best practice to crate a volume for your data files, database files, or any file or directory that your users will change when they use your application.
+
+The data stored in the volume will remain on the host machine even if you stop the container and remove the container with `docker rm`. (The volume will be removed on exit if you start the container with `docker run --rm`, though.)
+
+You can also share these volumes between containers with `docker run --volumes-from`.
+
+You can inspect your volumes with the `docker volume ls` and `docker volume inspect` commands.
+
+You can also have a look inside your volumes by navigating to Docker volumes in your file system. On Linux you can go to `/var/lib/docker/volumes` pick the id of the volume and list it as a directory. You can find out the id of the container and thus the volume by running `docker inspect` on your container.
+
+On Mac, you'll not be able to access `/var/lib/docker/volumes` so easily. If you run `screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty` on your Mac, you get a terminal where you can navigate as if you were using a Linux machine.
+
+The difference between the `VOLUME` instruction in Dockerfile and starting your container with `docker run -v ...` is this: `VOLUME` in Dockerfile will create a new empty directory for your files under the standard docker structure, i.e. `/var/lib/docker/volumes`. `docker run -v ...` can do more, you can mount existing directories from your host file system into your container and you can also specify the path of the directory on the host.
+
+Now you may think that `docker run -v ...` is the better option, but keep in mind that mounting an existing directory assumes that the directory exists on the host, which may give you portability issues.
+
+This topic is a good candidate for another detailed post and video, so let's move on for now.
+
+### USER
+
+Don't run your stuff as root, be humble, use the `USER` instruction to specify the user. This user will be used to run any subsequent `RUN`, `CMD` AND `ENDPOINT` instructions in your Dockerfile.
+
+### WORKDIR
+
+A very convenient way to define the working directory, it will be used with subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instructions. You can specify `WORKDIR` multiple times in a Dockerfile.
+
+If the directory does not exists, Docker will create it for you.
+
+### EXPOSE
+
+An important instruction to inform your users about the ports your application is listening on. `EXPOSE` will not publish the port, you need to use `docker run -p...` to do that when you start the container.
+
+### CMD and ENTRYPOINT
+
+`CMD` is the instruction to specify what component is to be run by your image with arguments in the following form: `CMD [“executable”, “param1”, “param2”…]`.
+
+You can override `CMD` when you're starting up your container by specifying your command after the image name like this: `$ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]`.
+
+You can only specify one `CMD` in a Dockerfile (OK, physically you can specify more than one, but only the last one will be used).  
+
+It is good practice to specify a `CMD` even if you are developing a generic container, in this case an interactive shell is a good `CMD` entry. So you do `CMD` ["python"] or `CMD` [“php”, “-a”] to give your users something to work with.
+
+So what's the deal with `ENTRYPOINT`? When you specify and entry point your image will work a bit differently. You use `ENTRYPOINT` as the main executable of your image. In this case whatever you specify in `CMD` will be added to `ENTRYPOINT` as parameters.
+
+{% highlight Dockerfile linenos=table %}
+ENTRYPOINT ["git"]
+CMD ["--help"]
+{% endhighlight %}
+
+This way you can build Docker images that mimic the behavior of the main executable you specify in `ENTRYPOINT`.
+
+### ONBUILD     
+
+This is so nice. You can specify instructions with `ONBUILD` that will be executed when your image is used as the base image of another Dockerfile. :)
+
+This is useful when you want to create a generic base image to be used in different variations by many Dockerfiles, or in many projects or by many parties.
+
+So you do not need to add the specific stuff immediately, like you don't need to copy the source code or config files in the base image. How could you even do that, when these things will be available only later?
+
+So what you do instead is to add `ONBUILD` instructions. So you can do something like this:
+
+{% highlight Dockerfile linenos=table %}
+ONBUILD COPY . /usr/src/app
+ONBUILD RUN /usr/src/app/mybuild.sh
+{% endhighlight %}
+
+`ONBUILD` instructions will be executed right after the `FROM` instruction in the downstram Dockerfile.
+
+## Your Dockerfile building workflow
+
+It's time to have a look at the second video on Youtube. Please have a look and let's move on.
 
 <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZcMr4G5DH7c" frameborder="0" allowfullscreen></iframe></div>
+
+1. Pick the right base image
+2. Go to shell and build your environment
+3. Add the steps to your Dockerfile and build your image
+4. Repeat steps 2 and 3
+
+
 
 <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/mbmVyXIaY80" frameborder="0" allowfullscreen></iframe></div>

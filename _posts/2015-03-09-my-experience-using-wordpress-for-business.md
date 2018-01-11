@@ -37,7 +37,7 @@ In order to be fair, I moved on to Joomla. Finding a theme for Joomla proved to 
 
 I made my decision anyway when I found out about the Skimlinks WordPress plugin.
 
-![]({{ site.url }}/assets/images/in-content/wordpress-logo-and-hand.jpg)
+![](/assets/images/in-content/wordpress-logo-and-hand.jpg)
 
 ## The WordPress theme
 
@@ -124,3 +124,4 @@ Plugin development is easy to learn, at least with and IT background, and PHP is
 **I have time to run campaigns to find out what works in on-line marketing. I have time to create the big data back-end that I have in mind.**
 
 **I have time to dive into the world of web economy with [Udemy](https://www.udemy.com/courses/) and [Coursera](https://www.coursera.org/) courses and plan for the next steps of my business.**
+
