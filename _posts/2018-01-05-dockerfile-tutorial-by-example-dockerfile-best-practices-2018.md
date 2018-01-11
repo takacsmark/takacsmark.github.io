@@ -1,43 +1,48 @@
 ---
 layout: post
-title:  "Dockerfile tutorial by example "
-description: "What career paths are available to a developer who's not interested in management, leadership, or teaching? "
+title:  "Dockerfile tutorial by example - basics and best practices [2018]"
+description: "An in-depth tutorial on creating your own Docker images with Dockerfile. Detailed examples, videos and Dockerfile best practices."
 date:   2018-01-05 01:59:00 +0100
-thumbnail: "/assets/images/post-thumbs/the-top-5-linux-systems-for-elderly-people.jpg"
+thumbnail: "/assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png"
 categories: Docker, Tutorials
 ---
 * TOC
 {:toc}
 
-This article is the writeup of 3 Dockerfile video tutorials on my Youtube channel, meaning I created the videos first and I'm adding the details in written form now.
-
-You'll find the videos included in this article as you read and progress through the content.
-
-
 ## Overview
 
-This article will help you understand the concept behind creating a Dockerfile. Moreover I'll explain why and in which situations you'll want to use a Dockerfile in the first place.  
+**This article will help you understand the concept behind creating a Dockerfile. Moreover I'll explain why and in which situations you'll want to use a Dockerfile in the first place.**
 
-We'll go through a few examples of my workflow for creating my Dockefiles and I'll share my experience and best practices regarding working with Dockerfiles.
+**We'll go through a few examples of my workflow for creating my Dockerfiles and I'll share my experience and best practices regarding working with Dockerfiles.**
+
+This article is the writeup of 2 Dockerfile video tutorials on my Youtube channel, meaning I created the videos first and I'm adding the details in written form now. You'll find the videos included in this article as you read and progress through the content.
+
+**This is a pretty lengthy article (over 5500 words), you can think of it as a chapter of a Docker book. Please be patient, every part of it contains practical information, I hope you'll find it useful.**
+
+**Enjoy!**
+
+Let's start the first video.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Er8MAvTWlI" frameborder="0" allowfullscreen></iframe></div>
 
 ## What is a Dockerfile and why you'd want to use one?
 
-**A Dockerfile is a text file that defines a docker image. You'll use a Dockerfile to create your own custom Docker image, in other words to define your custom environment to be used in a Docker container.**
+**A Dockerfile is a text file that defines a Docker image. You'll use a Dockerfile to create your own custom Docker image, in other words to define your custom environment to be used in a Docker container.**
 
 Since this tutorial is for beginners let's go slow and go deeper into the above definition.
 
-### Review Docker base terms
+### Recap of Docker base terms
 
 Let me repeat a few basic concepts to better explain. If you are absolutely new to docker, please start with the [Getting started with Docker - step by step tutorial - article on the blog](http://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/). It got 1,500 likes on Youtube from 120,000 views, so it's not only me who says you'll get this, so don't worry. :)  
 
-Docker's main purpose is to give us run-time environments that we can re-create/reproduce on any machine in any environment. The main advantage is to avoid the situations when we say "it worked on my machine", because Docker containers will give us the same environment on all machines.
+Docker's main purpose is to give us run-time environments that we can re-create/reproduce on any machine (that runs Docker). The main advantage is to avoid the situations when we say "it worked on my machine", because Docker containers will give us the same environment on all machines.
 
 In order to follow this article you need to understand the following 2 basic concepts of Docker:
 1. **Docker containers**: containers are runtime environments. You usually run one main process in one Docker container. You can think of this like one Docker container provides one service in your project.
 
     For example you can start one container to be your MySQL database and start another container to be your Wordpress server and connect these containers together to get a Wordpress project setup.
 
-    You can start containers to run all the tech you can think of, you can run databases, web servers, web frameworks, test servers, execute big data scripts, work on shell scripts, there is really no limit.
+    You can start containers to run all the tech you can think of, you can run databases, web servers, web frameworks, test servers, execute big data scripts, work on shell scripts, etc.
 
 2. Docker containers are started by running a **Docker image**. A Docker image is a pre-built environment for a certain technology or service. A Docker image is not a runtime, it's rather a collection of files, libraries and configuration files that build up an environment.
 
@@ -49,22 +54,20 @@ In order to follow this article you need to understand the following 2 basic con
 
 ### Why and when you'd want to use a Dockerfile?
 
-So let's go back to the definition: **A Dockerfile is a text file that defines a docker image. You'll use a Dockerfile to create your own custom Docker image, in other words to define your custom environment to be used in a Docker container.**
+So let's go back to the definition: **A Dockerfile is a text file that defines a Docker image. You'll use a Dockerfile to create your own custom Docker image, in other words to define your custom environment to be used in a Docker container.**
 
-You'll want to create your own Dockerfile when the images that area already available don't satisfy your project needs. This will actually happen most of the time, which means that learning about the Dockerfile is pretty essential part of working with Docker.
+You'll want to create your own Dockerfile when existing images don't satisfy your project needs. This will actually happen most of the time, which means that learning about the Dockerfile is a pretty essential part of working with Docker.
 
-You'll see in the tutorial that a Dockerfile is a step by step definition of building up a Docker image. The Dockerfile contains a list of instructions that Docker will execute when you issue the `docker build` command. Your workflow is like this.
+You'll see in the tutorial that a Dockerfile is a step by step definition of building up a Docker image. The Dockerfile contains a list of instructions that Docker will execute when you issue the `docker build` command. Your workflow is like this:
 1. you create the Dockerfile and define the steps that build up your images
-2. you isseu the `docker build` commnad which will build a Docker image from the Dockerfiles
+2. you issue the `docker build` command which will build a Docker image from your Dockerfile
 3. now you can use this image to start containers with the `docker run` command
 
-INSERT FIGURE HERE TODO
-
-You'll usually start searching for available Docker images on the [Docker store](http://store.docker.com), you'll also find images on github included with a good number of repos (in the form of Dockerfiles), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
+You'll usually start searching for available Docker images on the [Docker store](http://store.docker.com), you'll also find images on github included with a good number of repos (in the form of a Dockerfile), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
 
 The definition also implies that the images that you'll find on the Docker store are defined in Dockerfiles. We'll review some Dockerfiles in the first video. **A Docker image is created by building a Dockerfile** with the `docker build` command. We'll see examples later.
 
-This means that technology vendors and developers usually provide a Dockerfile for their specific technologies. They define the steps of building the image in the Dockerfile and they use `docker build` to create the Docker image.
+This means that technology vendors and developers usually provide one or more Dockerfile(s) with their specific technologies. They define the steps of building the image in the Dockerfile and they use `docker build` to create the Docker image.
 
 What happens if you can't find the exact Docker image that you need for your project? Most images are generic and won't cover your exact case. **This is the point when you'll create your own Docker images.**
 
@@ -74,10 +77,7 @@ All you need to do is to create a text file named `Dockerfile` (with no extensio
 
 ## Dockerfile basics
 
-In the first video you'll find the key concepts, Dockerfile examples, I teach you how to manage your Docker images locally and we'll create an example web server custom image and understand the concept of layering.
-
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Er8MAvTWlI" frameborder="0" allowfullscreen></iframe></div>
-
+In the first video you'll find the key concepts, Dockerfile examples, I teach you how to manage your Docker images locally and we'll create a custom image and understand the concept of layering.
 
 ### Dockerfile example
 
@@ -90,54 +90,54 @@ Please browse through the file, it's enough for now if you note the key structur
 <script src="http://gist-it.appspot.com/https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile"></script>
 
 At this point I would like you to understand the following key points based on the example file:
-1. The Dockerfile is a text file that contains the instructions that you would execute on the command line to create an image.
+1. The Dockerfile is a text file that (mostly) contains the instructions that you would execute on the command line to create an image.
 2. A Dockerfile is a step by step set of instructions.
 3. Docker provides a set of standard instructions to be used in the Dockerfile, like `FROM`, `COPY`, `RUN`, `ENV`, `EXPOSE`, `CMD` just to name a few basic ones.
 4. Docker will build a Docker image automatically by reading these instructions from the Dockerfile.
 
-So from a developer, or tech user perspective you'll be basically describing the build steps of your environment in the Dockerfile. Then you'll build your image from the Dockerfile and start up your containers.
+**So from a developer, or tech user perspective you'll be basically describing the build steps of your environment in the Dockerfile. Then you'll build your image from the Dockerfile and start up your containers.**
 
-This also implies that understanding Dockerfile instructions is not enough to build create your Dockerfile, you need to also understand the context of the technology you are building for. If, for example, you are bulding a Dockerfile to be used in a PHP project, you'll need to dive into PHP specific knowledge, like configuration methods, PHP extensions, environment settings and such.
+This also implies that understanding Dockerfile instructions is not enough to create your Dockerfile, because you need to also understand the context of the technology you are building for. If, for example, you are bulding a Dockerfile to be used in a PHP project, you'll need to dive into PHP specific knowledge, like configuration methods, PHP extensions, environment settings and such.
 
-The good news is that you can save a lot of time when starting out experimenting with a new technology, because you can you an image prepared by someone else, without understanding the details immediately. Once you are up for some more complex stuff you can start adding to the knowledge that you can extract and learn from other people's Dockerfiles.
+The good news is that you can save a lot of time when starting out experimenting with a new technology, because you can use an image prepared by someone else, without understanding the details immediately. Once you are up for some more complex stuff you can start adding to the knowledge that you can extract and learn from other people's Dockerfiles.
 
 >Reading Dockerfiles prepared by others is a great way to learn about technology.
 
 ### Listing Docker images on your computer
 
-Let's do some hands-on magic. Before building your own Docker images, let's how to manage images on your computer.
+Let's do some hands-on magic. Before building your own Docker images, let's see how to manage images on your computer.
 
 You can follow the video for this part at around 8:00, I'll provide a summary here.
 
-Use the command `docker images` in your terminal to list the images you currently have on your computer. Remember that images are stored on your computer once you pull them from a registry like the docker store, or once you build them on your computer.
+Use the command `docker images` in your terminal to list the images you currently have on your computer. Remember that images are stored on your computer once you pull them from a registry like the Docker store, or once you build them on your computer.
 
-If you have not pulled any images yet, your list may be empty. This my computer today (please note that the list is different from the list in the video, because I'm writing this article later in time).
+If you have not pulled any images yet, your list may be empty. This is my computer today (please note that the list is different from the list in the video, because I'm writing this article later in time).
 
 ![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-docker-images.png)
 
-These are the images that I'm currently using on my computer. I pulled most of them from the docker store, and I have built my own, too. The images that have a nametag in the form of `takacsmark/<image_name>` are the ones that I have built from my own Dockerfiles.
+These are the images that I'm currently using on my computer. I pulled most of them from the Docker store, and I have built my own, too. The images that have a nametag in the form of `takacsmark/<image_name>` are the ones that I have built from my own Dockerfiles.
 
-Please note that I usually don't keep all the images that I use, I try to keep everything nice and clean, because images take up a lot of space. I'll show you the exact amount of space images will take from your computer later on. That's why it's very important to learn how to clean up your images (will show you in a minute).
+Please note that I usually don't keep all the images that I use, I try to keep everything nice and clean, because images take up space.
 
 It is worthwhile to check the image sizes in the picture. You'll find that some images have a very small footprint, like the Alpine linux image, while more complex image take up a lot of space, like anaconda3.
 
 ### Let's create your first image
 
-Let's start the journey by creating a modified Alpine Linux image. We'll take the base Alpine image from the docker store and modify it by installing a few Linux packages. Please execute the following in terminal:
+Let's start the journey by creating a modified Alpine Linux image. We'll take the base Alpine image from the Docker store and modify it by installing a few Linux packages. Please execute the following in terminal:
 
 #### 1. Create the Dockerfile
 
 Create an empty directory for this task and create an empty file in that directory with the name `Dockerfile`. You can do this easily by issuing the command `touch Dockerfile` in your empty directory.
 
-Congratulations, you just created your first Dockerfile! Let's open the file in your favourite text editor.
+Congratulations, you just created your first Dockerfile! Let's open the file in your favorite text editor!
 
 The Alpine image does not have git, vim and curl by default, as you can see in the video. So let's create a custom image from Alpine that has git, vim and curl included. This will be your first custom Docker image.
 
 #### 2. Define the base image with FROM
 
-Every Dockerfile must start with the `FROM` instruction. The idea behind is that you need a starting point to build your image. You can start `FROM scratch`, scratch is an explicitly empty image on the docker store that is used to build base images like Alpine, Debian and so on.
+Every Dockerfile must start with the `FROM` instruction. The idea behind is that you need a starting point to build your image. You can start `FROM scratch`, scratch is an explicitly empty image on the Docker store that is used to build base images like Alpine, Debian and so on.
 
-I start my images mostly from other images. You can start you Docker images from any valid image that you pull from public registries. The image you start from is called you base image. In our case let's add `FROM alpine:3.4` to the Dockerfile.
+I start my images mostly from other images. You can start you Docker images from any valid image that you pull from public registries. The image you start from is called the base image. In our case let's add `FROM alpine:3.4` to the Dockerfile.
 
 Right now your Dockerfile should look like this:
 {% highlight Dockerfile linenos=table %}
@@ -164,9 +164,9 @@ Please run the following in terminal:
 `docker build -t takacsmark/alpine-smarter:1.0 .`
 
 This command is structured as follows:
-- docker build is the command to build a docker image from a Dockerfile
+- `docker build` is the command to build a Docker image from a Dockerfile
 - -t takacsmark/alpine-smarter:1.0 defines the tag (hence -t) of the image, which will be basically the name of the image. As the first part I put my own name `takacsmark`, because I'm the maintainer of the image, then I gave it a human readable name `alpine-smarter` and provided a version number `1.0`.
-- please note the `.` (dot) at the end of the line. You need to specify the directory where docker build should be looking for a Dockerfile. Therefore `.` tells docker build to look for the file in the current directory.
+- please note the `.` (dot) at the end of the line. You need to specify the directory where `docker build` should be looking for a Dockerfile. Therefore `.` tells `docker build` to look for the file in the current directory.
 
 You should see a similar output in terminal now:
 
@@ -174,6 +174,8 @@ You should see a similar output in terminal now:
 
 
 #### 5. Enjoy the results
+
+Docker created an image from your Dockerfile. You should see a new image in your image list issuing `docker images` again.
 
 Let's check what's inside our new image, let's run the following command and check out vim and curl:
 `docker run --rm -ti takacsmark/alpine-smarter:1.0 /bin/sh`
@@ -185,15 +187,15 @@ We have successfully added two packages to the Alpine base image. Let's not stop
 
 ### Understand image layering
 
-If you look at the above screen shot again that I added at the end of image building you can notice that `docker build` provided the build output in for steps, namely Step 1/4, Step 2/4, Step 3/4 and Step 4/4.
+If you look at the above screen shot again you can notice that `docker build` provided the build output in 4 steps, namely Step 1/4, Step 2/4, Step 3/4 and Step 4/4.
 
 At the headline of each step you can see the corresponding line in your Dockerfile. This is because `docker build` executes the lines in the Dockerfile one at a time.
 
-What is more important that with every step in the build process docker will create an intermediary image for the specific step. This means that docker will take the base image (alpine:3.4), then execute `RUN apk update` and then docker will add the resulting files from that step as another layer on top of the base image.
+What is more important that with every step in the build process Docker will create an intermediary image for the specific step. This means that Docker will take the base image (alpine:3.4), then execute `RUN apk update` and then Docker will add the resulting files from that step as another layer on top of the base image.
 
 You can follow the concept by following the line in the output that start with `---->` these lines denote the image ids of intermediary images.
 
-This means that the final docker image consist of 4 layers and the intermediary layers are also stored on your system as standalone images. This is useful because docker will use the intermediary images as image cache, which means your future builds will be much faster for those Dockerfile steps that you do not modify.
+This means that the final Docker image consist of 4 layers and the intermediary layers are also available on your system as standalone images. This is useful because Docker will use the intermediary images as image cache, which means your future builds will be much faster for those Dockerfile steps that you do not modify.
 
 Let's first see all the images that were created. Please issue the command
 `docker images -a` in terminal.
@@ -203,13 +205,15 @@ You should see something like this:
 
 We used `-a` to list all images on your computer including intermediary images. Please note how the image ids are the same as the ones you see during the build process.
 
-This also implies that your intermediary images will take up space on your computer, which may get painful sometimes. I have a nice collection of 2.5GB intermediary images on my computer for python anaconda3. We'll come back to this later.
+Only `RUN`, `COPY` and `ADD` instructions create layers to improve build performance.
 
 The main advantage of image layering lies in image caching.
 
 If you build your Dockerfile again now with the same command `docker build -t takacsmark/alpine-smarter:1.0 .`, you'll notice that the build was almost instantaneous and the output for every step says that the build was done from cache.
 
-This behavior makes our lives a lot easier. Since image layers are built on top of each other docker will use images cache during the build process up to the line where the first change occurs in your Dockerfile. Every later step will be re-built.
+This behavior makes our lives a lot easier. Since image layers are built on top of each other Docker will use images cache during the build process up to the line where the first change occurs in your Dockerfile. Every later step will be re-built.
+
+**Please note that each layer only stores the differences compared to the underlying layer. The video may be misleading from this perspective, because I interperet the sizes in `docker images -a` differently. The right interpretation is that `docker images` and `docker images -a` display the size of the image including the size of parent images.**
 
 #### Image cache example
 
@@ -238,7 +242,7 @@ RUN apk add vim
 RUN apk add git
 {% endhighlight %}
 
-In this case every step after change will be re-built. Which means that the steps to install curl, vim and git will be run from scratch, no caching will be available beyond the point where the change occured.
+In this case every step after the change will be re-built. Which means that the steps to install curl, vim and git will be run from scratch, no caching will be available beyond the point where the change occured.
 
 #### Dangling images
 
@@ -246,7 +250,7 @@ If you execute `docker images` now in terminal, you'll see something nasty.
 
 ![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-dangling-images.png)
 
-Our freshly built image is ready to use, but the previous image that we built with curl is still hanging around and it does not have a proper tag or name right now. (You can check the image ids to see that this is the same image we built previously).
+Our newly built image is ready to use, but the previous image that we built with curl is still hanging around and it does not have a proper tag or name right now. (You can check the image ids to see that this is the same image we built previously).
 
 Docker calls such images dangling images.
 
@@ -254,17 +258,15 @@ You can use the following command to list dangling images:
 
 `docker images --filter "dangling=true"`
 
-I personally don't like it images are just hangin around without a purpose, so here is how to remove them:
+I personally don't like it when images are just hanging around without a purpose, so here is how to remove them:
 
-`docker rmi $(docker images -q --filter "dangling=true")`
-
-
+`docker rmi $(docker images -q --filter "dangling=true")`.
 
 ## Dockerfile best practices
 
 ### Minimize the number of steps in the Dockerfile
 
-We have seen that layer caching may eat up your space drastically, especially if you are working with large components. Therefore it's a cool best practice to combine several steps into one line, so that they'll create only one intermediary image.
+Minimizing the number of steps in your image may improve build and pull performance. Therefore it's a cool best practice to combine several steps into one line, so that they'll create only one intermediary image.
 
 We can reformulate our Dockerfile like this:
 {% highlight Dockerfile linenos=table %}
@@ -276,7 +278,7 @@ RUN apk update && \
     apk add git
 {% endhighlight %}
 
-After building this Dockerfile the usual way you'll find that this time it has only taken 2 steps instead of 4, which will result in 1 new image, instead of 3 images, which saves space.
+After building this Dockerfile the usual way you'll find that this time it has only taken 2 steps instead of 4, which will result in 1 new image, instead of 3 images.
 
 ![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-line-optimization.png)
 
@@ -295,7 +297,7 @@ RUN apk update && \
     apk add vim
 {% endhighlight %}
 
-(Yes you can remove `apk add from the last 3 lines like this`):
+(Yes you can remove `apk add` from the last 3 lines like this):
 
 {% highlight Dockerfile linenos=table %}
 FROM alpine:3.4
@@ -308,42 +310,41 @@ RUN apk update && apk add \
 
 ### Start your Dockerfile with the steps that are least likely to change
 
-This is easier said than done. Anyway your image will stabilize after a while and changes will be less likely in your foundation. The best practice is to structure your Dockerfile according to the following:
-1. install tools that are needed to build your application
-2. install dependencies, libraries and packages
-3. build your application
-
+This is easier said than done. Anyway, your image will stabilize after a while and changes will be less likely. The best practice is to structure your Dockerfile according to the following:
+1. Install tools that are needed to build your application.
+2. Install dependencies, libraries and packages.
+3. Build your application.
 
 ### Clean up your Dockerfile
 
-Always review your steps in the Dockerfile and only keep the minimum set of steps that are needed by your application. Always remove unnecessary component.
+Always review your steps in the Dockerfile and only keep the minimum set of steps that are needed by your application. Always remove unnecessary components.
 
-### Use a `.dockerignore` file
+### Use a .dockerignore file
 
-The directory where you issue the `docker build` command is called the build context. Docker will send all of the files and directories in your build directory to the Docker daemon as part of the build context. If you have stuff in your directory that is not needed by your build you'll have an unnecessarily larger build context that results in a larger image size.
+The directory where you issue the `docker build` command is called the build context. Docker will send all of the files and directories in your build directory to the Docker daemon as part of the build context. If you have stuff in your directory that is not needed by your build, you'll have an unnecessarily larger build context that results in a larger image size.
 
 You can remedy this situation by adding a `.dockerignore` file that works similarly to `.gitignore`. You can specify the list of folders and files that should be ignored in the build context.
 
 
-If you want to have a look at the size of your build context just check out the first line of your `docker build` output. My alpine build output for example says: `Sending build context to Docker daemon  2.048kB`.
+If you want to have a look at the size of your build context, just check out the first line of your `docker build` output. My alpine build output for example says: `Sending build context to Docker daemon  2.048kB`.
 
 ### Containers should be ephemeral
 
-This would belong to generic docker guidelines, but it's never enough to stress this point. It is your best interest to design and build docker images that can be destroyed and recreated/replaced automatically or minimal configuration.
+This would belong to generic Docker guidelines, but it's never enough to stress this point. It is your best interest to design and build Docker images that can be destroyed and recreated/replaced automatically or with minimal configuration.
 
-Which means that you should create Dockerfiles that define stateless images. Any state, like data, should be kept outside of your containers.
+Which means that you should create Dockerfiles that define stateless images. Any state, should be kept outside of your containers.
 
 ### One container should have one concern
 
-Think of containers as entities that take responsibility of one aspect of your project. So design your application in a way that your web server, your database, your cache and other components have their own dedicated containers.
+Think of containers as entities that take responsibility for one aspect of your project. So design your application in a way that your web server, database, in-memory cache and other components have their own dedicated containers.
 
 You'll see the benefits of such a design when scaling your app horizontally. We'll look into interoperability of containers and container networking in a future tutorial.
 
 It's a good idea to check out [the official Dockerfile best practices page](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) for more info.
 
-## Dockerfile key instructions
+## Dockerfile key instructions best practices
 
-Docker documentation is usually very easy to follow and easy to understand. What I learnt from your comments is that the stuff that most people need is some insight into others' experience to see the big picture. So I usually focus on this aspect.
+The official Docker documentation is usually very easy to follow and easy to understand. What I learnt from your comments is, that the stuff that most people need is some insight into others' experience to see the big picture.
 
 The reason why I'll give you some insight into the key instructions is to share my experience and give you hints how to use them. I'll not give you the specs, for exact specs please check the [Dockerfile reference page](https://docs.docker.com/engine/reference/builder/).
 
@@ -363,15 +364,15 @@ We'll cover the following basic instructions to get you started:
 
 For beginners it's enough to understand that every Dockerfile must start with the `FROM` instruction in the form of `FROM <image>[:tag]`. This will set the base image for your Dockerfile, which means that subsequent instructions will be applied to this base image.
 
-The `tag` value is optional, if you don't specify the `tag` docker will use the tag `latest` and will try and use or pull the latest version of the base image during build.
+The `tag` value is optional, if you don't specify the `tag` Docker will use the tag `latest` and will try and use or pull the latest version of the base image during build.
 
 On the little bit more advanced side, let's note the following:
-- there is one instruction that you can put before `FROM` into your Dockerfile. This instruction is `ARG`. `ARG` is used to specify arguments for the `docker build` command with the `--build-arg <varname>=<value>` flag.
-- you can have more than one `FROM` instructions in your Dockerfile. You would one to use this feature when you use on base image to build your app and another base image to run it.
+- There is one instruction that you can put before `FROM` into your Dockerfile. This instruction is `ARG`. `ARG` is used to specify arguments for the `docker build` command with the `--build-arg <varname>=<value>` flag.
+- You can have more than one `FROM` instructions in your Dockerfile. You will want to use this feature, for example, when you use one base image to build your app and another base image to run it.
 
     It's called a multi-stage build and you can read about it [here](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
 
-    This is why every section that starts with `FROM` in your Dockerfile is called a build stage (even in the simle case of having one `FROM` instruction). You can specify the name of the build stage in the form `FROM <image>[:tag] [AS <name>]`.
+    This is why every section that starts with `FROM` in your Dockerfile is called a build stage (even in the simple case of having only one `FROM` instruction). You can specify the name of the build stage in the form `FROM <image>[:tag] [AS <name>]`.
 
 ### COPY vs ADD
 
@@ -379,14 +380,14 @@ Both `ADD` and `COPY` are designed to add directories and files to your Docker i
 
 The reason behind this is that `ADD` has extra features compared to `COPY` that make `ADD` more unpredictable and a bit over-designed. `ADD` can pull files from url sources, which `COPY` cannot. `ADD` can also extract compressed files assuming it can recognize and handle the format. You cannot extract archives with `COPY`.
 
-The `ADD` instruction was added to Docker first, and `COPY` was added later to provide a straightforward, rock solid solution for copying files and directories from <src> into your container's file system.
+The `ADD` instruction was added to Docker first, and `COPY` was added later to provide a straightforward, rock solid solution for copying files and directories into your container's file system.
 
 If you want to pull files from the web into your image I would suggest to use `RUN` and `curl` and uncompress your files with `RUN` and commands you would use on the command line.
 
 ### ENV
 
 `ENV` is used to define environment variables. The interesting thing about `ENV` is that it does two things:
-1. You can use it to define environment variables that will be available in your container. So when you build and image and start up a container with that image you'll find that the environment variable is available and is set to the value you specified in the Dockerfile.  
+1. You can use it to define environment variables that will be available in your container. So when you build an image and start up a container with that image you'll find that the environment variable is available and is set to the value you specified in the Dockerfile.  
 2. You can use the variables that you specify by `ENV` in the Dockerfile itself. So in subsequent instructions the environment variable will be available.
 
 ### RUN
@@ -414,7 +415,7 @@ You can also have a look inside your volumes by navigating to Docker volumes in 
 
 On Mac, you'll not be able to access `/var/lib/docker/volumes` so easily. If you run `screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty` on your Mac, you get a terminal where you can navigate as if you were using a Linux machine.
 
-The difference between the `VOLUME` instruction in Dockerfile and starting your container with `docker run -v ...` is this: `VOLUME` in Dockerfile will create a new empty directory for your files under the standard docker structure, i.e. `/var/lib/docker/volumes`. `docker run -v ...` can do more, you can mount existing directories from your host file system into your container and you can also specify the path of the directory on the host.
+The difference between the `VOLUME` instruction in Dockerfile and starting your container with `docker run -v ...` is this: `VOLUME` in Dockerfile will create a new empty directory for your files under the standard Docker structure, i.e. `/var/lib/docker/volumes`. `docker run -v ...` can do more, you can mount existing directories from your host file system into your container and you can also specify the path of the directory on the host.
 
 Now you may think that `docker run -v ...` is the better option, but keep in mind that mounting an existing directory assumes that the directory exists on the host, which may give you portability issues.
 
@@ -442,9 +443,9 @@ You can override `CMD` when you're starting up your container by specifying your
 
 You can only specify one `CMD` in a Dockerfile (OK, physically you can specify more than one, but only the last one will be used).  
 
-It is good practice to specify a `CMD` even if you are developing a generic container, in this case an interactive shell is a good `CMD` entry. So you do `CMD` ["python"] or `CMD` [“php”, “-a”] to give your users something to work with.
+It is good practice to specify a `CMD` even if you are developing a generic container, in this case an interactive shell is a good `CMD` entry. So you do `CMD ["python"]` or `CMD [“php”, “-a”]` to give your users something to work with.
 
-So what's the deal with `ENTRYPOINT`? When you specify and entry point your image will work a bit differently. You use `ENTRYPOINT` as the main executable of your image. In this case whatever you specify in `CMD` will be added to `ENTRYPOINT` as parameters.
+So what's the deal with `ENTRYPOINT`? When you specify an entry point, your image will work a bit differently. You use `ENTRYPOINT` as the main executable of your image. In this case whatever you specify in `CMD` will be added to `ENTRYPOINT` as parameters.
 
 {% highlight Dockerfile linenos=table %}
 ENTRYPOINT ["git"]
@@ -470,17 +471,42 @@ ONBUILD RUN /usr/src/app/mybuild.sh
 
 `ONBUILD` instructions will be executed right after the `FROM` instruction in the downstram Dockerfile.
 
-## Your Dockerfile building workflow
+## My Dockerfile building workflow
 
 It's time to have a look at the second video on Youtube. Please have a look and let's move on.
 
 <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZcMr4G5DH7c" frameborder="0" allowfullscreen></iframe></div>
 
-1. Pick the right base image
-2. Go to shell and build your environment
-3. Add the steps to your Dockerfile and build your image
-4. Repeat steps 2 and 3
+Now that we looked at the toolset and best practices, you might be wondering, what is the best way of building your Dockerfile.
 
+Well, I think everybody has their own ways, let me show you mine.
 
+Writing the Dockerfile is fairly simple. The hard part is to know what steps you need to take to set up your environment. This will largely depend on the technology you're working with and your knowledge of that specific technology.
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/mbmVyXIaY80" frameborder="0" allowfullscreen></iframe></div>
+I use a fairly straightforward 4 step approach to build my Dockerfiles in an iterative manner. It is the following:
+
+1. **Pick the right base image** - in this step I experiment with the base images available on-line for the technology in question. I usually check out different flavors, like an image based on Debian Jessie and another on based on Alpine.
+
+    I also check out the images made by others for a specific technology. For node.js, for example, I'm not building my own images from a Linux base, I usually use the offical node images as a base image.
+
+    When working with php, I usually start from php with the Apache web server included and add my stuff myself.
+2. **Go to shell and build your environment** - as a next step I go with a try-and-fail approach. I pull my chosen images to my computer and start a container in interactive mode with a shell.
+
+    I start manually executing the steps in the container and see how things work out. Once a step seems to be OK, I add it to my Dockerfile.
+
+    If something goes wrong, I change the course, and I update the Dockerfile immediately.
+
+3. **Add the steps to your Dockerfile and build your image** - I keep adding steps continuously as I make progress with my setup in the container.
+
+    Every now and then I stop and build my image from the Dockerfile to make sure that it produces the same results every time.
+
+    Then I use the newly built image to start a container with a shell and go on with my installation and set-up steps.
+4. **Repeat steps 2 and 3** - I keep repeating steps 2 and 3 until I reach the stage that I like.
+
+Please note that you can do a lot of fancy stuff for production applications and team work, like multi-stage builds, image hierarchies, shared volumes, networked containers, swarm and a lot more.
+
+We'll come back to these in another article.
+
+## Wrap up
+
+This post is too long already, so I'll not give you a summary now. :) Please comment and share if you liked it, and make sure to [subscribe on Youtube](https://www.youtube.com/c/takacsmark) and [follow me on Facebook](https://www.facebook.com/takacsmarkdotcom) and [Twitter](https://twitter.com/takacsmark) for updates.  
