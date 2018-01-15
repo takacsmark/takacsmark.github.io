@@ -41,9 +41,46 @@ Retail is the first field to be disrupted by AR applications. Gartner say, [by 2
 
 You can completely change the life of your colleagues by making them more successful at work with AR tools.
 
-## 7 uses of augmented reality you should consider
+## 7 uses of augmented reality that will matter to your business
 
-1. Customer interactions and engagement, service and shopping
+### 1. Consumer experience and shopping
+
+You can enhance your web-shop, as well as your brick and mortar stores with stunning AR experiences. We'll se examples for both scenarios.
+
+**Virtual fitting rooms, AR make-up mirrors and furniture preview apps have been on the market for over 5 years now, they have matured and have been embraced by customers They are not a just a nice option to have, any more.**
+
+If you haven't met the classics yet, please take a loot at these examples:
+
+- [Ikea Place](https://itunes.apple.com/us/app/ikea-place/id1279244498?mt=8), Ikea's furniture preview app lets you please furniture into your own place. Interesting technical detail about this app, that it uses [Apple's ARKit](https://developer.apple.com/arkit/), released by apple with Xcode 9 and iOS 11 to keep up with competition.
+
+    ![Ikea augmented reality app](/assets/images/in-content/ikea-augmented-reality-app.jpg)
+
+    photo from [iTunes](https://itunes.apple.com/us/app/ikea-place/id1279244498?mt=8)
+
+- [Gap's DressingRoom app](https://play.google.com/store/apps/details?id=com.avametric.dressingroombygap&hl=en) was launched last year, it allows you to create you own avatar and shop Gap's collections. It also allows you to try different sizes and colors, plus you'll have a 360 degree view of yourself.
+
+    ![Gap virtual dressing room app](/assets/images/in-content/gap-virtual-dressing-room.png)
+
+    photo is a screenshot from [Google play](https://play.google.com/store/apps/details?id=com.avametric.dressingroombygap&hl=en)
+
+- Augmented reality mirrors are everyday reality already. [Modiface](http://modiface.com/) is one of the most successful players in this space, their technology is [supporting top make-up brands](https://techcrunch.com/2016/01/19/facial-precognition/) worldwide.
+
+    Mobiface and their technology provides solutions for the key challenges in the beauty arena, like skin assessment, lipstick color recommendations, live make-up and real-time hair color previews.
+
+    <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZAv2sunQKCc" frameborder="0" allowfullscreen></iframe></div>
+
+Some other classic retail examples include the [Uniqlo magic mirror](https://www.youtube.com/watch?time_continue=2&v=oUD57MpHAE8) or [Converse the sampler](https://www.youtube.com/watch?v=lBQzXi04JpE).
+
+**AR dressing rooms in physical stores and interactive AR shopwindow experiences are common place. They are practical and also engaging and fun for customers.**
+
+**Online retailers, like Amazon, are investing into AR to help customers visualize products in the physical space when shopping online.**
+
+Amazon just released AR view in November 2017 in the Amazon app.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/uhdOzpblrm0" frameborder="0" allowfullscreen></iframe></div>
+
+
+
 1. Predictive maintenance
 2. Medical use, online help, visually impaired
 3. Education
