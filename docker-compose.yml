@@ -5,8 +5,16 @@ services:
         container_name: takacsmark-dot-com
         # Using incremental will only refresh the file that was changed and won't refersh dependencies
         # i.e. changing a post will refresh the post but not index.html, therefore this version is commented out and kept for reference
-        # command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
-        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml 
+
+        # run in incremental mode - good for working on one post
+        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+
+        # run non incremental with drafts - good when adding a new post
+        # command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
+
+        # run non incremental and no drafts - good to change design
+        # command: bundle exec jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
+
         ports:
             - 4000:4000
         volumes:
