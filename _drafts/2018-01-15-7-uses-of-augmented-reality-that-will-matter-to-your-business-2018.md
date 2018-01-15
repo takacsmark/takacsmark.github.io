@@ -29,21 +29,21 @@ I've seen serious investment into security, data science, AI, bots and IoT recen
 
 AR is a very special animal, because it's cross-industry. It can play well with any business in any field, and it can add value to other current technology trends.
 
-So, what do I mean by this? Your AR investment may play well with you other digital projects, on top of this you can use AR to better realize the value of your ongoing initiatives.
+So why is AR a special field and why should you consider AR in 2018?
 
-Let's say you have invested into data collection in your manufacturing site, and now you have all the data of your entire production line in a central repository. Now it's time to apply human or artificial intelligence to make your data work for you. Looking over your production line with an engineer's knowledge augmented with key metrics may save you a lot of time and money. Especially if potential failures and preventive maintenance actions are also highlighted.
-
-AR plays well with data, and guided recommendations. Any scenario works well with AR, where enriching your view with data gives you advantage.
-
-Another good thing about A/R is that it is directly connected to customer and user experience. Use AR to engage with customers and co-workers in whole new, inspiring ways.
-
-Retail is the first field to be disrupted by AR applications. Gartner say, [by 2020, 100 million consumers will shop in augmented reality](https://www.gartner.com/smarterwithgartner/gartner-predicts-a-virtual-world-of-exponential-change/).
-
-You can completely change the life of your colleagues by making them more successful at work with AR tools.
+- **Your AR investment may play well with you other digital projects, you can use AR to better realize the value of your ongoing initiatives.**
+- A great thing about AR is that it's **directly connected to customer experience**. Use AR to engage with customers in whole new, inspiring ways.
+- You implement AR in various ways; in a **mobile app, in smart glasses and in 2018 we'll have large AR walls** similar to large TV screen that give way to new, disruptive solutions.
+- AR plays well with **data and AI**. Personal recommendations showcased with AR may be the key for your customers, just think of car sales, home decor or clothing.
+- Manufacturing on a new level. Any scenario works well with AR, where enriching your view with **industry data** gives you an advantage.
+- Sometimes **visualization is everything**. AR applications in education, field service, medicine, business and coding can make a real difference for your clients and colleagues.  
 
 ## 7 uses of augmented reality that will matter to your business
 
 ### 1. Consumer experience and shopping
+
+Retail is the first field to be disrupted by AR applications. Gartner say, [by 2020, 100 million consumers will shop in augmented reality](https://www.gartner.com/smarterwithgartner/gartner-predicts-a-virtual-world-of-exponential-change/).
+
 
 You can enhance your web-shop, as well as your brick and mortar stores with stunning AR experiences. We'll se examples for both scenarios.
 
@@ -79,42 +79,51 @@ Amazon just released AR view in November 2017 in the Amazon app.
 
 <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/uhdOzpblrm0" frameborder="0" allowfullscreen></iframe></div>
 
+### 2. Field service and maintenance
+
+Manufacturers are continuously evaluating AR maintenance applications like [Thyssenkrupp's AR maintenance](https://www.youtube.com/watch?v=8OWhGiyR4Ns).
+
+These application give invaluable benefits for both the company and individual colleagues. Co-workers will feel more confident, because they can rely on real-time visual assistance, that will make them more successful at the end of day.
+
+The entire organization will enjoy the benefits of improved quality, reduced maintenance time and a well trained, happy workforce.
+
+**Typical features in AR maintenance include: indoor navigation, maintenance training, job review, step-by-step guidance, security access management, dashboards and status information, real-time feedback and alerting.**
+
+![Thyssenkrupp augmented reality maintenance](/assets/images/in-content/thyssenkrupp–bringing_new_vision_to_elevator_maintenance_with_Microsoft_HoloLens-YouTube.png)
+
+### 3. Telemedicine, AR treatment and visual aid
+
+You'll see medical application of AR in three main categories:
+#### Telemedicine, where AR is used by doctors and medical personnel as an assistance tool
+
+The [Nomadeec](http://nomadeec.com) Hololens helps with the assessment of the ambulatory patient with visual assessment, real time ECG results, connected tele-consultation and more.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/9faG8dUHJuk" frameborder="0" allowfullscreen></iframe></div>
+
+#### AR applications used to provide medical therapy
+
+[Cedars-Sinai Medical Center](https://www.cedars-sinai.org) started an initiative to use virtual reality as medical treatment. The used therapeutic videos where patient can fly over iceland, paint in an art studio and swim with dolphins. As a result of their [study](https://www.cedars-sinai.edu/About-Us/News/News-Releases-2017/Cedars-Sinai-Study-Finds-Virtual-Reality-Therapy-Helps-Decrease-Pain-in-Hospitalized-Patients.aspx) they found that Virtual Reality therapy helps decrease pain in hospitalized patients.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/yLpe_DwsqFE" frameborder="0" allowfullscreen></iframe></div>
+
+#### AR as visual aid for the visually impaired
+
+A research group at the University of Oxford has been developing smart glasses for the visually impaired for about the last 5 years.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZV3cAaFsbKY" frameborder="0" allowfullscreen></iframe></div>
+
+### 4. Education
+
+### 5. Entertainment and gaming
+### 6. Creatives and makers - modeling and architecture
+### 7. General business use, presentations, data visualization IT applications - code and data visualization https://primitive.io
 
 
-1. Predictive maintenance
-2. Medical use, online help, visually impaired
-3. Education
-4. Entertainment and gaming
-5. User interfaces
-6. Creatives and makers - modeling and architecture
-7. General business use, presentations, data visualization IT applications - code and data visualization https://primitive.io
 
 
-
-## A new perspective on AR
-
-But let me start with a point that I think is very important. I think, and this is my personal oppinion, that Augmented Reality is not just another technology trend. It is connected to many other trends that influence our lives.
-
-The reason why I'm saying this is that A/R fundamentally changes the way we interact with the world around us. Other trends will go on and support the use case for such advanced interactions.
-
-We gather more and more data from our surrounding and use these data to make decisions. Data driven insights often are present in real-time, event based ways. We can see various use cases at work and also in the household.
 
 Our social life and entertainment is evolving in ways where personal visualizations play a key role.
 
 Augmented Reality is the next stepping stone towards advanced interactions and user experiences.
 
 When we're using wearable A/R applications (like the Hololens), we are actually not just augmenting reality. What happens is that we are upgrading human perception, we gain superpowers like augmented vision, data enriched perception and a whole new level of interactivity (just think of the way you point and click with your fingers in front of the Hololens).
-
-Such upgraded   
-
-
-You are probably focusing on various super influential trends in 2018, like industry automation, data science, machine learning, autonomous AI, personal assistants, bots, crypto, blockchain, I'm sure we could list many more.
-
-If you ask the IT industry, I think for most of us the most influential trend is the global shortage of programmers and IT talent.  
-
-Why do I think that
-
-
-Finding the balance between "head in the clouds" and "feet on the ground" when we are creating new digital offerings is quite a challenge. Innovation ideas are often communicated with overwhelming passion and we get the feeling that implementing a new, cool trend is more important than understanding how we make this investment profitable.
-
-In this article I will focus on use cases that you may describe as incremental innovation. What I mean by that is that we'll see use cases that you can implement in 2018 in your business and where the business value does not require too much clarification, because it's almost self-explanatory.
