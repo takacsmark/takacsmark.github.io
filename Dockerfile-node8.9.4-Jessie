@@ -1,0 +1,24 @@
+# --
+# Dockerfile for development automation with gulp for takacsmark.com
+# Container meant to be used during development time to run gulp tasks
+#
+# Building the image:
+#     docker build -f Dockerfile-node8.9.4-Jessie -t takacsmark/takacsmark-dot-com:node8.9.4-Jessie .
+#
+# Running the container:
+#     docker run --rm -ti -v $(pwd):/usr/src/app takacsmark/takacsmark-dot-com:node8.9.4-Jessie /bin/bash
+# --
+
+# using a debian jessie base image, because could not make jpegtran-bin work on Alpine 3.x
+FROM node:8.9.4
+
+RUN npm install gulp-cli -g
+
+RUN apt-get update && apt-get install -y \
+    graphicsmagick \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+
+RUN npm install

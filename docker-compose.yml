@@ -1,29 +1,21 @@
 version: '3'
 services:
     jekyll:
-        image: jekyll/jekyll:pages
+        image: jekyll/jekyll:latest
         container_name: takacsmark-dot-com
-        # Using incremental will only refresh the file that was changed and won't refersh dependencies
-        # i.e. changing a post will refresh the post but not index.html, therefore this version is commented out and kept for reference
+        # working on one post - use incremental mode
+        command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
 
-        # run in incremental mode - good for working on one post
-        command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+        # add new post - no incremental mode, Jekyll will regenerate dependencies on save
+        # command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
 
-        # run non incremental with drafts - good when adding a new post
-        # command: bundle exec jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
+        # work on design - no incremental mode, no drafts, looks like production
+        # command:jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
 
-        # run non incremental and no drafts - good to change design
-        # command: bundle exec jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
+        volumes:
+            - $PWD:/srv/jekyll
+            - $PWD/vendor/bundle:/usr/local/bundle
 
         ports:
             - 4000:4000
-        volumes:
-            - .:/srv/jekyll
-    node-automation:
-        build: .
-        image: takacsmark/node-automation:jekyll
-        container_name: node-automation
-        command: /bin/bash
-        volumes:
-            - .:/usr/src/app
-            - /usr/src/app/node_modules
+            - 35729:35729
