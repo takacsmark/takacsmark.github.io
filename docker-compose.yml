@@ -4,10 +4,10 @@ services:
         image: jekyll/jekyll:latest
         container_name: takacsmark-dot-com
         # working on one post - use incremental mode
-        command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
+        # command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
 
         # add new post - no incremental mode, Jekyll will regenerate dependencies on save
-        # command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
+        command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
 
         # work on design - no incremental mode, no drafts, looks like production
         # command:jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch

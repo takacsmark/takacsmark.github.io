@@ -35,6 +35,6 @@
     "gulp-tap": "^1.0.1"
   },
   "dependencies": {
-    "foundation-sites": "^6.2.0",
+    "foundation-sites": "^6.2.0"
   }
 }
