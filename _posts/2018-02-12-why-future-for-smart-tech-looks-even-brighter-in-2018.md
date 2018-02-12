@@ -2,7 +2,7 @@
 layout: post
 title:  "Why The Future for Smart Tech Looks Even Brighter in 2018"
 description: "Why we can expect to see real progress in how AI is applied to customer experience strategies that transform our everyday lives."
-date:   2018-01-11 01:59:00 +0100
+date:   2018-02-12 01:59:00 +0100
 thumbnail: "/assets/images/post-thumbs/smart-tech-trends-2018.jpg"
 categories: Article, Trend
 ---
