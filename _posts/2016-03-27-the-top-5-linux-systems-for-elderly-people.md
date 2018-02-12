@@ -140,7 +140,7 @@ Puppy gave a messy impression, using the system was most of the time confusing a
 |Media players|Included|
 |Office|Libre Office|
 
-### [Debian](http://www.debian.org/)
+### [Debian](https://www.debian.org/)
 
 Debian is one of the most robust base distributions, there are several other distributions built on top of it. There are many Debian users in the senior community.
 
@@ -201,7 +201,7 @@ LXDE is another light desktop option. My opinion is that this is the one that th
 
 The file manager also looks like the one on Windows, even the colors are very similar. Folder shortcuts help you organize your documents.
 
-### [Ubuntu](http://www.ubuntu.com/)
+### [Ubuntu](https://www.ubuntu.com/)
 
 ![Ubuntu screenshot](/assets/images/in-content/Ubuntu-screenshot.png)
 
@@ -221,7 +221,7 @@ I think Ubuntu would be a great option for easy going, flexible seniors.
 |Media players|Included|
 |Office|Libre Office|
 
-### [Lubuntu](http://lubuntu.net/)
+### [Lubuntu](https://lubuntu.net/)
 ![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png)
 
 

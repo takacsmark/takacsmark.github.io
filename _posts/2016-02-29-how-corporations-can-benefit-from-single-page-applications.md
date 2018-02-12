@@ -93,7 +93,7 @@ This means that you need to implement your business logic only once. You'll have
 
 This way you'll have the same services across channels and devices based on the same code components. 
 
-**These tools were purposefully designed to support web, mobile and desktop development. Angular uses [Ionic](http://ionicframework.com) and [NativeScript](https://www.nativescript.org) to build hybrid and native applications. React provides [React Native](https://facebook.github.io/react-native/) for native mobile app creation.** 
+**These tools were purposefully designed to support web, mobile and desktop development. Angular uses [Ionic](https://ionicframework.com) and [NativeScript](https://www.nativescript.org) to build hybrid and native applications. React provides [React Native](https://facebook.github.io/react-native/) for native mobile app creation.** 
 
 Both Angular and React will let you create apps for iOS and Android. 
 
@@ -103,9 +103,9 @@ Cross platform desktop applications start to gain traction again. They are used 
 
 **One big area of such apps is messaging and productivity. They are built to fulfill the needs of collaboration and communications across global teams in a digital world.** 
 
-Another great user group of cross-platform desktop apps is the creative community. Designers and developers use such apps every day. A great example is [Google's powerful prototyping platform: Pixate](http://www.pixate.com).
+Another great user group of cross-platform desktop apps is the creative community. Designers and developers use such apps every day. A great example is [Google's powerful prototyping platform: Pixate](https://www.pixate.com).
 
-One great tool to build cross-platform desktop applications is [GitHub's Electron](http://electron.atom.io). Its development tools come from the same technical segment (JavaScript and node) as Angular and React. 
+One great tool to build cross-platform desktop applications is [GitHub's Electron](https://electron.atom.io). Its development tools come from the same technical segment (JavaScript and node) as Angular and React. 
 
 You can use your Angular and React components to build Electron applications. Electron is available for OS X, Windows and Linux (Ubuntu, Fedora, Debian). 
 
@@ -121,7 +121,7 @@ You can use your Angular and React components to build Electron applications. El
 
 - I belive the previous two points are known to corporate managers. The big question with Angular and React adoption in my opinion is maintainability.  
 
-*Most technologies involved are going through high-speed evolution. The base language, JavaScript, has made some big steps with [ES6/ES2015](http://www.ecma-international.org/ecma-262/6.0/) just recently.* 
+*Most technologies involved are going through high-speed evolution. The base language, JavaScript, has made some big steps with [ES6/ES2015](https://www.ecma-international.org/ecma-262/6.0/) just recently.* 
 
 I'm doing my best to keep my environment stable, still I'm using packages with React that publish new releases every other day on GitHub. Following up with changes is a continuous effort and requires attention.
 
@@ -149,4 +149,4 @@ Their popularity lies in their application feel, personalized services, fluid tr
 
 They not only attract customers, they have the power to remedy burning issues of corporations. They are ideal to create superior customer service experiences, they are designed to re-use the same code components for various channels and devices, thus saving implementation and maintenance cost. 
 
-The risks involved are related to the cutting edge-nature of these products. Despite the risks, several big names, like [Airbnb](https://www.airbnb.com/), [Netflix](https://www.netflix.com/), Salesforce, MSNBC, Deezer, Atlassian, [Gap Inc.](https://secure-www.gap.com/buy/shopping_bag.do), [The New York Times](http://www.nytimes.com/), [IMDb](http://www.imdb.com/) and many others think that SPAs are worth the investment. 
+The risks involved are related to the cutting edge-nature of these products. Despite the risks, several big names, like [Airbnb](https://www.airbnb.com/), [Netflix](https://www.netflix.com/), Salesforce, MSNBC, Deezer, Atlassian, [Gap Inc.](https://secure-www.gap.com/buy/shopping_bag.do), [The New York Times](https://www.nytimes.com/), [IMDb](https://www.imdb.com/) and many others think that SPAs are worth the investment. 

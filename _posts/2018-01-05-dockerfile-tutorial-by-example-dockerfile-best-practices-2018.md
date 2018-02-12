@@ -33,7 +33,7 @@ Since this tutorial is for beginners let's go slow and go deeper into the above 
 
 ### Recap of Docker base terms
 
-Let me repeat a few basic concepts to better explain. If you are absolutely new to docker, please start with the [Getting started with Docker - step by step tutorial - article on the blog](http://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/). It got 1,500 likes on Youtube from 120,000 views, so it's not only me who says you'll get this, so don't worry. :)  
+Let me repeat a few basic concepts to better explain. If you are absolutely new to docker, please start with the [Getting started with Docker - step by step tutorial - article on the blog]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/). It got 1,500 likes on Youtube from 120,000 views, so it's not only me who says you'll get this, so don't worry. :)  
 
 Docker's main purpose is to give us run-time environments that we can re-create/reproduce on any machine (that runs Docker). The main advantage is to avoid the situations when we say "it worked on my machine", because Docker containers will give us the same environment on all machines.
 
@@ -46,7 +46,7 @@ In order to follow this article you need to understand the following 2 basic con
 
 2. Docker containers are started by running a **Docker image**. A Docker image is a pre-built environment for a certain technology or service. A Docker image is not a runtime, it's rather a collection of files, libraries and configuration files that build up an environment.
 
-    The main source of Docker images online is the [Docker store](http://store.docker.com). You just need to search for your preferred tech component, pull the image from the store with the `docker pull` command and you are ready to start up containers.
+    The main source of Docker images online is the [Docker store](https://store.docker.com). You just need to search for your preferred tech component, pull the image from the store with the `docker pull` command and you are ready to start up containers.
 
     Containers are started from images with the `docker run` command. An image, as you'll see in the videos, is a layered representation of your environment. These layers contain the files and configuration needed by your environment.
 
@@ -63,7 +63,7 @@ You'll see in the tutorial that a Dockerfile is a step by step definition of bui
 2. you issue the `docker build` command which will build a Docker image from your Dockerfile
 3. now you can use this image to start containers with the `docker run` command
 
-You'll usually start searching for available Docker images on the [Docker store](http://store.docker.com), you'll also find images on github included with a good number of repos (in the form of a Dockerfile), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
+You'll usually start searching for available Docker images on the [Docker store](https://store.docker.com), you'll also find images on github included with a good number of repos (in the form of a Dockerfile), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
 
 The definition also implies that the images that you'll find on the Docker store are defined in Dockerfiles. We'll review some Dockerfiles in the first video. **A Docker image is created by building a Dockerfile** with the `docker build` command. We'll see examples later.
 
@@ -87,7 +87,7 @@ You can access the file directly via this url: [https://github.com/docker-librar
 
 Please browse through the file, it's enough for now if you note the key structural elements, skim trough the comments and see how the file is built up on a high level.
 
-<script src="http://gist-it.appspot.com/https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile"></script>
+<script src="https://gist-it.appspot.com/https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile"></script>
 
 At this point I would like you to understand the following key points based on the example file:
 1. The Dockerfile is a text file that (mostly) contains the instructions that you would execute on the command line to create an image.

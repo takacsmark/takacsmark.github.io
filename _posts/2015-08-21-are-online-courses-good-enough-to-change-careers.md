@@ -80,7 +80,7 @@ Picking the wrong course or the right courses but at the wrong time may cost you
 
 ## Working out your curriculum
 
-If you're watching the news of the on-line learning arena, you see a good number of new players appearing on the market. There are websites like [lynda.com](http://lynda.com), [Treehouse](https://teamtreehouse.com/) and [Udemy](http://udemy.com), just to name a few, who offer short on-line courses for people who want to build new skills.
+If you're watching the news of the on-line learning arena, you see a good number of new players appearing on the market. There are websites like [lynda.com](https://lynda.com), [Treehouse](https://teamtreehouse.com/) and [Udemy](https://udemy.com), just to name a few, who offer short on-line courses for people who want to build new skills.
 
 Messaging varies, but the key selling point these companies would emphasize is, that you are in the right place, if you wanna change careers. And it's never been easier to change careers.
 

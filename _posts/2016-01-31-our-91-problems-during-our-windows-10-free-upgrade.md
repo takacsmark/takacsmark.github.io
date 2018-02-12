@@ -61,7 +61,7 @@ This step went a lot smoother than I anticipated. I found a [direct Windows 7 do
 
 The page is super helpful, because it gives you the available Windows 7 versions for your own license key. You won't waste time trying to install the home edition with a professional license, for instance.
 
-I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](http://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit).
+I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](https://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit).
 
 ## 3. How to create a Windows 7 bootable install USB?
 
@@ -150,7 +150,7 @@ After about an hour I grew suspicious. Even though I'm not using Windows, I used
 
 Ctr+Shift+Esc for Task manager! I found that the upgrade process was not using any RAM, Network or CPU. It was not hanging, it just looked like it was not doing anything.
 
-After some desparate googling on my Mac I found the following [answer on Microsoft answers](http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399):
+After some desparate googling on my Mac I found the following [answer on Microsoft answers](https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399):
 
 * open cmd
 * type "net stop wuauserv"  (this will stop windows update service)

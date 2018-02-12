@@ -47,7 +47,7 @@ Let's have a look at the structure of the app folder, now. This is where MVC wil
 |____views
 | |____template.htm
 {% endhighlight %}
-A side note: the first geeky line is just a tree command for Mac that I found on this blog [http://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](http://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx).
+A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx).
 
 I created two directories under 'app' for this lesson. These are 'controllers' and 'views'. The 'models' folder will come also under 'app' later when we will use a database.
 
@@ -183,7 +183,7 @@ You can write f3 templates in plain HTML. If you need to use variables that are 
 
 You should use double curly braces to access globals. Variable names must be preceded by the `@` symbol. E.g. `{{ "{{ @name " }}}}` in the above example.
 
-[There is lot more to templating than this, you can read more about it on the Fat-Free site.](http://fatfreeframework.com/views-and-templates)
+[There is lot more to templating than this, you can read more about it on the Fat-Free site.](https://fatfreeframework.com/views-and-templates)
 
 ## Wrap-up
 

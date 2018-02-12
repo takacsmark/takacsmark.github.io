@@ -9,7 +9,7 @@ categories: Web development, Docker
 * TOC
 {:toc}
 ****Tip********
-If you are absolutely new to Docker, please start with the [beginners tutorial with examples](http://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
+If you are absolutely new to Docker, please start with the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
 
 ****Tip********
 Watch the video that I created for this post on Youtube. I show you what issue I faced when I tried to serve my existing GitHub Pages sites from the official Jekyll container. I also give you the fix that I created.    

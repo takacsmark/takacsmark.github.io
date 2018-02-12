@@ -6,7 +6,7 @@ date:   2015-03-09 07:48:00 +0100
 thumbnail: "/assets/images/post-thumbs/wordpress-on-table.jpg"
 categories: Wordpress, web economy
 ---
-I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](http://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
+I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](https://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
 
 **I found that using WordPress for business purposes is a great way to start my on-line journey. Here is the story.**
 
@@ -58,11 +58,11 @@ Here is my refined list of theme selection criteria when using WordPress for bus
 * and finally the theme should be elegant
 * I wanted to start fast, so I decided to purchase a commercial WordPress theme. I checked out a few theme building frameworks, but I thought, I don't wanna make a living from theme development, so I'd better move on with a turn-key solution and do my stuff.
 
-First I purchased the [Enfold theme](http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990?WT.oss_phrase=enfold&WT.oss_rank=2&WT.z_author=Kriesi&WT.ac=search_list&ref=takacsmark) by Kriesi. It met most of my requirements, except for three. It had a bulky code base, it broke the WordPress SEO plugin by Yoast and their support did not provide a fix for the SEO issue for months.
+First I purchased the [Enfold theme](https://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990?WT.oss_phrase=enfold&WT.oss_rank=2&WT.z_author=Kriesi&WT.ac=search_list&ref=takacsmark) by Kriesi. It met most of my requirements, except for three. It had a bulky code base, it broke the WordPress SEO plugin by Yoast and their support did not provide a fix for the SEO issue for months.
 
 I used the Enfold theme for six months, it helped me reach the first page of Google with some of my posts and finally it sent all my efforts down the drain when I was totally de-ranked by Google because my permalinks got all messed up due to the above SEO issue.
 
-I moved on and purchased a WordPress theme called [the7](http://themeforest.net/item/the7-responsive-multipurpose-wordpress-theme/5556590?WT.oss_phrase=&WT.oss_rank=7&WT.z_author=Dream-Theme&WT.ac=search_list&ref=takacsmark) by Dream Theme. I found that this theme supports my business site much better than Enfold. First of all it stays out of my way. It has a clean code, it is simple, stable, lighter than Enfold and works like charm. I saw great improvement in page speed that is an important SEO ranking factor. The visual editor is more reliable and support is outstanding.
+I moved on and purchased a WordPress theme called [the7](https://themeforest.net/item/the7-responsive-multipurpose-wordpress-theme/5556590?WT.oss_phrase=&WT.oss_rank=7&WT.z_author=Dream-Theme&WT.ac=search_list&ref=takacsmark) by Dream Theme. I found that this theme supports my business site much better than Enfold. First of all it stays out of my way. It has a clean code, it is simple, stable, lighter than Enfold and works like charm. I saw great improvement in page speed that is an important SEO ranking factor. The visual editor is more reliable and support is outstanding.
 
 Dream Theme provides something I call consultative support. If I ask a question they come back with alternatives and give me an opportunity to make a decision. My experience is that other vendors often take their virtual hammer and "fix" something on your site without you knowing what's going on. The hammer approach may work with some users, but I am building a business and I wanna run a meaningful discussion with partners and I prefer to take my own decisions regarding changes.
 
@@ -76,7 +76,7 @@ There are several fundamental plugins a small WordPress based business needs. I 
 * Leverage browser caching ninjas completes the caching picture,
 * UpdraftPlus is a free backup/restore utility that uploads backup files to my Google Drive every day. I use these backup files to update my dev environment,
 * Skimlinks affiliate network plugin,
-* [Premium Seo pack](http://codecanyon.net/item/premium-seo-pack-wordpress-plugin/6109437?WT.oss_phrase=premium+seo&WT.oss_rank=1&WT.z_author=AA-Team&WT.trending=trending&WT.ac=search_list&ref=takacsmark) is a feature rich premium SEO plugin,
+* [Premium Seo pack](https://codecanyon.net/item/premium-seo-pack-wordpress-plugin/6109437?WT.oss_phrase=premium+seo&WT.oss_rank=1&WT.z_author=AA-Team&WT.trending=trending&WT.ac=search_list&ref=takacsmark) is a feature rich premium SEO plugin,
 * External links adds rel no-follow to my external links,
 * Verify ownership,
 * Imsanity image compression utility,
@@ -89,7 +89,7 @@ There are several fundamental plugins a small WordPress based business needs. I 
 * Admin post navigation gives handy next and prev buttons on the post edit page,
 * And my own custom plugin to support my business objectives.
 
-Most plugins are free and available on [Wordpress.org](https://wordpress.org/plugins/). The security and performance plugins were suggested by [A2hosting](http://www.a2hosting.com/6278-0-3-18.html), where I host my sites. Premium SEO pack is the only commercial plugin. I tried four different SEO plugins and stayed with this one, although I am not completely happy with it, but this is for another post.
+Most plugins are free and available on [Wordpress.org](https://wordpress.org/plugins/). The security and performance plugins were suggested by [A2hosting](https://www.a2hosting.com/6278-0-3-18.html), where I host my sites. Premium SEO pack is the only commercial plugin. I tried four different SEO plugins and stayed with this one, although I am not completely happy with it, but this is for another post.
 
 > I found that I can add most critical corporate IT support capabilities to my site with free plugins. I have backup/restore, speed metrics, caching, security and monitoring all available.
 

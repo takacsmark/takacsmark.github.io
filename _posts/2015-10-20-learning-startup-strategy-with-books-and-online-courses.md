@@ -72,9 +72,9 @@ Good to Great helped me find the right intersection of the above 3 points. I fee
 
 The books is built on real examples of well-known companies detailing their success and mistakes. It gives you additional personal coaching in the leadership section, plus, it gives you the FlyWheel model with examples and detailed steps that are really useful for someone starting a new business.
 
-[I'd strongly recommend reading Good to Great by Jim Collins as a first step of the journey.](http://www.amazon.com/Good-Great-Some-Companies-Others/dp/0066620996)
+[I'd strongly recommend reading Good to Great by Jim Collins as a first step of the journey.](https://www.amazon.com/Good-Great-Some-Companies-Others/dp/0066620996)
 
-[![Good to Great by Jim Collins cover](http://ecx.images-amazon.com/images/I/41EV9hbgbCL._SX327_BO1,204,203,200_.jpg "Good to Great by Jim Collins cover")](http://www.amazon.com/Good-Great-Some-Companies-Others/dp/0066620996)
+[![Good to Great by Jim Collins cover](https://images-na.ssl-images-amazon.com/images/I/513OnP4AwTL.jpg)](https://www.amazon.com/Good-Great-Some-Companies-Others/dp/0066620996)
 
 ### Blue Ocean Strategy by W. Chan Kim and Renee Mauborgne
 
@@ -85,7 +85,7 @@ Analyzing your market and your own skills and abilities with the right insight m
 The book is full of great examples, detailed case studies, in fact.
 It'll give you a step by step methodology so that you can ask the right questions and find the right market and your place in that market.
 I was very happy to read how a fellow Hungarian bus company covered 20% of the North American bus market with their smart blue ocean strategy.
-[![Good to Great by Jim Collins cover](http://ecx.images-amazon.com/images/I/51w4ZYfrA4L._SX321_BO1,204,203,200_.jpg "Good to Great by Jim Collins cover")](http://www.amazon.com/Blue-Ocean-Strategy-Expanded-Edition/dp/1625274491/ref=dp_ob_title_bk)
+[![Blue ocean strategy](https://images-na.ssl-images-amazon.com/images/I/81IjbVUD%2B5L.jpg)](https://www.amazon.com/Blue-Ocean-Strategy-Expanded-Edition/dp/1625274491/ref=dp_ob_title_bk)
 
 **If you wanna read a few books only, read the above two before you work out your startup strategy. Both are available on Kindle, so you can start reading straight away, just click the images.**
 

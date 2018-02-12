@@ -9,7 +9,7 @@ categories: Web development, Docker
 * TOC
 {:toc}
 ****Tip********
-If you are absolutely new to Docker, please start with the [beginners tutorial with examples](http://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
+If you are absolutely new to Docker, please start with the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
 
 ****Tip********
 Watch the video that I created for this post on Youtube. I show how to install the docker engine on Mac in the video plus I walk you through all the steps that are needed to set up a Wordpress development environment with MySQL using Docker containers.   
@@ -66,7 +66,7 @@ Docker containers are meant to be stateless. Containers are environments, they d
 
 A docker image is a definition of an environment, while a container is a parametrized runtime of the image. We should be able to replicate the images and containers anytime and anywhere. Therefore storing stuff that may change in a container is not a good idea. 
 
-We'd better store data, source code, config files and anything mutable outside containers. Docker uses volumes to make this work. If you need more info to grasp the concept, check out the [beginners tutorial with examples](http://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
+We'd better store data, source code, config files and anything mutable outside containers. Docker uses volumes to make this work. If you need more info to grasp the concept, check out the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
 
 Here is how to solve the challenge around data storage. Go to your computer and create a directory for your MariaDB database files. 
 

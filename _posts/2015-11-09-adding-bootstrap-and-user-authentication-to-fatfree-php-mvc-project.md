@@ -29,13 +29,13 @@ Please make sure to follow the video, that is the only way to follow step by ste
 
 ## Bootstrap
 
-[Bootstrap](http://getbootstrap.com) is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
+[Bootstrap](https://getbootstrap.com) is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
 
 Most front-end frameworks feature a grid system, which is absolutely essential when laying out columns and rows on your web pages.
 
 Bootstrap has a pretty good grid system and an easy to use and easy to understand documentation and notation. Bootstrap is based on css and javascript.
 
-I checked out other alternatives, too, like [Foundation](http://foundation.zurb.com/), [HTML5 Boilerplate](http://html5boilerplate.com/) and [Pure](http://purecss.io/).
+I checked out other alternatives, too, like [Foundation](https://foundation.zurb.com/), [HTML5 Boilerplate](https://html5boilerplate.com/) and [Pure](https://purecss.io/).
 
 I decided to stay with Bootstrap, because it's the most widely used framework for some good reasons. The documentation is simple and very rich. The learning curve is manageable and bootstrap is available through several methods including CDN.
 
@@ -55,7 +55,7 @@ In order to add Bootstrap javascript copy and paste the below code right before 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](http://getbootstrap.com/getting-started/)
+The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](https://getbootstrap.com/getting-started/)
 
 ## Authentication
 

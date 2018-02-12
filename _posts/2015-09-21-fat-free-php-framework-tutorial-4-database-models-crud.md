@@ -19,7 +19,7 @@ I assume that people who are learning f3 are skilled enough to set up a database
 
 We'll use MySQL. This is not a suggestion or preference on my side. It's really up to you what database you'll use in your projects. I picked MySQL for the tutorial because it's the most widely used free database online. You'll need to set up a MySQL database on your local computer.
 
-You can choose to install the database server from the [MySQL website](http://dev.mysql.com/) or you can use [XAMPP](https://www.apachefriends.org/index.html) or [MAMP](https://www.mamp.info/en/) to run a database server on your computer. Various Linux distros come with the MySQL service already installed, all you need to do is start the service ($ sudo service mysql start).
+You can choose to install the database server from the [MySQL website](https://dev.mysql.com/) or you can use [XAMPP](https://www.apachefriends.org/index.html) or [MAMP](https://www.mamp.info/en/) to run a database server on your computer. Various Linux distros come with the MySQL service already installed, all you need to do is start the service ($ sudo service mysql start).
 
 On my computer I use MySQL installed, plus I use an instance of MAMP, both work just fine.
 
@@ -61,7 +61,7 @@ devdb = "mysql:host=127.0.0.1;port=3306;dbname=sbf3MVC"
 devdbusername = "sbf3MVC"
 devdbpassword = "sbf3MVC"
 {% endhighlight %}
-Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](http://fatfreeframework.com/databases)
+Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](https://fatfreeframework.com/databases)
 
 ### controller.php
 

@@ -23,7 +23,7 @@ Yep, this goes beyond SEO.
 
 **Search engines massively rely on some meta tags, but today there are dedicated meta tags for social sites like Facebook, Twitter and LinkedIn, too.**
 
-**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](http://schema.org).**
+**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](https://schema.org).**
 
 These are the meta tags you'll need on your site to successfully work with today's on-line ecosystem:
 
@@ -105,7 +105,7 @@ If you wanna know more details about length, [here is an information-rich study 
 There are some meta tags that you should add to all of your webpages under `<head>`. These are:
 
 - `charset` specifies the character encoding of the HTML document. The browser uses this information to display the page correctly.
-- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](http://www.w3schools.com/css/css_rwd_viewport.asp)
+- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp)
 
 Let's extend our previous example:
 {% highlight html linenos=table %}
