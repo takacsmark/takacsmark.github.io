@@ -27,7 +27,7 @@ The human machine interface works with drivers, not only watching the road and d
 
 ## Spectacular Advancements and Failures
 
-Thanks to the investment continuing to pour into AI projects, machine learning technologies such as those used to [recognize cancerous tissues](https://www.techemergence.com/machine-learning-medical-diagnostics-4-current-applications/) or [deliver our grocery orders](https://www.techemergence.com/machine-learning-medical-diagnostics-4-current-applications/) without the need for human hands will continue to delight us in the news.
+Thanks to the investment continuing to pour into AI projects, machine learning technologies such as those used to [recognize cancerous tissues](https://www.techemergence.com/machine-learning-medical-diagnostics-4-current-applications/) or [deliver our grocery orders](https://www.pymnts.com/matchmakers/2017/farmsteads-new-take-on-grocery-delivery/) without the need for human hands will continue to delight us in the news.
 
 Just as notably, vague intentions for AI developments will lead to some spectacular failures. Organizations with less than necessary resources, lured by the trend of trim-to-size approaches in AI development, may find themselves initiating failure.
 
@@ -43,7 +43,7 @@ Given that combined NLP and machine learning technologies aid AI in learning fro
 
 ## The Caring Side of AI
 
-AI use in healthcare is moving at a phenomenal rate in all areas, partly thanks to the structure of pre-existing healthcare systems. Big data analytics are already being used to crunch data about diseases, patient history, assist in clinical decision making and outcome predictions. It therefore only makes sense that other areas will soon follow suit. 
+AI use in healthcare is moving at a phenomenal rate in all areas, partly thanks to the structure of pre-existing healthcare systems. Big data analytics are already being used to crunch data about diseases, patient history, assist in clinical decision making and outcome predictions. It therefore only makes sense that other areas will soon follow suit.
 
 AI is already powering apps that are ‘responding the global shortfall of doctors’, such as [PushDoctor](https://www.pushdoctor.co.uk/nhs) or [GPDQ](https://itunes.apple.com/GB/app/id1051208054?mt=8). Additionally, there are [care and companionship robots](https://www.carehome.co.uk/news/article.cfm/id/1581587/EU-funded-robots-to-aid-UK-care-staff) (not dissimilar to Hero 7’s Baymax) that are planned for testing in care homes, thanks to funding from the EU and Japanese governments.
 
