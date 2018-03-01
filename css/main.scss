@@ -157,7 +157,13 @@ $font-path: "foundation-icons/foundation-icons";
             height: 2em;
         }
     }
+
+    @media screen and (min-width: 64em) {
+        padding-left: 0;
+    }
 }
+
+
 
 .sidebar.callout {
     margin-top: 1em;
