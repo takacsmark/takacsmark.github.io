@@ -163,30 +163,55 @@ $font-path: "foundation-icons/foundation-icons";
     }
 }
 
-
-
 .sidebar.callout {
     margin-top: 1em;
-    background-color: white;
+    background-color: $white;
+    margin-left: 4em;
 
-    font-size: 0.9em;
+    font-size: 0.7rem;
+    border: solid 1px rgb(230, 230, 231);
+
+    padding-left: .5em;
+    padding-right: .5em;
 
     .sidebar-title {
         color: $dark-gray;
-        text-transform: uppercase;
+        color: $black;
+        font-size: .8rem;
+        font-weight: 600;
         margin-bottom: 1em;
     }
 
     li {
         margin-bottom: 1em;
-        line-height: 1.4em;
+        line-height: 1.2em;
     }
 
 }
 
 .sidebar.social i {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-right: .2em;
+}
+
+.sidebar.recommended-courses {
+    i {
+        color: #f22918;
+    }
+    a {
+        color: $black;
+    }
+
+}
+
+.sidebar.learning-sites {
+    img {
+        width: 40%;
+        height: 4em;
+        object-fit: contain;
+        margin-right: 5%;
+        float: left;
+    }
 }
 
 article{

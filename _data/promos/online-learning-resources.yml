@@ -1,6 +1,6 @@
 items:
-  - title: Udemy - very practical, full of code-along development courses
-    image: https://www.udemy.com/staticx/udemy/images/v5/logo-green.svg
+  - title: Udemy - very practical, full of code-along courses
+    image: https://www.udemy.com/staticx/udemy/images/v6/default-meta-image.png
     url: https://www.udemy.com/
 
   - title: Edureka - instructor led live on-line courses
@@ -8,10 +8,10 @@ items:
     url: https://www.edureka.co/
 
   - title: Lynda - lot of courses about coding, design and SEO
-    image: https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0001/9770/brand.gif?itok=Q9uFKTbg
+    image: https://cdn.lynda.com/assets/282-r20180222/Website/ui/images/mediakit/logos-png/lynda_logo2k-d_144x.png
     url: https://www.lynda.com
 
-  - title: Pluralshight - you have it all - dev, ops, data, architecture, creative and a lot more
+  - title: Pluralshight - dev, ops, data, architecture, creative
     image: https://www.pluralsight.com/content/dam/pluralsight/newsroom/brand-assets/logos/pluralsight-logo-vrt-blk-2@2x.png
     url: https://www.pluralsight.com  
 

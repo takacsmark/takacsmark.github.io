@@ -30,40 +30,42 @@
     </div>
 </div>
 
-<div class="row callout sidebar secondary">
+<div class="row callout sidebar secondary recommended-courses">
     <div class="columns">
-        <p class="sidebar-title">Useful Courses</p>
+        <p class="sidebar-title">Build your career with onilne courses</p>
         <ul class="no-bullet">
-            <li><a target="_blank" href="https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/?siteID=TnL5HPStwNw-gImWsaURUfU94l3X2kSr0w&LSNPUBID=TnL5HPStwNw">Web Design for Beginners: Real World Coding in HTML & CSS</a></li>
-            <li><a target="_blank" href="https://www.youtube.com/playlist?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5">WordPress Theme Development</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/coding-for-entrepreneurs/">Coding for Entrepreneurs: Learn Python, Django, and More</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/react-redux/">Modern React with Redux</a></li>
-            <li><a target="_blank" href="https://egghead.io/series/getting-started-with-redux">Getting Started with Redux</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/understand-nodejs/">Learn and Understand NodeJS</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/master-the-mean-stack/">Master the MEAN Stack - Learn By Example</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/copywriting-secrets">Copywriting secrets - How to write copy that sells</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/facebook-pages">Facebook Marketing: A Step-by-Step to Your First 1000 Fans!</a></li>
-            <li><a target="_blank" href="https://www.udemy.com/online-marketing-crash-course">The Online Marketing Crash Course: Traffic, Leads & Clients</a></li>
+            <li><a target="_blank" href="https://www.udemy.com/docker-mastery/"><i class="fi-play"></i> Docker Mastery: The Complete Toolset From a Docker Captain</a></li>
+            <li><a target="_blank" href="https://www.udemy.com/learn-docker/"><i class="fi-play"></i> Docker for the Absolute Beginner - Hands On</a></li>
+            <li><a target="_blank" href="https://www.coursera.org/specializations/google-it-support"><i class="fi-play"></i> Google IT Support Professional Certificate</a></li>
+            <li><a target="_blank" href="https://www.coursera.org/specializations/python"><i class="fi-play"></i> Python for Everybody Specialization</a></li>
+            <li><a target="_blank" href="https://www.coursera.org/specializations/data-structures-algorithms"><i class="fi-play"></i> Data Structures and Algorithms</a></li>
+            <li><a target="_blank" href="https://www.coursera.org/specializations/jhu-data-science"><i class="fi-play"></i> Data Science Specialization</a></li>
+            <li><a target="_blank" href="https://www.coursera.org/specializations/machine-learning"><i class="fi-play"></i> Machine Learning Specialization</a></li>
+            <li><a target="_blank" href="https://www.simplilearn.com/cloud-solutions-architect-masters-program-training "><i class="fi-play"></i> Cloud Architect (AWS & Azure)</a></li>
+            <li><a target="_blank" href="https://www.simplilearn.com/devops-engineer-masters-program-certification-training"><i class="fi-play"></i> DevOps Architect</a></li>
+            <li><a target="_blank" href="https://www.simplilearn.com/artificial-intelligence-masters-program-training-course"><i class="fi-play"></i> Artificial Intelligence Engineer</a></li>
+            <li><a target="_blank" href="https://www.simplilearn.com/automation-testing-masters-program-certification-training-course"><i class="fi-play"></i> Automation Test Engineer</a></li>
         </ul>
     </div>
 </div>
 
-<div class="row callout sidebar secondary">
+<div class="row callout sidebar secondary learning-sites">
     <div class="columns">
-        <p class="sidebar-title">My favorite online learning resources</p>
+        <p class="sidebar-title">Affordable on-line learning resources</p>
         <ul class="no-bullet">
             {% for item in site.data.promos.online-learning-resources.items %}
             <li>
                 <a href="{{ item.url }}" target="_blank">
                     <img src="{{ item.image }}"/>
                 </a>
+            </li>
             <li>
                 <a href="{{ item.url }}" target="_blank">
                     {{ item.title }}
                 </a>
             </li>
             {% endfor %}
-        </ul>
+        </ul>            
     </div>
 </div>
 
