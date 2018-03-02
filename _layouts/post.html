@@ -5,14 +5,6 @@ layout: default
 
     <!--  Post thumbnail and title -->
     <section class="row">
-        <meta itemprop="image" content="{{ site.url }}{{ page.thumbnail}}">
-        {% if page.videothumb %}
-            <section>&nbsp;</section>
-        {% else %}
-            {% assign pl = page.thumbnail | size | minus: 4 %}
-            <img class="thumb" src="{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}" alt="{{ page.title }}">
-        {% endif %}
-
         <div class="columns">
             <div class="small-1 columns show-for-medium">
                 <img class="post-author-img" src="{{ site.url }}/assets/images/Mark.jpg" />
