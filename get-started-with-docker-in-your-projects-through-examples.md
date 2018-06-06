@@ -9,7 +9,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
     <div class="small-12 columns" id="docker-book-landing-header">
         <h1 class="post-title" itemprop="name headline">Start your Docker learning journey!</h1>
         <h5>I wrote this book to give you a practical, step by step learning experience.</h5>
-        <h5>We'll start from the basics and you'll learn Docker by building working examples that resemble real-life project situations.</h5>
+        <h5>We start from the basics and you'll learn to build, ship, and run applications through working examples that resemble real-life project situations.</h5>
         <button class="buy-btn">Buy the book for $4.99!</button>
     </div>
 </section>
@@ -23,14 +23,14 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
             <li>We cover the entire build, ship and run cycle.</li>
             <li>Unique project focus with practices and detailed workflow.</li>
             <li>Continuous integration example.</li>
-            <li>Swarm deployment on AWS.</li>
-            <li>Kubernetes deployment on AWS.</li>
-            <li>Gradual, gentle learning curve. </li>
+            <li>Swarm and Kubernetes deployment on AWS.</li>
+            <li>State of the art; published in June, 2018.</li>
+            <li>PDF, epub, and mobi formats with code samples in one zip file. </li>
         </ul>            
     </div>
     <div class="small-12 medium-6 columns">
         <h2>Why is this book special?</h2>
-        <ul>
+        <ul class="no-bullet">
             <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples that you can build righ away.</li>
             <li>The book has a <b>special project focus</b> to teach you how you can use Docker in your projects.</li>
             <li>Besides the learning examples, I added <b>another 65 pages of build exercises</b> with shell scripts, Node.js, Python, PHP, C, Golang, and more.</li>

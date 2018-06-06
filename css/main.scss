@@ -1,14 +1,28 @@
 ---
 # Main sass file of takacsmark.com
 ---
-@import "foundation-sites/scss/foundation";
-@import "syntax-highlighting";
-$topbar-background: $white;
+// Globals
 $topbar-background: rgb(250, 250, 251);
 $topbar-submenu-background: $topbar-background;
+$tmdc-light-green: #82C928;
+$tmdc-dark-green: #588E14;
+$tmdc-light-blue: #0099FF;
+$tmdc-dark-blue: #336699;
+$tmdc-yellow: #FFFF00;
+$tmdc-purple:#604C8D;
+$tmdc-orange: #EC5E52;
+$tmdc-pink: #E56284;
+$tmdc-dark-grey: #333333;
+$tmdc-red-highlight: #F22918;
+$tmdc-red-highlight-hover: #D5291B;
 
-// @include top-bar-container;
+// Import dependencies
+@import "foundation-sites/scss/foundation";
+@import "syntax-highlighting";
+@import "foundation-icons/foundation-icons.css";
+@include foundation-everything;
 
+// Set up font face
 $font-path: "foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
@@ -21,13 +35,11 @@ $font-path: "foundation-icons/foundation-icons";
   font-style: normal;
 }
 
-@import "foundation-icons/foundation-icons.css";
-
-
-@include foundation-everything;
-
+//
+// Site header and navigation
+//
 .site-header {
-    background-color: rgb(250, 250, 251);
+    background-color: $topbar-background;
     height: 3em;
 }
 
@@ -51,8 +63,12 @@ $font-path: "foundation-icons/foundation-icons";
     }
 }
 
+//
+// Main screen greeting box with slider
+//
 .greeting-box {
     position: relative;
+    overflow: hidden;
 
     .greeting-label {
         position: absolute;
@@ -71,11 +87,55 @@ $font-path: "foundation-icons/foundation-icons";
             padding: 0em .2em 0em .2em;
             margin-bottom: .1em;
             color: white;
-            background-color: #336699;
             font-weight: 600;
             font-size: .95em;
             line-height: 1em;
         }       
+
+        &.offscreen {
+            left: -1000px !important;
+        }
+
+        &.slidein {
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+            left: .2em !important;
+        }
+
+        &.slideout {
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+            left: -1000px !important;
+        }
+
+
+
+        &#docker-book {
+            left: .2em;
+
+            img {
+                max-height: 7em;
+                border: none;
+            }
+
+            span {
+                background-color: $tmdc-light-blue;
+            }
+
+        }
+
+        &#dockerfile-tutorial {
+            span {
+                background-color: $tmdc-dark-blue;
+            }
+        }
+
     }
 
     @media screen and (min-width: 376px) {
@@ -105,6 +165,9 @@ $font-path: "foundation-icons/foundation-icons";
 
 }
 
+//
+// Home page post listing
+//
 .card {
     margin-top: 1em;
 
@@ -165,6 +228,9 @@ $font-path: "foundation-icons/foundation-icons";
     }
 }
 
+//
+// Sidebar
+//
 .sidebar.callout {
     margin-top: 1em;
     background-color: $white;
@@ -189,6 +255,25 @@ $font-path: "foundation-icons/foundation-icons";
         line-height: 1.2em;
     }
 
+    .buy-btn {
+        width: 100%;
+    }
+    
+    &.book {
+
+        ul {
+            margin-top: 1em;
+        }
+
+        span {
+            padding-top: 2em;
+            color: $tmdc-dark-blue;
+            font-weight: 600;
+            font-size: 1.5em;
+            line-height: 1.2;
+        }
+    }
+
 }
 
 .sidebar.social i {
@@ -198,7 +283,7 @@ $font-path: "foundation-icons/foundation-icons";
 
 .sidebar.recommended-courses {
     i {
-        color: #f22918;
+        color: $tmdc-red-highlight;
     }
     a {
         color: $black;
@@ -216,6 +301,9 @@ $font-path: "foundation-icons/foundation-icons";
     }
 }
 
+//
+// Post content
+//
 article{
     .thumb {
         object-fit: cover;
@@ -250,12 +338,6 @@ article{
     .gallery {
         margin-bottom: .5em;
     }
-
-    // code {
-    //     border: none;
-    //     color: 1px solid rgba(88,142,20,1);
-    //     font-size: .95em;
-    // }
 }
 
 .fb-share-button {
@@ -277,6 +359,9 @@ figure.highlight {
     }
 }
 
+//
+// Footer
+//
 footer {
     margin-top: 2em;
     padding-top: 2em;
@@ -289,6 +374,9 @@ footer {
     }
 }
 
+//
+// Docker book landing page
+//
 #docker-book-landing-header {
     background-image: url("/assets/images/in-content/get-started-with-docker-in-your-projects-through-examples.png");
     height: 761px;
@@ -297,7 +385,7 @@ footer {
     background-size: contain; 
 
     h1, h5, .btn {
-        margin-top: 2.5em;
+        margin-top: 2.2em;
         width: 55%;
         word-wrap: normal;
     }
@@ -334,17 +422,20 @@ footer {
             margin-left: 0;
         }
 
-        li {
-            list-style: none;
-        }
+        // li {
+        //     list-style: none;
+        // }
     }
 }
 
+//
+// Call to action button RED
+//
 .buy-btn {
     width: 25%;
     margin-top: 4em;
 
-    background-color: #F22918; /* Green */
+    background-color: $tmdc-red-highlight; 
     border: none;
     color: white;
     font-weight: 500;
@@ -362,53 +453,9 @@ footer {
 }
 
 .buy-btn:hover {
-    background-color: #D5291B;
+    background-color: $tmdc-red-highlight-hover;
 }
 
 .fi-check.green {
-    color:#82C928;
+    color: $tmdc-light-green;
 }
-
-// Sass utilities
-// @import 'foundation/util/util';
-//
-// // Global variables and styles
-// @import 'foundation/global';
-//
-// // Components
-// @import 'foundation/grid/grid';
-// @import 'foundation/typography/typography';
-// @import 'foundation/forms/forms';
-// @import 'foundation/components/visibility';
-// @import 'foundation/components/float';
-// @import 'foundation/components/button';
-// @import 'foundation/components/button-group';
-// @import 'foundation/components/accordion-menu';
-// @import 'foundation/components/accordion';
-// @import 'foundation/components/badge';
-// @import 'foundation/components/breadcrumbs';
-// @import 'foundation/components/callout';
-// @import 'foundation/components/close-button';
-// @import 'foundation/components/drilldown';
-// @import 'foundation/components/dropdown-menu';
-// @import 'foundation/components/dropdown';
-// @import 'foundation/components/flex';
-// @import 'foundation/components/flex-video';
-// @import 'foundation/components/label';
-// @import 'foundation/components/media-object';
-// @import 'foundation/components/menu';
-// @import 'foundation/components/menu-icon';
-// @import 'foundation/components/off-canvas';
-// @import 'foundation/components/orbit';
-// @import 'foundation/components/pagination';
-// @import 'foundation/components/progress-bar';
-// @import 'foundation/components/reveal';
-// @import 'foundation/components/slider';
-// @import 'foundation/components/sticky';
-// @import 'foundation/components/switch';
-// @import 'foundation/components/table';
-// @import 'foundation/components/tabs';
-// @import 'foundation/components/title-bar';
-// @import 'foundation/components/top-bar';
-// @import 'foundation/components/thumbnail';
-// @import 'foundation/components/tooltip';
