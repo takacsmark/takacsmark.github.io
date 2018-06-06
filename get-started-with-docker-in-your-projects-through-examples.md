@@ -10,6 +10,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
         <h1 class="post-title" itemprop="name headline">Start your Docker learning journey!</h1>
         <h5>I wrote this book to give you a practical, step by step learning experience.</h5>
         <h5>We start from the basics and you'll learn to build, ship, and run applications through working examples that resemble real-life project situations.</h5>
+        <h5>Published in June, 2018.</h5>
         <button class="buy-btn">Buy the book for $4.99!</button>
     </div>
 </section>
@@ -39,7 +40,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
     </div>
 </section>
 
-<section class="row">
+<section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
         <button class="buy-btn">Buy the book for $4.99!</button>
     </div>
@@ -100,7 +101,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 | Deploy and run the web application on AWS in a Swarm cluster. | <i class="fi-check green"></i> |
 | Deploy and run the web application on AWS in a Kubernetes cluster. | <i class="fi-check green"></i> |
 
-<section class="row">
+<section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
         <button class="buy-btn">Buy the book for $4.99!</button>
     </div>

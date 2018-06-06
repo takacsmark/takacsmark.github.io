@@ -41,11 +41,11 @@ $(function() {
                 newElement.removeClass('slidein');
 
                 activeSlide = newSlide;
-                setTimeout(flipSlide, 4000);
+                setTimeout(flipSlide, 6000);
             });
         });
     }
 
-    setTimeout(flipSlide, 4000);
+    setTimeout(flipSlide, 6000);
     
 });
