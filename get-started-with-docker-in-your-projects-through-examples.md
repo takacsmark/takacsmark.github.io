@@ -78,7 +78,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 | Ship your application’s Docker images to the Docker Hub. | <i class="fi-check green"></i> |
 | Set up an automatic build workflow involving GitHub. | <i class="fi-check green"></i> |
 | Set up your own Docker Registry. | <i class="fi-check green"></i> |
-| Build a continuous integratin example with Travis CI. | <i class="fi-check green"></i> |
+| Build a continuous integration example with Travis CI. | <i class="fi-check green"></i> |
 | A unique ship summary chapter to outline the shipping workflow in Dockerized projects. | <i class="fi-check green"></i> |
 
 | Run your applications | |
