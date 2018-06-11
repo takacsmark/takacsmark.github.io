@@ -1,7 +1,7 @@
 ---
 layout: landingpage
 title: Get started with Docker in your projects - through examples
-description: The Docker tutorial book you'll love.
+description: Learn Docker from the basics to cloud clusters in one book. Gradual learning, special project practices focus, built on code-along examples, 360 pages.
 permalink: /get-started-with-docker-in-your-projects-through-examples/
 ---
 
@@ -11,7 +11,8 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
         <h5>I wrote this book to give you a practical, step by step learning experience.</h5>
         <h5>We start from the basics and you'll learn to build, ship, and run applications through working examples that resemble real-life project situations.</h5>
         <h5>Published in June, 2018.</h5>
-        <button class="buy-btn">Buy the book for $4.99!</button>
+        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
     </div>
 </section>
 
@@ -42,7 +43,8 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 
 <section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
-        <button class="buy-btn">Buy the book for $4.99!</button>
+        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
     </div>
 </section>
 
@@ -101,9 +103,20 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 | Deploy and run the web application on AWS in a Swarm cluster. | <i class="fi-check green"></i> |
 | Deploy and run the web application on AWS in a Kubernetes cluster. | <i class="fi-check green"></i> |
 
+##### Refund policy
+
+You may be able to return the book that you bought for a refund. We will consider your return if we receive your request within 3 days of the date of purchase.
+
+##### Privacy policy
+
+We take your privacy seriously and will take all measures to protect your personal information.
+
+Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
+
 <section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
-        <button class="buy-btn">Buy the book for $4.99!</button>
+        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
     </div>
 </section>
 
