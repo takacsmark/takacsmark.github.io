@@ -45,10 +45,7 @@
                 ga('require', 'linker');
                 ga('linker:autoLink', ['dpdcart.com']);
                 
-                ga('send', 'pageview', {
-                'page': '{{ site.baseurl }}{{ page.url }}',
-                'title': '{{ page.title | replace: "'", "\\'" }}'
-                });
+                ga('send', 'pageview');
             </script>
             <!-- End Google Analytics -->
         {% endif %}
