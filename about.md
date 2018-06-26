@@ -14,7 +14,7 @@ I am sitting here today thinking that I wanna write about practical things of li
 
 ## Bio
 
-Mark is a guy turning 40 these days.  He is happily married and he is fond of computers.
+Mark is a guy turning 43 these days. He is happily married and he is fond of computers.
 
 He spent over 15 years in IT and telecommunications, he architected complex IT solutions and lead large-scale delivery programs.
 
@@ -25,8 +25,6 @@ Today, Mark is working from home with his wife, who also left her career in tele
 Mark and his wife know a good deal about how large enterprises work and now they are trying to build a cool family business with the mindset and reflexes of the corporate world. Sometimes this results in funny situations, some other times wise and insightful observations come out of it, because they have already dealt with complex and sizable stuff.
 
 Mark and his wife live and work in Budapest, Hungary.
-
-The IT related articles on the blog come from this family project experience and some hobby projects.
 
 ## Contact
 
