@@ -33,7 +33,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
     <div class="small-12 medium-6 columns">
         <h2>Why is this book special?</h2>
         <ul class="no-bullet">
-            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples that you can build righ away.</li>
+            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples that you can build right away.</li>
             <li>The book has a <b>special project focus</b> to teach you how you can use Docker in your projects.</li>
             <li>Besides the learning examples, I added <b>another 65 pages of build exercises</b> with shell scripts, Node.js, Python, PHP, C, Golang, and more.</li>
             <li>In the last chapters, we <b>build a complex example end to end</b> using all the skills we learned in the book, plus we'll learn more.</li>
