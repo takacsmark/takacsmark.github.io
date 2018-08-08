@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is Docker and what it can do for you? (2018 tutorial)"
-description: "What is Docker? How can I use it in my projects? What are its benefits? Practical introduction to the Docker ecosystem through examples."
+description: "What is Docker? How can I use it in my projects? What are its benefits? Gentle introduction to the Docker ecosystem through examples."
 date:   2018-07-26 01:59:00 +0100
 thumbnail: "/assets/images/post-thumbs/what-is-docker-blog.png"
 categories: Docker, Tutorials
@@ -23,13 +23,13 @@ _This article is designed to be a functional introduction of Docker concepts wit
 
 **This post is intended for developers, operations people, managers, students and professionals alike who have working knowledge of building and delivering software and want to get started with Docker.**
 
-## What is Docker?
+## What is Docker
 
 Docker is a tool for companies/teams/individuals who develop, deploy and run software on a regular basis.
 
 **The core idea of Docker is that you can use Docker to encapsulate your application's source code, your application's configuration files and server runtime into a single entity, called the container. **
 
-**You can think of a Docker container as your application process running  in an isolated box that contains your application plus all of its dependencies, including server programs, config files, libraries, etc.**
+**You can think of a Docker container as your application process running  in an isolated box that contains your application plus all of its dependencies, including server programs, configuration files, libraries, etc.**
 
 Let’s see how this works!
 
@@ -41,7 +41,7 @@ The main source of Docker images is the [Docker Hub](https://hub.docker.com), wh
 
 You’ll find images for almost any technology you’d probably want to use in your projects. A few examples would be Nginx, Redis, Node, Memcached, Mongo, as you can see on the screenshot.
 
-The Nginx image has Nginx pre-installed, the Redis image has Redis, Node has Node.js pre-installed, and so on. 
+The Nginx image has Nginx pre-installed, the Redis image has Redis, Node has Node.js pre-installed, and so on.
 
 _I'm sure you'll get the idea if I show what's inside an image._
 
@@ -62,7 +62,6 @@ adduser       chroot        ether-wake    loadfont      nbd-client    partprobe 
 arping        crond         fbset         lspci         nginx         powertop      readprofile   setfont
 {% endhighlight %}
 
-
 The location of the Nginx config files in the Nginx image is `/etc/nginx`:
 {% highlight Dockerfile linenos=table %}
 / # ls /etc/nginx/
@@ -72,7 +71,7 @@ fastcgi.conf.default    koi-win                 nginx.conf              uwsgi_pa
 fastcgi_params          mime.types              nginx.conf.default      uwsgi_params.default
 {% endhighlight %}
 
-**So, a Docker image basically contains all the files that are needed to run a certain technical component. In case of the Nginx image, you find the Nginx executable binary and the config files and a standard location where you should put your website source code. You also find systems tools in the Docker images (like `gzip` and `mv`) that you may need.**
+**So, a Docker image contains all the files that are needed to run a certain technical component. In case of the Nginx image, you find the Nginx executable binary and the config files and a standard location where you should put your website source code. You also find systems tools in the Docker images (like `gzip` and `mv`) that you may need.**
 
 **You can download a Docker image from the Docker Hub with the `docker pull` command. This will copy the image to your machine.**
 
@@ -86,7 +85,7 @@ So if you want to start up an Nginx web server on your machine, you don’t need
 
 This is possible, because the Nginx Docker image already contains the Nginx web server and the Docker Engine will start up the Nginx process in the container.
 
-**If you want to add your own code and configuration to a Docker image, like Nginx, all you need to do is to extend the official Nginx image and copy your config files and code files into the image’s file system.**
+**If you want to add your own code and configuration to a Docker image, like Nginx, all you need to do is to extend the official Nginx image and copy your configuration files and code files into the image’s file system.**
 
 ## Let’s see an example
 
@@ -104,25 +103,25 @@ The project contains source files for various purposes like HTML files, SCSS sty
 
 If you are not using Docker and you want to start this website on a cloud server, you need to complete the following steps:
 
-- install Node.js on the development machine
-- use Node.js to generate the distribution code with Webpack
-- start up a server machine in the cloud (with AWS, Azure, Google or another cloud provider or your private cloud)
-- install Nginx on your cloud server
-- copy the Nginx configuration to the server
-- copy the default configuration to the server
-- copy your site’s distribution code to the server
-- start up Nginx on the server
+* install Node.js on the development machine
+* use Node.js to generate the distribution code with Webpack
+* start up a server machine in the cloud (with AWS, Azure, Google or another cloud provider or your private cloud)
+* install Nginx on your cloud server
+* copy the Nginx configuration to the server
+* copy the default configuration to the server
+* copy your site’s distribution code to the server
+* start up Nginx on the server
 
 If you are using Docker, however, you can accomplish the same with the following steps:
 
-- create a custom Docker image that
-	- builds your distribution code with the official Node.js image automatically
-	- contains your distribution code
-	- contains your Nginx configuration and default site configuration
-	- contains the Nginx web server pre-installed based on the official Nginx image
-- push your custom Docker image to the Docker Hub
-- start up a server machine with Docker installed in the cloud (with AWS, Azure, Google or another cloud provider or your private cloud)
-- pull your image from the Docker Hub and start a container with a single command
+* create a custom Docker image that
+  * builds your distribution code with the official Node.js image automatically
+  * contains your distribution code
+  * contains your Nginx configuration and default site configuration
+  * contains the Nginx web server pre-installed based on the official Nginx image
+* push your custom Docker image to the Docker Hub
+* start up a server machine with Docker installed in the cloud (with AWS, Azure, Google or another cloud provider or your private cloud)
+* pull your image from the Docker Hub and start a container running your website with a single command
 
 If you are using Docker, you can define all the build steps and runtime characteristics of your application during build time declaratively in standard file formats provided by Docker.
 
@@ -130,21 +129,24 @@ If you are using Docker, you can define all the build steps and runtime characte
 
 **With Docker, your application is bundled with its environment. You don’t need to install any of the components on the target system, you just work with Docker images and run containers.**
 
-**Docker makes your applications highly portable and reduces quality risks due to it’s high level of standardization.**
+**Docker makes your applications highly portable and reduces quality risks due to its high level of standardization.**
 
 ## The build, ship, and run cycle
 
-Docker is used all along the development lifecycle, you can use its tools to support your workflow during building, shipping and running your applications. Build, ship and run is actually Docker’s main slogan.
+Docker is used all along the development lifecycle. You can use its tools to support your workflow during building, shipping and running your applications. Build, ship and run is actually Docker’s main slogan.
 
 ### Build
 
 To build the one-pager website example, you’d need to conduct the following steps during build:
-- You create a simple text file, called the Dockerfile. The Dockerfile defines the build steps of your project’s custom Docker image.   
-	Add the steps to the Dockerfile to generate your website’s distribution code starting from the official Node.js image.   
-	Add the steps to the Dockerfile to copy the website distribution code and the Nginx configuration files next to the Nginx server into the official Nginx image.   
-	**Now you have your server environment defined as code in the Dockerfile that you can re-create anytime the same way with a single command on any machine.** 
-- You use the `docker build` command to build your project’s Docker image from the Dockerfile, the resulting image will contain the Nginx server with your custom configuration files and your website’s code. 
-- You can start your website with the `docker run` command now. This command will start a Docker container based on your project’s Docker image. The container’s main process will be the Nginx web server that serves your site. 
+
+* You create a simple text file, called the Dockerfile. The Dockerfile defines the build steps of your project’s custom Docker image.
+  Add the steps to the Dockerfile to generate your website’s distribution code starting from the official Node.js image.
+  
+  Add the steps to the Dockerfile to copy the website distribution code and the Nginx configuration files next to the Nginx server into the official Nginx image.
+  
+  **Now you have your server environment defined as code in the Dockerfile that you can re-create anytime the same way with a single command on any machine.**
+* You use the `docker build` command to build your project’s Docker image from the Dockerfile, the resulting image will contain the Nginx server with your custom configuration files and your website’s code.
+* You can start your website with the `docker run` command now. This command will start a Docker container based on your project’s Docker image. The container’s main process will be the Nginx web server that serves your site.
   
 ![Docker build flow]({{ site.url }}/assets/images/in-content/Docker-build-flow.png)
 
@@ -152,50 +154,56 @@ To build the one-pager website example, you’d need to conduct the following st
 
 You can ship your application with the following steps:
 
-- You can start up a Docker container from your project’s Docker image on any computer with the `docker run` command, all you need to do is ship your image to the other computer. 
-- You can achieve this by pushing your project’s custom Docker image to the Docker Hub with the `docker push` command. (Or you can create a private registry similar to the Docker Hub, we’ll talk about this later.)
-- Now you can use the `docker pull` command for your project’s custom image on another computer to pull your image from the Docker Hub and start up a container. You need to make sure that the other computer has Docker installed.  
-	**As you can see, you don’t need to install and configure the Nginx server and deploy your code on the other computer. You can grab everything bundled in your Docker image. **
+* You can start up a Docker container from your project’s Docker image on any computer with the `docker run` command, all you need to do is ship your image to the other computer.
+* You can achieve this by pushing your project’s custom Docker image to the Docker Hub with the `docker push` command. (Or you can create a private registry similar to the Docker Hub, we’ll talk about this later.)
+* Now you can use the `docker pull` command for your project’s custom image on another computer to pull your image from the Docker Hub and start up a container. You need to make sure that the other computer has Docker installed.  
+    **As you can see, you don’t need to install and configure the Nginx server and deploy your code on the other computer. You can grab everything bundled in your Docker image.**
   
 ![Docker ship flow]({{ site.url }}/assets/images/in-content/Docker-ship-flow.png)
 
 ### Run
+
 There are sophisticated and mature solutions to run your dockerized applications in production:
-- You can run your Docker-based applications with Docker’s standard tools. Docker has an orchestrator built-in, called Swarm, that you can use to manage high-availability, scaled applications on computer clusters.
-- Google’s container orchestrator, Kubernetes, is the market leading solution to orchestrate Docker-based applications, that’s why you’ll see more and more out-of-the-box Kubernetes support in Docker.  
-	**Working with Docker, you’ll create your infrastructure as code during the build phase and you use standard Docker commands to ship and run your application anytime and anywhere.**
+
+* You can run your Docker-based applications with Docker’s standard tools. Docker has an orchestrator built-in, called Swarm, that you can use to manage high-availability, scaled applications on computer clusters.
+* Google’s container orchestrator - Kubernetes - is the market leading solution to orchestrate Docker-based applications, that’s why you’ll see more and more out-of-the-box Kubernetes support in Docker.  
+    **Working with Docker, you’ll create your infrastructure as code during the build phase and you use standard Docker commands to ship and run your application anytime and anywhere.**
   
 ![Docker run flow]({{ site.url }}/assets/images/in-content/Docker-run-flow.png)
 
-## What problem does Docker solve?
+## What problem does Docker solve
 
 Now that you have seen the basics, let’s se what is the problem Docker was designed to solve.
 
-**Docker solves the problem of having identical environments for your applications across various stages of development. These environments share as many resources as possible while keeping the environments isolated and highly portable.**
+**Docker solves the problem of having identical environments for your applications across various stages of development. These environments (i.e. Docker containers) share as many resources as possible while keeping the environments isolated and highly portable. Docker provides light-weight, portable, isolated, fully customizable application environments in the form of containers.**
 
-We saw above that you build Docker images for your application that contain server programs, configuration and source code. Images contain your application and all of its dependencies. 
+_Now that you know that Docker provides portable, isolated runtime environments for your applications, you may be thinking that virtual machines provide similar benefits. Your are right, Docker containers are a form virtualization. Docker containers are often compared to virtual machines and we'll deep dive into the details and differences in my next article._
 
-This means that you only need Docker installed on any machine to start up your application container with the exact same dependencies. **This means that you ship your application’s environment along with your application in the Docker image and you do not need to install and configure other components to run your application.**
+We saw above that you build Docker images for your applications. These images contain server programs, configuration and source code. Images contain your application and all of its dependencies.
+
+This means that you only need Docker installed on any machine to start up your application with the exact same dependencies. **This means that you ship your application’s environment along with your application in the Docker image and you do not need to install and configure other components to run your application.**
 
 This makes your applications super portable.
 
-Docker is declarative, you define your Docker images in one or more Dockerfiles. The Dockerfile has a well defined format that you can find here: [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/).
+Docker is declarative; you define your Docker images in one or more Dockerfiles. The Dockerfile has a well defined format that you can find here: [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/).
 
-You should add your Dockerfile(s) to source control, so that you can build the same Docker image(s) on any machine. 
+You should add your Dockerfile(s) to source control, so that you can build the same Docker image(s) on any machine.
 
-If you are thinking now that complex applications need more Docker images and you need some way to define how these images work together, you are right. 
+If you are thinking now that complex applications need more Docker images and you need some way to define how these images work together, you are right.
 
-**Docker provides the Docker Compose tool to work with multi-container applications (we’ll see this later), where you can define multiple application services declaratively in the Compose file, also called `docker-compose.yml`, which is the file’s default name.**
+_Docker provides the Docker Compose tool to work with multi-container applications (we’ll see this later), where you can define multiple application services declaratively in the Compose file, also called `docker-compose.yml`, which is the file’s default name._
 
 ## The website example with Docker
 
 Let’s see how I implemented what I explained so far to build and run the onepager website example. I added two files to Define the build environment and behavior:
-- Dockerfile.dev
-- docker-compose.dev.yml
+
+* Dockerfile.dev
+* docker-compose.dev.yml
 
 I also added two files for production:
-- Dockerfile
-- docker-compose.yml
+
+* Dockerfile
+* docker-compose.yml
 
 ![Onepage example dockerized]({{ site.url }}/assets/images/in-content/onepage-website-boostrap-webpackdevserver-dockerized.png)
 
@@ -215,11 +223,11 @@ EXPOSE 8080
 CMD npm run dev
 {% endhighlight %}
 
-The development Dockerfile will start from the official `node:9.11.2-alpine` Docker image, that has Node.js pre-installed and is available on the [Docker Hub](https://hub.docker.com/_/node/). 
+The development Dockerfile will start from the official `node:9.11.2-alpine` Docker image, that has Node.js pre-installed and is available on the [Docker Hub](https://hub.docker.com/_/node/).
 
-In `Dockerfile.dev` we define the working directory to be `/usr/src/app`, we copy our Node.js `package.json` files and Webpack config file into the image. We then install the `npm` packages with `npm install`, and define `npm run dev` to be the main command of the container, which will start the Webpack dev server as the main process. 	
+In `Dockerfile.dev` we define the working directory to be `/usr/src/app`, we copy our Node.js `package.json` files and Webpack config file into the image. We then install the `npm` packages with `npm install`, and define `npm run dev` to be the main command of the container, which will start the Webpack dev server as the main process.
 
-We expose port 8080, which indicates that our Webpack dev server will run on port 8080. Now that we have our image defined, we can build the image with the `docker build` command: 
+We expose port 8080, which indicates that our Webpack dev server will run on port 8080. Now that we have our image defined, we can build the image with the `docker build` command:
 
 `$ docker build --tag takacsmark/web-intro.exmple:dev-1.0 --file Dockerfile.dev .`
 
@@ -245,7 +253,7 @@ Let’s not worry about the details too much now, this is to give you the high l
 
 The Webpack dev server is up and running. I did not need to install Node.js or any of the node modules on my machine to make this work, everything is encapsulated into a Docker container.  
 
-I have automated the build and run steps in a Compose file that I named `docker-compose.development.yml`. 
+I have automated the build and run steps in a Compose file that I named `docker-compose.development.yml`.
 
 Now I don't need to type in the long build and run commands we just used, because we have specified the build and run options in the Compose file and we can use a single command to build and run our application.
 
@@ -270,29 +278,29 @@ Note how the options match the command line parameters of the `docker build` and
 
 I defined one service with the name `webpack` and specified how to build my custom image under the `build` section. I also specified the runtime parameters that you have already seen in my `docker run` command above. Users can start up my project the same way with a standard command called `docker-compose up` based on the Compose file:
 
-`docker-compose --file docker-compose.dev.yml up`	
+`docker-compose --file docker-compose.dev.yml up`
 
 This command will build and run my project’s development configuration as defined in `docker-compose.development.yml`.
 
 ![run Webpack development server with docker compose]({{ site.url }}/assets/images/in-content/compose-up.gif)
 
-## What are the benefits of Docker?
+## What are the benefits of Docker
 
-Companies enjoy different benefits of Docker based on their use cases and application areas. 
+Companies enjoy different benefits of Docker based on their use cases and application areas.
 
 ### Infrastructure cost savings
 
 One of the most discussed benefits of Docker is that you can use Docker to replace virtual machines. When your strategy is to use virtual machines to run your applications in isolation, you have to set up a full blown virtual machine for every component you wish to run in an isolated environment.
 
-**If you use Docker containers to isolate your application components instead of virtual machines, you’ll get a much leaner infrastructure.** 
+**If you use Docker containers to isolate your application components instead of virtual machines, you’ll get a much leaner infrastructure, because containers are much lighter than virtual machines. You can read more about this in my next article.**
 
-Docker containers provide a high level of isolation to your applications that run in the containers, while containers are designed to share a lot of resources. This makes them more resource effective than isolating your applications using dedicated virtual machines. This may result in reduced server costs depending on your architecture.
+Docker containers provide a high level of isolation to your applications that run in the containers, while containers are designed to share a lot of resources. This makes them more resource effective than isolating your applications using dedicated virtual machines. This may result in higher workload density, thus reduced server costs depending on your architecture.
 
 While this is a commonly discussed benefit, my experience is that many companies start Docker adoption in other domains, especially if they apply Docker to existing systems.
 
 ### Standardized development
 
-A met several companies that started their Docker journey in the development space. 
+A met several companies that started their Docker journey in the development space.
 
 Developers often use different machines to write code. Some of them use a Windows laptop, others use Macs and a good number of developers use a Linux operating system for work.
 
@@ -326,7 +334,7 @@ In this scenario you’re not leveraging a container orchestrator like Swarm or 
 
 You still enjoy the benefits, because your deployment entity is a Docker image that improves your CI flow.
 
-_Just think of the quality improvement packing your legacy Java application into a Docker image and push that image through your CI pipeline. All the Java 	versioning and configuration issues live in your Docker image now and you can push through the same image for testing and production._
+_Just think of the quality improvement packing your legacy Java application into a Docker image and push that image through your CI pipeline. All the Java versioning and configuration issues live in your Docker image now and you can push through the same image for testing and production._
 
 ### Infrastructure as code
 
@@ -338,15 +346,12 @@ This makes your applications highly portable, it gives you the flexibility to co
 
 ## Next steps
 
-I’m sure you have a lot of open questions right now. I usually write code-along tutorials, so this post is also new for me, and I’m missing the step-by-step how to guidance from my own article. This type of content will come in the next posts, so bear with me.
-
-If you want code-along tutorials right now, check out my book, [Get started with Docker in your projects through examples](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/), or the free learning content on the [blog](https://takacsmark.com) and [my youtube channel](https://www.youtube.com/takacsmark).
+I’m sure you have a lot of open questions right now. If you feel like starting a code-along tutorial, check out my book, [Get started with Docker in your projects through examples](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/), or the free learning content on the [blog](https://takacsmark.com) and [my youtube channel](https://www.youtube.com/takacsmark).
 
 You can find the source code for the one page website on Github: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized).
 
 In the next post we’ll touch the following main topics:
 
-- Why is Docker often compared to virtual machines? What is the difference?
-- How does Docker work under the hood?
-- How are container resources isolated?
-- Linux based containers and Windows based containers
+* Why is Docker compared to virtual machines? What is the difference?
+* How are container resources isolated?
+* Linux based containers and Windows based containers
