@@ -12,7 +12,8 @@ The time has come, we will use what we learnt so far to create our first Fat-Fre
 ## The MVC Project Structure
 
 Unlike in previous posts in this tutorial series, this time let me start with the end result and explain the structure. Later on, I will come back to each file in detail.
-{% highlight terminal linenos=table %}
+
+```terminal
 ➜  1 base  ll
 total 40
 drwxr-xr-x  4 markgyorgyiimac  staff   136B Júl 20 20:02 app
@@ -23,7 +24,8 @@ drwxr-xr-x  4 markgyorgyiimac  staff   136B Júl 20 20:02 app
 -rw-r--r--  1 markgyorgyiimac  staff    89B Júl 20 20:08 routes.ini
 drwxr-xr-x  4 markgyorgyiimac  staff   136B Júl 20 20:04 tmp
 drwxr-xr-x  5 markgyorgyiimac  staff   170B Aug 12 19:04 vendor
-{% endhighlight %}
+```
+
 This is the structure of our MVC web application project folder now.
 
 *'app' is a folder that I created. I use this folder to store all the source code that I write for my application.
@@ -38,7 +40,8 @@ This is the structure of our MVC web application project folder now.
 The 'app' folder, the 'config.ini' and 'routes.ini' files were created by me, so you should also create these files and the directory for your own project. 'index.php' should already be there. The other files and folders are managed by Composer or f3, so don't worry about them.
 
 Let's have a look at the structure of the app folder, now. This is where MVC will take place:
-{% highlight terminal linenos=table %}
+
+```terminal
 ➜  app  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 .
 |____controllers
@@ -46,7 +49,8 @@ Let's have a look at the structure of the app folder, now. This is where MVC wil
 | |____MainController.php
 |____views
 | |____template.htm
-{% endhighlight %}
+```
+
 A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx).
 
 I created two directories under 'app' for this lesson. These are 'controllers' and 'views'. The 'models' folder will come also under 'app' later when we will use a database.
@@ -64,7 +68,8 @@ So let's make this work. I have moved the functionality from the previous lesson
 ## Files under the root folder
 
 ### index.php
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 require_once("vendor/autoload.php");
@@ -75,7 +80,8 @@ $f3->config('config.ini');
 $f3->config('routes.ini');
 
 $f3->run();
-{% endhighlight %}
+```
+
 We know this file very well. As you can see its contents have significantly decreased, because we moved our "business" functions to the files in the MVC files. This file contains the inclusion of Composer autoload and the initiation of the f3 instance, that we know from the first lesson.
 
 There are two new lines, 7 and 8. These lines tell f3 to use the 'config.ini' and 'routes.ini' files as config files of the system. This way config variabless and routing info have their dedicated place.
@@ -85,26 +91,30 @@ The last line tells f3 to listen to http requests and respond to them.
 Now that we told f3 to use the config files, let's move on to these files in the next step.
 
 ### routes.ini
-{% highlight php linenos=table %}
+
+```php
 [routes]
 
 ;base routes
 GET /=MainController->render
 GET /hello=MainController->sayhello
-{% endhighlight %}
+```
+
 This file contains the route definitions. This is the same info we used to add to our $f3->route() functions in the past, but now we have a different format that you see in the code.
 
 `;` on line 3 denotes a comment, while the [routes] tag on line 1 tells f3 that this is the section where routes are defined. This is important because you could have only one file for all of your config needs in f3, in that scenario you would separate different config sections with different tags. You'll see that our config.ini starts with the tag [globals], because that's where we define global variables.
 
 ### config.ini
-{% highlight php linenos=table %}
+
+```php
 [globals]
 
 DEBUG=3
 UI=app/views/
 AUTOLOAD=app/controllers/
-{% endhighlight %}
- This is the config file of global variables. Right now we have set three crucial variables.
+```
+
+This is the config file of global variables. Right now we have set three crucial variables.
 
 * DEBUG specifies the debug level from 0 to 3, 0 being the least informative meant for production systems.
 * UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory
@@ -113,7 +123,8 @@ AUTOLOAD=app/controllers/
 ## Files under app/controllers/
 
 ### Controller.php
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class Controller {
@@ -126,11 +137,13 @@ class Controller {
 		echo '- After routing';
 	}
 }
-{% endhighlight %}
+```
+
 The Controller class is the superclass of all of our controllers in this application. It implements the beforeroute and afterroute functions, that we discussed before. These functions will be available in all controllers in the application. As I said before beforeroute is the ideal place for checking session information.
 
 ### MainController.php
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class MainController extends Controller{
@@ -145,7 +158,8 @@ class MainController extends Controller{
 		echo 'Hello, babe!';
 	}
 }
-{% endhighlight %}
+```
+
 This is our main controller class. Its parent class is Controller. As you see, we moved the functions from the previous lesson from 'index.php' into this class. Render will render the main page of our web application. Sayhello is a function that will simply say hello.
 
 ### How does f3  invoke these class functions?
@@ -167,7 +181,8 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 ## Files under app/views/
 
 ### template.htm
-{% highlight html linenos=table %}
+
+```php
 <!DOCTYPE html>
 <html>
 <head>
@@ -178,7 +193,8 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 	<p>This is rendered from the template</p>
 </body>
 </html>
-{% endhighlight %}
+```
+
 You can write f3 templates in plain HTML. If you need to use variables that are provided by controllers, you need to add your variables as globals in the controller and use f3's template syntax to display or use those values. You can pass all variable types, as well as arrays and objects to templates in global variables.
 
 You should use double curly braces to access globals. Variable names must be preceded by the `@` symbol. E.g. `{{ "{{ @name " }}}}` in the above example.

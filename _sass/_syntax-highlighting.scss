@@ -5,9 +5,9 @@
     background: #fff;
     @extend %vertical-rhythm !optional;
 
-    .highlighter-rouge & {
-      background: #eef;
-    }
+    // .highlighter-rouge & {
+    //   background: #eef;
+    // }
 
     pre {
       white-space: pre-wrap;

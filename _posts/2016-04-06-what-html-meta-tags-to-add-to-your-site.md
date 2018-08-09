@@ -38,7 +38,8 @@ These are the meta tags you'll need on your site to successfully work with today
 Everybody knows these two guys: `title` and `description`, every page has them (at least the ones listed on the first few hundred pages in Google search results).
 
 **Every page on your website should have a `title` and `description` meta tag. Put these tags into the `<head>` section of your html pages.** For example:
-{% highlight html linenos=table %}
+
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -52,7 +53,7 @@ Everybody knows these two guys: `title` and `description`, every page has them (
         <!-- Page content comes here... -->
     </body>
 </html>
-{% endhighlight %}
+```
 
 As you can see `<title>` technically does not carry the `<meta>` tag format, but it's almost always discussed when talk comes to meta tags.
 
@@ -108,7 +109,8 @@ There are some meta tags that you should add to all of your webpages under `<hea
 - `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp)
 
 Let's extend our previous example:
-{% highlight html linenos=table %}
+
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -127,7 +129,7 @@ Let's extend our previous example:
         <!-- Page content comes here... -->
     </body>
 </html>
-{% endhighlight %}
+```
 
 There are further less frequent meta tags, the most notable ones are `robots`, `google` and `http-equiv`.
 
@@ -152,7 +154,7 @@ An example of the second scenario is Pinterest. You can track pins from your web
 
 Let's add a Google example to our sample code, where the value of the content field is a verification code provided by Google Search Console:
 
-{% highlight html linenos=table %}
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -175,7 +177,7 @@ Let's add a Google example to our sample code, where the value of the content fi
         <!-- Page content comes here... -->
     </body>
 </html>
-{% endhighlight %}
+```
 
 ## Social meta
 
@@ -189,7 +191,7 @@ Twitter uses its own notation, but if it's not present on your page Twitter will
 
 Let's define a set of Open Graph tags to be used by Facebook, Google Plus and LinkedIn. I will also add a Twitter title.
 
-{% highlight html linenos=table %}
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -217,7 +219,7 @@ Let's define a set of Open Graph tags to be used by Facebook, Google Plus and Li
         <!-- Page content comes here... -->
     </body>
 </html>
-{% endhighlight %}
+```
 
 **If you have issues with your Open Graph meta start debugging with [Facebook's Open Graph debugger.](https://developers.facebook.com/tools/debug/)**
 
@@ -230,7 +232,8 @@ Use them to describe articles, blog posts, products, product listings, events, p
 You'll help search engines and other computer based content tools understand the content of your page. This way you can better perform in content related on-line solutions.
 
 Let's see a blog post example:
-{% highlight html linenos=table %}
+
+```html
 <article itemscope itemtype="http://schema.org/BlogPosting">
     <meta itemprop="image" content="http://yoursite.com/image.jpg">
     <img src="http://yoursite.com/image.jpg">
@@ -249,7 +252,7 @@ Let's see a blog post example:
         <!-- Post body comes here -->
     </div>
 </article>
-{% endhighlight %}
+```
 
 Use the `itemscope` attribute to denote the start of a new schema.org object. `itemtype` specifies the type of the item started by `itemscope`. Use the `itemprop` attribute within the opening and closing tags of the element with the `itemscope` attribute.
 

@@ -140,21 +140,22 @@ Every Dockerfile must start with the `FROM` instruction. The idea behind is that
 I start my images mostly from other images. You can start you Docker images from any valid image that you pull from public registries. The image you start from is called the base image. In our case let's add `FROM alpine:3.4` to the Dockerfile.
 
 Right now your Dockerfile should look like this:
-{% highlight Dockerfile linenos=table %}
+
+```dockerfile
 FROM alpine:3.4
-{% endhighlight %}
+```
 
 #### 3. Add the lines to install packages
 
 Please add the lines to install vim and curl like this:
 
-{% highlight Dockerfile linenos=table %}
+```dockerfile
 FROM alpine:3.4
 
 RUN apk update
 RUN apk add vim
 RUN apk add curl
-{% endhighlight %}
+```
 
 This is not best practice, these are just a few lines to get started. Don't worry, you'll learn the best practices in this article.
 
@@ -219,13 +220,13 @@ This behavior makes our lives a lot easier. Since image layers are built on top 
 
  Let's play with the cache a little bit. Let's change our Dockerfile to see the behavior. Let's change the list line from adding curl to adding git. This is the resulting file:
 
- {% highlight Dockerfile linenos=table %}
+```dockerfile
  FROM alpine:3.4
 
  RUN apk update
  RUN apk add vim
  RUN apk add git
- {% endhighlight %}
+```
 
 Let's issue our build command again: `docker build -t takacsmark/alpine-smarter:1.0 .`.
 
@@ -233,14 +234,15 @@ You'll see that the first 3 steps run using cache and only the last step will be
 ![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-cache-example.png)
 
 Please note that if you change an early step in the Dockerfile, for example you add one line after `apk update` like this:
-{% highlight Dockerfile linenos=table %}
+
+```dockerfile
 FROM alpine:3.4
 
 RUN apk update
 RUN apk add curl
 RUN apk add vim
 RUN apk add git
-{% endhighlight %}
+```
 
 In this case every step after the change will be re-built. Which means that the steps to install curl, vim and git will be run from scratch, no caching will be available beyond the point where the change occured.
 
@@ -269,14 +271,15 @@ I personally don't like it when images are just hanging around without a purpose
 Minimizing the number of steps in your image may improve build and pull performance. Therefore it's a cool best practice to combine several steps into one line, so that they'll create only one intermediary image.
 
 We can reformulate our Dockerfile like this:
-{% highlight Dockerfile linenos=table %}
+
+```dockerfile
 FROM alpine:3.4
 
 RUN apk update && \
     apk add curl && \
     apk add vim && \
     apk add git
-{% endhighlight %}
+```
 
 After building this Dockerfile the usual way you'll find that this time it has only taken 2 steps instead of 4, which will result in 1 new image, instead of 3 images.
 
@@ -288,25 +291,25 @@ Keep in mind that only `RUN`, `COPY` and `ADD` instructions create layers.
 
 It's a good idea to sort multiline instructions in a human readable manner. My example above is not optimal, because I'm installing packages in no order at all. I should write a file like this instead, where I order packages in alphabetical order. This is very useful when you work with a long list.
 
-{% highlight Dockerfile linenos=table %}
+```dockerfile
 FROM alpine:3.4
 
 RUN apk update && \
     apk add curl && \
     apk add git && \
     apk add vim
-{% endhighlight %}
+```
 
 (Yes you can remove `apk add` from the last 3 lines like this):
 
-{% highlight Dockerfile linenos=table %}
+```dockerfile
 FROM alpine:3.4
 
 RUN apk update && apk add \
     curl \
     git \
     vim
-{% endhighlight %}
+```
 
 ### Start your Dockerfile with the steps that are least likely to change
 
@@ -447,10 +450,10 @@ It is good practice to specify a `CMD` even if you are developing a generic cont
 
 So what's the deal with `ENTRYPOINT`? When you specify an entry point, your image will work a bit differently. You use `ENTRYPOINT` as the main executable of your image. In this case whatever you specify in `CMD` will be added to `ENTRYPOINT` as parameters.
 
-{% highlight Dockerfile linenos=table %}
+```dockerfile
 ENTRYPOINT ["git"]
 CMD ["--help"]
-{% endhighlight %}
+```
 
 This way you can build Docker images that mimic the behavior of the main executable you specify in `ENTRYPOINT`.
 
@@ -464,10 +467,10 @@ So you do not need to add the specific stuff immediately, like you don't need to
 
 So what you do instead is to add `ONBUILD` instructions. So you can do something like this:
 
-{% highlight Dockerfile linenos=table %}
+```dockerfile
 ONBUILD COPY . /usr/src/app
 ONBUILD RUN /usr/src/app/mybuild.sh
-{% endhighlight %}
+```
 
 `ONBUILD` instructions will be executed right after the `FROM` instruction in the downstram Dockerfile.
 

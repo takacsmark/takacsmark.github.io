@@ -50,7 +50,8 @@ Next, we add a new record to this table. You can do this from the Query window i
 ### config.ini
 
 First, let's add the database to the config.ini file, the full contents of the file should look like this:
-{% highlight php linenos=table %}
+
+```ini
 [globals]
 
 DEBUG=3
@@ -60,7 +61,8 @@ AUTOLOAD=app/controllers/
 devdb = "mysql:host=127.0.0.1;port=3306;dbname=sbf3MVC"
 devdbusername = "sbf3MVC"
 devdbpassword = "sbf3MVC"
-{% endhighlight %}
+```
+
 Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](https://fatfreeframework.com/databases)
 
 ### controller.php
@@ -68,7 +70,8 @@ Note that the global variable names (devdb, devdbusername and devdbpassword were
 In the next step, we move on to our controller parent class and add the database connection to the constructor. This way, every controller in our application will have access to the same database connection without any further coding.
 
 Our new controller.php should look like this:
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class Controller {
@@ -100,7 +103,8 @@ class Controller {
 	}
 
 }
-{% endhighlight %}
+```
+
 A couple of thing happened here. We added an f3 variable to our parent controller, we set its value in the constructor. This is the f3 instance we have seen in the previous lectures. It's a singleton, so it's the very same instance we use in our index.php. We add it to our parent controller as a class variable for easy access in our controllers.
 
 Additionally our parent controller will have now a $db variable that we use in all of our controllers to manipulate data in our database. Please note line 21, where we added an option to f3 telling the framework to raise db exceptions. This way SQL exception from the database will be propagated to our error handling mechanism. This will be a life saver during debugging tasks.
@@ -112,7 +116,8 @@ See how we use the global variables from config.ini to establish the connection.
 Let's create the 'models' folder under our project's app folder and let's create a new empty file under models, called Messages.php. This is our first model in our MVC.
 
 In the file we will create something called a DB\SQL\Mapper. This is the heart of f3's ORM, it will neatly map our table to a PHP object. Here is how:
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class Messages extends DB\SQL\Mapper{
@@ -126,7 +131,8 @@ class Messages extends DB\SQL\Mapper{
 	    return $this->query;
 	}
 }
-{% endhighlight %}
+```
+
 Our model class extends DB\SQL\Mapper. On line 6 we specify the name of the db table we want to map in the constructor. Later on we can add our own functions to manipulate data.
 
 Right now we have only one function that will read all messages. $this simply refers to the PHP object that is the mapping of our database table to PHP.
@@ -134,7 +140,8 @@ Right now we have only one function that will read all messages. $this simply re
 ### Including models
 
 Now we need to make sure that f3 will include our model classes. We do this in the config.ini file, by adding the models folder to the AUTOLOAD global variable. Remember from previous lectures how we separate folders with the pipe (`|`) symbol.
-{% highlight php linenos=table %}
+
+```ini
 [globals]
 
 DEBUG=3
@@ -144,14 +151,15 @@ AUTOLOAD=app/controllers/|app/models/
 devdb = "mysql:host=127.0.0.1;port=3306;dbname=sbf3MVC"
 devdbusername = "f3admin"
 devdbpassword = "f3admin"
-{% endhighlight %}
+```
 
 ## Displaying test data from the db
 
 ### MainController.php
 
 Let's go to our MainController.php now and change the render function.
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class MainController extends Controller{
@@ -170,7 +178,8 @@ class MainController extends Controller{
 		echo 'Hello, babe!';
 	}
 }
-{% endhighlight%}
+```
+
 We create a new Messages object, we pass the db connection as a parameter. $this->db here refers to the $db variable that we set in our Controller.php. Remember that MainController extends Controller.
 
 Next we take the first record from the result set (number [0], of course) and pass this variable, $msg, to the template as a global variable. $msg in fact is an object that has properties following the table structure. Thus $msg->message or $msg['message'] also represent the message field in the database table.
@@ -180,7 +189,8 @@ We pass the entire object to the template and take care of the individual fields
 ### template.htm
 
 There is one thing left to do now. We have to change our message in the template on line 7. f3 lets us use the handy dot notation to access object properties.
-{% highlight html linenos=table %}
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -191,7 +201,8 @@ There is one thing left to do now. We have to change our message in the template
 	<p>This is rendered from the template</p>
 </body>
 </html>
-{% endhighlight %}
+```
+
 If all goes well you should see the new Hello World message coming from the database. :)
 
 ## CRUD
@@ -201,7 +212,8 @@ This tutorial would not be complete without a comprehensive CRUD example. I usua
 ### Method 1. Model functions
 
 Let's update our Messages.php model file with the below functions:
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class Messages extends DB\SQL\Mapper{
@@ -235,10 +247,9 @@ class Messages extends DB\SQL\Mapper{
 	    $this->load(array('id=?',$id));
 	    $this->erase();
 	}
-
-
 }
-{% endhighlight %}
+```
+
 These functions to the following:
 
 * getById() returns the database record with a given id. We can use this method to get a record with a specific primary key, this is useful when we wanna display, or update certain attributes of a given record.
@@ -251,7 +262,8 @@ Remember, you can use the 'POST' array and also other arrays in the copyFrom fun
 ### Method 2. Setting object attributes
 
 Let's add some code to our MainController and create a new message in the database and display it on our screen.
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class MainController extends Controller{
@@ -275,7 +287,8 @@ class MainController extends Controller{
 		echo 'Hello, babe!';
 	}
 }
-{% endhighlight %}
+```
+
 Ok, all I did was adding a few lines 7-10, that create a new Messages object, set object properties in PHP syntax and call the save() method. This saved a new record to the database. I did not have to set the id explicitly, because it's automatically incremented by MySQL.
 
 Then I select all records from the database and changed line 13 to display the second record. Now we have the new record on our page, plus we have it in our database, too.

@@ -18,7 +18,8 @@ $tmdc-red-highlight-hover: #D5291B;
 
 // Import dependencies
 @import "foundation-sites/scss/foundation";
-@import "syntax-highlighting";
+// @import "syntax-highlighting";
+@import "syntax.css";
 @import "foundation-icons/foundation-icons.css";
 @include foundation-everything;
 
@@ -346,18 +347,15 @@ article{
     top: -6px;
 }
 
-figure.highlight {
-    margin: 0;
-    text-overflow: word-wrap;
-
-    tbody {
-        // background-color: $light-gray;
-    }
+.highlight {
+    // margin: 0;
+    // text-overflow: word-wrap;
 
     code {
         background-color: transparent;
         border: none;
-        font-size: .8em;
+        color: inherit;
+        // font-size: .8em;
     }
 }
 
