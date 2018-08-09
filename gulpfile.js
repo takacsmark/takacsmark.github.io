@@ -1,20 +1,20 @@
 /**
  * This is the Gulp automation file for takacsmark.com
  */
-require('babel-core/register');
 
-var gulp = require('gulp');
+'use strict';
+
+const gulp = require('gulp');
 const path = require('path');
 const fs = require('fs');
 const dirCompare = require('dir-compare');
 const imagemin = require('gulp-imagemin');
 const imageResize = require('gulp-image-resize');
-var rename = require("gulp-rename");
-var del = require('del');
-var debug = require('gulp-debug');
-var glob = require("glob")
+const rename = require("gulp-rename");
+const del = require('del');
+const glob = require("glob")
+const runSequence = require('run-sequence');
 
-'use strict';
 /**
  * Image optimization
  *
@@ -25,35 +25,37 @@ var glob = require("glob")
  *        img:minimize      - minimize original images and add results to target folder
  *        img:generatesizes - generate sized versions of images in target folder
  *
- * source folder: static/images
+ * source folder: assets/_raw_images
  * target folder: assets/images
  *
  * @warning - your original files cannot end in _[0-9]*
  */
-const srcDir = 'static/images'
-const destDir = 'assets/images'
+const srcDir = 'assets/_raw_images';
+const destDir = 'assets/images';
 
 // Configuration object of responsive image sizes
 // details of image design are described in docs/responsive-design.md
 const responsiveImgGenConfig = [
     {
-        src: 'static/images/post-thumbs/*',
+        src: srcDir + '/post-thumbs/*',
         widths: [960, 570, 300],
-        dest: 'assets/images/post-thumbs/'
+        dest: destDir + '/post-thumbs/'
     },
     {
-        src: 'static/images/site-greeting/*',
+        src: srcDir + '/site-greeting/*',
         widths: [1920, 960, 600],
-        dest: 'assets/images/site-greeting/'
+        dest: destDir +'/site-greeting/'
     },
     {
-        src: 'static/images/in-content/*',
+        src: srcDir + '/in-content/*',
         widths: [750, 550, 370],
-        dest: 'assets/images/in-content/'
+        dest: destDir + '/in-content/'
     },
-
-
 ];
+
+gulp.task('default', () => {
+    console.log('Use gulp img:add to add new images');
+});
 
 // Task for removing all images in destination folder
 gulp.task('img:cleanup', ()=> {
@@ -68,9 +70,9 @@ gulp.task('img:minimize', () => {
         entry.state === 'left' ? files.push(entry.path1 + '/' + entry.name1) : null
     }
 
-    console.log('Moving ' + files.length + ' new image(s).')
+    console.log('Moving ' + files.length + ' new image(s).');
 
-    return gulp.src(files, {base: 'static/images/'})
+    return gulp.src(files, {base: srcDir })
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -82,8 +84,8 @@ gulp.task('img:minimize', () => {
                 ]
             })
         ]))
-        .pipe(gulp.dest('assets/images/'))
-})
+        .pipe(gulp.dest(destDir))
+});
 
 // Task to generate various image sizes from originals based on the config object
 // this task will generate missing images only
@@ -130,8 +132,6 @@ gulp.task('img:generatesizes', () => {
             }
         }
 
-        // console.log(fileList)
-
         return Promise.all(
             fileList.map(checkFileSizesExist)
         )
@@ -146,8 +146,6 @@ gulp.task('img:generatesizes', () => {
 
             return missing
         }, [])
-
-        // console.log(res)
 
         res.map((item) => {
             gulp.src(item[1])
@@ -165,4 +163,8 @@ gulp.task('img:generatesizes', () => {
     }).catch((err) => {
         console.log('someting went wrong: ' + err)
     })
-})
+});
+
+gulp.task('img:add', () => {
+    runSequence('img:minimize', 'img:generatesizes');
+});

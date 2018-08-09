@@ -1,0 +1,28 @@
+# --
+# Development automation Compose file
+# --
+
+version: '3'
+
+services:
+  # --
+  # Gulp is used for minimizing images and creating different image sizes
+  # See the gulpfile for details
+  #
+  # Usage: docker-compose up does not run in interactive mode, so you can start
+  # this with the docker-compose run with this command:
+  #
+  # docker-compose -f docker-compose.devtools.yml run gulp 
+  # -- 
+  gulp:
+    build:
+      context: .
+      dockerfile: Dockerfile.devtools
+      args:
+        node_image_version: ${NODE_IMAGE_VERSION}
+    image: takacsmark/takacsmark-dot-com:devtools-${NODE_IMAGE_VERSION}
+    volumes:
+      - ./:/usr/src/app
+    stdin_open: true
+    tty: true
+    command: /bin/bash
