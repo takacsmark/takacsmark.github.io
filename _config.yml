@@ -38,4 +38,4 @@ plugins:
 sass:
     style: compressed
 
-exclude: [static, node_modules, .babelrc, .gulpfile.babel.js, package.json, docs, vendor/bundle]
+exclude: [node_modules, .gulpfile.js, package.json, docs, vendor/bundle]
