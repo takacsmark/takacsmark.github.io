@@ -46,30 +46,33 @@ The Nginx image has Nginx pre-installed, the Redis image has Redis, Node has Nod
 _I'm sure you'll get the idea if I show what's inside an image._
 
 These images are technically file system snapshots, in the form of a Linux file system. The Nginx image, for example, contains the below Linux file system directories:
-{% highlight Dockerfile linenos=table %}
+
+```terminal
 / # ls
 bin    dev    etc    home   lib    media  mnt    proc   root   run    sbin   srv    sys    tmp    usr    var
-{% endhighlight %}
+```
 
 The standard directories contain a set of Linux files, that the creator of the image has included. You’ll find, for example, some standard system programs in the Nginx image under `/bin`, like `grep`, `gzip`, `mv`,`ps` and such.  
 
 The Nginx image also contains an Nginx installation. The Nginx binary is located under `/usr/sbin/nginx`:
-{% highlight Dockerfile linenos=table %}
+
+```terminal
 / # ls /usr/sbin
 add-shell     brctl         delgroup      fdformat      nanddump      nginx-debug   rdate         remove-shell  setlogcons
 addgroup      chpasswd      deluser       killall5      nandwrite     ntpd          rdev          rfkill        zdump
 adduser       chroot        ether-wake    loadfont      nbd-client    partprobe     readahead     sendmail      zic
 arping        crond         fbset         lspci         nginx         powertop      readprofile   setfont
-{% endhighlight %}
+```
 
 The location of the Nginx config files in the Nginx image is `/etc/nginx`:
-{% highlight Dockerfile linenos=table %}
+
+```terminal
 / # ls /etc/nginx/
 conf.d                  fastcgi_params.default  mime.types.default      scgi_params             win-utf
 fastcgi.conf            koi-utf                 modules                 scgi_params.default
 fastcgi.conf.default    koi-win                 nginx.conf              uwsgi_params
 fastcgi_params          mime.types              nginx.conf.default      uwsgi_params.default
-{% endhighlight %}
+```
 
 **So, a Docker image contains all the files that are needed to run a certain technical component. In case of the Nginx image, you find the Nginx executable binary and the config files and a standard location where you should put your website source code. You also find systems tools in the Docker images (like `gzip` and `mv`) that you may need.**
 
@@ -210,7 +213,8 @@ I also added two files for production:
 Let’s check out how the development setup works! This is an introductory post, so I’ll not explain every step in detail, we’ll do that later, I just want you to get the big picture.
 
 `Dockerfile.dev` defines the development image of the project:
-{% highlight Dockerfile linenos=table %}
+
+```
 FROM node:9.11.2-alpine
 
 WORKDIR /usr/src/app
@@ -221,7 +225,7 @@ RUN npm install
 EXPOSE 8080
 
 CMD npm run dev
-{% endhighlight %}
+```
 
 The development Dockerfile will start from the official `node:9.11.2-alpine` Docker image, that has Node.js pre-installed and is available on the [Docker Hub](https://hub.docker.com/_/node/).
 
@@ -234,12 +238,13 @@ We expose port 8080, which indicates that our Webpack dev server will run on por
 ![Build development Docker image]({{ site.url }}/assets/images/in-content/build-development-image.gif)
 
 Now I have a new Docker image on my computer that I can list with the `docker image ls` command:
-{% highlight Dockerfile linenos=table %}
+
+```terminal
 $ docker image ls
 REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
 takacsmark/web-intro.exmple     dev-1.0             1facbf4ac56b        17 minutes ago      164MB
 node                            9.11.2-alpine       a56170f59699        2 weeks ago         68.5MB
-{% endhighlight %}
+```
 
 You can see that I have the `node:9.11.2-alpine` image also on the list that I used as parent image to build my project’s custom image.
 
@@ -258,7 +263,8 @@ I have automated the build and run steps in a Compose file that I named `docker-
 Now I don't need to type in the long build and run commands we just used, because we have specified the build and run options in the Compose file and we can use a single command to build and run our application.
 
 The Compose  file defines the build and runtime behavior of my project. It looks like this:
-{% highlight Dockerfile linenos=table %}
+
+```yml
 version: '3'
 
 services:
@@ -272,7 +278,7 @@ services:
 	volumes:
 	  - ./src:/usr/src/app/src
 	  - ./img:/usr/src/app/img
-{% endhighlight %}
+```
 
 Note how the options match the command line parameters of the `docker build` and `docker run` commands that I used above.  
 

@@ -69,7 +69,8 @@ You can put your applications into containers that share most resources amongst 
 The strength of Docker is that they have gone through the tedious task of stripping of all common stuff from containers and leave the bare minimum inside for separation. This way they created a flexibility and portability we've not seen before in environment management.
 
 Let me give you an example of the containers I have on my local machine so that you get a better idea. Docker and the community say that every container should have one main executable. In practice I translated this to one application per container. These are the running containers on my Mac right now:
-{% highlight html linenos=table %}
+
+```terminal
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             
 STATUS              PORTS                                      NAMES
 
@@ -78,7 +79,8 @@ Up 32 seconds       0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   nginx-proxy
 
 ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago  
 Up 32 seconds       0.0.0.0:3306->3306/tcp                     mariadb
-{% endhighlight %}
+```
+
 As you can see I have two containers running locally. One of them is an nginx proxy and the other one is mariadb.
 
 If you look at the ports, you can see that nginx proxy is listening on port 80 and 443, which means that this is my active http://localhost server.
@@ -88,7 +90,8 @@ Similarly, mariadb is listening on the default port, which means that this is my
 Well, I'm not running apache or mysql on my Mac anymore. I do my development in Docker containers.
 
 I'll tell you a lot more about this, I just wanted to show a few containers running. Now if I wanted to work on a Wordpress site, for example, I could start a Wordpress container next to nginx-proxy and mariadb and make these guys work together.   
-{% highlight html linenos=table %}
+
+```terminal
 CONTAINER ID        IMAGE                 COMMAND                  CREATED      
 STATUS              PORTS                                      NAMES
 
@@ -100,7 +103,7 @@ Up 3 seconds        80/tcp                                     vs-api
 
 ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago         
 Up 11 minutes       0.0.0.0:3306->3306/tcp                     mariadb
-{% endhighlight %}
+```
 
 As you can see now, I have three containers running, I started Wordpress next to the other applications.
 
@@ -125,12 +128,13 @@ Installation of Docker for Mac and Windows is done with a wizard, please follow 
 When the installation is complete you should have Docker Engine up and running on your machine.
 
 If you are on Mac, you can check the little whale icon in the top bar near the clock. You should be having the necessary command line tools to run containers. Let's check if this is the case. Let's run these commands in the Terminal app.
-{% highlight html linenos=table %}
+
+```terminal
 ➜  ~ docker --version
 Docker version 1.12.1, build 6f9534c
 ➜  ~ docker-compose --version
 docker-compose version 1.8.0, build f3628c7
-{% endhighlight %}
+```
 
 `docker --version` and `docker-compose --version` show the version information of two essential Docker tools. If the above works, you are ready to move on to the next step.
 
@@ -162,7 +166,8 @@ On the page you'll see a list of images. Most of them have the label "official" 
 Some images are provided by third parties, including community members. Those are usually a bit more specific, they are probably built on top of official packages. You should be seeing popular apps and solutions on that list like node, httpd, wordpress, nginx, Ubuntu and so on. The number of stars and downloads will give you an idea how popular an image is in the community.
 
 Let me show you my machine, before we get your package. I use the `docker images` command to list images on my local machine.
-{% highlight html linenos=table %}
+
+```terminal
 REPOSITORY                           TAG                 IMAGE ID            
 CREATED             SIZE
 
@@ -180,7 +185,7 @@ node                                 latest              348237a1e6c9
 
 mariadb                              latest              7e149af02fc0        
 6 weeks ago         391.9 MB
-{% endhighlight %}
+```
 
 If you remember, I'm running an nginx-proxy, a mariadb and a wordpress container on my local machine. These containers are running instances of the images jwilder/nginx-proxy, wordpress and mariadb in the above list. I pulled those images from the Ducker hub.
 
@@ -220,7 +225,8 @@ So, let's just pull first. :) We will specify the version when we do so. Let's p
 `docker pull nginx:1.10.1-alpine`
 
 If you are wondering about the size difference between Jessie and Alpine, I pulled them both to show the numbers to you:
-{% highlight html linenos=table %}
+
+```terminal
 REPOSITORY                           TAG                 IMAGE ID            
 CREATED             SIZE
 
@@ -229,7 +235,7 @@ nginx                                1.10.1              bf2b4c2d7bf5
 
 nginx                                1.10.1-alpine       e84e20a9b8b5        
 3 weeks ago         54.03 MB
-{% endhighlight %}
+```
 
 You see that the Alpine image has a smaller footprint, 180.7MB vs 54.03MB.
 
@@ -276,7 +282,8 @@ This container is running in the foreground. If you look at your terminal, you'l
 `docker ps`
 
 You should see something like this:
-{% highlight html linenos=table %}
+
+```terminal
 ➜  ~ docker ps
 CONTAINER ID        IMAGE                 COMMAND                  
 CREATED             STATUS              PORTS                         NAMES
@@ -284,8 +291,7 @@ CREATED             STATUS              PORTS                         NAMES
 01041c82947c        nginx:1.10.1-alpine   "nginx -g 'daemon off"   
 41 minutes ago      Up 41 minutes       0.0.0.0:80->80/tcp, 443/tcp   my-nginx       
 3 weeks ago         54.03 MB
-{% endhighlight %}
-
+```
 
 `docker ps` gives you the list of running containers. These containers are pre-configured running applications. This gives you a lot of flexibility in practice, you can stop a container with `docker stop`, start it again with `docker start` or restart it with `docker restart`.
 
@@ -345,7 +351,7 @@ Let's create a directory for this step, and create a file called `nginx.conf` in
 
 For the sake of the tutorial let's copy the default nginx configuration from the container into the `nginx.conf` file on the host. This doesn't make much functional sense, it's just a technical example. Let's use this content:
 
-{% highlight html linenos=table %}
+```conf
 user  nginx;
 worker_processes  1;
 
@@ -377,7 +383,7 @@ http {
 
     include /etc/nginx/conf.d/*.conf;
 }
-{% endhighlight %}
+```
 
 We'll map this file as a volume into our container. As a result our nginx.conf file on the host machine will be shared with the container. If you change the file on the host, the container will pick up the changes.
 
@@ -406,9 +412,10 @@ We changed the configuration of our nginx container from the outside!
 ### Using source code from the host
 
 Wow, how about source code? Let's add a webpage to nginx with another volume mapping. Create a directory called `src` and create a file called `index.html` in that directory. Copy this inside:
-{% highlight html linenos=table %}
+
+```html
 <p>Hello world</p>
-{% endhighlight %}
+```
 
 `docker stop my-nginx` and `docker rm my-nginx` before we recreate it. Use a command similar to mine:
 
@@ -449,17 +456,19 @@ Think of layers as snapshots on top of each other. If there is a change in a lay
 I hope you're starting to feel the potential time, effort and headache savings that layer caching brings to the table.
 
 Let's create your image now. Open your `Dockerfile` in a text editor. The file has the following format:
-{% highlight html linenos=table %}
+
+```
 #Comment
 INSTRUCTION arguments
-{% endhighlight %}
+```
 
 We must, yes must, start the Dockerfile specifying which image we derive our image from. Use the `FROM` instruction to do this. Let's use our good old nginx image to start from. Create a file called `Dockerfile` next to your nginx.conf on your local machine with the following content:
-{% highlight html linenos=table %}
+
+```
 FROM nginx:1.10.1-alpine
 MAINTAINER me@example.com
 COPY ./nginx.conf  /etc/nginx/nginx.conf
-{% endhighlight %}
+```
 
 Our goal is to copy our nginx.conf from the local machine into a custom nginx image. This will give us an image that has gzip turned on by default. (Make sure you use the nginx.conf from the previous step where we uncommented the line that turns gzip on).
 

@@ -45,15 +45,15 @@ Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js fil
 
 In order to add the css, just copy the below line into the `<head>` section of your html file.
 
-{% highlight html linenos=table %}
+```html
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-{% endhighlight %}
+```
 
 In order to add Bootstrap javascript copy and paste the below code right before your closing `</body>` tag.
 
-{% highlight html linenos=table %}
+```html
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-{% endhighlight %}
+```
 
 The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](https://getbootstrap.com/getting-started/)
 
@@ -119,7 +119,8 @@ Please copy and paste the hashed password, i.e. the long, messy looking string r
 ## 3 Create the user model object
 
 Let's create a new file called User.php under our app/models/ directory with the familiar model class implementation.
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class User extends DB\SQL\Mapper{
@@ -158,14 +159,15 @@ class User extends DB\SQL\Mapper{
         $this->erase();
     }
 }
-{% endhighlight %}
+```
 
 We discussed the above code in details in previous lessons, please have a look at those if you need clarification.
 
 ## 4 Create the User Controller in PHP
 
 Add a new file under the app/controllers/ folder, called UserController.php with the following contents:
-{% highlight php linenos=table %}
+
+```php
 <?php
 
 class UserController extends Controller{
@@ -198,7 +200,7 @@ class UserController extends Controller{
         }
     }
 }
-{% endhighlight %}
+```
 
 This is an important point. The render method will render the login page that we add later. I hope this is easy to understand by now.
 
@@ -216,7 +218,7 @@ If the password does not match, we redirect the user to the login page.
 
 Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm.  The contents should be like this:
 
-{% highlight html linenos=table %}
+```html
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -253,7 +255,7 @@ Copy and paste the code of the login page from the Bootstrap example to a new fi
 
 </body>
 </html>
-{% endhighlight %}
+```
 
 Note that we included a dedicated signin.css, see the next point for details.
 
@@ -261,7 +263,7 @@ Note that we included a dedicated signin.css, see the next point for details.
 
 Copy the contents of the signin.css from the Bootstrap example using developer tools as seen in the video. Copy the code into a new file under app/css/signin.css. Please see the contents of the file below for reference:
 
-{% highlight css linenos=table %}
+```css
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -302,13 +304,13 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-{% endhighlight %}
+```
 
 ## 7 New routes for login and authentication
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
-{% highlight php linenos=table %}
+```conf
 [routes]
 
 ;base routes
@@ -316,7 +318,7 @@ GET /=MainController->render
 
 GET /login=UserController->render
 POST /authenticate=UserController->authenticate
-{% endhighlight %}
+```
 
 ## 8 Turn on CACHE in config.ini to enable cache based sessions
 
@@ -324,7 +326,7 @@ Use the Fat-Free cache setting on line 6 to turn on caching. We need this featur
 
 If you are wondering what session information I'm talking about see point 4 about the user controller.
 
-{% highlight php linenos=table %}
+```ini
 [globals]
 
 DEBUG=3
@@ -335,12 +337,13 @@ CACHE=true
 devdb = "mysql:host=127.0.0.1;port=3306;dbname=f3MVC"
 devdbusername = "f3MVCadmin"
 devdbpassword = "f3MVCadmin"
-9 Start a new session in index.php
-{% endhighlight %}
+```
+
+## 9 Start a new session in index.php
 
 In order to make authentication work as described in point 4, we need to start a new session for the user request. It's done in your index.php.
 
-{% highlight php linenos=table %}
+```php
 <?php
 
 require_once("vendor/autoload.php");
@@ -353,13 +356,13 @@ $f3->config('routes.ini');
 new Session();
 
 $f3->run();
-{% endhighlight %}
+```
 
 ## 10 Add security restrictions to the application's parent controller
 
 To close the loop, we need to make sure that users without an active session cannot access restricted routes. In order to achieve this we add some logic to the beforeroute method of the parent controller in Controller.php.
 
-{% highlight php linenos=table %}
+```php
 <?php
 
 class Controller {
@@ -394,7 +397,7 @@ class Controller {
     }
 
 }
-{% endhighlight %}
+```
 
 Please note that we have overridden the beforeroute method in UserController.php, so login features are available for users without an active session.
 

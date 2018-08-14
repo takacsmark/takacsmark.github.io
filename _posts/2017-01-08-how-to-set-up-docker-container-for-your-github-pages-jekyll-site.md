@@ -43,7 +43,8 @@ So once I dug my way through the docs, I launched a command like this (note that
 `docker run -p 4400:4000 -v $(pwd):/srv/jekyll  jekyll/jekyll:pages`
 
 What happens is that the container starts up and it will try to install the dependencies listed in the `Gemfile` and `Gemfile.lock` files of your project. These files are in your project to make sure that the same packages are installed wherever you develop your blog. So this stuff is good for you. The problem is that the installation fails with error messages like the ones below:
-{% highlight shell linenos=table %}
+
+```terminal
 Fetching gem metadata from https://rubygems.org/..........
 Fetching version metadata from https://rubygems.org/...
 Fetching dependency metadata from https://rubygems.org/..
@@ -221,7 +222,7 @@ Make sure that `gem install RedCloth -v '4.2.9'` succeeds before bundling.
 	from /usr/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/lib/jekyll/plugin_manager.rb:36:in `require_from_bundler'
 	from /usr/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/exe/jekyll:9:in `<main>'
 sh: can't kill pid 455: No such process
-{% endhighlight %}
+```
 
 
 It seems that the "jekyll" user does not have permission to install these gems.
@@ -231,7 +232,8 @@ It seems that the "jekyll" user does not have permission to install these gems.
 I was looking for a non destructive way to fix the issue, so I created a new Docker image starting from the official jekyll/jekyll:pages image.
 
 I added this Dockerfile to my project:
-{% highlight Dockerfile linenos=table %}
+
+```dockerfile
 FROM jekyll/jekyll:pages
 
 COPY Gemfile* /srv/jekyll/
@@ -245,8 +247,7 @@ RUN bundle config build.nokogiri --use-system-libraries && \
 	bundle install
 
 EXPOSE 4000
-{% endhighlight %}
-
+```
 
 This Dockerfile will copy `Gemfile` and `Gemfile.lock` into your custom image and run the installation of the gems when building the image. The Linux packages (the ones added with apk) are the ones required for the installation of the Gems.
 
@@ -257,7 +258,8 @@ As I said I have two sites and this config works with both of them.
 In case you still get issues you may want to add more packages to your specific case.
 
 In order to build and run the image I added a docker-compose.yml file to my project with the following content:
-{% highlight yml linenos=table %}
+
+```yml
 version: '2'
 services:
   takacsmark:
@@ -267,7 +269,7 @@ services:
     volumes:
      - .:/srv/jekyll
     command: bundle exec jekyll serve --drafts --config _config.yml,_config_dev.yml
-{% endhighlight %}
+```
 
 If I execute `docker-compose up -d` from terminal, the image will be built and the site comes up on `http://localhost:4000`.
 

@@ -53,10 +53,11 @@ Let's run this command in terminal:
 `docker pull mariadb:10.0.25`
 
 If you run the command `docker images` now in terminal, you should see a new line under your Docker images. It should look something like this:
-{% highlight shell linenos=table %}
+
+```terminal
 REPOSITORY                      TAG                   IMAGE ID            CREATED             SIZE
 mariadb                         10.0.25               bb3fc12095a7        7 months ago        344.4 MB
-{% endhighlight %}
+```
 
 OK, now that we have the image pulled, let's see how to start up a database. In order to make it work, we need to see how to store data for the MariaDB container. 
 
@@ -94,7 +95,7 @@ Here is the entire command, please run it in terminal:
 
 This will start up your database container plus it will create the database files in your data directory. The contents of your data folder will be something like this:
 
-{% highlight shell linenos=table %}
+```terminal
 -rw-rw----@  1 takacsmark  staff    16K Jan  8 11:51 aria_log.00000001
 -rw-rw----@  1 takacsmark  staff    52B Jan  8 11:51 aria_log_control
 -rw-rw----@  1 takacsmark  staff    48M Jan  8 11:51 ib_logfile0
@@ -103,7 +104,7 @@ This will start up your database container plus it will create the database file
 -rw-rw----@  1 takacsmark  staff     0B Nov 20 11:31 multi-master.info
 drwx------@ 89 takacsmark  staff   3.0K Nov 20 11:31 mysql
 drwx------@ 55 takacsmark  staff   1.8K Nov 20 11:31 performance_schema
-{% endhighlight %}
+```
 
 Now you can use your SQL client to connect to your database. My Sequel Pro connection looks like this:
 
@@ -125,11 +126,12 @@ So let's pull the [official Wordpress image from the Docker Store](https://store
 `docker pull wordpress:4.6.1-php7.0-apache`
 
 After the pull you should see the new image, just issue the command `docker images`. Mine looks like this:
-{% highlight shell linenos=table %}
+
+```terminal
 REPOSITORY                      TAG                   IMAGE ID            CREATED             SIZE
 wordpress                       4.6.1-php7.0-apache   80f218d7d14e        7 weeks ago         433.2 MB
 mariadb                         10.0.25               bb3fc12095a7        7 months ago        344.4 MB
-{% endhighlight %}
+```
 
 ## Start up your Wordpress Docker container
 
