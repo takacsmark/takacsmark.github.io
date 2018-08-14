@@ -141,7 +141,7 @@ I start my images mostly from other images. You can start you Docker images from
 
 Right now your Dockerfile should look like this:
 
-```dockerfile
+```
 FROM alpine:3.4
 ```
 
@@ -149,7 +149,7 @@ FROM alpine:3.4
 
 Please add the lines to install vim and curl like this:
 
-```dockerfile
+```
 FROM alpine:3.4
 
 RUN apk update
@@ -221,11 +221,11 @@ This behavior makes our lives a lot easier. Since image layers are built on top 
  Let's play with the cache a little bit. Let's change our Dockerfile to see the behavior. Let's change the list line from adding curl to adding git. This is the resulting file:
 
 ```dockerfile
- FROM alpine:3.4
+FROM alpine:3.4
 
- RUN apk update
- RUN apk add vim
- RUN apk add git
+RUN apk update
+RUN apk add vim
+RUN apk add git
 ```
 
 Let's issue our build command again: `docker build -t takacsmark/alpine-smarter:1.0 .`.
