@@ -269,15 +269,15 @@ version: '3'
 
 services:
   webpack:
-	build:
-	  context: .
-	  dockerfile: Dockerfile.dev
-	image: takacsmark/web-intro-exmpl:dev-1.0
-	ports:
-	  - 8080:8080
-	volumes:
-	  - ./src:/usr/src/app/src
-	  - ./img:/usr/src/app/img
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: takacsmark/web-intro-exmpl:dev-1.0
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./img:/usr/src/app/img
 ```
 
 Note how the options match the command line parameters of the `docker build` and `docker run` commands that I used above.  

@@ -347,6 +347,16 @@ article{
     top: -6px;
 }
 
+code {
+    border: none;
+    padding: 0;
+
+    &.highlighter-rouge {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
 .highlight {
     border-radius: 10px;
     padding: 8px 8px 8px 1.2em;
@@ -356,11 +366,8 @@ article{
         background-color: transparent;
         border: none;
         color: inherit;
-        // font-size: .8em;
     }
 }
-
-
 
 //
 // Footer
