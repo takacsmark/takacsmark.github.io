@@ -348,8 +348,9 @@ article{
 }
 
 .highlight {
-    // margin: 0;
-    // text-overflow: word-wrap;
+    border-radius: 10px;
+    padding: 8px 8px 8px 1.2em;
+    margin-bottom: 1em;
 
     code {
         background-color: transparent;
@@ -358,6 +359,8 @@ article{
         // font-size: .8em;
     }
 }
+
+
 
 //
 // Footer

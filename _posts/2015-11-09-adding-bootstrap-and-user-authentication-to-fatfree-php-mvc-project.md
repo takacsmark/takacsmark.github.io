@@ -310,7 +310,7 @@ body {
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
-```ini
+```conf
 [routes]
 
 ;base routes
@@ -337,8 +337,9 @@ CACHE=true
 devdb = "mysql:host=127.0.0.1;port=3306;dbname=f3MVC"
 devdbusername = "f3MVCadmin"
 devdbpassword = "f3MVCadmin"
-9 Start a new session in index.php
 ```
+
+## 9 Start a new session in index.php
 
 In order to make authentication work as described in point 4, we need to start a new session for the user request. It's done in your index.php.
 

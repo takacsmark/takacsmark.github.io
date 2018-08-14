@@ -457,14 +457,14 @@ I hope you're starting to feel the potential time, effort and headache savings t
 
 Let's create your image now. Open your `Dockerfile` in a text editor. The file has the following format:
 
-```dockerfile
+```
 #Comment
 INSTRUCTION arguments
 ```
 
 We must, yes must, start the Dockerfile specifying which image we derive our image from. Use the `FROM` instruction to do this. Let's use our good old nginx image to start from. Create a file called `Dockerfile` next to your nginx.conf on your local machine with the following content:
 
-```dockerfile
+```
 FROM nginx:1.10.1-alpine
 MAINTAINER me@example.com
 COPY ./nginx.conf  /etc/nginx/nginx.conf

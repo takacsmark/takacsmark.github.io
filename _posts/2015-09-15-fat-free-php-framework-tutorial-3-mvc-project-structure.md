@@ -92,7 +92,7 @@ Now that we told f3 to use the config files, let's move on to these files in the
 
 ### routes.ini
 
-```php
+```conf
 [routes]
 
 ;base routes
@@ -106,7 +106,7 @@ This file contains the route definitions. This is the same info we used to add t
 
 ### config.ini
 
-```php
+```ini
 [globals]
 
 DEBUG=3
@@ -182,7 +182,7 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 
 ### template.htm
 
-```php
+```html
 <!DOCTYPE html>
 <html>
 <head>
