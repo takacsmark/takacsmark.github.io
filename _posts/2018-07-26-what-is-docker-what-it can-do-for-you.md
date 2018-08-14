@@ -214,7 +214,7 @@ Let’s check out how the development setup works! This is an introductory post,
 
 `Dockerfile.dev` defines the development image of the project:
 
-```
+```docker
 FROM node:9.11.2-alpine
 
 WORKDIR /usr/src/app

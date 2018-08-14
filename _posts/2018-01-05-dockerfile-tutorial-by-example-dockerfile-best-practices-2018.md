@@ -141,7 +141,7 @@ I start my images mostly from other images. You can start you Docker images from
 
 Right now your Dockerfile should look like this:
 
-```
+```docker
 FROM alpine:3.4
 ```
 
@@ -149,7 +149,7 @@ FROM alpine:3.4
 
 Please add the lines to install vim and curl like this:
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update
@@ -220,7 +220,7 @@ This behavior makes our lives a lot easier. Since image layers are built on top 
 
  Let's play with the cache a little bit. Let's change our Dockerfile to see the behavior. Let's change the list line from adding curl to adding git. This is the resulting file:
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update
@@ -235,7 +235,7 @@ You'll see that the first 3 steps run using cache and only the last step will be
 
 Please note that if you change an early step in the Dockerfile, for example you add one line after `apk update` like this:
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update
@@ -272,7 +272,7 @@ Minimizing the number of steps in your image may improve build and pull performa
 
 We can reformulate our Dockerfile like this:
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update && \
@@ -291,7 +291,7 @@ Keep in mind that only `RUN`, `COPY` and `ADD` instructions create layers.
 
 It's a good idea to sort multiline instructions in a human readable manner. My example above is not optimal, because I'm installing packages in no order at all. I should write a file like this instead, where I order packages in alphabetical order. This is very useful when you work with a long list.
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update && \
@@ -302,7 +302,7 @@ RUN apk update && \
 
 (Yes you can remove `apk add` from the last 3 lines like this):
 
-```
+```docker
 FROM alpine:3.4
 
 RUN apk update && apk add \
@@ -450,7 +450,7 @@ It is good practice to specify a `CMD` even if you are developing a generic cont
 
 So what's the deal with `ENTRYPOINT`? When you specify an entry point, your image will work a bit differently. You use `ENTRYPOINT` as the main executable of your image. In this case whatever you specify in `CMD` will be added to `ENTRYPOINT` as parameters.
 
-```
+```docker
 ENTRYPOINT ["git"]
 CMD ["--help"]
 ```
@@ -467,7 +467,7 @@ So you do not need to add the specific stuff immediately, like you don't need to
 
 So what you do instead is to add `ONBUILD` instructions. So you can do something like this:
 
-```
+```docker
 ONBUILD COPY . /usr/src/app
 ONBUILD RUN /usr/src/app/mybuild.sh
 ```
