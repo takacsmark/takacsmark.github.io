@@ -262,6 +262,12 @@ $font-path: "foundation-icons/foundation-icons";
         font-size: 1.3em;
     }
     
+    &.mailinglist {
+        .button {
+            width: 100%;
+        }
+    }
+   
     &.book {
 
         ul {

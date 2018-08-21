@@ -43,7 +43,7 @@ layout: default
 <section class="row">
 
     <!--  Main content -->
-    <section class="small-12 large-9 columns">
+    <section class="small-12 large-9 columns" id="post-content" data-post-content>
 
         <div class="row">
             {% for post in site.posts %}
@@ -64,7 +64,7 @@ layout: default
     </section>
 
     <!--  Sidebar -->
-    <section class="large-3 columns show-for-large">
+    <section class="large-3 columns show-for-large" data-sticky-container>
         {% include sidebar.html %}
     </section>
 </section>
