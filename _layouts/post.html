@@ -37,7 +37,7 @@ layout: default
         <div class="row" itemprop="articleBody">
             <section class="columns">{% include social-share.html %}</section>
             <hr>
-            <section class="columns">{{ content }}</section>
+            <section class="columns" id="post-content" data-post-content>{{ content }}</section>
             <hr>
             <section class="columns">{% include social-share.html %}</section>
         </div>
@@ -45,7 +45,7 @@ layout: default
     </section>
 
     <!--  Sidebar -->
-    <section class="medium-3 columns show-for-medium">
+    <section class="medium-3 columns show-for-medium" data-sticky-container>
         {% include sidebar.html %}
     </section>
 </article>

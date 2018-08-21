@@ -4,12 +4,13 @@
             <h4><i class="fi-megaphone"></i> Contact Me</h4>
 
             <ul class="no-bullet">
-                {% if site.linkedin_username %}
+
+                {% if site.youtube_channel %}
                 <li>
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
-                        <i class="fi-social-linkedin"></i>
-                        <span>{{ site.linkedin_username }}</span>
-                        <!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
+                    <a href="https://youtube.com/{{ site.youtube_channel}}">
+                        <i class="fi-social-youtube"></i>
+                        <span>{{ site.youtube_channel }}</span>
+                        <!--[if lt IE 9]><em>Youtube</em><![endif]-->
                     </a>
                 </li>
                 {% endif %}
@@ -33,16 +34,6 @@
                 </li>
                 {% endif %}
 
-                {% if site.youtube_channel %}
-                <li>
-                    <a href="https://youtube.com/{{ site.youtube_channel}}">
-                        <i class="fi-social-youtube"></i>
-                        <span>{{ site.youtube_channel }}</span>
-                        <!--[if lt IE 9]><em>Youtube</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
-
                 {% if site.github_username %}
                 <li>
                     <a href="https://github.com/{{ site.github_username }}">
@@ -52,33 +43,15 @@
                 </li>
                 {% endif %}
 
-                {% if site.instagram_username %}
+                {% if site.linkedin_username %}
                 <li>
-                    <a href="https://instagram.com/{{ site.instagram_username }}">
-                        <i class="fi-social-instagram"></i>
-                        <span>{{ site.instagram_username}}</span>
-                        <!--[if lt IE 9]><em>Instagram</em><![endif]-->
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                        <i class="fi-social-linkedin"></i>
+                        <span>{{ site.linkedin_username }}</span>
+                        <!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
                     </a>
                 </li>
                 {% endif %}
-
-                {% if site.googleplus_username %}
-                <li>
-                    <a href="https://plus.google.com/{{ site.googleplus_username }}">
-                        <i class="fi-social-google-plus"></i>
-                        <span>{{ site.googleplus_username }}</span>
-                        <!--[if lt IE 9]><em>Google Plus</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
-
-                <li>
-                    <a href="{{ site.url }}/feed.xml">
-                        <i class="fi-rss"></i>
-                        <span>rss</span>
-                        <!--[if lt IE 9]><em>RSS</em><![endif]-->
-                    </a>
-                </li>
 
                 {% if site.email %}
                 <li>
@@ -100,7 +73,6 @@
 
         <div class="small-12 medium-4 columns">
             <h4><i class="fi-paw"></i> Adventures in a Digitial World</h4>
-
             <p>{{ site.description }}</p>
         </div>
 
@@ -108,7 +80,7 @@
 
     <section class="row expanded footer-copyright">
         <div class="columns">
-            <p>&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - hosted on <a href="https://pages.github.com/" target="_blank">Github pages</a> - created with <a href="https://jekyllrb.com/">Jekyll</a></p>
+            <p>&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - <a href="https://savalera.com/" target="_blank">Savalera Kft.</a>
         </div>
     </section>
 </footer>
