@@ -9,7 +9,7 @@ categories: Docker, Tutorials
 * TOC
 {:toc}
 
-This the second part of the Docker introduction article that I published recently on my [blog](https://takacsmark.com/what-is-docker-what-it-can-do-for-you/) and [medium](https://medium.com/@takacsmark/what-is-docker-and-what-it-can-do-for-you-2018-tutorial-842ddf2b2bf6).
+This the second part of the Docker introduction article that I published recently on my [blog](https://takacsmark.com/what-is-docker-what-it-can-do-for-you/) and [medium](https://medium.com/@takacsmark/what-is-docker-and-what-it-can-do-for-you-2018-tutorial-842ddf2b2bf6){:target="_blank"}.
 
 **My goal is to give you a gentle introduction to Docker with practical examples, explaining what Docker is, what you can achieve with it, why you’d want to use it and what benefits you may expect.**
 
