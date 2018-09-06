@@ -23,7 +23,14 @@ _This article is designed to be a functional introduction of Docker concepts wit
 
 **This post is intended for developers, operations people, managers, students and professionals alike who have working knowledge of building and delivering software and want to get started with Docker.**
 
+
 ## What is Docker
+
+Let's start with a video!
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/EmrikChpdfY" frameborder="0" allowfullscreen></iframe></div>
+
+**You can download the presentation using the button below.** 
+<a data-dpd-type="button" data-text="Download Presentation" data-variant="price-none" data-button-size="dpd-small" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=170727&amp;method_id=183710">Download Presentation</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 
 Docker is a tool for companies/teams/individuals who develop, deploy and run software on a regular basis.
 

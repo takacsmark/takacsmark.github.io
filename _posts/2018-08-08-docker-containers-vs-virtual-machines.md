@@ -15,6 +15,12 @@ This the second part of the Docker introduction article that I published recentl
 
 I’d definitely suggest to start with the [first post](https://takacsmark.com/what-is-docker-what-it-can-do-for-you/), because that’s where we cover the basics.
 
+Alternatively, you can watch just the video:
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/EmrikChpdfY" frameborder="0" allowfullscreen></iframe></div>
+
+**You can download the presentation using the button below.** 
+<a data-dpd-type="button" data-text="Download Presentation" data-variant="price-none" data-button-size="dpd-small" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=170727&amp;method_id=183710">Download Presentation</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+
 This introduction is a bit higher level, than a step-by-step, code-along tutorial. I decided to start the series on this level, so that less techie people may also find value in this introduction.
 
 You can find code-along Docker tutorials for free on my [blog](takacsmark.com) and my [youtube channel](https://www.youtube.com/takacsmark), if you prefer a more techie approach. I’ll keep adding more hard-core tech stuff, so stay tuned.
