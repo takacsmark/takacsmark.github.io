@@ -96,7 +96,35 @@ Google may use the Data collected to contextualize and personalize the ads of it
 
 Personal Data collected: Cookies and Usage Data.
 
-Place of processing: United States – [Privacy Policy](https://policies.google.com/privacy) – [Opt Out](https://tools.google.com/dlpage/gaoptout?hl=en). Privacy Shield participant.
+Place of processing: United States – [Privacy Policy](https://policies.google.com/privacy){:target="_blank"} – [Opt Out](https://tools.google.com/dlpage/gaoptout?hl=en){:target="_blank"}. Privacy Shield participant.
+
+#### Content commenting
+
+Content commenting services allow Users to make and publish their comments on the contents of this Application.
+Depending on the settings chosen by the Owner, Users may also leave anonymous comments. If there is an email address among the Personal Data provided by the User, it may be used to send notifications of comments on the same content. Users are responsible for the content of their own comments.
+If a content commenting service provided by third parties is installed, it may still collect web traffic data for the pages where the comment service is installed, even when Users do not use the content commenting service.
+
+##### Disqus (Disqus)
+
+Disqus is a content commenting service provided by Big Heads Labs Inc.
+
+Personal Data collected: Cookies, Usage Data and various types of Data as specified in the privacy policy of the service.
+
+Place of processing: United States – [Privacy Policy](https://help.disqus.com/customer/portal/articles/466259-privacy-policy){:target="_blank"} – [Opt out](https://help.disqus.com/customer/portal/articles/1657951){:target="_blank"}.
+
+#### Interaction with external social networks and platforms
+
+This type of service allows interaction with social networks or other external platforms directly from the pages of this Application.
+The interaction and information obtained through this Application are always subject to the User’s privacy settings for each social network.
+This type of service might still collect traffic data for the pages where the service is installed, even when Users do not use it.
+
+##### YouTube button and social widgets (Google LLC)
+
+The YouTube button and social widgets are services allowing interaction with the YouTube social network provided by Google LLC.
+
+Personal Data collected: Usage Data.
+
+Place of processing: United States – [Privacy Policy](https://policies.google.com/privacy){:target="_blank"}. Privacy Shield participant. 
 
 ##### Managing contacts and sending messages
 
@@ -109,7 +137,7 @@ MailChimp is an email address management and message sending service provided by
 
 Personal Data collected: email address, first name and last name.
 
-Place of processing: United States – [Privacy Policy](https://mailchimp.com/legal/privacy/). Privacy Shield participant.
+Place of processing: United States – [Privacy Policy](https://mailchimp.com/legal/privacy/){:target="_blank"}. Privacy Shield participant.
 
 ##### Selling goods and services on-line
 
@@ -123,7 +151,7 @@ DPD is an all-in-one shopping cart and digital fulfillment service to sell downl
 
 Personal Data collected: email address, first name and last name.
 
-Place of processing: United States – [Privacy Policy](https://getdpd.com/legal/privacy-policy/).
+Place of processing: United States – [Privacy Policy](https://getdpd.com/legal/privacy-policy/){:target="_blank"}.
 
 #### The rights of Users
 
