@@ -2,6 +2,10 @@
 <html>
     {% include head.html %}
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9XNNB9"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -46,6 +50,7 @@
                 ga('create', '{{ site.google_analytics }}', 'auto', {'allowLinker': true});
                 ga('require', 'linker');
                 ga('linker:autoLink', ['dpdcart.com']);
+                ga('set', 'anonymizeIp', true);
                 ga('send', 'pageview', {
                 'page': '{{ site.baseurl }}{{ page.url }}',
                 'title': '{{ page.title | replace: "'", "\\'" }}'
