@@ -22,22 +22,6 @@ googleplus_username: +Takacsmark
 disqus: takacsmark
 google_analytics: UA-41064919-3
 
-# Build settings
-# markdown: kramdown
-
-# highlighter: rouge
-# markdown: kramdown
-# kramdown:
-#   input: GFM
-#   auto_ids: true
-#   syntax_highlighter: rouge
-
-# kramdown:
-#     input: GFM
-#     syntax_highlighter: rouge
-#     syntax_highlighter_opts:
-#         css_class: 'highlight'
-
 plugins:
     - jekyll-sitemap
 
