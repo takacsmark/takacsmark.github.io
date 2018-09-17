@@ -263,7 +263,6 @@ $font-path: "foundation-icons/foundation-icons";
     }
     
     &.mailinglist {
-        width: 250px;
         .button {
             width: 100%;
         }
@@ -410,6 +409,11 @@ footer {
 
     h5 {
         margin-top: 2em;
+
+        &.blue {
+            color: $tmdc-light-blue;
+            font-weight: 600;
+        }
     }
 
     h1, h5 {
@@ -447,7 +451,7 @@ footer {
     /* Large */
     @media screen and (min-width: 64em) {
 
-        height: 761px;
+        // height: 761px;
 
         h1, h5, div.dpd-large {
             margin-top: 2em;
@@ -521,16 +525,14 @@ footer {
 
     margin-top: 1em;
     margin-bottom: 1em;
+    background-color: rgba(0,0,0,.03);
+    padding-top: 1em;
+    padding-bottom: 1em;
+
 
     div {
-        // background-color: rgba(0,0,0,.03);
         padding-left: 0;
         padding-right:0;
-    }
-
-    img {
-        // max-height: 8em;
-        // width: auto;
     }
 
     span {
@@ -540,14 +542,11 @@ footer {
         color: $tmdc-dark-blue;
         font-weight: 600;
         display: block;
-        // font-size: 1.5em;
-        // line-height: 1em;
     }     
 
     .buy-btn {
-        // font-size: 1em;
         box-shadow: none;
-        // margin-top: 0;
+        padding: 6px 16px;
     }
 
     @media screen and (min-width: 376px) {
@@ -558,40 +557,25 @@ footer {
     /* Medium low range */
     @media screen and (min-width: 40em) {
 
-    }
+        span {
+            font-size: 1.2em;
+        }   
 
+        .buy-btn {
+            padding: 10px 22px;
+        }
+    }
 
     /* Large */
     @media screen and (min-width: 64em) {
-        margin-top: 3em;
-        margin-bottom: 2em;
-    
-        div {
-            background-color: rgba(0,0,0,.03);
-            height: 80%;
-            padding-left: 0;
-            padding-right:0;
-        }
-    
-        img {
-            max-height: 5em;
-            width: auto;
-            // margin-bottom: .2em;
-        }
-    
+  
         span {
-            padding: 0em 1.5em 0em 1.5em;
-            margin-bottom: .1em;
             font-size: 1.3em;
-            line-height: 1em;
-            display: inline-block;
         }     
     
         .buy-btn {
             font-size: .9em;
-            margin-top: 0;
         }
-
     }
 
     /* Larger */
@@ -599,6 +583,9 @@ footer {
         span {
             font-size: 1.5em;
         }     
+        .buy-btn {
+            font-size: 1.1em;
+        }
     }
 }
 
