@@ -11,6 +11,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
         <h5>I wrote this book to give you a practical, step by step learning experience.</h5>
         <h5>We start from the basics and you'll learn to build, ship, and run applications through working examples that resemble real-life project situations.</h5>
         <h5>Published in June, 2018.</h5>
+        <h5 class="blue">Get the Docker book for $3 for 3 weeks from September 17 to October 8, 2018! <br>Use coupon code "3FOR3" during checkout!</h5>
         <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
         <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
     </div>
