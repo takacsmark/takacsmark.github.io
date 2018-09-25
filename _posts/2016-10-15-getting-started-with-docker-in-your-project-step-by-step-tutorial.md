@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Getting started with Docker in your project - a step by step tutorial"
-description: "This beginner tutorial explains what problems Docker solves for us and introduces Docker tools with code-along examples based on real project experience."
+title:  "Docker tutorial for beginners through examples - a step by step tutorial"
+description: "With this beginner's Docker tutorial you'll learn to use Docker in your projects, understand Docker's purpose and build routine using Docker tools."
 date:   2016-10-15 8:07:00 +0100
 thumbnail: "/assets/images/post-thumbs/docker-tutorial-getting-started.png"
 categories: Web development, Docker
