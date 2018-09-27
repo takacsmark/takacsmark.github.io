@@ -11,6 +11,10 @@ categories: Docker, Tutorials
 
 In previous tutorials we learned the basics of Docker containers and Docker images, and we've built several examples together. If you missed those lessons or need a refresher, please check out my previous tutorials, we'll build on top of the learning points from those articles here.
 
+**This post is available as a Youtube video, too.**
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/4EqysCR3mjo" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe></div>
+
 ## What is Docker Compose
 
 Most projects build architectures that involve more that one architecture component. Even the simplest hobby project will probably be built with a database and an application server of some kind. For example, the popular Wordpress stack consists of a Wordpress installation and a MySQL database instance.
