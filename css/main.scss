@@ -523,11 +523,11 @@ footer {
 //
 .book-promo-portrait {
 
-    margin-top: 1em;
-    margin-bottom: 1em;
+    // margin-top: 1em;
+    // margin-bottom: 1em;
     background-color: rgba(0,0,0,.03);
     padding-top: 1em;
-    padding-bottom: 1em;
+    // padding-bottom: 1em;
 
 
     div {
@@ -536,12 +536,13 @@ footer {
     }
 
     span {
-        padding: 0em .5em 0em .5em;
-        margin-top: 1em;
+        padding: 0em 1em 0em .5em;
+        // margin-top: 1em;
         margin-bottom: 1em;
-        color: $tmdc-dark-blue;
+        color: black;
         font-weight: 600;
         display: block;
+        font-size: .9em;
     }     
 
     .buy-btn {
@@ -557,6 +558,10 @@ footer {
     /* Medium low range */
     @media screen and (min-width: 40em) {
 
+        img {
+            max-height: 9em;
+        }
+
         span {
             font-size: 1.2em;
         }   
@@ -570,23 +575,23 @@ footer {
     @media screen and (min-width: 64em) {
   
         span {
-            font-size: 1.3em;
+            font-size: 1.5em;
         }     
     
         .buy-btn {
-            font-size: .9em;
+            // font-size: .9em;
         }
     }
 
     /* Larger */
-    @media screen and (min-width: 75em) {
-        span {
-            font-size: 1.5em;
-        }     
-        .buy-btn {
-            font-size: 1.1em;
-        }
-    }
+    // @media screen and (min-width: 75em) {
+    //     span {
+    //         font-size: 1.5em;
+    //     }     
+    //     .buy-btn {
+    //         font-size: 1.1em;
+    //     }
+    // }
 }
 
 //
