@@ -11,6 +11,10 @@ categories: Docker, Tutorials
 
 Working with Docker, you'll soon find various objects on your system that are hanging around from previous activities. It is essential to learn how to clean up Docker objects safely and pragmatically during project work.
 
+**You can watch this tutorial on Youtube, too.**
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/QruAkYHCFPE" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe></div>
+
 ## What Docker objects need clean up
 
 The Docker objects that stay around may be of various types:
