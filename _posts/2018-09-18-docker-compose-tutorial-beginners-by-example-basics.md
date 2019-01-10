@@ -78,7 +78,7 @@ Let's add the contents to `requirements.txt`:
 
 ```text
 flask
-redis
+redis<3.0.0
 ```
 
 #### app.py
