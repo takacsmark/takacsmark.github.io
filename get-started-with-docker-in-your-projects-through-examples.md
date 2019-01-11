@@ -25,7 +25,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
             <li>We cover the entire build, ship and run cycle.</li>
             <li>Unique project focus with practices and detailed workflow.</li>
             <li>Continuous integration example.</li>
-            <li>Swarm and Kubernetes deployment on AWS.</li>
+            <li>Swarm and Kubernetes deployment.</li>
             <li>State of the art; published in June, 2018.</li>
             <li>PDF, epub, and mobi formats with code samples in one zip file. </li>
         </ul>            
