@@ -17,7 +17,7 @@ I’d definitely suggest to start with the [first post](https://takacsmark.com/w
 
 This introduction is a bit higher level, than a step-by-step, code-along tutorial. I decided to start the series on this level, so that less techie people may also find value in this introduction.
 
-You can find code-along Docker tutorials for free on my [blog](takacsmark.com) and my [youtube channel](https://www.youtube.com/takacsmark), if you prefer a more techie approach. I’ll keep adding more hard-core tech stuff, so stay tuned.
+You can find code-along Docker tutorials for free on my [blog](https://takacsmark.com) and my [youtube channel](https://www.youtube.com/takacsmark){:target="_blank"}, if you prefer a more techie approach. I’ll keep adding more hard-core tech stuff, so stay tuned.
 
 In this article we’ll cover the following points about Docker:
 
@@ -69,7 +69,7 @@ Here is when Docker comes into play.
 
 **Docker containers are an operating system level virtualization technique. **
 
-**Operating system level virtualization means, that the kernel of the operating system provides services that enable isolated user-space instances. These instances are called containers.** You can read more about this on [Wikipedia](https://en.wikipedia.org/wiki/Operating-system-level_virtualization).
+**Operating system level virtualization means, that the kernel of the operating system provides services that enable isolated user-space instances. These instances are called containers.** You can read more about this on [Wikipedia](https://en.wikipedia.org/wiki/Operating-system-level_virtualization){:target="_blank"}.
 
 The idea of Linux containers is basically this: _You take a Linux machine and build isolated virtual environments (i.e. containers) right on the Linux operating system level that have dedicated CPU, memory, block I/O, networking resources, plus you make sure that the processes, file systems, users and networking are isolated._
 
@@ -123,7 +123,7 @@ With these tools, you can accomplish various provisioning and configuration mana
 
 Docker containers running on a Linux host are isolated with the use of Linux kernel features.
 
-**[Kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces)** isolate containers so that processes running in different containers cannot see or affect processes running in another container on the same host.
+**[Kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces){:target="_blank"}** isolate containers so that processes running in different containers cannot see or affect processes running in another container on the same host.
 
 Containers also get their own **network stack**. This way you can start multiple containers listening on the same port.
 
@@ -131,7 +131,7 @@ You can, for example, start two Nginx servers in two containers both listening o
 
 The containers can access each other on the Docker network, and you can set up networking to access the containers from the outside.
 
-Resource allocation and limiting is achieved with [control groups](https://en.wikipedia.org/wiki/Cgroups). Cgroups are also a feature of the Linux kernel.
+Resource allocation and limiting is achieved with [control groups](https://en.wikipedia.org/wiki/Cgroups){:target="_blank"}. Cgroups are also a feature of the Linux kernel.
 
 ## Linux containers and Windows containers
 
@@ -141,7 +141,7 @@ Docker started out as a container management platform for Linux machines. The co
 
 As a result of a cooperation between Docker and Microsoft, today you can use containers on Windows server machines, too. These containers are called Windows based containers and they share the kernel of the Windows server machine and the Docker images are built with Windows tools and Windows binaries.
 
-You’ll find both Linux based and Windows based containers on the Docker Hub these days. A simple example is [the Python repository on the Docker Hub ](https://hub.docker.com/_/python/) that has image variants for both Linux and Windows server.
+You’ll find both Linux based and Windows based containers on the Docker Hub these days. A simple example is [the Python repository on the Docker Hub ](https://hub.docker.com/_/python/){:target="_blank"} that has image variants for both Linux and Windows server.
 
 Today Docker containers are run on Linux servers and Windows servers in production.
 

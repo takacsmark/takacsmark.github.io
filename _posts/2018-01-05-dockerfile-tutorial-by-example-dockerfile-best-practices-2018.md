@@ -46,11 +46,11 @@ In order to follow this article you need to understand the following 2 basic con
 
 2. Docker containers are started by running a **Docker image**. A Docker image is a pre-built environment for a certain technology or service. A Docker image is not a runtime, it's rather a collection of files, libraries and configuration files that build up an environment.
 
-    The main source of Docker images online is the [Docker store](https://store.docker.com). You just need to search for your preferred tech component, pull the image from the store with the `docker pull` command and you are ready to start up containers.
+The main source of Docker images online is the [Docker store](https://store.docker.com){:target="_blank"}. You just need to search for your preferred tech component, pull the image from the store with the `docker pull` command and you are ready to start up containers.
 
-    Containers are started from images with the `docker run` command. An image, as you'll see in the videos, is a layered representation of your environment. These layers contain the files and configuration needed by your environment.
+Containers are started from images with the `docker run` command. An image, as you'll see in the videos, is a layered representation of your environment. These layers contain the files and configuration needed by your environment.
 
-    As you start up a container with `docker run`, Docker will add another layer on top of your image. While your image layers are read-only, the additional layer added by the container is read-write.
+As you start up a container with `docker run`, Docker will add another layer on top of your image. While your image layers are read-only, the additional layer added by the container is read-write.
 
 ### Why and when you'd want to use a Dockerfile?
 
@@ -59,11 +59,12 @@ So let's go back to the definition: **A Dockerfile is a text file that defines a
 You'll want to create your own Dockerfile when existing images don't satisfy your project needs. This will actually happen most of the time, which means that learning about the Dockerfile is a pretty essential part of working with Docker.
 
 You'll see in the tutorial that a Dockerfile is a step by step definition of building up a Docker image. The Dockerfile contains a list of instructions that Docker will execute when you issue the `docker build` command. Your workflow is like this:
+
 1. you create the Dockerfile and define the steps that build up your images
 2. you issue the `docker build` command which will build a Docker image from your Dockerfile
 3. now you can use this image to start containers with the `docker run` command
 
-You'll usually start searching for available Docker images on the [Docker store](https://store.docker.com), you'll also find images on github included with a good number of repos (in the form of a Dockerfile), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
+You'll usually start searching for available Docker images on the [Docker store](https://store.docker.com){:target="_blank"}, you'll also find images on github included with a good number of repos (in the form of a Dockerfile), or you can share Docker images within your team or company by creating your own Docker Registry (I'll write about this in an advanced tutorial).  
 
 The definition also implies that the images that you'll find on the Docker store are defined in Dockerfiles. We'll review some Dockerfiles in the first video. **A Docker image is created by building a Dockerfile** with the `docker build` command. We'll see examples later.
 
@@ -81,15 +82,18 @@ In the first video you'll find the key concepts, Dockerfile examples, I teach yo
 
 ### Dockerfile example
 
-Let's start with an example and see what's in a Dockerfile. I attached the below Dockerfile from GitHub, this file is part of the [official PHP image distribution on the Docker store](https://store.docker.com/images/php).
+Let's start with an example and see what's in a Dockerfile. I attached the below Dockerfile from GitHub, this file is part of the [official PHP image distribution on the Docker store](https://store.docker.com/images/php){:target="_blank"}.
 
-You can access the file directly via this url: [https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile](https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile).
+You can access the file directly via this url: [https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile](https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile){:target="_blank"}.
 
 Please browse through the file, it's enough for now if you note the key structural elements, skim trough the comments and see how the file is built up on a high level.
 
+```html
 <script src="https://gist-it.appspot.com/https://github.com/docker-library/php/blob/f4baf0edbc4e05e241938c68bcc7c9635707583d/7.2/stretch/apache/Dockerfile"></script>
+```
 
 At this point I would like you to understand the following key points based on the example file:
+
 1. The Dockerfile is a text file that (mostly) contains the instructions that you would execute on the command line to create an image.
 2. A Dockerfile is a step by step set of instructions.
 3. Docker provides a set of standard instructions to be used in the Dockerfile, like `FROM`, `COPY`, `RUN`, `ENV`, `EXPOSE`, `CMD` just to name a few basic ones.
@@ -343,13 +347,13 @@ Think of containers as entities that take responsibility for one aspect of your 
 
 You'll see the benefits of such a design when scaling your app horizontally. We'll look into interoperability of containers and container networking in a future tutorial.
 
-It's a good idea to check out [the official Dockerfile best practices page](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) for more info.
+It's a good idea to check out [the official Dockerfile best practices page](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/){:target="_blank"} for more info.
 
 ## Dockerfile key instructions best practices
 
 The official Docker documentation is usually very easy to follow and easy to understand. What I learnt from your comments is, that the stuff that most people need is some insight into others' experience to see the big picture.
 
-The reason why I'll give you some insight into the key instructions is to share my experience and give you hints how to use them. I'll not give you the specs, for exact specs please check the [Dockerfile reference page](https://docs.docker.com/engine/reference/builder/).
+The reason why I'll give you some insight into the key instructions is to share my experience and give you hints how to use them. I'll not give you the specs, for exact specs please check the [Dockerfile reference page](https://docs.docker.com/engine/reference/builder/){:target="_blank"}.
 
 We'll cover the following basic instructions to get you started:
 - `FROM` - every Dockerfile starts with `FROM`, with the introduction of multi-stage builds as of version 17.05, you can have more than one `FROM` instruction in one Dockerfile.
@@ -373,9 +377,9 @@ On the little bit more advanced side, let's note the following:
 - There is one instruction that you can put before `FROM` into your Dockerfile. This instruction is `ARG`. `ARG` is used to specify arguments for the `docker build` command with the `--build-arg <varname>=<value>` flag.
 - You can have more than one `FROM` instructions in your Dockerfile. You will want to use this feature, for example, when you use one base image to build your app and another base image to run it.
 
-    It's called a multi-stage build and you can read about it [here](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
+It's called a multi-stage build and you can read about it [here](https://docs.docker.com/engine/userguide/eng-image/multistage-build/){:target="_blank"}.
 
-    This is why every section that starts with `FROM` in your Dockerfile is called a build stage (even in the simple case of having only one `FROM` instruction). You can specify the name of the build stage in the form `FROM <image>[:tag] [AS <name>]`.
+This is why every section that starts with `FROM` in your Dockerfile is called a build stage (even in the simple case of having only one `FROM` instruction). You can specify the name of the build stage in the form `FROM <image>[:tag] [AS <name>]`.
 
 ### COPY vs ADD
 
@@ -396,9 +400,10 @@ If you want to pull files from the web into your image I would suggest to use `R
 ### RUN
 
 `RUN` will execute commands, so it's one of the most-used instructions. I would like to highlight two points:
+
 1. You'll use a lot of `apt-get` type of commands to add new packages to your image. It's always advisable to put `apt-get update` and `apt-get install` commands on the same line.
-    This is important because of layer caching. Having these on two separate lines would mean that if you add a new package to your install list, the layer with `apt-get update` will not be invalidated in the layer cache and you might end up in a mess. [Read more here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#run).
-2. `RUN` has two forms; `RUN <command>` (called shell form) and `RUN ["executable", "param1", "param2"]` called exec form. Please note that `RUN <command>` will invoke a shell automatically (`/bin/sh -c` by default), while the exec form will not invoke a command shell. [If you want to tackle a problem around this read here](https://docs.docker.com/engine/reference/builder/#run).  
+    This is important because of layer caching. Having these on two separate lines would mean that if you add a new package to your install list, the layer with `apt-get update` will not be invalidated in the layer cache and you might end up in a mess. [Read more here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#run){:target="_blank"}.
+2. `RUN` has two forms; `RUN <command>` (called shell form) and `RUN ["executable", "param1", "param2"]` called exec form. Please note that `RUN <command>` will invoke a shell automatically (`/bin/sh -c` by default), while the exec form will not invoke a command shell. [If you want to tackle a problem around this read here](https://docs.docker.com/engine/reference/builder/#run){:target="_blank"}.  
 
 ### VOLUME
 
@@ -512,4 +517,4 @@ We'll come back to these in another article.
 
 ## Wrap up
 
-This post is too long already, so I'll not give you a summary now. :) Please comment and share if you liked it, and make sure to [subscribe on Youtube](https://www.youtube.com/c/takacsmark) and [follow me on Facebook](https://www.facebook.com/takacsmarkdotcom) and [Twitter](https://twitter.com/takacsmark) for updates.  
+This post is too long already, so I'll not give you a summary now. :) Please comment and share if you liked it, and make sure to [subscribe on Youtube](https://www.youtube.com/c/takacsmark){:target="_blank"} and [follow me on Facebook](https://www.facebook.com/takacsmarkdotcom){:target="_blank"} and [Twitter](https://twitter.com/takacsmark){:target="_blank"} for updates.  

@@ -23,7 +23,7 @@ Yep, this goes beyond SEO.
 
 **Search engines massively rely on some meta tags, but today there are dedicated meta tags for social sites like Facebook, Twitter and LinkedIn, too.**
 
-**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](https://schema.org).**
+**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](https://schema.org){:target="_blank"}.**
 
 These are the meta tags you'll need on your site to successfully work with today's on-line ecosystem:
 
@@ -97,16 +97,16 @@ There is not one magic number for the length of title or description, because th
 
 Google typically displays 50-60 characters from the title, and about 150-160 from the description. The rest of the information in these tags will not be visible on the results page.
 
-If you're wondering how you can make sure that you don't mess up, use this [Google snippet optimization tool on-line](http://snippetoptimizer.net).
+If you're wondering how you can make sure that you don't mess up, use this [Google snippet optimization tool on-line](http://snippetoptimizer.net){:target="_blank"}.
 
-If you wanna know more details about length, [here is an information-rich study by Moz.](https://moz.com/blog/new-title-tag-guidelines-preview-tool)
+If you wanna know more details about length, [here is an information-rich study by Moz.](https://moz.com/blog/new-title-tag-guidelines-preview-tool){:target="_blank"}
 
 ## Miscellaneous meta
 
 There are some meta tags that you should add to all of your webpages under `<head>`. These are:
 
 - `charset` specifies the character encoding of the HTML document. The browser uses this information to display the page correctly.
-- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp)
+- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp){:target="_blank"}
 
 Let's extend our previous example:
 
@@ -185,7 +185,7 @@ I like this part a lot, because it'll give you spectacular results. **Social met
 
 The minimum information you should provide is title, description and an image.
 
-Most social sites support the [Open Graph protocol](http://ogp.me) to acquire useful information about a webpage.
+Most social sites support the [Open Graph protocol](http://ogp.me){:target="_blank"} to acquire useful information about a webpage.
 
 Twitter uses its own notation, but if it's not present on your page Twitter will use Open Graph data.
 
@@ -221,11 +221,11 @@ Let's define a set of Open Graph tags to be used by Facebook, Google Plus and Li
 </html>
 ```
 
-**If you have issues with your Open Graph meta start debugging with [Facebook's Open Graph debugger.](https://developers.facebook.com/tools/debug/)**
+**If you have issues with your Open Graph meta start debugging with [Facebook's Open Graph debugger.](https://developers.facebook.com/tools/debug/){:target="_blank"}**
 
 ## Schema.org to describe your content
 
-[Schema.org](https://schema.org) provides schemas for structured data on the internet.
+[Schema.org](https://schema.org){:target="_blank"} provides schemas for structured data on the internet.
 
 Use them to describe articles, blog posts, products, product listings, events, people, and so on.
 

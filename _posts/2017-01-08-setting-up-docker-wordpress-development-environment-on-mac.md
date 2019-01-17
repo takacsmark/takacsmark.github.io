@@ -28,9 +28,9 @@ The purpose of this article is to teach you how to set up a Wordpress + MySQL de
 * deployment is a breeze,
 * I don't need to install all the messy dev tools on my shiny new MacBook Pro (yeah, I'm an orderly person).
 
-In order to enjoy the above benefits, you need to install the Docker engine on your machine first. We are lucky, because I just bought a new Mac, so you can see the native Docker for Mac installation in the video. There is not much to write about it, it's just a wizard that you should follow. Just go to [https://www.docker.com/products/docker#/mac](https://www.docker.com/products/docker#/mac) and follow the steps in my video. 
+In order to enjoy the above benefits, you need to install the Docker engine on your machine first. We are lucky, because I just bought a new Mac, so you can see the native Docker for Mac installation in the video. There is not much to write about it, it's just a wizard that you should follow. Just go to [https://www.docker.com/products/docker#/mac](https://www.docker.com/products/docker#/mac){:target="_blank"} and follow the steps in my video. 
 
-We'll use a SQL client during this tutorial, so please make sure that your preferred SQL client is available on your machine. If you don't know what to use, check out my favorite for the Mac; [Sequel Pro](https://sequelpro.com).
+We'll use a SQL client during this tutorial, so please make sure that your preferred SQL client is available on your machine. If you don't know what to use, check out my favorite for the Mac; [Sequel Pro](https://sequelpro.com){:target="_blank"}.
 
 After we sorted out the installation here is what we will do:
 
@@ -42,7 +42,7 @@ After we sorted out the installation here is what we will do:
 
 ## Pulling the MySQL image to your machine
 
-Let's go to the [Docker Store](https://store.docker.com/search?q=mariadb&source=verified) and search for MariaDB. 
+Let's go to the [Docker Store](https://store.docker.com/search?q=mariadb&source=verified){:target="_blank"} and search for MariaDB. 
 
 If you are wondering why we are using MariaDB as our MySQL image, here is the deal: there are various implementations of MySQL. Official MySQL is maintained by Oracle, it's completely free (unless you need enterprise grade support). MariaDB is the community edition of MySQL. We have projects in the corporate environment where I work, that use MySQL. For my own small business, startup hacking type of projects I prefer the community version. 
 
@@ -67,7 +67,7 @@ Docker containers are meant to be stateless. Containers are environments, they d
 
 A docker image is a definition of an environment, while a container is a parametrized runtime of the image. We should be able to replicate the images and containers anytime and anywhere. Therefore storing stuff that may change in a container is not a good idea. 
 
-We'd better store data, source code, config files and anything mutable outside containers. Docker uses volumes to make this work. If you need more info to grasp the concept, check out the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
+We'd better store data, source code, config files and anything mutable outside containers. Docker uses volumes to make this work. If you need more info to grasp the concept, check out the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/){:target="_blank"}.
 
 Here is how to solve the challenge around data storage. Go to your computer and create a directory for your MariaDB database files. 
 
@@ -121,7 +121,7 @@ I decided to go for the second option for a couple of reasons:
 * on a small scale I can use the same MariaDB container to serve multiple databases to multiple applications. This is my current production setup and I use a single db to serve multiple pages.
 * on a larger scale if I need to scale my setup I'd prefer to be able to scale web servers and databases separately as need be.
 
-So let's pull the [official Wordpress image from the Docker Store](https://store.docker.com/images/c14a56d6-07e4-464b-b71c-4b24dc7f1836?tab=description). Please pick the version of your preference. In the tutorial we use this command in terminal: 
+So let's pull the [official Wordpress image from the Docker Store](https://store.docker.com/images/c14a56d6-07e4-464b-b71c-4b24dc7f1836?tab=description){:target="_blank"}. Please pick the version of your preference. In the tutorial we use this command in terminal: 
 
 `docker pull wordpress:4.6.1-php7.0-apache`
 

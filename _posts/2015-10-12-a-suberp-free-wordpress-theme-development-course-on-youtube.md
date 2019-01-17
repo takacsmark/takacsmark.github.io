@@ -9,7 +9,7 @@ categories: 'Online learning'
 ---
 Let me point you to a great tutorial on Youtube that will teach you basic Wordpress theme development through well explained examples, and will teach you the basics of web development at the same time.
 
-This course is ideal for beginners and experienced programmers, who are new to Wordpress. The course, a Youtube playlist, was created by [LearnWebCode](https://www.youtube.com/user/LearnWebCode) and it shows you the steps you should take to create a Wordpress theme. It's a very focused and concentrated material.
+This course is ideal for beginners and experienced programmers, who are new to Wordpress. The course, a Youtube playlist, was created by [LearnWebCode](https://www.youtube.com/user/LearnWebCode){:target="_blank"} and it shows you the steps you should take to create a Wordpress theme. It's a very focused and concentrated material.
 
 With the help of this course I was able to create the Wordpress theme of this website (the one you are reading now) in one afternoon.
 
@@ -31,11 +31,11 @@ I think the course is very helpful for beginners and experienced programmers, to
 
 If you are an experienced programmer, but new to Wordpress, I think this is the course to take. It is focused on Wordpress specifics that you are looking for and will show you the practices used in Wordpress theme development. It's not boring at all, and you won't loose much time on things you already know.
 
-If you like the style and pace of the course and feel you'd like to learn more about HTML and CSS you can take [this Udemy course by the same person.](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
+If you like the style and pace of the course and feel you'd like to learn more about HTML and CSS you can take [this Udemy course by the same person.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2Fweb-design-for-beginners-real-world-coding-in-html-css%2F){:target="_blank"}
 
-[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/post-thumbs/web-design-for-beginners-course.jpg)](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
+[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/post-thumbs/web-design-for-beginners-course.jpg)](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css){:target="_blank"}
 
-[Web Design for Beginners: Real World Coding in HTML & CSS by Brad Schiff](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css/)
+[Web Design for Beginners: Real World Coding in HTML & CSS by Brad Schiff](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css){:target="_blank"}
 
 I took Brad's Udemy course, too. I'm very thankful, because he helped me to clean the concepts around HTML grids and some practices in CSS and HTML. This course is payable, but there are often promotions, so it's worth to have a look.
 

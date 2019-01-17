@@ -23,7 +23,7 @@ I have a cactus that got injured when it was young, you can tell by the large br
 ![Junior cactus]({{ site.url }}/assets/images/in-content/junior-cactus.jpg) 
 
  							 						
-So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf).
+So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf){:target="_blank"}.
 
 I planted the cutting in the late spring and I saw the first signs of growth in a matter of weeks.
 

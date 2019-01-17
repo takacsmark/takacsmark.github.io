@@ -19,7 +19,7 @@ So you decided to learn Docker? This tutorial, unlike other tutorials, takes a s
 
 I will use an experience from a recent project and solve common computing challenges I had to face. I think I could have solved such challenges with much less headache if I had this tutorial. So I decided to write it.
 
-I rolled out the new version of my affiliate site, [vanitysocks.com](http://vanitysocks.com) recently. I used a lot of cool tech in this project, I built an isomorphic React app with Redux, I also wrote a Wordpress theme that turns Wordpress into a backend with a proprietary REST API.
+I rolled out the new version of my affiliate site recently. I used a lot of cool tech in this project, I built an isomorphic React app with Redux, I also wrote a Wordpress theme that turns Wordpress into a backend with a proprietary REST API.
 
 During this project I faced the challenge of deploying several components to different environments. That's how I met Docker.
 
@@ -115,7 +115,7 @@ So let's make it happen for you, too. Let's install docker first, and then talk 
 
 ## Running Docker on your machine
 
-**In order to use Docker on your local machine or on your server, you need Docker Engine.** [You can download and install Docker Engine for Mac, Windows and Linux from the Docker site, follow this link.](https://docs.docker.com/engine/installation/)
+**In order to use Docker on your local machine or on your server, you need Docker Engine.** [You can download and install Docker Engine for Mac, Windows and Linux from the Docker site, follow this link.](https://docs.docker.com/engine/installation/){:target="_blank"}
 
 Please note that the way we run Docker on Mac and Windows used to be much different not too long ago. I'm writing this on October 13th, 2016. If you see tutorials that say that you need Docker Toolbox, Docker Machine or boot2docker to run docker containers on Mac and Windows, then be aware that those are outdated.
 
@@ -156,10 +156,10 @@ The first thing you need for your development is the image that servers your goa
 
 Images may come from two sources:
 
-- image repository, I use the [Docker Hub](https://hub.docker.com/explore/), I'm not aware of any other significant repository, the hub serves me well.
+- image repository, I use the [Docker Hub](https://hub.docker.com/explore/){:target="_blank"}, I'm not aware of any other significant repository, the hub serves me well.
 - you can create your own images. We will talk about this in more details, because this part is awesome. Docker images are layered, so you can build them layer by layer, and you can build your images starting from other images.
 
-Let's just visit [Docker Hub](https://hub.docker.com/explore/) and lay your hands on your first image. You can sign up if you want to, you don't need a registration to browse and use images though.
+Let's just visit [Docker Hub](https://hub.docker.com/explore/){:target="_blank"} and lay your hands on your first image. You can sign up if you want to, you don't need a registration to browse and use images though.
 
 On the page you'll see a list of images. Most of them have the label "official" , which means that they are provided as the official package of a specific technology. (OK, this is pretty obvious).
 
@@ -490,13 +490,13 @@ Looking at `http://localhost` in your browser will result in the Hello world exa
 
 We just created a new image that has a small functional improvement compared to the original one.
 
-[You can find the complete Dockerfile reference here.](https://docs.docker.com/engine/reference/builder/)
+[You can find the complete Dockerfile reference here.](https://docs.docker.com/engine/reference/builder/){:target="_blank"}
 
 ## Docker compose
 
 We use docker-compose to define and run multi container applications. I use compose to start up my local development environment with the database, wordpress and node components. Compose has a very similar syntax to the docker command line tools, but with compose we use a file called `docker-compose.yml` by default.
 
-This post is long enough already, so it's better if I dedicate another post to this topic. While you wait you can read the [official docker-compose documentation](https://docs.docker.com/compose/overview/).
+This post is long enough already, so it's better if I dedicate another post to this topic. While you wait you can read the [official docker-compose documentation](https://docs.docker.com/compose/overview/){:target="_blank"}.
 
 ## Wrap up
 

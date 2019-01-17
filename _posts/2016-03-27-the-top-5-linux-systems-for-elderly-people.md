@@ -120,11 +120,11 @@ All-in-all these are the most common desktop environments that I considered for 
 
 Let's review and evaluate the selected Linux distributions for our needs.
 
-### [Puppy Linux](http://puppylinux.org)
+### [Puppy Linux](http://puppylinux.org){:target="_blank"}
 
 ![Puppy linux screenshot 2016](/assets/images/in-content/puppy-linux-2016.png)
 
-The [Puppy site](http://puppylinux.org) starts with a testimonial that says that Puppy Linux is the best and fastest OS in the world. Unluckily, the quote comes from 2011.
+The [Puppy site](http://puppylinux.org){:target="_blank"} starts with a testimonial that says that Puppy Linux is the best and fastest OS in the world. Unluckily, the quote comes from 2011.
 
 The whole system looks and feels outdated. I actually re-visited their site to check if they are still maintaining the distribution.
 
@@ -140,7 +140,7 @@ Puppy gave a messy impression, using the system was most of the time confusing a
 |Media players|Included|
 |Office|Libre Office|
 
-### [Debian](https://www.debian.org/)
+### [Debian](https://www.debian.org/){:target="_blank"}
 
 Debian is one of the most robust base distributions, there are several other distributions built on top of it. There are many Debian users in the senior community.
 
@@ -158,7 +158,7 @@ But first let's see the software table:
 
 #### Debian with Gnome 3
 
-![Debian 8 with Gnome 3 desktop](/assets/images/in-content/Debian8-gnome3-launch-menu.png)
+![Debian 8 with Gnome 3 desktop](/assets/images/in-content/Debian8-gnome3-launch-menu.png){:target="_blank"}
 
 Gnome 3 is a modern day desktop environment trying to adopt the Launchpad idea from Mac and Windows. Application dock is on the left side of the screen, there is no formal menu, there is a launch screen with search bar instead.
 
@@ -201,7 +201,7 @@ LXDE is another light desktop option. My opinion is that this is the one that th
 
 The file manager also looks like the one on Windows, even the colors are very similar. Folder shortcuts help you organize your documents.
 
-### [Ubuntu](https://www.ubuntu.com/)
+### [Ubuntu](https://www.ubuntu.com/){:target="_blank"}
 
 ![Ubuntu screenshot](/assets/images/in-content/Ubuntu-screenshot.png)
 
@@ -221,7 +221,7 @@ I think Ubuntu would be a great option for easy going, flexible seniors.
 |Media players|Included|
 |Office|Libre Office|
 
-### [Lubuntu](https://lubuntu.net/)
+### [Lubuntu](https://lubuntu.net/){:target="_blank"}
 ![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png)
 
 
@@ -239,7 +239,7 @@ Due to it's XP like appearance and low hardware requirements it's a great option
 |Media players|Basic included|
 |Office|Basic software, installing Libre Office is recommended.|
 
-### [LinuxMint](https://linuxmint.com/)
+### [LinuxMint](https://linuxmint.com/){:target="_blank"}
 ![LinuxMint screenshot](/assets/images/in-content/LinuxMint-screenshot.png)
 
 I saved the best for last. Our entire family agreed that this is the one we prefer.
@@ -272,4 +272,4 @@ If you need a light option, check out Lubuntu.
 If the grannies in your family have a cool and flexible approach, have a look at Ubuntu.
 
 You can find further interesting reading on-line here:
-[Linux for the elderly on Voice of the masses](https://www.linuxvoice.com/voice-of-the-masses-best-distro-for-older-users/)
+[Linux for the elderly on Voice of the masses](https://www.linuxvoice.com/voice-of-the-masses-best-distro-for-older-users/){:target="_blank"}

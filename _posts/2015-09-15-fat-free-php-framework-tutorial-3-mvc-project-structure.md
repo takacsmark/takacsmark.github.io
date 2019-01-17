@@ -28,20 +28,20 @@ drwxr-xr-x  5 markgyorgyiimac  staff   170B Aug 12 19:04 vendor
 
 This is the structure of our MVC web application project folder now.
 
-*'app' is a folder that I created. I use this folder to store all the source code that I write for my application.
-*'composer.json' is a file we have seen before. It's the config file of the composer PHP package manager.
-*'composer.lock' is a file created and used by composer, let's handle it as a black box.
-*'index.php' is the main file of our web application. We use this file to configure and run the Fat-Free Framework. This was the only file we worked on so far.
-*'routes.ini' is the config file where we store our routes. Yeah, we move our routes from index.php to routes.ini in this lesson.
-*'config.ini' is the file where we store our config f3 variables.
-*'tmp' directory is created by Fat-Free. f3 has built in caching features. As soon as you add templates to your project, the tmp folder will appear with cached files.
-*'vendor' we have seen this directory in the first lesson. It's created and managed by Composer. It contains third party libraries used in your project.
+* 'app' is a folder that I created. I use this folder to store all the source code that I write for my application.
+* 'composer.json' is a file we have seen before. It's the config file of the composer PHP package manager.
+* 'composer.lock' is a file created and used by composer, let's handle it as a black box.
+* 'index.php' is the main file of our web application. We use this file to configure and run the Fat-Free Framework. This was the only file we worked on so far.
+* 'routes.ini' is the config file where we store our routes. Yeah, we move our routes from index.php to routes.ini in this lesson.
+* 'config.ini' is the file where we store our config f3 variables.
+* 'tmp' directory is created by Fat-Free. f3 has built in caching features. As soon as you add templates to your project, the tmp folder will appear with cached files.
+* 'vendor' we have seen this directory in the first lesson. It's created and managed by Composer. It contains third party libraries used in your project.
 
 The 'app' folder, the 'config.ini' and 'routes.ini' files were created by me, so you should also create these files and the directory for your own project. 'index.php' should already be there. The other files and folders are managed by Composer or f3, so don't worry about them.
 
 Let's have a look at the structure of the app folder, now. This is where MVC will take place:
 
-```terminal
+```console
 ➜  app  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 .
 |____controllers
@@ -51,7 +51,7 @@ Let's have a look at the structure of the app folder, now. This is where MVC wil
 | |____template.htm
 ```
 
-A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx).
+A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx){:target="_blank"}.
 
 I created two directories under 'app' for this lesson. These are 'controllers' and 'views'. The 'models' folder will come also under 'app' later when we will use a database.
 
@@ -199,7 +199,7 @@ You can write f3 templates in plain HTML. If you need to use variables that are 
 
 You should use double curly braces to access globals. Variable names must be preceded by the `@` symbol. E.g. `{{ "{{ @name " }}}}` in the above example.
 
-[There is lot more to templating than this, you can read more about it on the Fat-Free site.](https://fatfreeframework.com/views-and-templates)
+[There is lot more to templating than this, you can read more about it on the Fat-Free site.](https://fatfreeframework.com/views-and-templates){:target="_blank"}
 
 ## Wrap-up
 

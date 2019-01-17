@@ -32,11 +32,11 @@ Let's see what is the cause of these issues and let's see how to fix it.
 
 ## Understanding the problem
 
-Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll).
+Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll){:target="_blank"}.
 
 Unlike other images on the Docker Store, this one has a very poor documentation. I know, I can always contribute to the project, instead of bitching about poor documentation on my blog, so let's just take my remark as a statement of an obvious fact.
 
-If you want to understand how to use the Jekyll image, you can directly [go the Wiki](https://github.com/jekyll/docker/wiki/Usage:-Running). It would be nice to bring this information in front of new users, instead of hiding it behind a couple of links. (OK, I stop whining.)
+If you want to understand how to use the Jekyll image, you can directly [go the Wiki](https://github.com/jekyll/docker/wiki/Usage:-Running){:target="_blank"}. It would be nice to bring this information in front of new users, instead of hiding it behind a couple of links. (OK, I stop whining.)
 
 So once I dug my way through the docs, I launched a command like this (note that you need to use the :pages tag to get the GitHub Pages version of the image):   
 
@@ -273,6 +273,6 @@ services:
 
 If I execute `docker-compose up -d` from terminal, the image will be built and the site comes up on `http://localhost:4000`.
 
-[If you wanna check out the entire source, please feel free to read it on GitHub.](https://github.com/takacsmark/takacsmark.github.io)
+[If you wanna check out the entire source, please feel free to read it on GitHub.](https://github.com/takacsmark/takacsmark.github.io){:target="_blank"}
 
 Please note that I'm using stuff like Gulp on my blog, but I haven't added Gulp to the Dockerfile yet, so you won't find it there.

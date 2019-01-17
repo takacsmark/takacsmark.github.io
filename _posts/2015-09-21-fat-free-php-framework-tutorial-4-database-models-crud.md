@@ -9,7 +9,7 @@ videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed
 ---
 It's time we add 'M' to MVC and complete the core of our Fat-Free MVC sample project. In this lesson we will create a new database, connect to it from our project and set up models with f3's ORM functionality.
 
-*****UPDATE** you can clone the project files on github here [https://github.com/takacsmark/Fat-Free-PHP-MVC-Sample-Project.git](https://github.com/takacsmark/Fat-Free-PHP-MVC-Sample-Project.git).
+**UPDATE** you can clone the project files on github here [https://github.com/takacsmark/Fat-Free-PHP-MVC-Sample-Project.git](https://github.com/takacsmark/Fat-Free-PHP-MVC-Sample-Project.git){:target="_blank"}.
 
 After this lesson you'll be able to build the cool functionality you have in mind on top of your own Fat-Free kick-start project. Let's see how to do it!
 
@@ -19,13 +19,13 @@ I assume that people who are learning f3 are skilled enough to set up a database
 
 We'll use MySQL. This is not a suggestion or preference on my side. It's really up to you what database you'll use in your projects. I picked MySQL for the tutorial because it's the most widely used free database online. You'll need to set up a MySQL database on your local computer.
 
-You can choose to install the database server from the [MySQL website](https://dev.mysql.com/) or you can use [XAMPP](https://www.apachefriends.org/index.html) or [MAMP](https://www.mamp.info/en/) to run a database server on your computer. Various Linux distros come with the MySQL service already installed, all you need to do is start the service ($ sudo service mysql start).
+You can choose to install the database server from the [MySQL website](https://dev.mysql.com/){:target="_blank"} or you can use [XAMPP](https://www.apachefriends.org/index.html){:target="_blank"} or [MAMP](https://www.mamp.info/en/){:target="_blank"} to run a database server on your computer. Various Linux distros come with the MySQL service already installed, all you need to do is start the service ($ sudo service mysql start).
 
 On my computer I use MySQL installed, plus I use an instance of MAMP, both work just fine.
 
 After your server is running, you'll need a GUI to manage your databases. Although we could work from the command line, I don't like it.
 
-In MAMP and XAMPP you can use phpMyAdmin, but I prefer MySQLWorkbench because it looks like the enterprise tools I used to use. [You can install it from here](https://dev.mysql.com/downloads/workbench/), on Linux you can do $ sudo apt-get install mysql-workbench.
+In MAMP and XAMPP you can use phpMyAdmin, but I prefer MySQLWorkbench because it looks like the enterprise tools I used to use. [You can install it from here](https://dev.mysql.com/downloads/workbench/){:target="_blank"}, on Linux you can do $ sudo apt-get install mysql-workbench.
 
 Let's open up our database admin tool, phpMyAdmin or MySQLWorkbench and connect to the local database. The default settings are; network address 127.0.0.1, port 3306, user root, and no password. If you're not on MAMP or XAMPP, go to the Server menu in MySQLWordbench and under the Startup/Shutdown submenu Start the server.
 
@@ -63,7 +63,7 @@ devdbusername = "sbf3MVC"
 devdbpassword = "sbf3MVC"
 ```
 
-Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](https://fatfreeframework.com/databases)
+Note that the global variable names (devdb, devdbusername and devdbpassword were made up by me, you can use any name you like). The structure of the values follows f3 conventions, I think they are self explanatory. [You can read more about the different database connections on the Fat-Free site.](https://fatfreeframework.com/databases){:target="_blank"}
 
 ### controller.php
 

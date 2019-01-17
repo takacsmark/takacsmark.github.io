@@ -42,7 +42,7 @@ Let’s see how this works!
 
 Docker containers are defined in the form of Docker images.
 
-The main source of Docker images is the [Docker Hub](https://hub.docker.com), where you’ll find about 1,5 million different images available for free. The screenshot shows the first few items on the list on the Docker Hub.
+The main source of Docker images is the [Docker Hub](https://hub.docker.com){:target="_blank"}, where you’ll find about 1,5 million different images available for free. The screenshot shows the first few items on the list on the Docker Hub.
 
 ![Docker Images on the Docker Hub]({{ site.url }}/assets/images/in-content/Docker_Images_on_Docker_Hub.png)
 
@@ -103,7 +103,7 @@ Let’s have a closer look, I created a one-pager website demo that looks like t
 
 ![Onepager website example]({{ site.url }}/assets/images/in-content/onepager-website.gif)
 
-Full source code is available on GitHub: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized).
+Full source code is available on GitHub: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized){:target="_blank"}.
 
 Let’s say your team is developing the above website. Your developers create and unit test the source code of your application. Once the unit tests are complete they have a structure similar to the below in their project:
 
@@ -195,7 +195,7 @@ This means that you only need Docker installed on any machine to start up your a
 
 This makes your applications super portable.
 
-Docker is declarative; you define your Docker images in one or more Dockerfiles. The Dockerfile has a well defined format that you can find here: [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/).
+Docker is declarative; you define your Docker images in one or more Dockerfiles. The Dockerfile has a well defined format that you can find here: [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/){:target="_blank"}.
 
 You should add your Dockerfile(s) to source control, so that you can build the same Docker image(s) on any machine.
 
@@ -234,7 +234,7 @@ EXPOSE 8080
 CMD npm run dev
 ```
 
-The development Dockerfile will start from the official `node:9.11.2-alpine` Docker image, that has Node.js pre-installed and is available on the [Docker Hub](https://hub.docker.com/_/node/).
+The development Dockerfile will start from the official `node:9.11.2-alpine` Docker image, that has Node.js pre-installed and is available on the [Docker Hub](https://hub.docker.com/_/node/){target="_blank"}.
 
 In `Dockerfile.dev` we define the working directory to be `/usr/src/app`, we copy our Node.js `package.json` files and Webpack config file into the image. We then install the `npm` packages with `npm install`, and define `npm run dev` to be the main command of the container, which will start the Webpack dev server as the main process.
 
@@ -359,9 +359,9 @@ This makes your applications highly portable, it gives you the flexibility to co
 
 ## Next steps
 
-I’m sure you have a lot of open questions right now. If you feel like starting a code-along tutorial, check out my book, [Get started with Docker in your projects through examples](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/), or the free learning content on the [blog](https://takacsmark.com) and [my youtube channel](https://www.youtube.com/takacsmark).
+I’m sure you have a lot of open questions right now. If you feel like starting a code-along tutorial, check out my book, [Get started with Docker in your projects through examples](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/){:target="_blank"}, or the free learning content on the [blog](https://takacsmark.com){:target="_blank"} and [my youtube channel](https://www.youtube.com/takacsmark){:target="_blank"}.
 
-You can find the source code for the one page website on Github: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized).
+You can find the source code for the one page website on Github: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized){:target="_blank"}.
 
 In the next post we’ll touch the following main topics:
 

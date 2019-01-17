@@ -44,12 +44,12 @@ Some points are usual challenges, I hope I can give you some good hints to solve
 
 I wanted to start the process by creating a bootable USB stick in the old Windows 7 system that was originally on the machine. I expected some issues, but the fact, that I could not even logon to Windows 7 came early.
 
-I got stuck on the login screen with the message "The User Profile Service failed the logon. User profile cannot be loaded". [I was not the first person facing this problem, there is a related answer on Microsoft's support site.](https://support.microsoft.com/en-us/kb/947215)
+I got stuck on the login screen with the message "The User Profile Service failed the logon. User profile cannot be loaded". [I was not the first person facing this problem, there is a related answer on Microsoft's support site.](https://support.microsoft.com/en-us/kb/947215){:target="_blank"}
 
 Let me show you the nature of the problem by quoting the official explanation:
 >Occasionally, Windows might not read your user profile correctly, such as if your antivirus software is scanning your computer while you try to log on.
 
-Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215).
+Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215){:target="_blank"}.
 
 ![Windows regisrty edit](/assets/images/in-content/ms-registry-edit.png)
 
@@ -57,11 +57,11 @@ Finally I could log on after rebooting and face the real challenge.
 
 ## 2. How to download the Windows 7 installation iso?
 
-This step went a lot smoother than I anticipated. I found a [direct Windows 7 download link on Microsoft's site](https://www.microsoft.com/en-us/software-download/windows7).
+This step went a lot smoother than I anticipated. I found a [direct Windows 7 download link on Microsoft's site](https://www.microsoft.com/en-us/software-download/windows7){:target="_blank"}.
 
 The page is super helpful, because it gives you the available Windows 7 versions for your own license key. You won't waste time trying to install the home edition with a professional license, for instance.
 
-I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](https://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit).
+I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](https://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit){:target="_blank"}.
 
 ## 3. How to create a Windows 7 bootable install USB?
 
@@ -69,13 +69,13 @@ Now that the iso image was downloaded, it was time to create a bootable USB stic
 
 According to MS, a 4GB stick shall be enough. My smallest stick had 8 GB, so I cannot confirm a smaller number, but 8 GB is enough for sure.
 
-[Microsoft officially provides a tool to create bootable USB sticks or DVDs from downloaded iso installation images.](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool) The tool is easy to use, unfortunately I cannot give any feedback about the results.
+[Microsoft officially provides a tool to create bootable USB sticks or DVDs from downloaded iso installation images.](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool){:target="_blank"} The tool is easy to use, unfortunately I cannot give any feedback about the results.
 
 Why, you may ask? Because my father-in-law's PC cannot boot from a USB stick. I found this out after writing three different sticks. Well, it took some time...
 
 This may have something to do with the fact that it was thunderstruck two times in the last year.
 
-I tried [another USB creator tool, called Rufus,](https://rufus.akeo.ie/) before I realized that the problem is with the PC.
+I tried [another USB creator tool, called Rufus,](https://rufus.akeo.ie/){:target="_blank"} before I realized that the problem is with the PC.
 
 I tried to burn the iso to DVD with Microsoft's USB/DVD download tool, but failed miserably. I cannot tell if this is a fault of the tool or the frequent thunder storms attacking my family.
 
@@ -150,7 +150,7 @@ After about an hour I grew suspicious. Even though I'm not using Windows, I used
 
 Ctr+Shift+Esc for Task manager! I found that the upgrade process was not using any RAM, Network or CPU. It was not hanging, it just looked like it was not doing anything.
 
-After some desparate googling on my Mac I found the following [answer on Microsoft answers](https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399):
+After some desparate googling on my Mac I found the following [answer on Microsoft answers](https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399){:target="_blank"}:
 
 * open cmd
 * type "net stop wuauserv"  (this will stop windows update service)
@@ -195,7 +195,7 @@ I put the IE icon next to the Edge icon and pinned it to the system tray. These 
 
 ![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/in-content/edge-ie-icons.png) 
 
-[Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912)
+[Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912){:target="_blank"}
 
 **So I installed Firefox.**
 
@@ -205,7 +205,7 @@ I tried to describe the issues I met with facts and only a few emotional stateme
 
 **I really appreciate what you're doing for the developer community and I totally love my XBox.**
 
-I have written this post using [Microsoft Visual Studio Code](https://code.visualstudio.com/) running on Arch Linux in a VMWare Virtual Machine on my iMac.
+I have written this post using [Microsoft Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} running on Arch Linux in a VMWare Virtual Machine on my iMac.
 
 I dumped my $70 sublime license for Code. Code is a fantastic product and I really love the way you can do markdown editing with an immediate preview.
 
