@@ -745,7 +745,7 @@ Docker Swarm is not your only option for container orchestration, it is not even
 * Allow service discovery in the cluster.
 * Rolling update of cluster services.
 
-Besides Swarm, there are multiple orchestrator alternatives on the market that you can choose from. The top 4 products considered by most projects are Google's Kubernetes, Docker Swarm, Apache Mesos and HashiCorp's Nomad.
+Besides Swarm, there are multiple orchestrator alternatives on the market that you can choose from. The top 4 products considered by most projects are Google's Kubernetes, Docker Swarm, Mesos and HashiCorp's Nomad.
 
 Kubernetes by Google is the market leading container orchestrator solution today. Its wide adoption is understandable thanks to Google's wast experience in cloud computing and the large community around the product. Kubernetes, or k8s in short, is free and open-source. Kubernetes was open-sourced in 2014 and it is maintained by the Cloud Native Computing Foundation.
 
