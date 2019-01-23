@@ -349,8 +349,87 @@ article{
     }
 }
 
-.fb-share-button {
-    top: -6px;
+.social-box .social-share {
+    list-style: none;
+    float: right;
+
+    li {
+        float: left;
+        width: 2.5rem;
+
+        svg {
+            fill: $tmdc-light-blue;
+            width: 1.5rem;
+        }
+    }
+}
+
+.social-float .social-share {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -.5rem;
+    padding-left: .5rem;
+    background-color: rgba($tmdc-light-blue, .7);
+    list-style: none;
+
+    li {
+        float: left;
+        width: 2.5rem;
+
+        svg {
+            fill: $topbar-background;
+            height: 3rem;
+            width: 2rem;
+        }
+    }
+
+    /* Medium low range */
+    @media screen and (min-width: 40em) {
+        left: 0;
+        bottom: 34%;
+        width: 2rem;
+        padding-left: 0;
+        background-color: transparent;
+
+        li {
+            float: none;
+            padding-left: .5rem;
+            width: 2rem;
+
+            svg {
+                height: 2rem;
+                fill: rgba($tmdc-light-blue, 1);
+            }
+
+            &:hover {
+                svg {
+                    fill: $tmdc-light-green;
+                }
+            }
+            
+            &:first-of-type svg {
+                padding-top: .8rem;
+            }
+
+            &:nth-of-type(2) svg {
+                padding-top: .4rem;
+            }
+
+            &:last-of-type svg {
+                padding-top: .6rem;
+                margin-left: .2rem;
+            }
+        }
+    }
+
+    /* Large */
+    @media screen and (min-width: 64em) {
+    }
+
+
+
+
 }
 
 code {

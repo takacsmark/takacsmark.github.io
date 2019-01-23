@@ -32,12 +32,17 @@ layout: default
     </section>
 
     <!--  Main content -->
-    <section class="small-12 medium-7 columns">
+    <section class="small-12 medium-7 medium-offset-1 columns">
         {% if page.videothumb %}
             <div class="flex-video">
               {{ page.videothumb }}
             </div>
         {% endif %}
+
+        <section class="social-float">
+            {% include social-share.html %}
+        </section>
+        
 
         <div class="row" itemprop="articleBody">
             <hr>
@@ -45,6 +50,12 @@ layout: default
             <hr>
         </div>
 
+        <section class="social-box row">
+            <span><b>
+                Do you like this article? Share it!
+            </b></span>
+            {% include social-share.html %}
+        </section>
     </section>
 
     <!--  Sidebar -->

@@ -48,4 +48,14 @@ $(function() {
 
     setTimeout(flipSlide, 6000);
     
+    //Hide and show share buttons
+    let sheight = $(".social-float .social-share").height();
+    
+    $(window).scroll( () => {
+        if($(document).height()-$(".social-float .social-share").offset().top-sheight < $(document).height()-$("div.comments").offset().top) {
+            $(".social-float").css("visibility", "hidden");
+        } else {
+            $(".social-float").css("visibility", "visible");
+        }
+    });
 });
