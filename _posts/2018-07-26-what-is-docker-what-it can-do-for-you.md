@@ -3,7 +3,7 @@ layout: post
 title:  "What is Docker and what is Docker used for? [2018 tutorial]"
 description: "What is Docker? What is docker used for? What are its benefits? Gentle introduction to the Docker ecosystem through examples."
 date:   2018-07-26 01:59:00 +0100
-thumbnail: "/assets/images/post-thumbs/what-is-docker-blog.png"
+thumbnail: "/assets/images/post-thumbs/what-is-docker.png"
 categories: Docker, Tutorials
 ---
 * TOC
