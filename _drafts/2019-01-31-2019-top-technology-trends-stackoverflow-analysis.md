@@ -3,15 +3,23 @@ layout: post
 title: "2019 Top Technology Trends | Based on Stackoverflow Data Analysis"
 description: "Discover high growth technology solutions used by companies wordwide in enterprise application development, web apps, data analysis, ML, DevOps, mobile applications and more."
 date: 2019-01-31 07:19:00 +0100
-thumbnail: "/assets/images/post-thumbs/docker-swarm.png"
+thumbnail: "/assets/images/post-thumbs/2019-Technology-Trends-Stackoverflow-Analysis.png"
 categories: Technology, Trends, TechBiz
 ---
 * TOC
 {:toc}
 
-This post is the result of a few days of Stackoverflow data mining. The insights and figures that you find in this article come from the December 2, 2018 [Stack Exchange data dump](https://archive.org/download/stackexchange){:target="_blank"}.
+This post is the result of several days of Stackoverflow data mining. The insights and figures you find in this article come from the December 2, 2018 [Stack Exchange data dump](https://archive.org/download/stackexchange){:target="_blank"}.
 
 _The goal of this post is to show you what's happening in popular enterprise and web application domains, data science, machine learning and cloud technologies._
+
+First, I give you a short introduction to the big picture presenting the top technology domains on Stackoverflow.
+Next, we explore the high growth technologies of 2019 grouped into practical categories:
+
+* **Growth of the most established technologies** - find the focus of the industry.
+* **Growth of trending technologies** - trending skills you should already have or build right now.
+* **Growth of emerging technologies** - up and coming technologies that increase the overall value of your work.
+* **High growth newcomers** - new releases you should keep an eye on.
 
 ## The leading technical domains on Stackoverflow
 
@@ -114,7 +122,7 @@ We start with those tags that had at least 100k questions on Stackoverflow in Ju
 | 15 | sql        | 468,836   | 443,312   | 25,524  |        5.76 |
 
 
-This table gives us new and interesting pieces of information.
+This table gives us the overall trends of the industry.
 
 * **Data mining, statistical computing and AI** made it to the top fifteen with Python, Excel, R, SQL and some of the JSON questions.
 * Web application frameworks are also a significant group with Angular, Node, Django and Spring. A good portion of the JSON questions is attributed to API development, so **web applications and APIs** are still amongst the hottest topics.
