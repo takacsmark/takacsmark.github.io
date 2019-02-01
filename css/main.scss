@@ -39,31 +39,9 @@ $font-path: "foundation-icons/foundation-icons";
 //
 // Site header and navigation
 //
-.site-header {
-    background-color: $topbar-background;
-    height: 3em;
+#main-navigation {
+    background-color: $tmdc-dark-grey;
 }
-
-.top-bar {
-
-    padding-bottom: 0;
-
-    .top-bar-title {
-        margin-top: .45em;
-    }
-
-    @media screen and (max-width: 39.9375em) {
-        .top-bar-title span {
-            text-align: center;
-        }
-    }
-
-    ul.menu li a {
-        font-size: .9em;
-        margin-top: 2px;
-    }
-}
-
 //
 // Main screen greeting box with slider
 //
@@ -114,8 +92,6 @@ $font-path: "foundation-icons/foundation-icons";
             transition: .5s;
             left: -1000px !important;
         }
-
-
 
         &#docker-book {
             left: .2em;
