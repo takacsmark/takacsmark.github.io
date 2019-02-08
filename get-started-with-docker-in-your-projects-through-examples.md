@@ -5,46 +5,69 @@ description: Learn Docker from the basics to cloud clusters in one book. Gradual
 permalink: /get-started-with-docker-in-your-projects-through-examples/
 ---
 
+<section class="row hide-for-large" id="docker-book-landing-images">
+	<div class="small-6 columns" id="instructor-box"></div>
+	<div class="small-6 columns" id="book-cover-box"></div>
+</section>
+
 <section class="row">
-    <div class="small-12 columns" id="docker-book-landing-header">
-        <h1 class="post-title" itemprop="name headline">Build Docker skills today!</h1>
-        <h5>I wrote this book to give you a practical, step by step learning experience.</h5>
-        <h5>We start from the basics and you'll learn to build, ship, and run applications through working examples that resemble real-life project situations.</h5>
-        <h5><b>Last updated January 10, 2019.</b></h5>
-        <h5>Published in June, 2018.</h5>
-        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+    <div class="small-12 large-8 columns" id="docker-book-landing-header">
+        <h1 class="post-title" itemprop="name headline">The one book that turns you into a pro Docker builder</h1>
+		<section class="row">
+			<div class="show-for-large large-1 columns" id="instructor-box"></div>
+		</section>
     </div>
+	<div class="show-for-large large-4 columns" id="book-cover-box"></div>
+</section>
+
+<section class="row">
+	<div class="small-12 columns large-text-center" id="docker-book-landing-question">
+		<ul class="no-bullet">
+			<li>Would you like to learn Docker from the basics?</li>
+			<li>Would you like an instructor with a gradual approach focused on the best learning experience?</li>
+			<li>Would you like to build, ship and run real applications to get ready for project work?</li>
+		</ul>
+	</div>
 </section>
 
 <section class="row" id="docker-book-landing-middle">
-    <div class="small-12 medium-6 columns">
-        <h2> What's included?</h2>
+    <div class="small-12 large-6 columns">
+        <h2> What do you get in the book?</h2>
         <ul>
-            <li>305 pages of high quality learning content.</li>
-            <li>Every chapter is built on code-along examples.</li>
-            <li>We cover the entire build, ship and run cycle.</li>
-            <li>Unique project focus with practices and detailed workflow.</li>
-            <li>Continuous integration example.</li>
-            <li>Swarm and Kubernetes deployment.</li>
-            <li>State of the art; published in June, 2018.</li>
-            <li>PDF, epub, and mobi formats with code samples in one zip file. </li>
+            <li>Over <b>300 pages of high quality learning content</b>.</li>
+            <li>Every chapter is built on <b>code-along examples</b>.</li>
+            <li>We cover the <b>entire build, ship and run cycle</b>.</li>
+            <li>Unique project focus with <b>best practices and detailed workflow</b>.</li>
+            <li><b>Continuous integration</b> example.</li>
+            <li><b>Swarm and Kubernetes</b> deployment.</li>
+            <li><b>Updated in January, 2019</b>.</li>
+            <li>PDF, epub, and mobi formats with code samples in one zip file.</li>
+			<li>BONUS: we Dockerize an entire open-source web application project from GitHub.</li>
         </ul>            
     </div>
-    <div class="small-12 medium-6 columns">
+    <div class="small-12 large-6 columns">
         <h2>Why is this book special?</h2>
-        <ul class="no-bullet">
-            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples that you can build right away.</li>
-            <li>The book has a <b>special project focus</b> to teach you how you can use Docker in your projects.</li>
+        <ul>
+            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples, because <b>you learn more by doing.</b></li>
+            <li>The book has a <b>special project focus</b> to teach you how you can use Docker in real life.</li>
             <li>Besides the learning examples, I added <b>another 65 pages of build exercises</b> with shell scripts, Node.js, Python, PHP, C, Golang, and more.</li>
-            <li>In the last chapters, we <b>build a complex example end to end</b> using all the skills we learned in the book, plus we'll learn more.</li>
+            <li>In the last chapters, we <b>build a complex example end to end</b> using all the skills we learned in the book.</li>
+			<li>Over <b>300k happy students on Youtube</b>.</li>
+			<li><b>7 days money back quarantee</b>, no questions asked.</li>
         </ul>
     </div>
 </section>
 
 <section class="row docker-book-landing-buttonline">
-    <div class="small-12 columns text-center">
+    <div class="small-12 columns">
+		<h5><b>Last updated on January 10, 2019.</b></h5>
+        <h5>Published in June, 2018.</h5>
+	</div>
+</section>
+
+<section class="row docker-book-landing-buttonline">
+	<div class="small-12 columns text-center">
         <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
-        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
     </div>
 </section>
 
@@ -99,16 +122,6 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 | Set up the Dockerized production environment. | <i class="fi-check green"></i> |
 | Deploy and run the web application on AWS in a Swarm cluster. | <i class="fi-check green"></i> |
 | Deploy and run the web application in a Kubernetes cluster. | <i class="fi-check green"></i> |
-
-##### Refund policy
-
-You may be able to return the book that you bought for a refund. We will consider your return if we receive your request within 3 days of the date of purchase.
-
-##### Privacy policy
-
-We take your privacy seriously and will take all measures to protect your personal information.
-
-Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
 <section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
@@ -178,6 +191,16 @@ We **set up the development environment and automated testing using Travis CI**.
 I have set up the examples to be gradual with a gentle learning curve. I explain the steps in detail so that you can follow along.
 
 I hope you’ll enjoy the journey and acquire great skills.
+
+## Refund policy
+
+You may be able to return the book that you bought for a refund. We will consider your return if we receive your request within 7 days of the date of purchase.
+
+## Privacy policy
+
+We take your privacy seriously and will take all measures to protect your personal information.
+
+Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
 <section class="row docker-book-landing-buttonline">
     <div class="small-12 columns text-center">
