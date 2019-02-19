@@ -20,9 +20,13 @@ If you want to jump to a specific step, please check out the table of contents a
 
 In order to get the most out of this article you should be familiar with basic Docker concepts, like containers, images, the Dockerfile and Docker Compose. If you need a refresher on these topics, please go to my previous tutorials first. Alternatively you can get [my book](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/){:target="_blank"} for a complete guided experience.
 
+This tutorial is available as a Youtube video, too.
+
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/https://youtu.be/3-7gZS4ePak" frameborder="0" allowfullscreen></iframe></div>
+
 ## Your first Swarm cluster
 
-Swarm is Docker's built in container orchestrator solution, it's main purpose is to manage containers in a computer cluster, i.e. a set of connected computers that work together.
+Swarm is Docker's built in container orchestrator solution, its main purpose is to manage containers in a computer cluster, i.e. a set of connected computers that work together.
 
 Swarm comes built into the Docker Engine, you don't need to install anything to get started. (You need to have Docker installed, of course, but you don't need extra components.)
 
