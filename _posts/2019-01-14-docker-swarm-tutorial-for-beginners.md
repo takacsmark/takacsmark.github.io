@@ -22,7 +22,7 @@ In order to get the most out of this article you should be familiar with basic D
 
 This tutorial is available as a Youtube video, too.
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/https://youtu.be/3-7gZS4ePak" frameborder="0" allowfullscreen></iframe></div>
+<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/3-7gZS4ePak" frameborder="0" allowfullscreen></iframe></div>
 
 ## Your first Swarm cluster
 
@@ -72,7 +72,7 @@ $ tree
 Let's create the `package.json` and `package-lock.json` files first with the use of a Docker container:
 
 ```console
-$ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm init -y 
+$ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm init -y
 $ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm i -S express
 ```
 
@@ -163,7 +163,7 @@ Let's see the results of our work first, please visit [http://localhost](http://
 
 ![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png)
 
-## Explore the stack 
+## Explore the stack
 
 We deployed a stack to the Swarm based on the description in the Compose file. We can see our deployed stack with a simple command:
 
@@ -289,7 +289,7 @@ docker@myvm2:~$ docker swarm join --token SWMTKN-1-678250sc60og59wbwf25z6xwiz5a1
 This node joined a swarm as a worker.
 ```
 
-Now we have two machines in the Swarm. In order to deploy our Node example application to the Swarm we need to make sure that our project's Docker image is available to the virtual machines. Our workflow on a real project would be to automatically build and push our tested Docker images to a central repository. So we'll do exactly this, we'll push our Docker image to the Docker Hub into a public  repository. 
+Now we have two machines in the Swarm. In order to deploy our Node example application to the Swarm we need to make sure that our project's Docker image is available to the virtual machines. Our workflow on a real project would be to automatically build and push our tested Docker images to a central repository. So we'll do exactly this, we'll push our Docker image to the Docker Hub into a public  repository.
 
 ```console
 $ docker-compose push
@@ -482,7 +482,7 @@ We used the `docker service ls` command before to list the services in the Swarm
 
 ### List tasks
 
-We used the `docker service ps <service_name>` command before to list the tasks in your Node application service. 
+We used the `docker service ps <service_name>` command before to list the tasks in your Node application service.
 
 ### Scale a service
 
@@ -504,7 +504,7 @@ As you can see, the service logs are displayed for all tasks that belong to the 
 
 ### Update a service
 
-Use the `docker service update` command to update the configuration of a service. You can change the configuration that you specified with `docker service create` with this command. 
+Use the `docker service update` command to update the configuration of a service. You can change the configuration that you specified with `docker service create` with this command.
 
 ### Rollback service changes
 
@@ -714,7 +714,7 @@ We defined a custom network in our Compose file, and Docker automatically create
 
 Docker has a network driver called the overlay network driver. Overlay networks are networks over multiple Docker host machines. You can connect multiple machines that run the Docker daemon using one overlay network.
 
-When we deployed our stack to the Swarm, our user defined network was created in the form of an overlay network. Overlay is the default driver when you are using the Compose file in Swarm mode. 
+When we deployed our stack to the Swarm, our user defined network was created in the form of an overlay network. Overlay is the default driver when you are using the Compose file in Swarm mode.
 
 Swarm services use a solution called the routing mesh for service discovery. This means that if you publish ports in your services, the published ports will be available on all Swarm nodes, and you can connect to a service's published port on any node even if that node is not running a container of the specific service. Your request is redirected to the node that is running the service automatically in the background.
 
