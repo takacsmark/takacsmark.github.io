@@ -2,8 +2,8 @@
 layout: post
 title: "Top 14 Python skills for businesses | 2019 | Based on Stackoverflow Data"
 description: "What Python skills should you and your team build in 2019? What do others build with Python? We analyized Stackoverflow data to give you a clear action plan."
-date: 2019-01-31 07:19:00 +0100
-thumbnail: "/assets/images/post-thumbs/2019-Technology-Trends-Stackoverflow-Analysis.png"
+date: 2019-02-25 07:19:00 +0100
+thumbnail: "/assets/images/post-thumbs/Top-14-python-skills-businesses-2019-stackoverflow-analysis.png"
 categories: Technology, Trends, TechBiz
 ---
 * TOC
