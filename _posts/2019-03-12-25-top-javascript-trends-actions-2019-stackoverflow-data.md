@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "25 Top Javascript Trends & Actions | 2019 | based on Stackoverflow data"
+title: "25 Top Javascript Trends & Actions | 2019 | Based on Stackoverflow data"
 description: "What are the top trends in the Javascript ecosystem in 2019? What tools should I use, what do other's build in real life? Were is Javascript heading? Let's use Stackoverflow data to answer these questions."
 date: 2019-03-12 07:19:00 +0100
 thumbnail: "/assets/images/post-thumbs/25-Top-Javascript-Trends-Actions-2019.png"
