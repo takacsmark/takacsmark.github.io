@@ -119,7 +119,7 @@ $font-path: "foundation-icons/foundation-icons";
         font-size: 2em;
     }
 
-    /* Medium higer end */
+    /* Medium higher end */
     @media screen and (min-width: 49em) {
         font-size: 2.5em;
     }
@@ -253,6 +253,9 @@ $font-path: "foundation-icons/foundation-icons";
         }
     }
 
+    .merchandise {
+	margin: 0;
+    }
 }
 
 .sidebar.social i {
@@ -712,3 +715,58 @@ footer {
         background-color: #336699 !important;
     }
 }
+
+.merchandise {
+    margin-top: .5rem;
+    height: auto;
+    padding: .4rem;
+    background-color: rgb(247,247,249);
+    
+    h1 {
+        font-size: .9rem;
+        font-weight: 500;
+	color: $tmdc-dark-blue;
+    }
+
+    p {
+        padding: 0 .5rem 0 .5rem;
+        margin-bottom: 0;
+        font-size: .9rem;
+    }
+    
+    .price {
+        font-weight: 500;
+        color: $tmdc-red-highlight;
+    }
+    
+    .button {
+        width: 100%;
+	margin-bottom: 0;
+	margin-top: .4rem;
+    }
+
+    @media screen and (min-width: 40em) {
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+
+	.title {
+	    border-bottom: 4px solid white;
+	    padding-left: .5rem;
+	    padding-top: .4rem;
+	}
+
+	h1 {
+	    font-size: 1rem;
+	}
+	
+	.merch-image {
+	    border-bottom: 4px solid white;
+	}
+    }
+
+    @media screen and (min-width: 64em) {
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+    }
+}
+
