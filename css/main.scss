@@ -238,6 +238,10 @@ $font-path: "foundation-icons/foundation-icons";
         }
     }
    
+    .discord-logo {
+	max-width: 60%;
+    }
+    
     &.book {
 
         ul {
@@ -255,6 +259,10 @@ $font-path: "foundation-icons/foundation-icons";
 
     .merchandise {
 	margin: 0;
+
+	.title {
+	    display: none;
+	}
     }
 }
 
@@ -439,6 +447,10 @@ footer {
     .footer-copyright {
         background-color: $black;
         font-size: .75em;
+    }
+
+    .discord-logo {
+	max-width: 50%;
     }
 }
 
