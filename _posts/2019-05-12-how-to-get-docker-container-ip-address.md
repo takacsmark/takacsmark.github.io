@@ -2,7 +2,7 @@
 layout: post
 
 title: "How to get a Docker container's IP address | Docker tips"
-description: "What are the top trends in the Javascript ecosystem in 2019? What tools should I use, what do other's build in real life? Were is Javascript heading? Let's use Stackoverflow data to answer these questions."
+description: "Need to find the IP address of a Docker container? Need to know how to get the IP address of a Docker container on different networks? Here is how."
 date: 2019-05-12 07:19:00 +0100
 thumbnail: "/assets/images/post-thumbs/docker-tips-container-ip.png"
 categories: Docker, DevOps 
