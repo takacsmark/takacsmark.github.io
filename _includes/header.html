@@ -1,15 +1,31 @@
-<div class="title-bar"id="main-navigation" data-responsive-toggle="main-menu" data-hide-for="medium">
-    <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-    <div class="title-bar-title">Menu</div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">takacsmark.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="top-bar" id="main-menu">
-    <div class="top-bar-left">
-        <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
-            <li class="menu-text">takacsmark.com</li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/get-started-with-docker-in-your-projects-through-examples">Get the Docker book!</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </div>
-</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/get-started-with-docker-in-your-projects-through-examples">Docker Book</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Free Courses
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Docker</a>
+          <a class="dropdown-item" href="#">Fatfree PHP Framework</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Programming Trends</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>

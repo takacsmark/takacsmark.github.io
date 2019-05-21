@@ -1,10 +1,11 @@
-/**
- * This is the Gulp automation file for takacsmark.com
- */
-
 'use strict';
-
 const gulp = require('gulp');
+//sass processing
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+//image optimization
 const path = require('path');
 const fs = require('fs');
 const dirCompare = require('dir-compare');
@@ -14,6 +15,28 @@ const rename = require("gulp-rename");
 const del = require('del');
 const glob = require("glob")
 const runSequence = require('run-sequence');
+
+/**
+ * Css processing
+ */
+gulp.task('sass', () => {
+    const processors = [
+	autoprefixer,
+	cssnano
+    ];
+
+    return gulp.src('./scss/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(postcss(processors))
+	.pipe(gulp.dest('./assets'));
+});
+
+/** Watch
+ *
+ */
+gulp.task('watch', () => {
+    gulp.watch('./scss/*.scss', gulp.series(['sass']));
+});
 
 /**
  * Image optimization
