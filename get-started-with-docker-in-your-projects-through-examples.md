@@ -4,131 +4,239 @@ title: Get started with Docker in your projects - through examples
 description: Learn Docker from the basics to cloud clusters in one book. Gradual learning, special project practices focus, built on code-along examples, 360 pages.
 permalink: /get-started-with-docker-in-your-projects-through-examples/
 ---
+<img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0" alt="...">
+<!-- add alt text, change image size -->
+# The one book that turns you into a pro Docker builder
 
-<section class="row hide-for-large" id="docker-book-landing-images">
-	<div class="small-6 columns" id="instructor-box"></div>
-	<div class="small-6 columns" id="book-cover-box"></div>
-</section>
+- *Would you like to learn Docker from the basics?*
+- *Would you like an instructor with a gradual approach focused on the best learning experience?*
+- *Would you like to build, ship and run real applications to get ready for project work?*
 
-<section class="row">
-    <div class="small-12 large-8 columns" id="docker-book-landing-header">
-        <h1 class="post-title" itemprop="name headline">The one book that turns you into a pro Docker builder</h1>
-		<section class="row">
-			<div class="show-for-large large-1 columns" id="instructor-box"></div>
-		</section>
-    </div>
-	<div class="show-for-large large-4 columns" id="book-cover-box"></div>
-</section>
+## What do you get in the book?
 
-<section class="row">
-	<div class="small-12 columns large-text-center" id="docker-book-landing-question">
-		<ul class="no-bullet">
-			<li>Would you like to learn Docker from the basics?</li>
-			<li>Would you like an instructor with a gradual approach focused on the best learning experience?</li>
-			<li>Would you like to build, ship and run real applications to get ready for project work?</li>
-		</ul>
-	</div>
-</section>
+- Over **300 pages of high quality learning content**.
+- Every chapter is built on **code-along examples**.
+- We cover the **entire build, ship and run cycle**.
+- Unique project focus with **best practices and detailed workflow**.
+- **Continuous integration** example.
+- **Swarm and Kubernetes** deployment.
+- **Updated in January, 2019**.
+- PDF, epub, and mobi formats with code samples in one zip file.
+- BONUS: we Dockerize an entire open-source web application project from GitHub.
+		
+## Why is this book special?
 
-<section class="row" id="docker-book-landing-middle">
-    <div class="small-12 large-6 columns">
-        <h2> What do you get in the book?</h2>
-        <ul>
-            <li>Over <b>300 pages of high quality learning content</b>.</li>
-            <li>Every chapter is built on <b>code-along examples</b>.</li>
-            <li>We cover the <b>entire build, ship and run cycle</b>.</li>
-            <li>Unique project focus with <b>best practices and detailed workflow</b>.</li>
-            <li><b>Continuous integration</b> example.</li>
-            <li><b>Swarm and Kubernetes</b> deployment.</li>
-            <li><b>Updated in January, 2019</b>.</li>
-            <li>PDF, epub, and mobi formats with code samples in one zip file.</li>
-			<li>BONUS: we Dockerize an entire open-source web application project from GitHub.</li>
-        </ul>            
-    </div>
-    <div class="small-12 large-6 columns">
-        <h2>Why is this book special?</h2>
-        <ul>
-            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples, because <b>you learn more by doing.</b></li>
-            <li>The book has a <b>special project focus</b> to teach you how you can use Docker in real life.</li>
-            <li>Besides the learning examples, I added <b>another 65 pages of build exercises</b> with shell scripts, Node.js, Python, PHP, C, Golang, and more.</li>
-            <li>In the last chapters, we <b>build a complex example end to end</b> using all the skills we learned in the book.</li>
-			<li>Over <b>300k happy students on Youtube</b>.</li>
-			<li><b>7 days money back quarantee</b>, no questions asked.</li>
-        </ul>
-    </div>
-</section>
+- This book is **a code-along tutorial**, I introduce every aspect of Docker through examples, because **you learn more by doing.**
+- The book has a **special project focus** to teach you how you can use Docker in real life.
+- Besides the learning examples, I added **another 65 pages of build exercises** with shell scripts, Node.js, Python, PHP, C, Golang, and more.
+- In the last chapters, we **build a complex example end to end** using all the skills we learned in the book.
+- Over **300k happy students on Youtube**.
+- **7 days money back quarantee**, no questions asked.
 
-<section class="row docker-book-landing-buttonline">
-    <div class="small-12 columns">
-		<h5><b>Last updated on January 10, 2019.</b></h5>
-        <h5>Published in June, 2018.</h5>
-	</div>
-</section>
+##### **Last updated on January 10, 2019.**
+##### Published in June, 2018.
 
-<section class="row docker-book-landing-buttonline">
-	<div class="small-12 columns text-center">
-        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
-    </div>
-</section>
+<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 
 ## What you will learn
 
-| Build with Docker | |
-|-------|--------|
-| Learn what Docker is and what problems it solves in software development projects. | <i class="fi-check green"></i> |
-| We install Docker on your machine and start building together. | <i class="fi-check green"></i> |
-| We start the journey by running applications in Docker containers. | <i class="fi-check green"></i> |
-| Learn to manage Docker containers. | <i class="fi-check green"></i> |
-| Container practices that are crucial for Dockerized project work. | <i class="fi-check green"></i> |
-| Dive into Docker images, and see how images define containers. | <i class="fi-check green"></i> |
-| Learn to manage images. | <i class="fi-check  green"></i> |
-| Find and select the best Docker images for your projects online. | <i class="fi-check green"></i> |
-| Create your custom Docker images with the Dockerfile. | <i class="fi-check green"></i> |
-| Learn Dockerfile best practices. | <i class="fi-check green"></i> |
-| I’ll show you my image building workflow. | <i class="fi-check green"></i> |
-| Image building exercises; including shell scripts, Node.js, Python, PHP, C, Golang,and more. | <i class="fi-check green"></i> |
-| Dive into multi-container applications. | <i class="fi-check green"></i> |
-| Define, build and run applications with the Docker Compose tool. | <i class="fi-check green"></i> |
-| Docker Networks.   | <i class="fi-check green"></i> |
-| Docker Volumes. | <i class="fi-check green"></i> |
-| Build practices with Docker Compose. | <i class="fi-check green"></i> |
-| A unique “build summary” chapter to outline of the build workflow. | <i class="fi-check green"></i> |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Build with Docker</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Learn what Docker is and what problems it solves in software development projects.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>We install Docker on your machine and start building together.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>We start the journey by running applications in Docker containers.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Learn to manage Docker containers.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Container practices that are crucial for Dockerized project work.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Dive into Docker images, and see how images define containers.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Learn to manage images.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Find and select the best Docker images for your projects online.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Create your custom Docker images with the Dockerfile.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Learn Dockerfile best practices.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>I’ll show you my image building workflow.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Image building exercises; including shell scripts, Node.js, Python, PHP, C, Golang,and more.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Dive into multi-container applications.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Define, build and run applications with the Docker Compose tool.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Docker Networks.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Docker Volumes.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Build practices with Docker Compose.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>A unique “build summary” chapter to outline of the build workflow.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-| Ship your applications | |
-|-------|--------|
-| Learn how to ship your applications. | <i class="fi-check green"></i> |
-| Ship your application’s Docker images to the Docker Hub. | <i class="fi-check green"></i> |
-| Set up an automatic build workflow involving GitHub. | <i class="fi-check green"></i> |
-| Set up your own Docker Registry. | <i class="fi-check green"></i> |
-| Build a continuous integration example with Travis CI. | <i class="fi-check green"></i> |
-| A unique ship summary chapter to outline the shipping workflow in Dockerized projects. | <i class="fi-check green"></i> |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Ship your applications</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Learn how to ship your applications.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Ship your application’s Docker images to the Docker Hub.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up an automatic build workflow involving GitHub.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up your own Docker Registry.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Build a continuous integration example with Travis CI.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>A unique ship summary chapter to outline the shipping workflow in Dockerized projects.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-| Run your applications | |
-|-------|--------|
-| Learn how to run your high availability, scalable applications in production. | <i class="fi-check green"></i> |
-| Set up and manage a Docker Swarm cluster. | <i class="fi-check green"></i> |
-| Deploy your application stacks to the Swarm. | <i class="fi-check green"></i> |
-| Scale and manage services in a Swarm. | <i class="fi-check green"></i> |
-| A unique run summary chapter with an overview of typical run tasks in your projects. | <i class="fi-check green"></i> |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Run your applications</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Learn how to run your high availability, scalable applications in production.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up and manage a Docker Swarm cluster.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Deploy your application stacks to the Swarm.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Scale and manage services in a Swarm.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>A unique run summary chapter with an overview of typical run tasks in your projects.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-| End to end example where we dockerize a Flask application | |
-|-------|--------|
-| Extend a Flask web application project to use Docker to build, ship and run the application. | <i class="fi-check green"></i> |
-| Use Docker containers to generate the application code. | <i class="fi-check green"></i> |
-| Use environment variables to drive various aspects of our project build. | <i class="fi-check green"></i> |
-| Automate most project tasks. | <i class="fi-check green"></i> |
-| Set up the Dockerized development environment. | <i class="fi-check green"></i> |
-| Set up automated testing using Travis CI. | <i class="fi-check green"></i> |
-| Set up the Dockerized production environment. | <i class="fi-check green"></i> |
-| Deploy and run the web application on AWS in a Swarm cluster. | <i class="fi-check green"></i> |
-| Deploy and run the web application in a Kubernetes cluster. | <i class="fi-check green"></i> |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>End to end example where we dockerize a Flask application</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Extend a Flask web application project to use Docker to build, ship and run the application.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Use Docker containers to generate the application code.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Use environment variables to drive various aspects of our project build.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Automate most project tasks.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up the Dockerized development environment.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up automated testing using Travis CI.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Set up the Dockerized production environment.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Deploy and run the web application on AWS in a Swarm cluster.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+    <tr>
+      <td>Deploy and run the web application in a Kubernetes cluster.</td>
+      <td><i class="fas fa-check text-success"></i></td>
+    </tr>
+  </tbody>
+</table>
 
-<section class="row docker-book-landing-buttonline">
-    <div class="small-12 columns text-center">
-        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
-        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
-    </div>
-</section>
+<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 
 ## Read the preface from the book
 
@@ -202,24 +310,21 @@ We take your privacy seriously and will take all measures to protect your person
 
 Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
-<section class="row docker-book-landing-buttonline">
-    <div class="small-12 columns text-center">
-        <a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
-        <!-- <button class="buy-btn">Buy the book for $4.99!</button> -->
-    </div>
-</section>
+<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 
 {% if site.disqus %}
-<div class="comments row">
-    <div id="disqus_thread" class="columns"></div>
-    <script type="text/javascript">
-        var disqus_shortname = '{{ site.disqus }}';
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<div class="container">
+    <section class="row">
+        <div id="disqus_thread" class="col-12"></div>
+        <script type="text/javascript">
+            var disqus_shortname = '{{ site.disqus }}';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
 </div>
 {% endif %}
