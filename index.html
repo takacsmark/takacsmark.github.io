@@ -1,76 +1,56 @@
 ---
 layout: default
 ---
-<div class="container">
+<!-- Greeting Box -->
+<div class="container p-0">
   <div class="row">
     <div class="col">
+
+      <div class="card bg-dark text-white border-white rounded-0">
+	<img src="/assets/images/site-greeting/mark-blue-shirt-wide.jpg" class="card-img rounded-0" alt="...">
+	<div class="card-img-overlay">
+	  <h1 class="card-title">Learn Docker with Mark</h1>
+	  <a href="/get-started-with-docker-in-your-projects-through-examples" class="btn btn-light">Get the Book</a>
+	</div>
+      </div>
+
     </div>
   </div>
 </div>
+<!-- End Greeting Box -->
 
+<!-- Main Content -->
 <div class="container">
   <div class="row">
-    <div class="col">
+
+    {% for post in site.posts %}
+    <div class="col-12">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+
+	<div class="card border-white">
+	  {% assign pl = post.thumbnail | size | minus: 4 %}
+	  <img class="card-img-top rounded-0" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
+	  <div class="card-body">
+	    <h2 class="card-title">{{ post.title }}</h2>
+	    <p class="card-text">{{ post.description }}</p>
+	    <p class="card-text"><small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small></p>
+	  </div>
+	</div>
+      </a>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+<!-- End Main Content -->
+
+<!-- Sidebar -->
+<!-- TODO sticky sidebar -->
+<div class="container d-none">
+  <div class="row">
+    <div class="col-12">
+      {% include sidebar.html %}
     </div>
   </div>
 </div>
-
-
-
-
-<!-- <section class="row greeting-box"> -->
-<!--     <div class="small-10 medium-10 large-10 columns greeting-label" id="docker-book"> -->
-<!--         <a href="/get-started-with-docker-in-your-projects-through-examples/"> -->
-<!--             <div class="row"> -->
-<!--                 <div class="small-4 columns"> -->
-<!--                     <img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" alt="Get started with Docker in your projects through exmples book cover"> -->
-<!--                 </div> -->
-<!--                 <div class="small-8 columns"> -->
-<!--                     <div><span>305 pages of</span></div> -->
-<!--                     <div><span>step by step learning</span></div> -->
-<!--                     <div><span>through examples.</span></div> -->
-<!--                     <div><span>Build, ship and run!</span></div> -->
-<!--                     <div><span>Get the book now!</span></div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--         </a>  -->
-<!--     </div> -->
-<!--     <div class="small-10 medium-10 large-10 columns greeting-label offscreen" id="dockerfile-tutorial"> -->
-<!--         <a href="/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/"> -->
-<!--             <img src="/assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png" alt="Dockerfile tutorial by example"> -->
-<!--             <div><span>Learn Dockerfile basics and best</span></div> -->
-<!--             <div><span>practices with my new in-depth</span></div> -->
-<!--             <div><span>(5800 words) tutorial for FREE!</span></div>          -->
-<!--         </a>  -->
-<!--     </div>     -->
-<!--     <img src="assets/images/site-greeting/mark-takacs-home.jpg" alt=""> -->
-<!-- </section> -->
-
-<!-- <section class="row"> -->
-
-<!--     <\!--  Main content -\-> -->
-<!--     <section class="small-12 large-9 columns" id="post-content" data-post-content> -->
-
-<!--         <div class="row"> -->
-<!--             {% for post in site.posts %} -->
-<!--             <a href="{{ post.url | prepend: site.baseurl }}" class="small-12 medium-4 columns card"> -->
-<!--                 <div> -->
-<!--                     {% assign pl = post.thumbnail | size | minus: 4 %} -->
-<!--                     <img class="thumbnail" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}"> -->
-<!--                 </div> -->
-<!--                 <div class="info"> -->
-<!--                     <h2>{{ post.title }}</h2> -->
-<!--                     <p class="description">{{ post.description }}</p> -->
-<!--                     <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p> -->
-<!--                     <hr> -->
-<!--                 </div> -->
-<!--             </a> -->
-<!--             {% endfor %} -->
-<!--         </div> -->
-<!--     </section> -->
-
-<!--     <\!--  Sidebar -\-> -->
-<!--     <section class="large-3 columns show-for-large" data-sticky-container> -->
-<!--         {% include sidebar.html %} -->
-<!--     </section> -->
-<!-- </section> -->
+<!-- End Sidebar -->
