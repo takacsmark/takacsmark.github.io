@@ -4,8 +4,10 @@ title: Get started with Docker in your projects - through examples
 description: Learn Docker from the basics to cloud clusters in one book. Gradual learning, special project practices focus, built on code-along examples, 360 pages.
 permalink: /get-started-with-docker-in-your-projects-through-examples/
 ---
-<img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0" alt="...">
-<!-- add alt text, change image size -->
+<div class="text-center mt-2 mb-2">
+	<img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0 border-light" alt="Get Started with Docker in your Projects Book Cover by Mark Takacs">
+</div>
+
 # The one book that turns you into a pro Docker builder
 
 - *Would you like to learn Docker from the basics?*
@@ -36,7 +38,9 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 ##### **Last updated on January 10, 2019.**
 ##### Published in June, 2018.
 
-<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+<div class="text-center mt-4 mb-2">
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+</div>
 
 ## What you will learn
 
@@ -236,7 +240,9 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
   </tbody>
 </table>
 
-<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+<div class="text-center mt-4 mb-2">
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+</div>
 
 ## Read the preface from the book
 
@@ -310,7 +316,9 @@ We take your privacy seriously and will take all measures to protect your person
 
 Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
-<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+<div class="text-center mt-4 mb-2">
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+</div>
 
 {% if site.disqus %}
 <div class="container">
