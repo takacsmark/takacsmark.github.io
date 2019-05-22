@@ -25,23 +25,92 @@ Next, we explore the high growth technologies of 2019 grouped into practical cat
 
 [The first Stackoverflow question](https://stackoverflow.com/questions/6/percentage-width-child-element-in-absolutely-positioned-parent-on-internet-explo){:target="_blank"} was created on July 31, 2008. Questions and answers are added continuously since that day. Questions are tagged with the label of their specific domain by Stackoverflow users. The all-time top ranking tags are the ones you see in the table below.
 
-|    | TagName       | Questions |
-|----|---------------|-----------|
-|  1 | javascript    | 1,723,731 |
-|  2 | java          | 1,487,235 |
-|  3 | c#            | 1,264,947 |
-|  4 | php           | 1,245,650 |
-|  5 | android       | 1,155,005 |
-|  6 | python        | 1,068,679 |
-|  7 | jquery        | 936,264   |
-|  8 | html          | 789,778   |
-|  9 | c++           | 595,978   |
-| 10 | ios           | 584,135   |
-| 11 | css           | 563,816   |
-| 12 | mysql         | 541,862   |
-| 13 | sql           | 468,836   |
-| 14 | asp.net       | 340,549   |
-| 15 | ruby-on-rails | 300,045   |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>javascript</td>
+      <td>1,723,731</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>java</td>
+      <td>1,487,235</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>c#</td>
+      <td>1,264,947</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>php</td>
+      <td>1,245,650</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>android</td>
+      <td>1,155,005</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>python</td>
+      <td>1,068,679</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>jquery</td>
+      <td>936,264</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>html</td>
+      <td>789,778</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>c++</td>
+      <td>595,978</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>ios</td>
+      <td>584,135</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>css</td>
+      <td>563,816</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>mysql</td>
+      <td>541,862</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sql</td>
+      <td>468,836</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>asp.net</td>
+      <td>340,549</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>ruby-on-rails</td>
+      <td>300,045</td>
+    </tr>
+  </tbody>
+</table>
 
 The table shows the overall number of questions tagged with the specific "TagName" since the beginning of Stackoverflow. There are over 53k tags, you see the top 15 here.
 
@@ -61,23 +130,140 @@ Keep in mind, that these numbers show the accumulated results of a decade, they 
 
 Let's compare the above tag counts to the tag counts from June, 2018. I have another Stackoverflow dump from last summer that I used to create the below table.
 
-|    | TagName       | Questions | Questions (06/2018) | Growth # | Growth % |
-|----|---------------|-----------|-----------|---------|-------------|
-|  1 | javascript    | 1,723,731 | 1,624,044 | 99,687  |        6.14 |
-|  2 | java          | 1,487,235 | 1,420,739 | 66,496  |        4.68 |
-|  3 | c#            | 1,264,947 | 1,213,373 | 51,574  |        4.25 |
-|  4 | php           | 1,245,650 | 1,200,404 | 45,246  |        3.77 |
-|  5 | android       | 1,155,005 | 1,106,297 | 48,708  |        4.40 |
-|  6 | python        | 1,068,679 | 962,457   | 106,222 |       11.04 |
-|  7 | jquery        | 936,264   | 913,262   | 23,002  |        2.52 |
-|  8 | html          | 789,778   | 752,349   | 37,429  |        4.97 |
-|  9 | c++           | 595,978   | 572,330   | 23,648  |        4.13 |
-| 10 | ios           | 584,135   | 564,630   | 19,505  |        3.45 |
-| 11 | css           | 563,816   | 537,685   | 26,131  |        4.86 |
-| 12 | mysql         | 541,862   | 520,597   | 21,265  |        4.08 |
-| 13 | sql           | 468,836   | 443,312   | 25,524  |        5.76 |
-| 14 | asp.net       | 340,549   | 333,949   | 6,600   |        1.98 |
-| 15 | ruby-on-rails | 300,045   | 292,802   | 7,243   |        2.47 |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+      <th>Questions (06/2018)</th>
+      <th>Growth #</th>
+      <th>Growth %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>javascript</td>
+      <td>1,723,731</td>
+      <td>1,624,044</td>
+      <td>99,687</td>
+      <td>6.14</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>java</td>
+      <td>1,487,235</td>
+      <td>1,420,739</td>
+      <td>66,496</td>
+      <td>4.68</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>c#</td>
+      <td>1,264,947</td>
+      <td>1,213,373</td>
+      <td>51,574</td>
+      <td>4.25</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>php</td>
+      <td>1,245,650</td>
+      <td>1,200,404</td>
+      <td>45,246</td>
+      <td>3.77</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>android</td>
+      <td>1,155,005</td>
+      <td>1,106,297</td>
+      <td>48,708</td>
+      <td>4.40</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>python</td>
+      <td>1,068,679</td>
+      <td>962,457</td>
+      <td>106,222</td>
+      <td>11.04</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>jquery</td>
+      <td>936,264</td>
+      <td>913,262</td>
+      <td>23,002</td>
+      <td>2.52</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>html</td>
+      <td>789,778</td>
+      <td>752,349</td>
+      <td>37,429</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>c++</td>
+      <td>595,978</td>
+      <td>572,330</td>
+      <td>23,648</td>
+      <td>4.13</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>ios</td>
+      <td>584,135</td>
+      <td>564,630</td>
+      <td>19,505</td>
+      <td>3.45</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>css</td>
+      <td>563,816</td>
+      <td>537,685</td>
+      <td>26,131</td>
+      <td>4.86</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>mysql</td>
+      <td>541,862</td>
+      <td>520,597</td>
+      <td>21,265</td>
+      <td>4.08</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sql</td>
+      <td>468,836</td>
+      <td>443,312</td>
+      <td>25,524</td>
+      <td>5.76</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>asp.net</td>
+      <td>340,549</td>
+      <td>333,949</td>
+      <td>6,600</td>
+      <td>1.98</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>ruby-on-rails</td>
+      <td>300,045</td>
+      <td>292,802</td>
+      <td>7,243</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
 
 The table shows the growth in terms of questions tagged with the top fifteen tags, both the growth in the number of questions and growth percentage are displayed in the **"Growth #"** and **"Growth %"** columns respectively.
 
@@ -103,24 +289,140 @@ Let's turn the question around and see the top growth tags in the last six month
 
 We start with those tags that had at least 100k questions on Stackoverflow in June, 2018. These are mature technologies with large user base; let's call them established tags. The below table is ordered by growth percentage showing highest growth first.
 
-|    | TagName    | Questions | Questions (06/2018) | Growth # | Growth % |
-|----|------------|-----------|-----------|---------|-------------|
-|  1 | python-3.x | 131,954   | 103,283   | 28,671  |       27.76 |
-|  2 | excel      | 182,653   | 146,298   | 36,355  |       24.85 |
-|  3 | angular    | 142,665   | 114,564   | 28,101  |       24.53 |
-|  4 | python     | 1,068,679 | 962,457   | 106,222 |       11.04 |
-|  5 | node.js    | 252,591   | 227,969   | 24,622  |       10.80 |
-|  6 | r          | 265,957   | 240,683   | 25,274  |       10.50 |
-|  7 | swift      | 214,571   | 194,762   | 19,809  |       10.17 |
-|  8 | django     | 185,010   | 171,428   | 13,582  |        7.92 |
-|  9 | spring     | 143,227   | 133,450   | 9,777   |        7.33 |
-| 10 | wordpress  | 142,202   | 133,363   | 8,839   |        6.63 |
-| 11 | javascript | 1,723,731 | 1,624,044 | 99,687  |        6.14 |
-| 12 | arrays     | 281,590   | 265,417   | 16,173  |        6.09 |
-| 13 | json       | 249,683   | 235,478   | 14,205  |        6.03 |
-| 14 | sql-server | 247,642   | 233,561   | 14,081  |        6.03 |
-| 15 | sql        | 468,836   | 443,312   | 25,524  |        5.76 |
-
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+      <th>Questions (06/2018)</th>
+      <th>Growth #</th>
+      <th>Growth %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>python-3.x</td>
+      <td>131,954</td>
+      <td>103,283</td>
+      <td>28,671</td>
+      <td>27.76</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>excel</td>
+      <td>182,653</td>
+      <td>146,298</td>
+      <td>36,355</td>
+      <td>24.85</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>angular</td>
+      <td>142,665</td>
+      <td>114,564</td>
+      <td>28,101</td>
+      <td>24.53</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>python</td>
+      <td>1,068,679</td>
+      <td>962,457</td>
+      <td>106,222</td>
+      <td>11.04</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>node.js</td>
+      <td>252,591</td>
+      <td>227,969</td>
+      <td>24,622</td>
+      <td>10.80</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>r</td>
+      <td>265,957</td>
+      <td>240,683</td>
+      <td>25,274</td>
+      <td>10.50</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>swift</td>
+      <td>214,571</td>
+      <td>194,762</td>
+      <td>19,809</td>
+      <td>10.17</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>django</td>
+      <td>185,010</td>
+      <td>171,428</td>
+      <td>13,582</td>
+      <td>7.92</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>spring</td>
+      <td>143,227</td>
+      <td>133,450</td>
+      <td>9,777</td>
+      <td>7.33</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>wordpress</td>
+      <td>142,202</td>
+      <td>133,363</td>
+      <td>8,839</td>
+      <td>6.63</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>javascript</td>
+      <td>1,723,731</td>
+      <td>1,624,044</td>
+      <td>99,687</td>
+      <td>6.14</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>arrays</td>
+      <td>281,590</td>
+      <td>265,417</td>
+      <td>16,173</td>
+      <td>6.09</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>json</td>
+      <td>249,683</td>
+      <td>235,478</td>
+      <td>14,205</td>
+      <td>6.03</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sql-server</td>
+      <td>247,642</td>
+      <td>233,561</td>
+      <td>14,081</td>
+      <td>6.03</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sql</td>
+      <td>468,836</td>
+      <td>443,312</td>
+      <td>25,524</td>
+      <td>5.76</td>
+    </tr>
+  </tbody>
+</table>
 
 This table gives us the overall trends of the industry.
 
@@ -133,23 +435,140 @@ This table gives us the overall trends of the industry.
 
 Another interesting segment is the group of tags with over 10k questions on Stackoverflow. We find the up and coming technologies of the past years that took a strong start and are still on the rise.
 
-|    | TagName      | Questions | Questions (06/2018) | Growth # | Growth % |
-|----|--------------|---------|-----------|---------|-------------|
-|  1 | kotlin       | 16,947  | 11,069    | 5,878   |       53.10 |
-|  2 | vue.js       | 26,395  | 18,041    | 8,354   |       46.31 |
-|  3 | vba          | 135,135 | 99,820    | 35,315  |       35.38 |
-|  4 | web          | 35,788  | 26,518    | 9,270   |       34.96 |
-|  5 | react-native | 42,213  | 32,064    | 10,149  |       31.65 |
-|  6 | reactjs      | 112,290 | 85,881    | 26,409  |       30.75 |
-|  7 | spring-boot  | 48,406  | 37,662    | 10,744  |       28.53 |
-|  8 | tensorflow   | 35,850  | 28,128    | 7,722   |       27.45 |
-|  9 | asp.net-core | 24,620  | 19,398    | 5,222   |       26.92 |
-| 10 | typescript   | 68,305  | 54,863    | 13,442  |       24.50 |
-| 11 | pandas       | 88,287  | 70,923    | 17,364  |       24.48 |
-| 12 | firebase     | 61,699  | 50,217    | 11,482  |       22.86 |
-| 13 | redux        | 16,588  | 13,527    | 3,061   |       22.63 |
-| 14 | docker       | 48,222  | 39,408    | 8,814   |       22.37 |
-| 15 | dataframe    | 41,810  | 34,330    | 7,480   |       21.79 |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+      <th>Questions (06/2018)</th>
+      <th>Growth #</th>
+      <th>Growth %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>kotlin</td>
+      <td>16,947</td>
+      <td>11,069</td>
+      <td>5,878</td>
+      <td>53.10</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>vue.js</td>
+      <td>26,395</td>
+      <td>18,041</td>
+      <td>8,354</td>
+      <td>46.31</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>vba</td>
+      <td>135,135</td>
+      <td>99,820</td>
+      <td>35,315</td>
+      <td>35.38</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>web</td>
+      <td>35,788</td>
+      <td>26,518</td>
+      <td>9,270</td>
+      <td>34.96</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>react-native</td>
+      <td>42,213</td>
+      <td>32,064</td>
+      <td>10,149</td>
+      <td>31.65</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>reactjs</td>
+      <td>112,290</td>
+      <td>85,881</td>
+      <td>26,409</td>
+      <td>30.75</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>spring-boot</td>
+      <td>48,406</td>
+      <td>37,662</td>
+      <td>10,744</td>
+      <td>28.53</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>tensorflow</td>
+      <td>35,850</td>
+      <td>28,128</td>
+      <td>7,722</td>
+      <td>27.45</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>asp.net-core</td>
+      <td>24,620</td>
+      <td>19,398</td>
+      <td>5,222</td>
+      <td>26.92</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>typescript</td>
+      <td>68,305</td>
+      <td>54,863</td>
+      <td>13,442</td>
+      <td>24.50</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>pandas</td>
+      <td>88,287</td>
+      <td>70,923</td>
+      <td>17,364</td>
+      <td>24.48</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>firebase</td>
+      <td>61,699</td>
+      <td>50,217</td>
+      <td>11,482</td>
+      <td>22.86</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>redux</td>
+      <td>16,588</td>
+      <td>13,527</td>
+      <td>3,061</td>
+      <td>22.63</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>docker</td>
+      <td>48,222</td>
+      <td>39,408</td>
+      <td>8,814</td>
+      <td>22.37</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>dataframe</td>
+      <td>41,810</td>
+      <td>34,330</td>
+      <td>7,480</td>
+      <td>21.79</td>
+    </tr>
+  </tbody>
+</table>
 
 **This is the list that shows you which skills you should develop right now in your company or in your own profile to stay competitive.**
 
@@ -164,23 +583,140 @@ Another interesting segment is the group of tags with over 10k questions on Stac
 
 Let's see what's happening to those tags that have over 1000 questions. These tags are gaining increasing visibility.
 
-|    | TagName                | Questions | Questions (06/2018) | Growth # | Growth % |
-|----|------------------------|---------|-----------|---------|-------------|
-|  1 | flutter                | 7,728   | 2,781     | 4,947   |      177.89 |
-|  2 | google-cloud-firestore | 6,392   | 3,354     | 3,038   |       90.58 |
-|  3 | product                | 3,603   | 1,902     | 1,701   |       89.43 |
-|  4 | jestjs                 | 4,047   | 2,146     | 1,901   |       88.58 |
-|  5 | pandas-groupby         | 2,255   | 1,326     | 929     |       70.06 |
-|  6 | discord                | 1,974   | 1,191     | 783     |       65.74 |
-|  7 | hyperledger-fabric     | 3,055   | 1,910     | 1,145   |       59.95 |
-|  8 | actions-on-google      | 1,721   | 1,083     | 638     |       58.91 |
-|  9 | hyperledger-composer   | 1,676   | 1,055     | 621     |       58.86 |
-| 10 | axios                  | 4,232   | 2,676     | 1,556   |       58.15 |
-| 11 | bootstrap-4            | 9,688   | 6,128     | 3,560   |       58.09 |
-| 12 | vuex                   | 2,147   | 1,375     | 772     |       56.15 |
-| 13 | hyperledger            | 2,350   | 1,525     | 825     |       54.10 |
-| 14 | google-cloud-functions | 4,517   | 2,969     | 1,548   |       52.14 |
-| 15 | asp.net-core-webapi    | 1,997   | 1,324     | 673     |       50.83 |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+      <th>Questions (06/2018)</th>
+      <th>Growth #</th>
+      <th>Growth %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>flutter</td>
+      <td>7,728</td>
+      <td>2,781</td>
+      <td>4,947</td>
+      <td>177.89</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>google-cloud-firestore</td>
+      <td>6,392</td>
+      <td>3,354</td>
+      <td>3,038</td>
+      <td>90.58</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>product</td>
+      <td>3,603</td>
+      <td>1,902</td>
+      <td>1,701</td>
+      <td>89.43</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>jestjs</td>
+      <td>4,047</td>
+      <td>2,146</td>
+      <td>1,901</td>
+      <td>88.58</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>pandas-groupby</td>
+      <td>2,255</td>
+      <td>1,326</td>
+      <td>929</td>
+      <td>70.06</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>discord</td>
+      <td>1,974</td>
+      <td>1,191</td>
+      <td>783</td>
+      <td>65.74</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>hyperledger-fabric</td>
+      <td>3,055</td>
+      <td>1,910</td>
+      <td>1,145</td>
+      <td>59.95</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>actions-on-google</td>
+      <td>1,721</td>
+      <td>1,083</td>
+      <td>638</td>
+      <td>58.91</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>hyperledger-composer</td>
+      <td>1,676</td>
+      <td>1,055</td>
+      <td>621</td>
+      <td>58.86</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>axios</td>
+      <td>4,232</td>
+      <td>2,676</td>
+      <td>1,556</td>
+      <td>58.15</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>bootstrap-4</td>
+      <td>9,688</td>
+      <td>6,128</td>
+      <td>3,560</td>
+      <td>58.09</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>vuex</td>
+      <td>2,147</td>
+      <td>1,375</td>
+      <td>772</td>
+      <td>56.15</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>hyperledger</td>
+      <td>2,350</td>
+      <td>1,525</td>
+      <td>825</td>
+      <td>54.10</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>google-cloud-functions</td>
+      <td>4,517</td>
+      <td>2,969</td>
+      <td>1,548</td>
+      <td>52.14</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>asp.net-core-webapi</td>
+      <td>1,997</td>
+      <td>1,324</td>
+      <td>673</td>
+      <td>50.83</td>
+    </tr>
+  </tbody>
+</table>
 
 **This list contains smaller libraries, frameworks that you should consider for your overall project toolkit.**
 
@@ -193,23 +729,140 @@ Let's see what's happening to those tags that have over 1000 questions. These ta
 
 Let's look at those tags that had a low number of questions (between 100 and 1000), these are typically new releases that show immense growth from day one.
 
-|    | TagName                         | Questions | Questions (06/2018) | Growth # | Growth % |
-|----|---------------------------------|---------|-----------|---------|-------------|
-|  1 | angular6                        | 5,231   |       436 | 4,795   |     1099.77 |
-|  2 | ubuntu-18.04                    | 622     |       107 | 515     |      481.31 |
-|  3 | webpack-4                       | 614     |       149 | 465     |      312.08 |
-|  4 | android-collapsingtoolbarlayout | 1,052   |       278 | 774     |      278.42 |
-|  5 | firebase-security-rules         | 543     |       168 | 375     |      223.21 |
-|  6 | nestjs                          | 323     |       101 | 222     |      219.80 |
-|  7 | aws-appsync                     | 336     |       109 | 227     |      208.26 |
-|  8 | cypress                         | 467     |       158 | 309     |      195.57 |
-|  9 | kubernetes-ingress              | 379     |       136 | 243     |      178.68 |
-| 10 | next.js                         | 432     |       164 | 268     |      163.41 |
-| 11 | laravel-5.6                     | 1,725   |       662 | 1,063   |      160.57 |
-| 12 | php-7.2                         | 364     |       142 | 222     |      156.34 |
-| 13 | postgresql-10                   | 296     |       117 | 179     |      152.99 |
-| 14 | java-10                         | 353     |       144 | 209     |      145.14 |
-| 15 | google-kubernetes-engine        | 691     |       283 | 408     |      144.17 |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questions</th>
+      <th>Questions (06/2018)</th>
+      <th>Growth #</th>
+      <th>Growth %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>angular6</td>
+      <td>5,231</td>
+      <td>436</td>
+      <td>4,795</td>
+      <td>1099.77</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>ubuntu-18.04</td>
+      <td>622</td>
+      <td>107</td>
+      <td>515</td>
+      <td>481.31</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>webpack-4</td>
+      <td>614</td>
+      <td>149</td>
+      <td>465</td>
+      <td>312.08</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>android-collapsingtoolbarlayout</td>
+      <td>1,052</td>
+      <td>278</td>
+      <td>774</td>
+      <td>278.42</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>firebase-security-rules</td>
+      <td>543</td>
+      <td>168</td>
+      <td>375</td>
+      <td>223.21</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>nestjs</td>
+      <td>323</td>
+      <td>101</td>
+      <td>222</td>
+      <td>219.80</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>aws-appsync</td>
+      <td>336</td>
+      <td>109</td>
+      <td>227</td>
+      <td>208.26</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>cypress</td>
+      <td>467</td>
+      <td>158</td>
+      <td>309</td>
+      <td>195.57</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>kubernetes-ingress</td>
+      <td>379</td>
+      <td>136</td>
+      <td>243</td>
+      <td>178.68</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>next.js</td>
+      <td>432</td>
+      <td>164</td>
+      <td>268</td>
+      <td>163.41</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>laravel-5.6</td>
+      <td>1,725</td>
+      <td>662</td>
+      <td>1,063</td>
+      <td>160.57</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>php-7.2</td>
+      <td>364</td>
+      <td>142</td>
+      <td>222</td>
+      <td>156.34</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>postgresql-10</td>
+      <td>296</td>
+      <td>117</td>
+      <td>179</td>
+      <td>152.99</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>java-10</td>
+      <td>353</td>
+      <td>144</td>
+      <td>209</td>
+      <td>145.14</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>google-kubernetes-engine</td>
+      <td>691</td>
+      <td>283</td>
+      <td>408</td>
+      <td>144.17</td>
+    </tr>
+  </tbody>
+</table>
 
 **Web application development** is again heavily present with Angular, Webpack, [Cypress](https://www.cypress.io/){:target="_blank"}, an end-to-end Javascript testing framework, [nest](https://nestjs.com/){:target="_blank"} and [Next.js](https://nextjs.org/){:target="_blank"}, a production grade React framework.
 
@@ -219,23 +872,92 @@ Most tags in this category are related to a specific release of a given technolo
 
 Let's look at the tags that are completely new and growing in the December 2018 Stackoverflow data dump.
 
-|    | TagName               |   Questons |
-|----|-----------------------|---------|
-|  1 | xcode10               |     701 |
-|  2 | angular7              |     502 |
-|  3 | ios12                 |     472 |
-|  4 | laravel-5.7           |     402 |
-|  5 | azure-devops-rest-api |     377 |
-|  6 | macos-mojave          |     328 |
-|  7 | ef-core-2.1           |     310 |
-|  8 | swift4.2              |     245 |
-|  9 | vue-cli-3             |     174 |
-| 10 | angular-material-6    |     167 |
-| 11 | raku                  |     133 |
-| 12 | azure-artifacts       |     125 |
-| 13 | nuxt                  |     123 |
-| 14 | laravel-nova          |     123 |
-| 15 | ibm-rational          |     120 |
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>&nbsp;</th>
+      <th>TagName</th>
+      <th>Questons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>xcode10</td>
+      <td>701</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>angular7</td>
+      <td>502</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>ios12</td>
+      <td>472</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>laravel-5.7</td>
+      <td>402</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>azure-devops-rest-api</td>
+      <td>377</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>macos-mojave</td>
+      <td>328</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>ef-core-2.1</td>
+      <td>310</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>swift4.2</td>
+      <td>245</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>vue-cli-3</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>angular-material-6</td>
+      <td>167</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>raku</td>
+      <td>133</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>azure-artifacts</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>nuxt</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>laravel-nova</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>ibm-rational</td>
+      <td>120</td>
+    </tr>
+  </tbody>
+</table>
 
 This list re-confirms that **iOS mobile development is a top priority with Xcode, iOS 12 and Swift 4.2, web application frameworks keep evolving with Nuxt and Vue cli, Laravel 5.7 and Angular Material.**
 

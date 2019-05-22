@@ -72,9 +72,8 @@ What makes this report unique?
 
 According to Stackoverflow data, these are the world's leading programming languages based on the total number of questions created since 2008.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -176,9 +175,8 @@ Stackoverflow questions are usually tagged with multiple tags. This helps users 
 
 **Let's look at the most common tags that are used together with the `python` tag in Stackoverflow questions.**
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -350,9 +348,8 @@ Let's see what these numbers tell you:
 
 The above table shows the number of questions created by users. *We have the data to look at the number of times questions with certain tags are looked at by users on Stackoverflow in the table below.*
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -598,9 +595,8 @@ We examine Python segments based on the number of questions a tag has:
 
 These are the heavy tags that have been around for long enough to have a stable user base and mature solutions. Users look at both old and new questions to find out how to solve daily challenges.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -719,9 +715,8 @@ These are the heavy tags that have been around for long enough to have a stable 
 
 These tags are also established with a strong base, although somewhat smaller than the ones in the previous chapter.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -810,9 +805,8 @@ These tags are also established with a strong base, although somewhat smaller th
 
 These tags are from smaller niche segments. 
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -930,9 +924,8 @@ These tags are from smaller niche segments.
 
 These tags appear out of thin air and may or may not become a rising star of the next period.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>

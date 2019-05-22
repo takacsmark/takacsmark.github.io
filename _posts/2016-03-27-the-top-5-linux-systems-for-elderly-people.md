@@ -61,17 +61,62 @@ My father-in-law, for example takes note of every step in a little green noteboo
 
 We created a little table that sums up where we see the main differences between Linux and Windows 10. Please note that the below table is based on LinuxMint, that was our final choice. I tell you how we came to this decision later in this post.
 
-|Feature|LinuxMint|Windows 10|
-|---|---|---|
-|Clarity|Clear, descriptive application menu, offering obvious options to do certain tasks.|Start menu defaults to search behavior, thus assuming you know what you're looking for. Rich app selection is confusing to seniors.|
-|Control|Starts in a matter of seconds, immediately ready to use, not intrusive. No extra questions asked.| Updates take control from users during startup and shutdown. Users must wait. Windows floods users with questions that senior people don't understand.|
-|Hardware|Runs well on older machines. Auto detects and installs popular hardware. You have internet access during Linux setup, for example. (had to replace a webcam, though)|Designed for users who keep up with gadget trends. Often popular hardware requires drivers. I installed Windows on the same hardware as Linux and had to download drivers on another machine and transfer via USB.|
-|Security| Root password protects critical areas. Viruses are rare.|No password required for system changes, which may result in unwanted changes. (In plain English old people may screw up their systems accidentally.) Virus and malware protection requires extra software and effort.|
-|Features|All features described in the needs chapter are available.|Surprisingly Windows 10 does not come with all features described in the needs chapter. Edge does not support plugins (as of today), so no Java e-banking and no flash for you.|
-|Office|Libre office comes with the system, you're immediately ready to go after the system is installed.| You can install Libre office for free, or buy Microsoft Office.|
-|Maintenance|No issues in two months.| 2-3 phone calls a week. Father-in-law uses Windows 7 instead, booting from an old drive.|
-|Mission|From the webstie - "The purpose of Linux Mint is to produce a modern, elegant and comfortable operating system which is both powerful and easy to use."| From the website - "At Microsoft, our mission is to enable people and businesses throughout the world to realize their full potential." Windows seems to be the more dynamic, high speed player. I think they are better suited for businesses and younger generations.|
-|Pricing|This stuff is completely free and will remain free.|The upgrade is free. Members of our family are concerned about future pricing that is today unclear.|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Feature</th>
+<th>LinuxMint</th>
+<th>Windows 10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clarity</td>
+<td>Clear, descriptive application menu, offering obvious options to do certain tasks.</td>
+<td>Start menu defaults to search behavior, thus assuming you know what you’re looking for. Rich app selection is confusing to seniors.</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Starts in a matter of seconds, immediately ready to use, not intrusive. No extra questions asked.</td>
+<td>Updates take control from users during startup and shutdown. Users must wait. Windows floods users with questions that senior people don’t understand.</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>Runs well on older machines. Auto detects and installs popular hardware. You have internet access during Linux setup, for example. (had to replace a webcam, though)</td>
+<td>Designed for users who keep up with gadget trends. Often popular hardware requires drivers. I installed Windows on the same hardware as Linux and had to download drivers on another machine and transfer via USB.</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Root password protects critical areas. Viruses are rare.</td>
+<td>No password required for system changes, which may result in unwanted changes. (In plain English old people may screw up their systems accidentally.) Virus and malware protection requires extra software and effort.</td>
+</tr>
+<tr>
+<td>Features</td>
+<td>All features described in the needs chapter are available.</td>
+<td>Surprisingly Windows 10 does not come with all features described in the needs chapter. Edge does not support plugins (as of today), so no Java e-banking and no flash for you.</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Libre office comes with the system, you’re immediately ready to go after the system is installed.</td>
+<td>You can install Libre office for free, or buy Microsoft Office.</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>No issues in two months.</td>
+<td>2-3 phone calls a week. Father-in-law uses Windows 7 instead, booting from an old drive.</td>
+</tr>
+<tr>
+<td>Mission</td>
+<td>From the webstie - “The purpose of Linux Mint is to produce a modern, elegant and comfortable operating system which is both powerful and easy to use.”</td>
+<td>From the website - “At Microsoft, our mission is to enable people and businesses throughout the world to realize their full potential.” Windows seems to be the more dynamic, high speed player. I think they are better suited for businesses and younger generations.</td>
+</tr>
+<tr>
+<td>Pricing</td>
+<td>This stuff is completely free and will remain free.</td>
+<td>The upgrade is free. Members of our family are concerned about future pricing that is today unclear.</td>
+</tr>
+</tbody>
+</table>
 
 ## What are Linux distributions?
 
@@ -132,13 +177,36 @@ You need to complete some set-up steps manually (internet connection for example
 
 Puppy gave a messy impression, using the system was most of the time confusing and not helpful. We decided to drop it, there are better options on our list.
 
-|Software|Availability|
-|---|---|
-|Browser|Firefox and Chrome|
-|E-mail|Not included, must install|
-|File management|Home folder is full of technical stuff, no clear place for pictures, videos and music|
-|Media players|Included|
-|Office|Libre Office|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Software</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>Firefox and Chrome</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Not included, must install</td>
+</tr>
+<tr>
+<td>File management</td>
+<td>Home folder is full of technical stuff, no clear place for pictures, videos and music</td>
+</tr>
+<tr>
+<td>Media players</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Libre Office</td>
+</tr>
+</tbody>
+</table>
 
 ### [Debian](https://www.debian.org/){:target="_blank"}
 
@@ -148,13 +216,36 @@ Debian's most appealing pros are its maturity and stability. We will give you se
 
 But first let's see the software table:
 
-|Software|Availability|
-|---|---|
-|Browser|Iceweasel (based on Firefox)|
-|E-mail|Icedove (based on Thunderbird)|
-|File management|Home folder is clean with picture, music and video shortcuts|
-|Media players|Included|
-|Office|Libre Office|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Software</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>Iceweasel (based on Firefox)</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Icedove (based on Thunderbird)</td>
+</tr>
+<tr>
+<td>File management</td>
+<td>Home folder is clean with picture, music and video shortcuts</td>
+</tr>
+<tr>
+<td>Media players</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Libre Office</td>
+</tr>
+</tbody>
+</table>
 
 #### Debian with Gnome 3
 
@@ -213,13 +304,36 @@ The last point is not necessarily a plus, because users need to learn the ways o
 
 I think Ubuntu would be a great option for easy going, flexible seniors.
 
-|Software|Availability|
-|---|---|
-|Browser|Firefox|
-|E-mail|Thunderbird|
-|File management|Home folder is clean with picture, music and video shortcuts|
-|Media players|Included|
-|Office|Libre Office|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Software</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Thunderbird</td>
+</tr>
+<tr>
+<td>File management</td>
+<td>Home folder is clean with picture, music and video shortcuts</td>
+</tr>
+<tr>
+<td>Media players</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Libre Office</td>
+</tr>
+</tbody>
+</table>
 
 ### [Lubuntu](https://lubuntu.net/){:target="_blank"}
 ![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png){:.img-fluid}
@@ -231,13 +345,36 @@ It comes with the LXDE desktop, that we have seen also in the Debian chapter abo
 
 Due to it's XP like appearance and low hardware requirements it's a great option for senior members of the family.
 
-|Software|Availability|
-|---|---|
-|Browser|Firefox|
-|E-mail|Must install yourself.|
-|File management|Home folder is clean with picture, music and video shortcuts|
-|Media players|Basic included|
-|Office|Basic software, installing Libre Office is recommended.|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Software</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Must install yourself.</td>
+</tr>
+<tr>
+<td>File management</td>
+<td>Home folder is clean with picture, music and video shortcuts</td>
+</tr>
+<tr>
+<td>Media players</td>
+<td>Basic included</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Basic software, installing Libre Office is recommended.</td>
+</tr>
+</tbody>
+</table>
 
 ### [LinuxMint](https://linuxmint.com/){:target="_blank"}
 ![LinuxMint screenshot](/assets/images/in-content/LinuxMint-screenshot.png){:.img-fluid}
@@ -250,13 +387,36 @@ It's true that the desktop environment has some flashy elements, so it's not run
 
 LinuxMint has user friendly description of every application at the bottom of the application menu. This will help users to find the right software for every task.
 
-|Software|Availability|
-|---|---|
-|Browser|Firefox|
-|E-mail|Thunderbird|
-|File management|Home folder is clean with picture, music and video shortcuts|
-|Media players|Included|
-|Office|Libre Office|
+<table class="table table-striped">
+<thead class="thead-dark">
+<tr>
+<th>Software</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Thunderbird</td>
+</tr>
+<tr>
+<td>File management</td>
+<td>Home folder is clean with picture, music and video shortcuts</td>
+</tr>
+<tr>
+<td>Media players</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Office</td>
+<td>Libre Office</td>
+</tr>
+</tbody>
+</table>
 
 ## Wrap-up
 

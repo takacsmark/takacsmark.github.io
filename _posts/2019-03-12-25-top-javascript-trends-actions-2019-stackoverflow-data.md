@@ -93,9 +93,8 @@ Let's get started!
 
 The first table shows us the number of questions created for the top tags on Stackoverflow since its beginnings in 2008.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -191,9 +190,8 @@ You may look at the figure and say that Javascript's dominance is over, but real
 
 The next table shows the growth percentage in the number of new questions created on Stackoverflow for the above programming languages and platforms from June 2018 to December 2018.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -286,9 +284,8 @@ Most questions have multiple tags. We use these tags to find the most common tag
 
 The table shows the total **number of new questions created**, thus you can see the **all time top tags used together with the `javascript` tag** below.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -548,9 +545,8 @@ We examine Javascript segments based on the number of questions a tag has:
 
 These are the heavy tags that have been around for long enough to have a stable user base and mature solutions. Users look at both old and new questions to find out how to solve daily challenges.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -666,9 +662,8 @@ These are the heavy tags that have been around for long enough to have a stable 
 
 These tags are also established with a strong base, although somewhat smaller than the ones in the previous chapter.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -786,9 +781,8 @@ These tags are also established with a strong base, although somewhat smaller th
 
 These tags are from smaller niche segments. 
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -915,9 +909,8 @@ These tags are from smaller niche segments.
 
 These tags appeared recently and may or may not become a rising star of the next period.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>

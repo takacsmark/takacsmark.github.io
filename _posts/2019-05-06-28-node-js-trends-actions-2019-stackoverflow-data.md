@@ -81,9 +81,8 @@ We found that Angular, React and Vue are the top growth segments of Javascript. 
 
 The table below shows the top Stackoverflow tags used next to Node.js on Stackoverflow questions.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -328,9 +327,8 @@ We look at the details of the following segments:
 
 These are the heavy tags that have been around for long enough to have a stable user base and mature solutions. Users look at both old and new questions to find out how to solve daily challenges.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -448,9 +446,8 @@ These are the heavy tags that have been around for long enough to have a stable 
 
 These tags are also established with a strong base, although somewhat smaller than the ones in the previous chapter.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -571,9 +568,8 @@ These tags are also established with a strong base, although somewhat smaller th
 
 These tags are from smaller niche segments. 
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
@@ -735,9 +731,8 @@ These tags are from smaller niche segments.
 
 These tags appeared recently and may or may not become a rising star of the next period.
 
-<table>
-
-<thead>
+<table class="table table-striped">
+<thead class="thead-dark">
 <tr>
 <th>#</th>
 <th>Tag name</th>
