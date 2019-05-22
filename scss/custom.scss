@@ -42,6 +42,13 @@
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
+//override container width for medium and down
+.container {
+    @include media-breakpoint-down(lg) {
+	max-width: 100%;
+    }
+}
+
 // Navbar styling 
 .navbar-light .navbar-toggler {
     border-color: rgba(0,0,0,0);
@@ -51,16 +58,53 @@
 #greeting-box {
 
     img {
-	width: 200%;
-	margin-left: -100%;
+        width: 200%;
+        margin-left: -100%;
     }
 
     .card-img-overlay {
-	max-width: 55%;
+        max-width: 55%;
 
-	h1 {
-	    margin-top: 35%;
-	    margin-bottom: 35%;
+        h1 {
+            margin-top: 35%;
+            margin-bottom: 35%;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+	
+        img {
+            width: 100%;
+            margin-left: inherit;
+        }
+
+        .card-img-overlay {
+
+             h1 {
+                 margin-top: 20%;
+		 margin-bottom: 15%;
+             }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+	
+        .card-img-overlay {
+
+             h1 {
+                 margin-top: 20%;
+		 margin-bottom: 15%;
+             }
+        }
+    }
+
+
+}
+
+.post-listing-item {
+    @include media-breakpoint-up(sm) {
+	h2 {
+	    font-size: 1.8rem;
 	}
     }
 }
@@ -74,5 +118,15 @@ footer {
 	background-color: rgb(10, 10, 10);
 	color: rgb(254, 254, 254);
 	font-size: .75rem;
+    }
+
+    img {
+        width: 75%;
+    }
+    
+    @include media-breakpoint-up(lg) {
+	img {
+	    width: 50%;
+	}
     }
 }

@@ -6,11 +6,11 @@ layout: default
   <div class="row">
     <div class="col">
 
-      <div id="greeting-box" class="card bg-dark text-white border-white rounded-0 mb-5">
+      <div class="card bg-dark text-white border-white rounded-0 overflow-hidden mb-5 mt-sm-n4" id="greeting-box">
 	<img src="/assets/images/site-greeting/mark-blue-shirt-wide.jpg" class="card-img rounded-0" alt="...">
-	<div class="card-img-overlay">
+	<div class="card-img-overlay pl-sm-5">
 	  <h1 class="card-title">Learn Docker with Mark</h1>
-	  <a href="/get-started-with-docker-in-your-projects-through-examples" class="btn btn-light">Get the Book</a>
+	  <a href="/get-started-with-docker-in-your-projects-through-examples" class="btn btn-light stretched-link">Get the Book</a>
 	</div>
       </div>
 
@@ -38,20 +38,18 @@ layout: default
   <div class="row">
 
     {% for post in site.posts %}
-    <div class="col-12">
-      <a href="{{ post.url | prepend: site.baseurl }}">
+    <div class="post-listing-item col-12 col-sm-6 col-lg-3">
 
 	<div class="card border-white">
-	  {% assign pl = post.thumbnail | size | minus: 4 %}
-	  <img class="card-img-top rounded-0" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
-	  <div class="card-body">
-	    <h2 class="card-title">{{ post.title }}</h2>
-	    <p class="card-text">{{ post.description }}</p>
-	    <p class="card-text"><small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small></p>
-	  </div>
+	    {% assign pl = post.thumbnail | size | minus: 4 %}
+	    <img class="card-img-top rounded-0" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
+	    <div class="card-body p-3">
+	        <h2 class="card-title">{{ post.title }}</h2>
+	        <p class="card-text">{{ post.description }}</p>
+	        <p class="card-text"><small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small></p>
+                <a href="{{ post.url | prepend: site.baseurl }}" class="card-link stretched-link"></a>
+	    </div>
 	</div>
-      </a>
-      <hr>
     </div>
     {% endfor %}
 
