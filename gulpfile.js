@@ -136,7 +136,7 @@ gulp.task('img:generatesizes', () => {
         })
     }
 
-    readFileList.then((files) => {
+    return readFileList.then((files) => {
         let fileList = []
 
         for(let file of files) {

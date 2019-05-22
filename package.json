@@ -29,8 +29,6 @@
     "dir-compare": "^1.7.2",
     "eslint": "^5.16.0",
     "glob": "^7.1.4",
-    "gulp": "^4.0.2",
-    "gulp-debug": "^4.0.0",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^8.0.0",
@@ -39,5 +37,7 @@
     "gulp-tap": "^1.0.1",
     "run-sequence": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
