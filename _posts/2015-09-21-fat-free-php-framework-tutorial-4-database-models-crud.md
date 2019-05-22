@@ -31,7 +31,7 @@ Let's open up our database admin tool, phpMyAdmin or MySQLWorkbench and connect 
 
 Create a new database, i.e. a new database schema as shown in the screenshot.
 
-![MySQLWorkbench create db schema]({{ site.url }}/assets/images/in-content/MySQL-Workbench-create-database.jpg)
+![MySQLWorkbench create db schema]({{ site.url }}/assets/images/in-content/MySQL-Workbench-create-database.jpg){:.img-fluid}
 
 Let's add a new admin user to the new database, please look at the video to see how to do this.
 
@@ -39,11 +39,11 @@ Let's add a new admin user to the new database, please look at the video to see 
 
 Click the db schema indicator in the left pane and right click Tables. Let's create a new table with the create table menu. (see video for details). Let's just create a table called 'messages', where we store messages we want to display on our website.
 
-![MySQLWorkbench create table]({{ site.url }}/assets/images/in-content/MySQL_Workbench-create-table.jpg)
+![MySQLWorkbench create table]({{ site.url }}/assets/images/in-content/MySQL_Workbench-create-table.jpg){:.img-fluid}
 
 Next, we add a new record to this table. You can do this from the Query window in MySQLWorkbench by directly editing query results. (see video for details).
 
-![MySQLWorkbench edit table data]({{ site.url }}/assets/images/in-content/MySQL_Workbench-edit-table-data.jpg)
+![MySQLWorkbench edit table data]({{ site.url }}/assets/images/in-content/MySQL_Workbench-edit-table-data.jpg){:.img-fluid}
 
 ## Connecting Fat-Free to the database
 

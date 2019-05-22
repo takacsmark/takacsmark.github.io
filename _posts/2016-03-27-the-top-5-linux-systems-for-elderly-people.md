@@ -122,7 +122,7 @@ Let's review and evaluate the selected Linux distributions for our needs.
 
 ### [Puppy Linux](http://puppylinux.org){:target="_blank"}
 
-![Puppy linux screenshot 2016](/assets/images/in-content/puppy-linux-2016.png)
+![Puppy linux screenshot 2016](/assets/images/in-content/puppy-linux-2016.png){:.img-fluid}
 
 The [Puppy site](http://puppylinux.org){:target="_blank"} starts with a testimonial that says that Puppy Linux is the best and fastest OS in the world. Unluckily, the quote comes from 2011.
 
@@ -158,7 +158,7 @@ But first let's see the software table:
 
 #### Debian with Gnome 3
 
-![Debian 8 with Gnome 3 desktop](/assets/images/in-content/Debian8-gnome3-launch-menu.png){:target="_blank"}
+![Debian 8 with Gnome 3 desktop](/assets/images/in-content/Debian8-gnome3-launch-menu.png){:.img-fluid}
 
 Gnome 3 is a modern day desktop environment trying to adopt the Launchpad idea from Mac and Windows. Application dock is on the left side of the screen, there is no formal menu, there is a launch screen with search bar instead.
 
@@ -168,7 +168,7 @@ Due to it's flashy appearance, you'd better run Gnome 3 on newer, powerful machi
 
 #### Debian with Gnome classic
 
-![Debian8 with Gnome classic desktop](/assets/images/in-content/Debian8-gnome-classic.png)
+![Debian8 with Gnome classic desktop](/assets/images/in-content/Debian8-gnome-classic.png){:.img-fluid}
 
 This is the classic version of Gnome. It does not have the Launchpad, it has a traditional application menu instead. Based on my experience this option is better for old users.
 
@@ -176,26 +176,26 @@ The menu is located on the top of the screen, it requires configuration to move 
 
 #### Debian with KDE
 
-![Debian 8 with KDE desktop](/assets/images/in-content/Debian8-KDE.png)
+![Debian 8 with KDE desktop](/assets/images/in-content/Debian8-KDE.png){:.img-fluid}
 
 KDE is more XP like than Gnome. The "start" menu may be a bit confusing though, because it's not a laid out tree, so it's hard to follow where we are.
 The file manager is different here, it does not have the media folder shortcuts.
 
 #### Debian with Mate
 
-![Debian 8 with Mate](/assets/images/in-content/Debian8-Mate.png)
+![Debian 8 with Mate](/assets/images/in-content/Debian8-Mate.png){:.img-fluid}
 
 Mate is clean and simple, it's at level with Gnome classic. The file manager also has the media folder shortcuts. Seems to be a great option.
 
 #### Debian with Xfce
 
-![Debian8 with Xfce desktop](/assets/images/in-content/Debian8-default-Xfce-desktop.png)
+![Debian8 with Xfce desktop](/assets/images/in-content/Debian8-default-Xfce-desktop.png){:.img-fluid}
 
 Xfce is a simple, light desktop. The menu is logical, the bottom dock is great for tech savvy users, but may be confusing for the elderly. Also the file manager window lacks the media folders. It requires some configuration to add them.
 
 #### Debian with LXDE
 
-![Debian8 with LXDE](/assets/images/in-content/Debian8-LXDE.png)
+![Debian8 with LXDE](/assets/images/in-content/Debian8-LXDE.png){:.img-fluid}
 
 LXDE is another light desktop option. My opinion is that this is the one that the most reminds me of Windows XP, thus giving the best transition experience.
 
@@ -203,7 +203,7 @@ The file manager also looks like the one on Windows, even the colors are very si
 
 ### [Ubuntu](https://www.ubuntu.com/){:target="_blank"}
 
-![Ubuntu screenshot](/assets/images/in-content/Ubuntu-screenshot.png)
+![Ubuntu screenshot](/assets/images/in-content/Ubuntu-screenshot.png){:.img-fluid}
 
 Ubuntu is a super successful Linux flavor, it's popular with senior people, business users, creative users, tech users, almost everyone.
 
@@ -222,7 +222,7 @@ I think Ubuntu would be a great option for easy going, flexible seniors.
 |Office|Libre Office|
 
 ### [Lubuntu](https://lubuntu.net/){:target="_blank"}
-![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png)
+![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png){:.img-fluid}
 
 
 Lubuntu is a lightweight port of Ubuntu. Its main purpose is to run on less powerful hardware and it provides more simplicity than its big brother.
@@ -240,7 +240,7 @@ Due to it's XP like appearance and low hardware requirements it's a great option
 |Office|Basic software, installing Libre Office is recommended.|
 
 ### [LinuxMint](https://linuxmint.com/){:target="_blank"}
-![LinuxMint screenshot](/assets/images/in-content/LinuxMint-screenshot.png)
+![LinuxMint screenshot](/assets/images/in-content/LinuxMint-screenshot.png){:.img-fluid}
 
 I saved the best for last. Our entire family agreed that this is the one we prefer.
 The main reason behind our preference is that Linux Mint is purposefully designed to be the easiest option to move from Windows to Linux.

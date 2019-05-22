@@ -47,7 +47,7 @@ So in my design planning workflow a front-end server will manifest as one Docker
 
 One container will feature one main process, not more. Some containers have multiple running processes on the technical level, like the Nginx image, but these processes all belong to the Nginx server, so they belong to one logical service. The image shows the master and worker processes running in an Nginx container.
 
-![Nginx container processes in Vagrant ubuntu bionic]({{ site.url }}/assets/images/in-content/Nginx_containers_ubuntu_vagrant.png)
+![Nginx container processes in Vagrant ubuntu bionic]({{ site.url }}/assets/images/in-content/Nginx_containers_ubuntu_vagrant.png){:.img-fluid}
 
 So, I like to think of images and containers as application services and I think of Docker as a great tool to decompose my application stacks into layers, services and modules.
 
@@ -83,7 +83,7 @@ _From the user perspective a container on your Linux machine will look like a se
 
 The below figure shows the isolation scenario with Docker containers (on the left) and virtual machines (on the right):
 
-![Docker containers vs virtual machines]({{ site.url }}/assets/images/in-content/container_vs_vm.png)
+![Docker containers vs virtual machines]({{ site.url }}/assets/images/in-content/container_vs_vm.png){:.img-fluid}
 
 Docker started out as Linux based operating system level virtualization technology, but nowadays Windows based containers are also supported as we’ll see later in this post.
 

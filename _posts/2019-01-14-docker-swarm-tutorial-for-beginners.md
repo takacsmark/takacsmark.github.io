@@ -161,7 +161,7 @@ Please also note the first line of the command output above that says `Ignoring 
 
 Let's see the results of our work first, please visit [http://localhost](http://localhost){:target="_blank"}; you should see a message like this one: `Hello from Swarm 63daead91754`.
 
-![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png)
+![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png){:.img-fluid}
 
 ## Explore the stack
 
@@ -229,9 +229,9 @@ Docker started four tasks automatically for our scaled service. Docker displays 
 
 If you go to [http://localhost](http://localhost){:target="_blank"} and refresh the page a few times, you'll get alternating host names, because your request is served from different replicated containers. (Make sure to clear the browser cache during refresh to see the results, you can easily do this with CMD+SHIFT+R on Mac or CTRL+F5 on Windows and Linux, this will work with most browsers.)
 
-![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png)
+![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png){:.img-fluid}
 
-![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-2.png)
+![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-2.png){:.img-fluid}
 
 ## Set up a cluster with multiple hosts
 
@@ -332,7 +332,7 @@ myvm2   -        virtualbox   Running   tcp://192.168.99.101:2376           v18.
 
 You can use the IP address of any of the machines to access the application. Let's use the address of `myvm1` in the browser.
 
-![Docker Swarm Node app running in VM](/assets/images/in-content/docker-swarm-vm-1.png)
+![Docker Swarm Node app running in VM](/assets/images/in-content/docker-swarm-vm-1.png){:.img-fluid}
 
 Why not load the cluster with a few replicas and check out the whole thing in a nice visual representation?
 
@@ -352,7 +352,7 @@ dockersamples/visualizer
 
 We started a container from the `dockersamples/visualizer` image, we gave it a constraint to run on a manager node and made it available on port 8080. Now if you visit port 8080 on any VM in the browser you'll get a visual webpage like the one below.
 
-![Docker Swarm VM visualizer](/assets/images/in-content/docker-swarm-vm-visualizer.png)
+![Docker Swarm VM visualizer](/assets/images/in-content/docker-swarm-vm-visualizer.png){:.img-fluid}
 
 You can clearly see on the figure that `myvm1` is the manger node in the cluster, `myvm2` is the worker and both nodes have containers scheduled on them. The visualizer is running on the manager node, because we defined a constraint to run on a node that has a manager node. (This constraint was needed by the way, because the visualizer can collect the Swarm info on a manager node only.)
 
@@ -616,7 +616,7 @@ We have 6 replicas of our Node application running and one replica of visualizer
 
 Let's see it in visualizer.
 
-![Docker Swarm Node application visualizer scaled to 6](/assets/images/in-content/docker-swarm-visualizer-node-2.png)
+![Docker Swarm Node application visualizer scaled to 6](/assets/images/in-content/docker-swarm-visualizer-node-2.png){:.img-fluid}
 
 Docker has various options for deployment configuration, please refer to the [Compose file reference](https://docs.docker.com/compose/compose-file/){:target="_blank"} to create the right configuration for your project.
 

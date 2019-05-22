@@ -19,8 +19,8 @@ I guess people have different reasons for growing cactus from seeds. Mine was a 
 I have a cactus that got injured when it was young, you can tell by the large brown spot on its body. I love this cactus a lot, because it is one of my first ones and it brings white flowers and little red fruits every year.
 
 
-![Damaged cactus]({{ site.url }}/assets/images/in-content/damaged-cactus.jpg)
-![Junior cactus]({{ site.url }}/assets/images/in-content/junior-cactus.jpg) 
+![Damaged cactus]({{ site.url }}/assets/images/in-content/damaged-cactus.jpg){:.img-fluid}
+![Junior cactus]({{ site.url }}/assets/images/in-content/junior-cactus.jpg){:.img-fluid} 
 
  							 						
 So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf){:target="_blank"}.
@@ -51,8 +51,8 @@ My wife was so nice to give me one of her very valuable plastic boxes that are p
 
 ## So now the plastic box vs. the Petri dish
 
-![Cactus greenhouse in plastic box]({{ site.url }}/assets/images/in-content/cactus-greenhouse-plastic-box.jpg) 
-![Petri dish]({{ site.url }}/assets/images/in-content/petri-dish.jpg)  					 
+![Cactus greenhouse in plastic box]({{ site.url }}/assets/images/in-content/cactus-greenhouse-plastic-box.jpg){:.img-fluid} 
+![Petri dish]({{ site.url }}/assets/images/in-content/petri-dish.jpg){:.img-fluid}  					 
 I poured water into the plastic box so that it covered the entire surface and reached up to 1-2 millimeters above the bottom of the pots. I closed the box and put the desk lamp back on.
 
 This happened sometime in November. My cactus seeds had a long way to go, but I was relaxed to see the moisture on the walls of the box all the time. Same with the Petri dish, so I left things alone and waited.
@@ -63,7 +63,7 @@ It happened unexpectedly on a February morning. I started growing some early pla
 
 Then I looked over to the plastic box and could not really see a thing because of the moisture. I don't know why, but I took a closer look and saw these little guys.
 
-![Cactus seedlings in plastic box greenhouse]({{ site.url }}/assets/images/in-content/cactus-seedlings-in-box.jpg) 
+![Cactus seedlings in plastic box greenhouse]({{ site.url }}/assets/images/in-content/cactus-seedlings-in-box.jpg){:.img-fluid} 
 
 The miracle has happened and I knew I have come to the point that was not covered in the Youtube video.
 
@@ -85,7 +85,7 @@ Now I will be more careful reading the signs, and will consult my wife before mo
 
 Here is the photo of the little guys today.
 
-![Cactus seedlings]({{ site.url }}/assets/images/in-content/cactus-seedlings.jpg)
+![Cactus seedlings]({{ site.url }}/assets/images/in-content/cactus-seedlings.jpg){:.img-fluid}
  
 
  

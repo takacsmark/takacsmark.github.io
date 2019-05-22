@@ -8,4 +8,4 @@ We use cookies to analyze our traffic. These cookies collect information that is
 
 <input id="consent_performance" type="checkbox" /><label for="consent_performance">Performance Cookies</label>
 
-<button type="button" class="button" id="consent_save">Save Settings</button>
+<button type="button" class="btn btn-primary" id="consent_save">Save Settings</button>

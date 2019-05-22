@@ -261,7 +261,7 @@ Let's look at the trends in all of the above domains.
 
 General Javascript trends based on the number of questions created per month as the percentage of all Javascript questions.
 
-![img]({{ site.url }}/assets/images/in-content/njs-js-base-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-js-base-so-questions-trends-2018.png){:.img-fluid}{:.img-fluid}
 
 As you can see in the picture, the number of Node.js questions is constantly growing, Typescript is growing at the same rate from the base Javascript toolkit.
 
@@ -274,7 +274,7 @@ If you have your preferred technologies, you'd better review your preferences re
 
 Let's see some of the key server side components right here.
 
-![img]({{ site.url }}/assets/images/in-content/njs-server-side-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-server-side-so-questions-trends-2018.png){:.img-fluid}
 
 **Express** is the clear winner on the server side. Sails made it to the top 25 tags list above, but its usage shows decline.
 
@@ -287,7 +287,7 @@ The figure shows the number of new monthly questions as a percentage of total qu
 
 The Firebase real-time database and Google Cloud Firestore are the other winners of the recent years.
 
-![img]({{ site.url }}/assets/images/in-content/njs-db-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-db-so-questions-per-total-2018.png){:.img-fluid}
 
 
 ### Cloud services
@@ -296,18 +296,18 @@ The next figure shows new monthly questions created for popular cloud solutions 
 
 For now, let's note how Firebase is outperforming other players, and also note that the entire cloud ecosystem is in a stable growth phase.
 
-![img]({{ site.url }}/assets/images/in-content/njs-devops-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-devops-so-questions-per-total-2018.png){:.img-fluid}
 
 
 ### Web frameworks
 
 I have already mentioned how Angular and React dominate the Javascript trends today. Let's see their growth numbers compared to the number of new Node.js questions a month.
 
-![img]({{ site.url }}/assets/images/in-content/njs-web-frameworks-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-web-frameworks-so-questions-trends-2018.png){:.img-fluid}
 
 I also added a separate figure for less prominent frameworks; namely Nest, Next and Nuxt.
 
-![img]({{ site.url }}/assets/images/in-content/njs-web-frameworks-1-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/njs-web-frameworks-1-so-questions-trends-2018.png){:.img-fluid}
 
 
 ## Growth segments of the Javascript ecosystem

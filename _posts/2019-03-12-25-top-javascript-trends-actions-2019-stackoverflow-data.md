@@ -179,7 +179,7 @@ Javascript's position may look stable now, you may think that building front-end
 
 **If you look at the number of new questions created as a percentage of all questions in the next graph, you see a different picture though.**
 
-![img]({{ site.url }}/assets/images/in-content/prog-lang-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/prog-lang-so-questions-per-total-2018.png){:.img-fluid}
 
 There is one technology whose significance is drastically increasing while all other top tags go down. Even Javascript seems to be in a mild decline. **Python, denoted by the brown line, however is shooting for the stars**.
 
@@ -488,9 +488,9 @@ The figure below depicts the overall number of new monthly questions created ove
 -   **Ecmascript-6 and Promises** are catching up quickly and becoming mainstream. (You can see this in the zoomed-in version of this graph below.)
 -   **Typescript sees exceptional growth**, it's widely used by large teams and Angular projects.
 
-![img]({{ site.url }}/assets/images/in-content/js-base-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/js-base-so-questions-trends-2018.png){:.img-fluid}
 
-![img]({{ site.url }}/assets/images/in-content/jszoom-base-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/jszoom-base-so-questions-trends-2018.png){:.img-fluid}
 
 
 ### Classic dynamic websites
@@ -501,7 +501,7 @@ In this section we look at **PHP, HTML, HTML5, CSS and DOM**. These plots show e
 
 -   **PHP, HTML and CSS all have a high number of new questions every month**; ~10k, ~8k and ~6k respectively. These are high numbers which means that they are in the base toolkit of website building despite the fact that they are not amongst the top growth areas. On the other hand let's also mention that some of these techniques are replaced by other new techniques like JSX and Virtual DOM.
 
-![img]({{ site.url }}/assets/images/in-content/classic-jsweb-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/classic-jsweb-so-questions-per-total-2018.png){:.img-fluid}
 
 
 ### Modern web applications
@@ -512,11 +512,11 @@ Here we go with **Angular, React and Vue**. I also added a figure about Knockout
 -   **Vue is growing rapidly, too**, with about 800 new questions a month.
 -   **React-native and Redux** grow with React.js, demonstrating good progress all across React's services.
 
-![img]({{ site.url }}/assets/images/in-content/modern-jsweb-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/modern-jsweb-so-questions-trends-2018.png){:.img-fluid}
 
 Our old friends are all going down, their role is taken over by Angular, React and Vue for now.
 
-![img]({{ site.url }}/assets/images/in-content/modern-t2-jsweb-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/modern-t2-jsweb-so-questions-trends-2018.png){:.img-fluid}
 
 
 ### Server side Javascript
@@ -527,7 +527,7 @@ Server side Javascript is a mature member of our back-end toolbox used in variou
 
 The numbers at this level don't give us much information as to what Node.js is used for in real-life. *I'm working on another report dedicated to Node.js and server side Javascript; stay tuned!*
 
-![img]({{ site.url }}/assets/images/in-content/server-side-js-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/server-side-js-so-questions-trends-2018.png){:.img-fluid}
 
 
 ## Growth segments of the Javascript ecosystem

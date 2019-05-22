@@ -87,7 +87,7 @@ If you wanna deep dive into the dark art of headlines, just search for headline 
 
 Here comes some practical advice: **Google and other search engines will only display a limited number of characters in the search results.** Let's take this example:
 
-![title and description in google search results](/assets/images/in-content/title-description-google-search-results.jpg)
+![title and description in google search results](/assets/images/in-content/title-description-google-search-results.jpg){:.img-fluid}
 
 This is my post copied from the 6th position of Google search.
 

@@ -271,7 +271,7 @@ If you wanted to assign a different port on your host, let's say 8080, you would
 
 Let's go back to our original scenario, open your browser now and check `http://localhost`. You should see this:
 
-![Welcome to Nginx]({{ site.url }}/assets/images/in-content/welcome-to-nginx.jpg)
+![Welcome to Nginx]({{ site.url }}/assets/images/in-content/welcome-to-nginx.jpg){:.img-fluid}
 
 Let's celebrate, you have started a web server with Docker! I know, a few things are missing, but we'll get to that.
 
@@ -403,9 +403,9 @@ Restart the container so it will pick up the new configuration with `docker rest
 
 You can check compression in Chrome developer tools, under the Network tab and clicking the entry 'localhost'. This is my response before and after the change.
 
-![Nginx without compression]({{ site.url }}/assets/images/in-content/nginx-without-gzip-response-chrome.jpg)
+![Nginx without compression]({{ site.url }}/assets/images/in-content/nginx-without-gzip-response-chrome.jpg){:.img-fluid}
 
-![Nginx with compression]({{ site.url }}/assets/images/in-content/nginx-with-gzip-response-chrome.jpg)
+![Nginx with compression]({{ site.url }}/assets/images/in-content/nginx-with-gzip-response-chrome.jpg){:.img-fluid}
 
 We changed the configuration of our nginx container from the outside!
 
@@ -423,7 +423,7 @@ Wow, how about source code? Let's add a webpage to nginx with another volume map
 
 We added a new volume `-v` parameter to the command. It points to the `src` folder on the host (please use your own full path) and mounts it to `/usr/share/nginx/html` in the container. Again I got the container path of html files on Docker Hub. If you go to `http://localhost` now, you should see a familiar hello world page.
 
-![Hello word with nginx]({{ site.url }}/assets/images/in-content/hello-word-nginx.jpg)
+![Hello word with nginx]({{ site.url }}/assets/images/in-content/hello-word-nginx.jpg){:.img-fluid}
 
 Now the magic starts. Open your favorite text editor and change the message from `Hello world` to `Hello docker` or whatever you like.
 

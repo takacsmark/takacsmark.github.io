@@ -37,7 +37,7 @@ In order to be fair, I moved on to Joomla. Finding a theme for Joomla proved to 
 
 I made my decision anyway when I found out about the Skimlinks WordPress plugin.
 
-![](/assets/images/in-content/wordpress-logo-and-hand.jpg)
+![](/assets/images/in-content/wordpress-logo-and-hand.jpg){:.img-fluid}
 
 ## The WordPress theme
 

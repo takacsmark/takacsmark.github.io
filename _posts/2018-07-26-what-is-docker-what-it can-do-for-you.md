@@ -44,7 +44,7 @@ Docker containers are defined in the form of Docker images.
 
 The main source of Docker images is the [Docker Hub](https://hub.docker.com){:target="_blank"}, where you’ll find about 1,5 million different images available for free. The screenshot shows the first few items on the list on the Docker Hub.
 
-![Docker Images on the Docker Hub]({{ site.url }}/assets/images/in-content/Docker_Images_on_Docker_Hub.png)
+![Docker Images on the Docker Hub]({{ site.url }}/assets/images/in-content/Docker_Images_on_Docker_Hub.png){:.img-fluid}
 
 You’ll find images for almost any technology you’d probably want to use in your projects. A few examples would be Nginx, Redis, Node, Memcached, Mongo, as you can see on the screenshot.
 
@@ -101,13 +101,13 @@ This is possible, because the Nginx Docker image already contains the Nginx web 
 
 Let’s have a closer look, I created a one-pager website demo that looks like this:
 
-![Onepager website example]({{ site.url }}/assets/images/in-content/onepager-website.gif)
+![Onepager website example]({{ site.url }}/assets/images/in-content/onepager-website.gif){:.img-fluid}
 
 Full source code is available on GitHub: [https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized](https://github.com/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized){:target="_blank"}.
 
 Let’s say your team is developing the above website. Your developers create and unit test the source code of your application. Once the unit tests are complete they have a structure similar to the below in their project:
 
-![Onepager website example project structure]({{ site.url }}/assets/images/in-content/onepager.png)
+![Onepager website example project structure]({{ site.url }}/assets/images/in-content/onepager.png){:.img-fluid}
 
 The project contains source files for various purposes like HTML files, SCSS style sheets, and Javascript; plus the project contains the configuration files that are needed to serve this website with an Nginx web server.
 
@@ -158,7 +158,7 @@ To build the one-pager website example, you’d need to conduct the following st
 * You use the `docker build` command to build your project’s Docker image from the Dockerfile, the resulting image will contain the Nginx server with your custom configuration files and your website’s code.
 * You can start your website with the `docker run` command now. This command will start a Docker container based on your project’s Docker image. The container’s main process will be the Nginx web server that serves your site.
   
-![Docker build flow]({{ site.url }}/assets/images/in-content/Docker-build-flow.png)
+![Docker build flow]({{ site.url }}/assets/images/in-content/Docker-build-flow.png){:.img-fluid}
 
 ### Ship
 
@@ -169,7 +169,7 @@ You can ship your application with the following steps:
 * Now you can use the `docker pull` command for your project’s custom image on another computer to pull your image from the Docker Hub and start up a container. You need to make sure that the other computer has Docker installed.  
     **As you can see, you don’t need to install and configure the Nginx server and deploy your code on the other computer. You can grab everything bundled in your Docker image.**
   
-![Docker ship flow]({{ site.url }}/assets/images/in-content/Docker-ship-flow.png)
+![Docker ship flow]({{ site.url }}/assets/images/in-content/Docker-ship-flow.png){:.img-fluid}
 
 ### Run
 
@@ -179,7 +179,7 @@ There are sophisticated and mature solutions to run your dockerized applications
 * Google’s container orchestrator - Kubernetes - is the market leading solution to orchestrate Docker-based applications, that’s why you’ll see more and more out-of-the-box Kubernetes support in Docker.  
     **Working with Docker, you’ll create your infrastructure as code during the build phase and you use standard Docker commands to ship and run your application anytime and anywhere.**
   
-![Docker run flow]({{ site.url }}/assets/images/in-content/Docker-run-flow.png)
+![Docker run flow]({{ site.url }}/assets/images/in-content/Docker-run-flow.png){:.img-fluid}
 
 ## What problem does Docker solve
 
@@ -215,7 +215,7 @@ I also added two files for production:
 * Dockerfile
 * docker-compose.yml
 
-![Onepage example dockerized]({{ site.url }}/assets/images/in-content/onepage-website-boostrap-webpackdevserver-dockerized.png)
+![Onepage example dockerized]({{ site.url }}/assets/images/in-content/onepage-website-boostrap-webpackdevserver-dockerized.png){:.img-fluid}
 
 Let’s check out how the development setup works! This is an introductory post, so I’ll not explain every step in detail, we’ll do that later, I just want you to get the big picture.
 
@@ -242,7 +242,7 @@ We expose port 8080, which indicates that our Webpack dev server will run on por
 
 `$ docker build --tag takacsmark/web-intro.exmple:dev-1.0 --file Dockerfile.dev .`
 
-![Build development Docker image]({{ site.url }}/assets/images/in-content/build-development-image.gif)
+![Build development Docker image]({{ site.url }}/assets/images/in-content/build-development-image.gif){:.img-fluid}
 
 Now I have a new Docker image on my computer that I can list with the `docker image ls` command:
 
@@ -261,7 +261,7 @@ Now I can use a single Docker command to start up a container for development fr
 
 Let’s not worry about the details too much now, this is to give you the high level idea.
 
-![Start webpack development server in docker container]({{ site.url }}/assets/images/in-content/start-dev-server.gif)
+![Start webpack development server in docker container]({{ site.url }}/assets/images/in-content/start-dev-server.gif){:.img-fluid}
 
 The Webpack dev server is up and running. I did not need to install Node.js or any of the node modules on my machine to make this work, everything is encapsulated into a Docker container.  
 
@@ -295,7 +295,7 @@ I defined one service with the name `webpack` and specified how to build my cust
 
 This command will build and run my project’s development configuration as defined in `docker-compose.development.yml`.
 
-![run Webpack development server with docker compose]({{ site.url }}/assets/images/in-content/compose-up.gif)
+![run Webpack development server with docker compose]({{ site.url }}/assets/images/in-content/compose-up.gif){:.img-fluid}
 
 ## What are the benefits of Docker
 

@@ -159,7 +159,7 @@ The table also illustrates the heavy use of **Java and C# in enterprise projects
 
 Let me show you the growth in new questions created evey month as a percentage of total for the programming languages listed above. 
 
-![img]({{ site.url }}/assets/images/in-content/prog-lang-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/prog-lang-so-questions-per-total-2018.png){:.img-fluid}
 
 **This is the figure that puts Python into the focus of this article**.
 
@@ -541,21 +541,21 @@ Please note that numbers in the previous section showed the number of questions 
 
 The creation of new Python questions has a stable upward slope; a clear sign of a buzzing ecosystem.
 
-![img]({{ site.url }}/assets/images/in-content/py-base-so-questions-per-total-2018.png)
+![img]({{ site.url }}/assets/images/in-content/py-base-so-questions-per-total-2018.png){:.img-fluid}
 
 
 ### Python 2.7 vs 3.x
 
 Python 3.x has a higher overall question creation number and the creation curve shows continuous growth. The number of new Python 2.7 questions seems to be over a turning point.
 
-![img]({{ site.url }}/assets/images/in-content/py-base-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/py-base-so-questions-trends-2018.png){:.img-fluid}
 
 
 ### Django and Flask
 
 **Flask shows stable usage with slight growth**, and Django is in steady slow decrease. These segments are not in high-growth.
 
-![img]({{ site.url }}/assets/images/in-content/py-df-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/py-df-so-questions-trends-2018.png){:.img-fluid}
 
 
 ### Data science and machine learning
@@ -564,7 +564,7 @@ This is what a clear growth curve looks like. **Pandas and `dataframe` questions
 
 **The above is true for Tensorflow and machine learning in general, too**.
 
-![img]({{ site.url }}/assets/images/in-content/py-dsml-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/py-dsml-so-questions-trends-2018.png){:.img-fluid}
 
 
 ### Web scraping
@@ -575,7 +575,7 @@ With big data comes the big need for data. **Web scraping is one way to collect 
 
 Since Python is a popular way to process your data, it makes sense to collect your data with a Python based solution.
 
-![img]({{ site.url }}/assets/images/in-content/py-ws-so-questions-trends-2018.png)
+![img]({{ site.url }}/assets/images/in-content/py-ws-so-questions-trends-2018.png){:.img-fluid}
 
 *Here comes the part where you find individual go-to technologies and action-able insights in the world of Python.*
 

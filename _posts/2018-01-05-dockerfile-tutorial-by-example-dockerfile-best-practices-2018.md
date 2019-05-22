@@ -117,7 +117,7 @@ Use the command `docker images` in your terminal to list the images you currentl
 
 If you have not pulled any images yet, your list may be empty. This is my computer today (please note that the list is different from the list in the video, because I'm writing this article later in time).
 
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-docker-images.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-docker-images.png){:.img-fluid}
 
 These are the images that I'm currently using on my computer. I pulled most of them from the Docker store, and I have built my own, too. The images that have a nametag in the form of `takacsmark/<image_name>` are the ones that I have built from my own Dockerfiles.
 
@@ -175,7 +175,7 @@ This command is structured as follows:
 
 You should see a similar output in terminal now:
 
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-build_750.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-build_750.png){:.img-fluid}
 
 
 #### 5. Enjoy the results
@@ -206,7 +206,7 @@ Let's first see all the images that were created. Please issue the command
 `docker images -a` in terminal.
 
 You should see something like this:
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-layers.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-layers.png){:.img-fluid}
 
 We used `-a` to list all images on your computer including intermediary images. Please note how the image ids are the same as the ones you see during the build process.
 
@@ -235,7 +235,7 @@ RUN apk add git
 Let's issue our build command again: `docker build -t takacsmark/alpine-smarter:1.0 .`.
 
 You'll see that the first 3 steps run using cache and only the last step will be re-run, as shown in the picture.
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-cache-example.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-cache-example.png){:.img-fluid}
 
 Please note that if you change an early step in the Dockerfile, for example you add one line after `apk update` like this:
 
@@ -254,7 +254,7 @@ In this case every step after the change will be re-built. Which means that the 
 
 If you execute `docker images` now in terminal, you'll see something nasty.
 
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-dangling-images.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-dangling-images.png){:.img-fluid}
 
 Our newly built image is ready to use, but the previous image that we built with curl is still hanging around and it does not have a proper tag or name right now. (You can check the image ids to see that this is the same image we built previously).
 
@@ -287,7 +287,7 @@ RUN apk update && \
 
 After building this Dockerfile the usual way you'll find that this time it has only taken 2 steps instead of 4, which will result in 1 new image, instead of 3 images.
 
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-line-optimization.png)
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-line-optimization.png){:.img-fluid}
 
 Keep in mind that only `RUN`, `COPY` and `ADD` instructions create layers.
 

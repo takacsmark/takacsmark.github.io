@@ -108,7 +108,7 @@ drwx------@ 55 takacsmark  staff   1.8K Nov 20 11:31 performance_schema
 
 Now you can use your SQL client to connect to your database. My Sequel Pro connection looks like this:
 
-![Sequel Pro Localhost MariaDB Connection](/assets/images/in-content/Sequel_Pro_Mysql_Docker_Tutorial.png)
+![Sequel Pro Localhost MariaDB Connection](/assets/images/in-content/Sequel_Pro_Mysql_Docker_Tutorial.png){:.img-fluid}
 
 We are halfway through. Let's add Wordpress to the picture. 
 
