@@ -12,8 +12,9 @@ categories: Web development, Docker
 ****Update********
 Now you can follow along the video and learn with my youtube tutorial. 
 
- <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/Vyp5_F42NGs" frameborder="0" allowfullscreen></iframe></div>
-
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vyp5_F42NGs" allowfullscreen></iframe>
+</div>
 
 So you decided to learn Docker? This tutorial, unlike other tutorials, takes a solution focused approach, rather than a toolkit focused approach. We start from the big picture, understanding what problems Docker is meant to solve and start using Docker as we make progress.  
 

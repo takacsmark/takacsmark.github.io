@@ -4,7 +4,7 @@ title:  "A Superb Free WordPress Theme Development Course On Youtube"
 description: "Learn basic WordPress theme development on YOUTUBE for FREE through well explained examples, and learn the basics of web development at the same time."
 date:   2015-10-12 11:53:00 +0100
 thumbnail: /assets/images/post-thumbs/web-design-for-beginners-course.jpg
-videothumb: '<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5" frameborder="0" allowfullscreen></iframe>'
+videothumb: "https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5"
 categories: 'Online learning'
 ---
 Let me point you to a great tutorial on Youtube that will teach you basic Wordpress theme development through well explained examples, and will teach you the basics of web development at the same time.

@@ -20,6 +20,15 @@ layout: default
 
         <!-- Main Content -->
         <div class="col-12">
+
+            <!-- Video Thumb -->
+            {% if page.videothumb %}
+	    <div class="embed-responsive embed-responsive-16by9">
+	        <iframe class="embed-responsive-item" src="{{ page.videothumb }}" allowfullscreen></iframe>
+	    </div>
+            {% endif %}
+            <!-- End Video Thumb -->
+
             <!-- Post Content -->
             <section class="row" itemprop="articleBody">
                 <div class="col-12">
@@ -48,14 +57,6 @@ layout: default
     
 
     
-    <!-- TODO floating share buttons -->
-    <!-- TODO code formatting -->
-    <!-- TODO video thumb -->
-        {% if page.videothumb %}
-            <div class="flex-video">
-              {{ page.videothumb }}
-            </div>
-        {% endif %}
 </article>
 
 {% if site.disqus %}

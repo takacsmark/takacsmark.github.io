@@ -27,7 +27,10 @@ _This article is designed to be a functional introduction of Docker concepts wit
 ## What is Docker
 
 Let's start with a video!
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/EmrikChpdfY" frameborder="0" allowfullscreen></iframe></div>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EmrikChpdfY" allowfullscreen></iframe>
+</div>
 
 **You can download the presentation using the button below.** 
 <a data-dpd-type="button" data-text="Download Presentation" data-variant="price-none" data-button-size="dpd-small" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=170727&amp;method_id=183710">Download Presentation</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>

@@ -5,7 +5,7 @@ description: "4th lesson in our tutorial series covers Fat-Free models, database
 date:   2015-09-21 17:36:00 +0100
 categories: tutorials
 thumbnail: /assets/images/post-thumbs/Fatfree_PHP_Framework_Tutorial_-_4_-_YouTube.jpg
-videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/XydAAp3ZF-M" frameborder="0" allowfullscreen></iframe>'
+videothumb: "https://www.youtube.com/embed/XydAAp3ZF-M"
 ---
 It's time we add 'M' to MVC and complete the core of our Fat-Free MVC sample project. In this lesson we will create a new database, connect to it from our project and set up models with f3's ORM functionality.
 

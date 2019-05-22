@@ -23,7 +23,9 @@ This article is the writeup of 2 Dockerfile video tutorials on my Youtube channe
 
 Let's start the first video.
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Er8MAvTWlI" frameborder="0" allowfullscreen></iframe></div>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6Er8MAvTWlI" allowfullscreen></iframe>
+</div>
 
 ## What is a Dockerfile and why you'd want to use one?
 

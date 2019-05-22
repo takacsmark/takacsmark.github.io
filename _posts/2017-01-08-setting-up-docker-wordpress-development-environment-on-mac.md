@@ -14,7 +14,9 @@ If you are absolutely new to Docker, please start with the [beginners tutorial w
 ****Tip********
 Watch the video that I created for this post on Youtube. I show how to install the docker engine on Mac in the video plus I walk you through all the steps that are needed to set up a Wordpress development environment with MySQL using Docker containers.   
 
- <div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/eBGvHkTFDTs" frameborder="0" allowfullscreen></iframe></div>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eBGvHkTFDTs" allowfullscreen></iframe>
+</div>
 
 This article is the writeup of the video tutorial, meaning I created the video first and I'm adding the details in written form now. 
 

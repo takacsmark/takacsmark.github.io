@@ -13,7 +13,9 @@ Working with Docker, you'll soon find various objects on your system that are ha
 
 **You can watch this tutorial on Youtube, too.**
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/QruAkYHCFPE" frameborder="0" allow="autoplay; encrypted-media"  allowfullscreen></iframe></div>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QruAkYHCFPE" allowfullscreen></iframe>
+</div>
 
 ## What Docker objects need clean up
 

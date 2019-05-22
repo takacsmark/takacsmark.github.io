@@ -22,7 +22,9 @@ In order to get the most out of this article you should be familiar with basic D
 
 This tutorial is available as a Youtube video, too.
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/3-7gZS4ePak" frameborder="0" allowfullscreen></iframe></div>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
+</div>
 
 ## Your first Swarm cluster
 

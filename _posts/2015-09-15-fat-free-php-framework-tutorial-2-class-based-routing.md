@@ -5,7 +5,7 @@ description: "Set and get values of global variables and see how Fat-Free enable
 date:   2015-09-15 16:09:24 +0100
 categories: tutorials
 thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
-videothumb: '<iframe width="420" height="315" src="https://www.youtube.com/embed/fAng7nIQKpM" frameborder="0" allowfullscreen></iframe>'
+videothumb: "https://www.youtube.com/embed/fAng7nIQKpM"
 ---
 In this lesson, I will explain how you can set and get values of global variables and I will also explain how Fat-Free enables building a completely modular MVC project with class based routing. 
 
