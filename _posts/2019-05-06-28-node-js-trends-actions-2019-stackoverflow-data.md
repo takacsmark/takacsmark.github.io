@@ -564,7 +564,7 @@ These tags are also established with a strong base, although somewhat smaller th
 > -   See how you can use Electron to build cross-platform desktop applications.
 
 
-### TODO Growth of trending technologies
+### Growth of trending technologies
 
 These tags are from smaller niche segments. 
 

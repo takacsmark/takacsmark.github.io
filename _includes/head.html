@@ -24,10 +24,9 @@
     <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}" />
     <!-- End Site Meta DO NOT CHANGE-->
 
-    <!-- External Apps TODO Cleanup -->
-    <meta property="fb:app_id" content="730731577062449" />
+    <!-- Google Site Verfication -->
     <meta name="google-site-verification" content="2DFgqqJVnbuSGjOdyKJZFbGKPGHqu99tt4aBBmbuiKc" />
-    <!-- End External Apps TODO Cleanup -->
+    <!-- End Google Site Verfication -->
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -43,7 +42,6 @@
     <link rel="stylesheet" href="{{ "/assets/highlight/styles/default.css" | prepend: site.baseurl | prepend: site.url }}">
     <!-- End Code highlight CSS -->
 
-    
     <!-- Site CSS -->
     <link rel="stylesheet" href="{{ "/assets/custom.css" | prepend: site.baseurl | prepend: site.url }}">
     <!-- End Site CSS -->
