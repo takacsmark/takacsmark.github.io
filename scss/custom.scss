@@ -42,10 +42,12 @@
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
+// Navbar styling 
 .navbar-light .navbar-toggler {
     border-color: rgba(0,0,0,0);
 }
 
+// Index page greeting box styling
 #greeting-box {
 
     img {
@@ -60,5 +62,17 @@
 	    margin-top: 35%;
 	    margin-bottom: 35%;
 	}
+    }
+}
+
+// Footer styling
+footer {
+    background-color: #1e1e1f;
+    color: white;
+
+    .container-fluid {
+	background-color: rgb(10, 10, 10);
+	color: rgb(254, 254, 254);
+	font-size: .75rem;
     }
 }

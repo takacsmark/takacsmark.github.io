@@ -1,112 +1,105 @@
-<div class="container">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-            <h5>Contact Me</h5>
+<footer>
 
-            <ul class="no-bullet">
+    <!-- Three column footer information -->
+    <section class="container">
+        <div class="row">
 
-                {% if site.youtube_channel %}
-                <li>
-                    <a href="https://youtube.com/{{ site.youtube_channel}}" target="_blank">
-		      <i class="fab fa-youtube"></i>
-		      <span>{{ site.youtube_channel }}</span>
-                      <!--[if lt IE 9]><em>Youtube</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
+            <!-- Contact information -->
+            <section class="col-12">
+                <h4 class="mt-4">Contact Me</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://youtube.com/{{ site.youtube_channel}}" target="_blank">
+		            <i class="fab fa-youtube"></i>
+		            <span>{{ site.youtube_channel }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/{{ site.facebook_page }}" target="_blank">
+		            <i class="fab fa-facebook-f"></i>
+                            <span>{{ site.facebook_page }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+		            <i class="fab fa-twitter"></i>
+                            <span>{{ site.twitter_username }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+		            <i class="fab fa-github"></i>
+                            <span>{{ site.github_username }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+		            <i class="fab fa-linkedin"></i>
+                            <span>{{ site.linkedin_username }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:{{ site.email }}">
+		            <i class="fas fa-envelope-open"></i>
+                            <span>{{ site.email }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- End Contact information -->
 
-                {% if site.facebook_page %}
-                <li>
-                    <a href="https://facebook.com/{{ site.facebook_page }}" target="_blank">
-		      <i class="fab fa-facebook-f"></i>
-                      <span>{{ site.facebook_page }}</span>
-                      <!--[if lt IE 9]><em>Facebook</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
+            <!-- Discord and Youtube connection info -->
+            <section class="col-12">
+                <h4 class="mt-4">Join the Discord server</h4>
+	        <a href="https://discord.gg/KxaQd4W" target="_blank"><img class="w-75" src="{{ site.url }}/assets/images/discord-logo.svg" alt="Discord logo"></img></a> 
 
-                {% if site.twitter_username %}
-                <li>
-                    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-		      <i class="fab fa-twitter"></i>
-                      <span>{{ site.twitter_username }}</span>
-                    </a>
-                </li>
-                {% endif %}
+                <h4 class="mt-4">Subscribe on Youtube</h4>
+                <div class="g-ytsubscribe" data-channelid="UCNaxXS9VOYKyVbT--ctbHEA" data-layout="default" data-count="default"></div>
+            </section>
+            <!-- End Discord and Youtube connection info -->
 
-                {% if site.github_username %}
-                <li>
-                    <a href="https://github.com/{{ site.github_username }}" target="_blank">
-		      <i class="fab fa-github"></i>
-                      <span>{{ site.github_username }}</span>
-                    </a>
-                </li>
-                {% endif %}
+            <!-- Website information -->
+            <section class="col-12">
+                <h4 class="mt-4">Website info</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/terms-of-service">
+                            <span>Terms of service</span>
+                        </a>
+                    </li>                
+                    <li>
+                        <a href="/privacy-policy">
+                            <span>Privacy policy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/return-refund-policy">
+                            <span>Return and refund policy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cookie-settings">
+                            <span>Cookie settings</span>
+                        </a>
+                    </li>                
+                    <!-- <li>
+                        <script class="skimlinks_ref_script" type="text/javascript" src="https://s.skimresources.com/api/ref.js?p=61108&d=1384518&t=1"></script>                
+                    </li> -->
+                </ul>
+            </section>
+            <!-- End Website information -->
+        </div>
+    </section>
+    <!-- Three column footer information -->
 
-                {% if site.linkedin_username %}
-                <li>
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
-		      <i class="fab fa-linkedin"></i>
-                      <span>{{ site.linkedin_username }}</span>
-                      <!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
+    <!-- Copyright line -->
+    <section class="container-fluid no-gutters pt-2">
+        <div class="row">
+            <div class="col-12">
+                <p>&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - <a href="https://savalera.com/" target="_blank">Savalera Kft.</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Copyright line -->
 
-                {% if site.email %}
-                <li>
-                    <a href="mailto:{{ site.email }}">
-		      <i class="fas fa-envelope-open"></i>
-                      <span>{{ site.email }}</span>
-                      <!--[if lt IE 9]><em>Email</em><![endif]-->
-                    </a>
-                </li>
-                {% endif %}
-            </ul>
-      </div>
-      <div class="col-12">
-            <h5>Join the Discord server</h5>
-	    <a href="https://discord.gg/KxaQd4W" target="_blank"><img class="discord-logo" src="{{ site.url }}/assets/images/discord-logo.svg" alt="Discord logo"></img></a> 
-
-            <h5>Subscribe on Youtube</h5>
-            <div class="g-ytsubscribe" data-channelid="UCNaxXS9VOYKyVbT--ctbHEA" data-layout="default" data-count="default"></div>
-      </div>
-      <div class="col-12">
-            <h5>Website info</h5>
-            <ul class="no-bullet">
-                <li>
-                    <a href="/terms-of-service">
-                        <span>Terms of service</span>
-                    </a>
-                </li>                
-                <li>
-                    <a href="/privacy-policy">
-                        <span>Privacy policy</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/return-refund-policy">
-                        <span>Return and refund policy</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/cookie-settings">
-                        <span>Cookie settings</span>
-                    </a>
-                </li>                
-                <!-- <li>
-                    <script class="skimlinks_ref_script" type="text/javascript" src="https://s.skimresources.com/api/ref.js?p=61108&d=1384518&t=1"></script>                
-                </li> -->
-            </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-            <p>&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - <a href="https://savalera.com/" target="_blank">Savalera Kft.</a>
-      </div>
-    </div>
-  </div>
-</div>
+</footer>
