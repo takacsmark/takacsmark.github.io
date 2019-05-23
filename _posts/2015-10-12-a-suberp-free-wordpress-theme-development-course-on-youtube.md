@@ -3,6 +3,7 @@ layout: post
 title:  "A Superb Free WordPress Theme Development Course On Youtube"
 description: "Learn basic WordPress theme development on YOUTUBE for FREE through well explained examples, and learn the basics of web development at the same time."
 date:   2015-10-12 11:53:00 +0100
+author: Márk Takács
 thumbnail: /assets/images/post-thumbs/web-design-for-beginners-course.jpg
 videothumb: "https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5"
 categories: 'Online learning'

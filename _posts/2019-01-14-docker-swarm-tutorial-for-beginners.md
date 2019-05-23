@@ -3,6 +3,7 @@ layout: post
 title: "Docker Swarm Tutorial | Code Along | Zero to Hero under 1 Hour"
 description: "Would you like to run your projects in high-availability scalable mode on computer clusters? Get the skills you need to become the Swarm guru in your team."
 date: 2019-01-14 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-swarm.png"
 categories: Docker, Tutorials
 ---

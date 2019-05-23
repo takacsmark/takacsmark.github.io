@@ -3,6 +3,7 @@ layout: post
 title: "How to set up a Docker container for your GithHub Pages site?"
 description: "Serving my existing GitHub Pages Jekyll sites from a Docker container was not easy. Here is how I fixed the issue."
 date: 2017-01-08 10:07:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-jekyll.png"
 categories: Web development, Docker
 ---

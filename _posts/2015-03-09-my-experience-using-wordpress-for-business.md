@@ -3,6 +3,7 @@ layout: post
 title:  "My experience using Wordpress for business"
 description: "The story of why I decided to use WordPress for business purposes. My approach to product selection, challenges and great discoveries along the way."
 date:   2015-03-09 07:48:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/wordpress-on-table.jpg"
 categories: Wordpress, web economy
 ---

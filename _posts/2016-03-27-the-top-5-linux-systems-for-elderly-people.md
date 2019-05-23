@@ -3,6 +3,7 @@ layout: post
 title:  "The top 5 Linux systems for elderly people"
 description: "Evaluation of the top 5 Linux distributions for elderly people based on our assessment of their needs and lifestyle. "
 date:   2016-03-27 16:07:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/the-top-5-linux-systems-for-elderly-people.jpg"
 categories: Linux, User experience
 ---

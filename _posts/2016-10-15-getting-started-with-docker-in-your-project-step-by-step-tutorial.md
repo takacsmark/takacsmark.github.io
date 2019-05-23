@@ -3,6 +3,7 @@ layout: post
 title:  "Docker tutorial for beginners through examples - a step by step tutorial"
 description: "With this beginner's Docker tutorial you'll learn to use Docker in your projects, understand Docker's purpose and build routine using Docker tools."
 date:   2016-10-15 8:07:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-tutorial-getting-started.png"
 categories: Web development, Docker
 ---

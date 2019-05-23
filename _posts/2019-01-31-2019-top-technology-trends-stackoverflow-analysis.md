@@ -3,6 +3,7 @@ layout: post
 title: "2019 Top Technology Trends | Based on Stackoverflow Data Analysis"
 description: "Discover high growth technology solutions used by companies worldwide in enterprise application development, web apps, data analysis, ML, DevOps, mobile applications and more."
 date: 2019-01-31 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/2019-Technology-Trends-Stackoverflow-Analysis.png"
 categories: Technology, Trends, TechBiz
 ---

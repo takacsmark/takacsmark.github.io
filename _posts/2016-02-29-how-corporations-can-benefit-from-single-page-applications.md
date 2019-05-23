@@ -3,6 +3,7 @@ layout: post
 title:  "How corporations can benefit from single page applications?"
 description: "Single page applications are a hot topic. How will they improve customer experience and IT costs? Who are the players? What are the risks? Where to start?"
 date:   2016-02-28 15:58:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/single_page_applications_instagram.jpg"
 categories: web economy, corporate IT, single page applications, react, angular
 ---
@@ -74,6 +75,7 @@ You can check out more examples here: [Built with Angular](https://www.madewitha
 A good example is [Gap Inc.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fsecure-www.gap.com%2Fbuy%2Fshopping_bag.do){:target="_blank"}(built with Angular), where you can connect your shopping bag across devices.
 
 ![Gap Angular example]({{ site.url }}/assets/images/in-content/gap_angular_example.jpg){:.img-fluid}
+author: Márk Takács
 
 Such experiences greatly improve customer loyalty and engagement. SPAs have an extra, soft plus being fluid and responsive, giving way to personalization and intuition. 
 

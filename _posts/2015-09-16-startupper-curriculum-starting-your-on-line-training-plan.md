@@ -3,6 +3,7 @@ layout: post
 title:  "Startupper Curriculum - Starting Your On-Line Training Plan"
 description: "This the first step towards your startupper curriculum. These are the guiding principles we'll use to put together your on-line training plan."
 date:   2015-09-16 17:06:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/startupper-online-curriculum.jpg"
 categories: 'Online learning'
 ---

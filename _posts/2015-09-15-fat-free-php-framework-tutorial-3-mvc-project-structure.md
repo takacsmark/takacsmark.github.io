@@ -3,6 +3,7 @@ layout: post
 title:  "Fat-Free PHP Framework Tutorial – 3 MVC Project Structure"
 description: "This the third video in our Fat-Free Tutorial series. The time has come, we will use what we learnt so far to create our first Fat-Free MVC project."
 date:   2015-09-15 16:11:31 +0100
+author: Márk Takács
 categories: tutorials
 thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: "https://www.youtube.com/embed/DQT5sDO1_Ck"

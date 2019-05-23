@@ -3,6 +3,7 @@ layout: post
 title: "28 Node.js Trends and Actions | 2019 | Based on Stackoverflow Data"
 description: "Explore the top tech used in real-life Node.js projects. Use our comprehensive action plan to move forward. All this based on Stackoverflow data."
 date: 2019-05-06 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/28-Node-js-Trends-Actions-2019.png"
 categories: Technology, Trends, TechBiz
 ---

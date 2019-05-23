@@ -3,6 +3,7 @@ layout: post
 title: "Docker prune explained - usage and examples"
 description: "Docker prune is the way to clean up containers, images, volumes and networks on your system. See how to remove unused resources, free up space and unclutter you environment."
 date: 2018-10-02 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-prune.png"
 categories: Docker, Tutorials
 ---

@@ -3,6 +3,7 @@ layout: post
 title:  "Dockerfile tutorial by example - basics and best practices [2018]"
 description: "An in-depth tutorial on creating your own Docker images with Dockerfile. Detailed examples, videos and Dockerfile best practices."
 date:   2018-01-05 01:59:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png"
 categories: Docker, Tutorials
 ---

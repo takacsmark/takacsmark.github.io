@@ -3,6 +3,7 @@ layout: post
 title: "Docker containers vs VMs. What is the difference?"
 description: "How are containers different from VMs? What are the benefits of containers over VMS? How are container resources isolated? Linux containers vs Windows containers."
 date: 2018-08-08 01:59:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/containers-vs-vms.png"
 categories: Docker, Tutorials
 ---

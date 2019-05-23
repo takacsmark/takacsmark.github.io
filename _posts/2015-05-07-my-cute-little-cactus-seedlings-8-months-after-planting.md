@@ -3,6 +3,7 @@ layout: post
 title:  "My cute little cactus seedlings 8 months after planting"
 description: "What if I told you that I have grown these cactus seedlings based on a Youtube video? 8 months later I'm proud and a bit wiser."
 date:   2015-05-07 17:14:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/cactus-seedlings.jpg"
 categories: Hobby
 ---

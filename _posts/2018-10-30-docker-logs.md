@@ -3,6 +3,7 @@ layout: post
 title: "Docker logs - Container, Compose, Swarm and Engine Logs"
 description: "The easiest way to see Docker logs is to start containers in the foreground. There are many ways to see logs of detached containers, the easiest is to use the `docker container logs` command. With several handy options this command will save you hours."
 date: 2018-10-30 07:39:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-logs.png"
 categories: Docker, Tutorials
 ---

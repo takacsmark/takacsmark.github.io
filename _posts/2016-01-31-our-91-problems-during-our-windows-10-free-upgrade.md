@@ -3,6 +3,7 @@ layout: post
 title:  "Our 9+1 Problems During Our Windows 10 Free Upgrade"
 description: "I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations. I provide tips and solutions in this post."
 date:   2016-01-31 16:38:44 +0100
+author: Márk Takács
 categories: Hobby
 thumbnail: "/assets/images/post-thumbs/window-10-install-post.png"
 ---

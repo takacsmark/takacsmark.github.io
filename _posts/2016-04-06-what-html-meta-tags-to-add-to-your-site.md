@@ -3,6 +3,7 @@ layout: post
 title:  "What HTML meta tags to add to your site and what do they do?"
 description: "Eager to clarify what meta tags you need in your HTML markup? Need some info on where, why and how to add them? Could use a few examples?"
 date:   2016-04-04 16:07:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/html_meta_tags.jpg"
 categories: Web development, User experience
 ---

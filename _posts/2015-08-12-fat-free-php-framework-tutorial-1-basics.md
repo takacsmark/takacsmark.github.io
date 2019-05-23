@@ -3,6 +3,7 @@ layout: post
 title:  "Fat-Free PHP Framework Tutorial - 1 Basics"
 description: "First lecture of my video tutorial series on solving web programming challenges with Fat-Free. Lecture 1 covers installation, project setup and routing."
 date:   2015-08-12 16:06:00 +0100
+author: Márk Takács
 categories: tutorials
 thumbnail: /assets/images/post-thumbs/Fat-Free_PHP_Framework_Tutorial_-_1_Basics_and_1__markgyorgyiimac_Mark-es-Gyorgyi____Documents_Development_Tutorials_fatfree_1_base__zsh_.jpg
 videothumb: "https://www.youtube.com/embed/R-ydcTTrR5s"

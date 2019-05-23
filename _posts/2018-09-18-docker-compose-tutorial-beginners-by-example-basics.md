@@ -3,6 +3,7 @@ layout: post
 title: "Docker compose tutorial for beginners by example [all you need to know]"
 description: "Learn everything you need to get started with Docker Compose in your project work. Learn gradually going through examples, get best practices based on previous project experience."
 date: 2018-09-18 01:59:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-compose-beginners-all-you-need-to-know.png"
 categories: Docker, Tutorials
 ---
