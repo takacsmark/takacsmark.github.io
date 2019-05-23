@@ -1,76 +1,63 @@
-<section class="sticky" data-sticky data-anchor="post-content">
-    <div class="row column callout sidebar secondary mailinglist">
-        <div class="columns">
-            <p class="sidebar-title">Regular learning updates</p>           
-            <a href="/mailing-list-signup" class="button">Join the mailing list</a>
+<section>
+
+    <!-- Mailing List -->
+    <section class="row">
+        <div class="col">
+
+	    <div class="card mb-4">
+  	        <div class="card-header">
+		    Regular learning updates
+		</div>
+	        <div class="card-body">
+		    <h5 class="card-title">Join the mailing list!</h5> 
+	            <p class="card-text">Get notified about new tutorials and articles.</p>
+                    <a href="/mailing-list-signup" class="btn btn-primary btn-block stretched-link">Subscribe</a>
+                </div>
+	    </div>
+
         </div>
-    </div>
+    </section>
+    <!-- End Mailing List -->
     
-    <div class="row column callout sidebar secondary">
-        <div class="columns">
-            <p class="sidebar-title">Join the discussion!</p>           
-	    <a href="https://discord.gg/KxaQd4W" target="_blank"><img class="discord-logo" src="{{ site.url }}/assets/images/discord-logo.svg" alt="Discord logo"></img></a> 
-        </div>
-    </div>
+    <!-- Discord Server -->
+    <section class="row">
+        <div class="col">
 
-    <div class="row column callout sidebar secondary book">
-        <div class="columns">
-            <p class="sidebar-title">From zero to project fluency!</p>
-            <a href="/get-started-with-docker-in-your-projects-through-examples/">
-                <img src="/assets/images/in-content/Summersale.png" alt="Get started with Docker in your projects through exmples">
-                <ul class="no-bullet">
-                    <li><button class="buy-btn">Get the book!</button></li>
-                </ul>
-            </a>
-        </div>
-    </div>
+	    <div class="card mb-4">
+	        <div class="card-header">
+		    Community chat server
+		</div>
+		<div class="card-body">
+		    <h5 class="card-title">Join the discussion!</h5>
+		    <p class="card-text">Chat about tech questions and topcis in our newly forming community.</p>
+	            <a class="stretched-link" href="https://discord.gg/KxaQd4W" target="_blank"><img class="img-fluid" src="/assets/images/discord-logo.svg" alt="Discord logo"></img></a> 
+		</div>    
+	    </div>
 
+        </div>
+    </section>
+    <!-- End Discord Server -->
 
-    <div class="row column callout sidebar secondary">
-        <div class="columns">
-          <p class="sidebar-title"><b>NEW!</b> funny stickers, t-shirts and more designed by Mark</p>           
-	  {% include merchandise.html %}
-        </div>
-    </div>
+    <!-- Book Promo -->
+    <section id="sidebar-book-promo" class="row">
+        <div class="col">
 
-    
-    <!-- <div class="row callout sidebar secondary recommended-courses">
-        <div class="columns">
-            <p class="sidebar-title">Build your career with onilne courses</p>
-            <ul class="no-bullet">
-                <li><a target="_blank" href="https://www.udemy.com/docker-mastery/"><i class="fi-play"></i> Docker Mastery: The Complete Toolset From a Docker Captain</a></li>
-                <li><a target="_blank" href="https://www.udemy.com/learn-docker/"><i class="fi-play"></i> Docker for the Absolute Beginner - Hands On</a></li>
-                <li><a target="_blank" href="https://www.coursera.org/specializations/google-it-support"><i class="fi-play"></i> Google IT Support Professional Certificate</a></li>
-                <li><a target="_blank" href="https://www.coursera.org/specializations/python"><i class="fi-play"></i> Python for Everybody Specialization</a></li>
-                <li><a target="_blank" href="https://www.coursera.org/specializations/data-structures-algorithms"><i class="fi-play"></i> Data Structures and Algorithms</a></li>
-                <li><a target="_blank" href="https://www.coursera.org/specializations/jhu-data-science"><i class="fi-play"></i> Data Science Specialization</a></li>
-                <li><a target="_blank" href="https://www.coursera.org/specializations/machine-learning"><i class="fi-play"></i> Machine Learning Specialization</a></li>
-                <li><a target="_blank" href="https://www.simplilearn.com/cloud-solutions-architect-masters-program-training "><i class="fi-play"></i> Cloud Architect (AWS & Azure)</a></li>
-                <li><a target="_blank" href="https://www.simplilearn.com/devops-engineer-masters-program-certification-training"><i class="fi-play"></i> DevOps Architect</a></li>
-                <li><a target="_blank" href="https://www.simplilearn.com/artificial-intelligence-masters-program-training-course"><i class="fi-play"></i> Artificial Intelligence Engineer</a></li>
-                <li><a target="_blank" href="https://www.simplilearn.com/automation-testing-masters-program-certification-training-course"><i class="fi-play"></i> Automation Test Engineer</a></li>
-            </ul>
+	    <div class="card bg-light mb-4">
+	        <div class="card-header">
+		    Get job ready with Docker 
+		</div>
+		<div class="card-body text-center">
+		    <h5 class="card-title">Learn Docker from my book!</h5>
+		    <p class="card-text text-primary font-weight-bolder">Learn Docker from zero to building a real project.</p>
+	            <img class="img-fluid w-75 mb-2" src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover_370.png" alt="Get started with Docker in your projects through exmples"></img> 
+		    <p class="card-text text-success font-weight-bolder">Step-by-step instructions.</p>
+		    <p class="card-text text-danger font-weight-bolder">Save 37% through May 31, 2019.</p>
+                    <a href="/get-started-with-docker-in-your-projects-through-examples/" class="btn btn-primary btn-block stretched-link">Get the book</a>
+		</div>    
+	    </div>
+	  
         </div>
-    </div>
-     -->
-    <!-- <div class="row callout sidebar secondary learning-sites">
-        <div class="columns">
-            <p class="sidebar-title">Affordable on-line learning resources</p>
-            <ul class="no-bullet">
-                {% for item in site.data.promos.online-learning-resources.items %}
-                <li>
-                    <a href="{{ item.url }}" target="_blank">
-                        <img src="{{ item.image }}"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ item.url }}" target="_blank">
-                        {{ item.title }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>            
-        </div>
-    </div> -->
-  
+    </section>
+    <!-- End Book Promo -->
+
 </section>
