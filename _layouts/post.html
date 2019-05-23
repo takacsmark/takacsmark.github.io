@@ -5,12 +5,22 @@ layout: default
 
     <!-- Post Title -->
     <section class="row">
-        <div class="col-1">
-            <img class="img-fluid d-none" src="{{ site.url }}/assets/images/Mark.jpg" />
-	</div>
         <div class="col-12">
             <h1 itemprop="name headline">{{ page.title }}</h1>
-            <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+	</div>
+    </section>
+    
+    <section class="row mt-2 mb-3">
+        <div class="col-auto">
+            <img class="img-fluid" style="width: 52px;" src="{{ site.url }}/assets/images/Mark.jpg" />
+	</div>
+
+        <div class="col pl-0">
+	    {% if page.author %}
+	    <div class="small text-muted text-uppercase font-weight-bolder" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></div>
+	      {% endif %}
+	    
+            <div><time class="small text-muted" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></div>
         </div>
     </section>
     <!-- End Post Title -->
@@ -38,8 +48,8 @@ layout: default
 
             <!-- Social Share -->
             <section class="row">
-                <div class="col-12">
-                    <span><b>Do you like this article? Share it!</b></span>
+                <div class="col-12 text-right mb-4">
+                    <span class="small font-weight-bolder text-uppercase">Share this article!</span>
 	            {% include social-share.html %}
                 </div>
             </section>
