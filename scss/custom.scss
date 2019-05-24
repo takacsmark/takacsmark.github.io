@@ -1,5 +1,7 @@
 // Custom.scss | takacsmark.com
 
+$enable-responsive-font-sizes: true;
+
 //Import Bootstrap 4 source
 // Required
 @import "../node_modules/bootstrap/scss/functions";
@@ -45,7 +47,6 @@
 
 
 // Global overrides
-
 
 //override container width for medium and down
 .container {
@@ -155,26 +156,10 @@
 }
 
 
-// Post listing on index page
-.post-listing-item {
-    @include media-breakpoint-up(sm) {
-	h2 {
-	    font-size: 1.8rem;
-	}
-    }
-    
-    @include media-breakpoint-up(lg) {
-	h2 {
-	    font-size: 1.6rem;
-	}
-    }
-}
-
-
 // Footer styling
 #site-footer {
     background-color: #1e1e1f;
-    color: white;
+    color: rgb(254, 254, 254);
 
     .container-fluid {
 	background-color: rgb(10, 10, 10);
