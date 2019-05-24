@@ -7,44 +7,7 @@
             <!-- Contact information -->
             <section class="col-12 col-sm-4">
                 <h4 class="mt-4">Contact Me</h4>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://youtube.com/{{ site.youtube_channel}}" target="_blank">
-		            <i class="fab fa-youtube"></i>
-		            <span>{{ site.youtube_channel }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/{{ site.facebook_page }}" target="_blank">
-		            <i class="fab fa-facebook-f"></i>
-                            <span>{{ site.facebook_page }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-		            <i class="fab fa-twitter"></i>
-                            <span>{{ site.twitter_username }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/{{ site.github_username }}" target="_blank">
-		            <i class="fab fa-github"></i>
-                            <span>{{ site.github_username }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
-		            <i class="fab fa-linkedin"></i>
-                            <span>{{ site.linkedin_username }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{ site.email }}">
-		            <i class="fas fa-envelope-open"></i>
-                            <span>{{ site.email }}</span>
-                        </a>
-                    </li>
-                </ul>
+		{% include contactinfo.html %}
             </section>
             <!-- End Contact information -->
 
