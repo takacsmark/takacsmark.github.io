@@ -42,6 +42,11 @@
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
+
+
+// Global overrides
+
+
 //override container width for medium and down
 .container {
     @include media-breakpoint-down(lg) {
@@ -49,10 +54,16 @@
     }
 }
 
+
+
+// Component customization
+
+
 // Navbar styling 
 .navbar-light .navbar-toggler {
     border-color: rgba(0,0,0,0);
 }
+
 
 // Index page greeting box styling
 #greeting-box {
@@ -121,17 +132,30 @@
     
     // Desktop screens and Table landscape modes
     @include media-breakpoint-up(lg) {
-	
+        margin-top: -4.5rem !important;
+	    
         .card-img-overlay {
 
              h1 {
-                 margin-top: 20%;
-		 margin-bottom: 15%;
+                 margin-top: 45%;
+                 font-size: 3.3rem;
+             }
+        }
+    }
+
+    // Desktop screens XL 
+    @include media-breakpoint-up(xl) {
+        .card-img-overlay {
+
+             h1 {
+                 font-size: 3.6rem;
              }
         }
     }
 }
 
+
+// Post listing on index page
 .post-listing-item {
     @include media-breakpoint-up(sm) {
 	h2 {
@@ -146,8 +170,9 @@
     }
 }
 
+
 // Footer styling
-footer {
+#site-footer {
     background-color: #1e1e1f;
     color: white;
 

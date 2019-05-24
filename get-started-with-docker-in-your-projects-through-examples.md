@@ -4,36 +4,60 @@ title: Get started with Docker in your projects - through examples
 description: Learn Docker from the basics to cloud clusters in one book. Gradual learning, special project practices focus, built on code-along examples, 360 pages.
 permalink: /get-started-with-docker-in-your-projects-through-examples/
 ---
-<div class="text-center mt-2 mb-2">
-	<img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0 border-light" alt="Get Started with Docker in your Projects Book Cover by Mark Takacs">
-</div>
 
-# The one book that turns you into a pro Docker builder
+<section class="row mb-4">
+    <div class="col-12 col-sm-4 mt-2 text-center">
+	    <img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0 border-light" alt="Get Started with Docker in your Projects Book Cover by Mark Takacs">
+    </div>
+	<div class="col mt-2 mt-lg-5 pl-lg-5">
+        <h1 class="mb-4 mt-lg-5 display-4">The one book that turns you into a pro Docker builder</h1>
+        <ul class="list-unstyled">
+            <li class="lead mb-2">Would you like to learn Docker from the basics?</li>
+            <li class="lead mb-2">Would you like an instructor with a gradual approach focused on the best learning experience?</li>
+            <li class="lead mb-2">Would you like to build, ship and run real applications to get ready for project work?</li>
+        </ul>
+	</div>
+</section>
 
-- *Would you like to learn Docker from the basics?*
-- *Would you like an instructor with a gradual approach focused on the best learning experience?*
-- *Would you like to build, ship and run real applications to get ready for project work?*
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <h2>What do you get in the book?</h2>
+        <ul>
+            <li>Over <b>300 pages of high quality learning content</b>.</li>
+            <li>Every chapter is built on <b>code-along examples</b>.</li>
+            <li>We cover the <b>entire build, ship and run cycle</b>.</li>
+            <li>Unique project focus with <b>best practices and detailed workflow</b>.</li>
+            <li><b>Continuous integration</b> example.</li>
+            <li><b>Swarm and Kubernetes</b> deployment.</li>
+            <li><b>Updated in January, 2019</b>.</li>
+            <li>PDF, epub, and mobi formats with code samples in one zip file.</li>
+            <li>BONUS: we Dockerize an entire open-source web application project from GitHub.</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h2>Why is this book special?</h2>
+        <ul>
+            <li>This book is <b>a code-along tutorial</b>, I introduce every aspect of Docker through examples, because <b>you learn more by doing.</b></li>
+            <li>The book has a <b>special project focus</b> to teach you how you can use Docker in real life.</li>
+            <li>Besides the learning examples, I added <b>another 65 pages of build exercises</b> with shell scripts, Node.js, Python, PHP, C, Golang, and more.</li>
+            <li>In the last chapters, we <b>build a complex example end to end</b> using all the skills we learned in the book.</li>
+            <li>Over <b>300k happy students on Youtube</b>.</li>
+            <li><b>7 days money back quarantee</b>, no questions asked.</li>
+        </ul>	
+	</div>
+</section>
 
-## What do you get in the book?
+## What readers say
 
-- Over **300 pages of high quality learning content**.
-- Every chapter is built on **code-along examples**.
-- We cover the **entire build, ship and run cycle**.
-- Unique project focus with **best practices and detailed workflow**.
-- **Continuous integration** example.
-- **Swarm and Kubernetes** deployment.
-- **Updated in January, 2019**.
-- PDF, epub, and mobi formats with code samples in one zip file.
-- BONUS: we Dockerize an entire open-source web application project from GitHub.
-		
-## Why is this book special?
+<blockquote class="blockquote text-center">
+  <p class="mb-0">"I read many books, and studied online tutorials. None of them helped me as much as your content. You rock!"</p>
+  <footer class="blockquote-footer">Ozzy</footer>
+</blockquote>
 
-- This book is **a code-along tutorial**, I introduce every aspect of Docker through examples, because **you learn more by doing.**
-- The book has a **special project focus** to teach you how you can use Docker in real life.
-- Besides the learning examples, I added **another 65 pages of build exercises** with shell scripts, Node.js, Python, PHP, C, Golang, and more.
-- In the last chapters, we **build a complex example end to end** using all the skills we learned in the book.
-- Over **300k happy students on Youtube**.
-- **7 days money back quarantee**, no questions asked.
+<blockquote class="blockquote text-center">
+  <p class="mb-0">"It is absolutely beautiful and very informative."</p>
+  <footer class="blockquote-footer">Dinesh</footer>
+</blockquote>
 
 ##### **Last updated on January 10, 2019.**
 ##### Published in June, 2018.
