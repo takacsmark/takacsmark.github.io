@@ -80,8 +80,15 @@ $enable-responsive-font-sizes: true;
     // Very small viewport, like Iphone 5s portrait layout 
     @media (max-width: 339.98px) {
         margin-top: 0 !important;
+
+	.btn-lg {
+	    padding: .375rem .75rem;
+	    font-size: 1rem;
+	    line-height: 1.5;
+	    border-radius: .25rem;
+	}
     }
-    
+
     // Smart phones in landscape mode 
     @include media-breakpoint-up(sm) {
         img {
