@@ -32,8 +32,8 @@ $enable-responsive-font-sizes: true;
 // @import "jumbotron";
 // @import "alert";
 // @import "progress";
-// @import "media";
-// @import "list-group";
+@import "../node_modules/bootstrap/scss/media";
+@import "../node_modules/bootstrap/scss/list-group";
 // @import "close";
 // @import "toasts";
 // @import "modal";
@@ -91,6 +91,27 @@ $enable-responsive-font-sizes: true;
 
         h1 {
             max-width: 80%;
+        }
+    }
+}
+
+
+// Featured content
+.featured-box {
+
+    .media img {
+        width: 64px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .media {
+	    width: 50%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .media {
+	    width: 25%;
         }
     }
 }

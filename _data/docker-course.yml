@@ -1,0 +1,40 @@
+items:
+  - title: Docker tutorial for beginners through examples - a step by step tutorial
+    image: /assets/images/post-thumbs/docker-tutorial-getting-started.png
+    url: /getting-started-with-docker-in-your-project-step-by-step-tutorial/
+    order: 1
+
+  - title: Dockerfile tutorial by example - basics and best practices [2018]
+    image: /assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png
+    url: /dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+    order: 2
+
+  - title: What is Docker and what is Docker used for? [2018 tutorial]
+    image: /assets/images/post-thumbs/what-is-docker.png
+    url: /what-is-docker-what-it-can-do-for-you/
+    order: 3
+
+  - title: Docker containers vs VMs. What is the difference?
+    image: /assets/images/post-thumbs/containers-vs-vms.png
+    url: /docker-containers-vs-virtual-machines/
+    order: 4
+
+  - title: Docker compose tutorial for beginners by example [all you need to know]
+    image: /assets/images/post-thumbs/docker-compose-beginners-all-you-need-to-know.png
+    url: /docker-compose-tutorial-beginners-by-example-basics/
+    order: 5
+
+  - title: Docker Swarm Tutorial | Code Along | Zero to Hero under 1 Hour
+    image: /assets/images/post-thumbs/docker-swarm.png
+    url: /docker-swarm-tutorial-for-beginners/
+    order: 6
+
+  - title: Docker logs - Container, Compose, Swarm and Engine Logs
+    image: /assets/images/post-thumbs/docker-logs.png
+    url: /docker-logs/
+    order: 7
+
+  - title: Docker prune explained - usage and examples
+    image: /assets/images/post-thumbs/docker-prune.png
+    url: /docker-prune/
+    order: 8

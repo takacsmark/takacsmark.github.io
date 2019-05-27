@@ -1,0 +1,16 @@
+items:
+  - title: Dockerfile tutorial by example - basics and best practices [2018]
+    image: /assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png
+    url: /dockerfile-tutorial-by-example-dockerfile-best-practices-2018/
+
+  - title: Docker compose tutorial for beginners by example [all you need to know]
+    image: /assets/images/post-thumbs/docker-compose-beginners-all-you-need-to-know.png
+    url: /docker-compose-tutorial-beginners-by-example-basics/
+
+  - title: Docker tutorial for beginners through examples - a step by step tutorial
+    image: /assets/images/post-thumbs/docker-tutorial-getting-started.png
+    url: /getting-started-with-docker-in-your-project-step-by-step-tutorial/
+
+  - title: 25 Top Javascript Trends & Actions | 2019 | Based on Stackoverflow data
+    image: /assets/images/post-thumbs/25-Top-Javascript-Trends-Actions-2019.png
+    url: /25-top-javascript-trends-actions-2019-stackoverflow-data/

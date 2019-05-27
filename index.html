@@ -2,7 +2,7 @@
 layout: default
 ---
 <!-- Greeting Box -->
-<section class="container px-0 mb-4 mt-n5">
+<section class="container px-0 mb-5 mt-n5">
     <div class="row">
         <div class="col mt-lg-n1">
 
@@ -11,9 +11,9 @@ layout: default
 	        <!-- <div class="card-img-overlay pl-sm-5"> -->
 	        <div class="card-img-overlay d-flex align-content-end flex-wrap">
 	            <h1 class="card-title display-1">Learn Docker with Mark</h1>
-		    <div>
-	                <a href="/" class="btn btn-primary mr-3">FREE Course</a>
-	                <a href="/get-started-with-docker-in-your-projects-through-examples" class="btn btn-success ">Get the Book</a>
+		    <div class="mt-4">
+	                <a href="#free-docker-course" class="btn btn-primary btn-lg mr-3">FREE Course</a>
+	                <a href="/get-started-with-docker-in-your-projects-through-examples" class="btn btn-success btn-lg">Get the Book</a>
 		    </div>
 	        </div>
             </div>
@@ -24,18 +24,63 @@ layout: default
 <!-- End Greeting Box -->
 
 <!-- Featured Posts -->
-<!-- <div class="container"> -->
-<!--   <div class="row"> -->
+<section class="container" id="free-docker-course">
+  <div class="row">
+    <div class="col-12">
 
-<!--     <div class="col-12"> -->
-<!-- 	<div class="card border-white"> -->
-<!-- 	  <div class="card-body"> -->
-<!-- 	  </div> -->
-<!-- 	</div> -->
-<!--     </div> -->
-<!--   </div> -->
-<!-- </div> -->
+	<div class="card mb-5 featured-box">
+	  <div class="card-body">
+	    <h5 class="card-title text-center">Featured - FREE Docker course</h5>
+	    <h5 class="card-title text-muted text-center mb-4"><small>Start here! These posts and videos teach you the basics of Docker.</small></h5>
+	    <div class="card-text d-flex flex-wrap">	
+              {% for item in site.data.docker-course.items %}
+              {% assign pl = item.image | size | minus: 4 %}
+              <div class="media pr-3 position-relative">
+                  <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
+                  <div class="media-body">
+                    <h6 class="mt-0">{{ item.order }}. {{ item.title }}</h6>
+                  <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a>
+	          </div>
+              </div>
+              {% endfor %}
+	    </div>
+	  </div>
+
+	  <div class="card-footer text-muted">
+	    You can find more free Docker learning below. 
+	  </div>
+	</div>
+
+    </div>
+  </div>
+</section>
 <!-- End Featured Posts -->
+
+<!-- Most Popular Posts -->
+<section class="container">
+  <div class="row">
+    <div class="col-12">
+
+	<div class="card mb-5 featured-box">
+	  <div class="card-body">
+	    <h5 class="card-title text-center mb-4">Most popular articles</h5>
+	    <div class="card-text d-flex flex-wrap">	
+              {% for item in site.data.most-popular.items %}
+              {% assign pl = item.image | size | minus: 4 %}
+              <div class="media pr-3 position-relative">
+                  <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
+                  <div class="media-body">
+                    <h6 class="mt-0">{{ item.title }}</h6>
+                  <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a>
+	          </div>
+              </div>
+              {% endfor %}
+	    </div>
+	  </div>
+    </div>
+  </div>
+</section>
+<!-- End Most Popular Posts -->
 
 <!-- Main Content -->
 <section class="container">
