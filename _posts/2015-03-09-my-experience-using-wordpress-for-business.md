@@ -5,7 +5,7 @@ description: "The story of why I decided to use WordPress for business purposes.
 date:   2015-03-09 07:48:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/wordpress-on-table.jpg"
-categories: Wordpress, web economy
+categories: Wordpress
 ---
 I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](https://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
 

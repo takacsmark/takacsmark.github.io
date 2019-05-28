@@ -5,7 +5,7 @@ description: "With this beginner's Docker tutorial you'll learn to use Docker in
 date:   2016-10-15 8:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-tutorial-getting-started.png"
-categories: Web development, Docker
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -13,7 +13,7 @@ categories: Web development, Docker
 ****Update********
 Now you can follow along the video and learn with my youtube tutorial. 
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vyp5_F42NGs" allowfullscreen></iframe>
 </div>
 

@@ -5,7 +5,7 @@ description: "How are containers different from VMs? What are the benefits of co
 date: 2018-08-08 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/containers-vs-vms.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}

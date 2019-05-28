@@ -123,6 +123,7 @@ $enable-responsive-font-sizes: true;
     }
 }
 
+
 // Footer styling
 #site-footer {
     background-color: #1e1e1f;
@@ -141,5 +142,14 @@ $enable-responsive-font-sizes: true;
     .container-fluid {
 	background-color: rgb(10, 10, 10);
 	font-size: .75rem;
+    }
+}
+
+// Inline sponsored links
+.inline-sponsored {
+
+    img {
+	max-width: 64px;
+	max-height: 64px;
     }
 }

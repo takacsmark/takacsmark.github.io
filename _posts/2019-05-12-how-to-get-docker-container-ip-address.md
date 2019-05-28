@@ -5,7 +5,7 @@ description: "Need to find the IP address of a Docker container? Need to know ho
 date: 2019-05-12 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-tips-container-ip.png"
-categories: Docker, DevOps 
+categories: Docker Tutorials 
 ---
  * TOC
 {:toc}

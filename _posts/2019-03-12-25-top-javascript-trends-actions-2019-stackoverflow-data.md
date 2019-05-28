@@ -5,7 +5,7 @@ description: "What are the top trends in the Javascript ecosystem in 2019? What 
 date: 2019-03-12 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/25-Top-Javascript-Trends-Actions-2019.png"
-categories: Technology, Trends, TechBiz
+categories: Trends Javascript
 ---
  * TOC
 {:toc}

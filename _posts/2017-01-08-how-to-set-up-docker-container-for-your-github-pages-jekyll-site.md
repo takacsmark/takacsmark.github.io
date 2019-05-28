@@ -5,7 +5,7 @@ description: "Serving my existing GitHub Pages Jekyll sites from a Docker contai
 date: 2017-01-08 10:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-jekyll.png"
-categories: Web development, Docker
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -15,7 +15,7 @@ If you are absolutely new to Docker, please start with the [beginners tutorial w
 ****Tip********
 Watch the video that I created for this post on Youtube. I show you what issue I faced when I tried to serve my existing GitHub Pages sites from the official Jekyll container. I also give you the fix that I created.    
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6UAf8b_2juk" allowfullscreen></iframe>
 </div>
 

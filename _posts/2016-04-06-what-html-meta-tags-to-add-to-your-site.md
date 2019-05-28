@@ -5,7 +5,7 @@ description: "Eager to clarify what meta tags you need in your HTML markup? Need
 date:   2016-04-04 16:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/html_meta_tags.jpg"
-categories: Web development, User experience
+categories: HTML SEO
 ---
 * TOC
 {:toc}

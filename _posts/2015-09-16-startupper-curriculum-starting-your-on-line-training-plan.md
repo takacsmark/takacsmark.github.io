@@ -5,7 +5,7 @@ description: "This the first step towards your startupper curriculum. These are 
 date:   2015-09-16 17:06:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/startupper-online-curriculum.jpg"
-categories: 'Online learning'
+categories: Education 
 ---
 I promised in my previous post, ["Are online courses good enough to change careers?"]({{ site.url }}/are-online-courses-good-enough-to-change-careers/){:target="_blank"}, that I will start a series of posts and help you build your own online training curriculum. I decided to call this Startupper Curriculum.
 

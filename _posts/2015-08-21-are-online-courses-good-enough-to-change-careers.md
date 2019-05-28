@@ -5,7 +5,7 @@ description: "Shall I start learning on-line? Is it feasible to acquire the requ
 date:   2015-08-21 18:29:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/change-careers-with-online-courses.jpg"
-categories: 'Online learning'
+categories: Education 
 ---
 This is the start of a new blog category on tmdc today. This is the first post in a section where I'll share my e-learning learnings on my journey towards becoming an on-line entrepreneur.
 

@@ -5,7 +5,7 @@ description: "Discover high growth technology solutions used by companies worldw
 date: 2019-01-31 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/2019-Technology-Trends-Stackoverflow-Analysis.png"
-categories: Technology, Trends, TechBiz
+categories: Trends Python Javascript 
 ---
 * TOC
 {:toc}

@@ -5,7 +5,7 @@ description: "Learn everything you need to get started with Docker Compose in yo
 date: 2018-09-18 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-compose-beginners-all-you-need-to-know.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -14,7 +14,7 @@ In previous tutorials we learned the basics of Docker containers and Docker imag
 
 **This post is available as a Youtube video, too.**
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4EqysCR3mjo" allowfullscreen></iframe>
 </div>
 

@@ -5,7 +5,7 @@ description: "What is Docker? What is docker used for? What are its benefits? Ge
 date:   2018-07-26 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/what-is-docker.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -29,7 +29,7 @@ _This article is designed to be a functional introduction of Docker concepts wit
 
 Let's start with a video!
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EmrikChpdfY" allowfullscreen></iframe>
 </div>
 

@@ -5,7 +5,7 @@ description: "The easiest way to see Docker logs is to start containers in the f
 date: 2018-10-30 07:39:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-logs.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}

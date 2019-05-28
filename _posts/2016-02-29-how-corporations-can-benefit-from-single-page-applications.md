@@ -5,7 +5,7 @@ description: "Single page applications are a hot topic. How will they improve cu
 date:   2016-02-28 15:58:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/single_page_applications_instagram.jpg"
-categories: web economy, corporate IT, single page applications, react, angular
+categories: React Angular
 ---
 * TOC
 {:toc}

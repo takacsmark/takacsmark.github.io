@@ -5,7 +5,7 @@ description: "What Python skills should you and your team build in 2019? What do
 date: 2019-02-26 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/Top-14-python-skills-businesses-2019-stackoverflow-analysis.png"
-categories: Technology, Trends, TechBiz
+categories: Trends Python 
 ---
  * TOC
 {:toc}

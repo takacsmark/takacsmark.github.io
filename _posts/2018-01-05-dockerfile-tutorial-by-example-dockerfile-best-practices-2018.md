@@ -5,7 +5,7 @@ description: "An in-depth tutorial on creating your own Docker images with Docke
 date:   2018-01-05 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/dockerfile-tutorial-by-example-post.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -24,7 +24,7 @@ This article is the writeup of 2 Dockerfile video tutorials on my Youtube channe
 
 Let's start the first video.
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6Er8MAvTWlI" allowfullscreen></iframe>
 </div>
 

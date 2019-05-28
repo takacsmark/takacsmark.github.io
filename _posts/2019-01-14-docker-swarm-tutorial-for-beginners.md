@@ -5,7 +5,7 @@ description: "Would you like to run your projects in high-availability scalable 
 date: 2019-01-14 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-swarm.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -23,7 +23,7 @@ In order to get the most out of this article you should be familiar with basic D
 
 This tutorial is available as a Youtube video, too.
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
 </div>
 

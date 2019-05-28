@@ -4,7 +4,7 @@ title:  "Fat-Free PHP Framework Tutorial – 2 Class Based Routing"
 description: "Set and get values of global variables and see how Fat-Free enables building a completely modular MVC project with class based routing."
 date:   2015-09-15 16:09:24 +0100
 author: Márk Takács
-categories: tutorials
+categories: PHP Tutorials
 thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: "https://www.youtube.com/embed/fAng7nIQKpM"
 ---

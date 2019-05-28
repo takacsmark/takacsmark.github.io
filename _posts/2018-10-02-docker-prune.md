@@ -5,7 +5,7 @@ description: "Docker prune is the way to clean up containers, images, volumes an
 date: 2018-10-02 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-prune.png"
-categories: Docker, Tutorials
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -14,7 +14,7 @@ Working with Docker, you'll soon find various objects on your system that are ha
 
 **You can watch this tutorial on Youtube, too.**
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QruAkYHCFPE" allowfullscreen></iframe>
 </div>
 

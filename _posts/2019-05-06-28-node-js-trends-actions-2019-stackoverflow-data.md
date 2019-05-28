@@ -5,7 +5,7 @@ description: "Explore the top tech used in real-life Node.js projects. Use our c
 date: 2019-05-06 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/28-Node-js-Trends-Actions-2019.png"
-categories: Technology, Trends, TechBiz
+categories: Trends Javascript Nodejs 
 ---
  * TOC
 {:toc}

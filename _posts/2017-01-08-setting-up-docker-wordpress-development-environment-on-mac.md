@@ -5,7 +5,7 @@ description: "Looking for a good practice to set up a Docker development environ
 date: 2017-01-08 08:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-wordpress-mariadb.png"
-categories: Web development, Docker
+categories: Docker Tutorials
 ---
 * TOC
 {:toc}
@@ -15,7 +15,7 @@ If you are absolutely new to Docker, please start with the [beginners tutorial w
 ****Tip********
 Watch the video that I created for this post on Youtube. I show how to install the docker engine on Mac in the video plus I walk you through all the steps that are needed to set up a Wordpress development environment with MySQL using Docker containers.   
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed-responsive embed-responsive-16by9 mb-4">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eBGvHkTFDTs" allowfullscreen></iframe>
 </div>
 

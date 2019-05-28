@@ -33,7 +33,7 @@ layout: default
 
             <!-- Video Thumb -->
             {% if page.videothumb %}
-	    <div class="embed-responsive embed-responsive-16by9">
+	    <div class="embed-responsive embed-responsive-16by9 mb-4">
 	        <iframe class="embed-responsive-item" src="{{ page.videothumb }}" allowfullscreen></iframe>
 	    </div>
             {% endif %}
@@ -66,6 +66,27 @@ layout: default
     
 </article>
 
+<!-- Inline Sponsored Links -->
+<script>
+  const promos = [
+      {% for item in site.data.ads.items %}
+      {% if page.categories contains item.tag %}
+      {
+	  image: "{{ item.image }}",
+	  title: "{{ item.title }}",
+	  sub: "{{ item.sub }}",
+	  url: "{{ item.url }}",
+	  type: "{{ item.type }}",
+	  tags: "{{ item.tags }}",
+	  ends: "{{ item.ends }}"
+      },
+      {% endif %}
+      {% endfor %}
+  ];
+</script>
+<!-- End Inline Sponsored Links -->
+
+<!-- Comments -->
 {% if site.disqus %}
 <section class="container">
     <section class="row">
@@ -82,3 +103,4 @@ layout: default
     </section>
 </section>
 {% endif %}
+<!-- End Comments -->

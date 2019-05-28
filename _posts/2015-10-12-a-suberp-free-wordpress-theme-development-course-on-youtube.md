@@ -6,7 +6,7 @@ date:   2015-10-12 11:53:00 +0100
 author: Márk Takács
 thumbnail: /assets/images/post-thumbs/web-design-for-beginners-course.jpg
 videothumb: "https://www.youtube.com/embed/videoseries?list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5"
-categories: 'Online learning'
+categories: Wordpress 
 ---
 Let me point you to a great tutorial on Youtube that will teach you basic Wordpress theme development through well explained examples, and will teach you the basics of web development at the same time.
 
@@ -34,14 +34,14 @@ If you are an experienced programmer, but new to Wordpress, I think this is the 
 
 If you like the style and pace of the course and feel you'd like to learn more about HTML and CSS you can take [this Udemy course by the same person.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2Fweb-design-for-beginners-real-world-coding-in-html-css%2F){:target="_blank"}
 
-[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/post-thumbs/web-design-for-beginners-course.jpg)](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css){:target="_blank"}
+[![Web Design for Beginners: Real World Coding in HTML & CSS]({{ site.url }}/assets/images/post-thumbs/web-design-for-beginners-course.jpg){:.img-fluid}](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css){:target="_blank"}
 
 [Web Design for Beginners: Real World Coding in HTML & CSS by Brad Schiff](https://www.udemy.com/web-design-for-beginners-real-world-coding-in-html-css){:target="_blank"}
 
 I took Brad's Udemy course, too. I'm very thankful, because he helped me to clean the concepts around HTML grids and some practices in CSS and HTML. This course is payable, but there are often promotions, so it's worth to have a look.
 
 Another important resource that I used during my theme development is the below figure by Wordpress. It explains the Wordpress theme template hierarchy and it speeds up your design process a lot.
-[![wordpress theme template hierarchy]({{ site.url }}/assets/images/in-content/wordpress-template-hierarchy.png)](https://developer.wordpress.org/files/2014/10/template-hierarchy.png)
+[![wordpress theme template hierarchy]({{ site.url }}/assets/images/in-content/wordpress-template-hierarchy.png){:.img-fluid}](https://developer.wordpress.org/files/2014/10/template-hierarchy.png)
 
 ## Wrap-up
 
