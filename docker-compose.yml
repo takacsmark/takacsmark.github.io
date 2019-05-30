@@ -13,8 +13,8 @@ services:
         # command: jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
 
         volumes:
-            - $PWD:/srv/jekyll
-            - $PWD/vendor/bundle:/usr/local/bundle
+            - .:/srv/jekyll
+            - ./vendor/bundle:/usr/local/bundle
 
         ports:
             - 4000:4000
