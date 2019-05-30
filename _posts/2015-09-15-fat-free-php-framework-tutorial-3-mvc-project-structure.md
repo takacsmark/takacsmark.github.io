@@ -183,6 +183,7 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 
 ### template.htm
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html>
@@ -195,6 +196,7 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 </body>
 </html>
 ```
+{% endraw %}
 
 You can write f3 templates in plain HTML. If you need to use variables that are provided by controllers, you need to add your variables as globals in the controller and use f3's template syntax to display or use those values. You can pass all variable types, as well as arrays and objects to templates in global variables.
 

@@ -191,6 +191,7 @@ We pass the entire object to the template and take care of the individual fields
 
 There is one thing left to do now. We have to change our message in the template on line 7. f3 lets us use the handy dot notation to access object properties.
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html>
@@ -203,6 +204,7 @@ There is one thing left to do now. We have to change our message in the template
 </body>
 </html>
 ```
+{% endraw %}
 
 If all goes well you should see the new Hello World message coming from the database. :)
 
