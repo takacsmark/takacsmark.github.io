@@ -23,6 +23,7 @@ services:
     image: takacsmark/takacsmark-dot-com:devtools-${NODE_IMAGE_VERSION}
     volumes:
       - ./:/usr/src/app
+      - /usr/src/app/node_modules
     stdin_open: true
     tty: true
     command: /bin/bash
