@@ -63,7 +63,7 @@ In this article we take Stackoverflow data dumps and analyze vital aspects of th
 
 Javascript is a broad domain and most of our findings in this article are focused around big players, because their numbers bring them to the top.
 
-**We are well able to confirm the leading Javascript trends, we also highlighted the key niche players emerging in the field. In order to find more of Javascript we need to dig deeper. We'll do this in another three future reports focusing on React, Angular and Node.**
+**We are well able to confirm the leading Javascript trends, we also highlighted the key niche players emerging in the field. In order to find more of Javascript we need to dig deeper. We'll do this in another future report focusing on Node.**
 
 
 ## How far have we come with Javascript in the past years
