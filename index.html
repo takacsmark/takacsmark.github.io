@@ -27,25 +27,7 @@ layout: default
 <section class="container" id="free-docker-course">
   <div class="row">
     <div class="col-12">
-
-	<div class="card mb-5 featured-box">
-	  <div class="card-body">
-	    <h5 class="card-title text-center">Featured - FREE Docker course</h5>
-	    <h5 class="card-title text-muted text-center mb-4"><small>Start here! These posts and videos teach you the basics of Docker.</small></h5>
-	    <div class="card-text d-flex flex-wrap">	
-              {% for item in site.data.docker-course.items %}
-              {% assign pl = item.image | size | minus: 4 %}
-              <div class="media pr-3 position-relative">
-                  <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
-                  <div class="media-body">
-                    <h6 class="mt-0">{{ item.order }}. {{ item.title }}</h6>
-                  <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a>
-	          </div>
-              </div>
-              {% endfor %}
-	    </div>
-	  </div>
-
+      {% include featured.html %}
     </div>
   </div>
 </section>
@@ -56,9 +38,9 @@ layout: default
   <div class="row">
     <div class="col-12">
 
-	<div class="card mb-5 featured-box bg-light">
+	<div class="card mb-5 featured-box bg-light border-white">
 	  <div class="card-body">
-	    <h5 class="card-title text-center mb-4">Most popular articles</h5>
+	    <h5 class="card-title text-center mb-4 text-uppercase display-4">Most popular articles</h5>
 	    <div class="card-text d-flex flex-wrap">	
               {% for item in site.data.most-popular.items %}
               {% assign pl = item.image | size | minus: 4 %}
@@ -66,13 +48,15 @@ layout: default
                   <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
                   <div class="media-body">
                     <h6 class="mt-0">{{ item.title }}</h6>
-                  <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a>
-	          </div>
+                    <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a> 
+                  </div> 
               </div>
-              {% endfor %}
-	    </div>
-	  </div>
+	            {% endfor %}
+	     </div>
     </div>
+   </div>
+
+  </div>
   </div>
 </section>
 <!-- End Most Popular Posts -->

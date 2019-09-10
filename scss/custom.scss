@@ -44,7 +44,8 @@ $enable-responsive-font-sizes: true;
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-
+$tmdc-light-green:#82C928; 
+$tmdc-ligh-blue: #0099FF;
 
 // Global overrides
 
@@ -123,6 +124,10 @@ $enable-responsive-font-sizes: true;
     }
 }
 
+.gradient-separator {
+    height: .5rem;
+    background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(130,201,40,1) 100%);
+}
 
 // Footer styling
 #site-footer {
