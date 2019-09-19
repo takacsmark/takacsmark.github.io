@@ -22,7 +22,7 @@ _First, let me say that this practice should not be used to create a Docker cont
 
 **Sometimes however, you need a quick way to copy some stuff into a running container to test it out.** Docker provides a dedicated command called `docker cp` to support this.
 
-Let's start an Nginx container on your machine and list its container name and id.
+Let's start an [Nginx](https://www.nginx.com/){:target="_blank"} container on your machine and list its container name and id.
 
 ```shell
 $ docker run -d -p 80:80 nginx
