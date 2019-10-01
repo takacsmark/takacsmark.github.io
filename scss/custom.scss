@@ -66,44 +66,6 @@ $tmdc-ligh-blue: #0099FF;
     border-color: rgba(0,0,0,0);
 }
 
-// Index page greeting box styling
-#greeting-box {
-    img {
-        width: 200%;
-        margin-left: -100%;
-    }
-
-    h1 {
-        max-width: 55%;
-    }
-
-
-    // Very small viewport, like Iphone 5s portrait layout 
-    @media (max-width: 339.98px) {
-        margin-top: 0 !important;
-
-	.btn-lg {
-	    padding: .375rem .75rem;
-	    font-size: 1rem;
-	    line-height: 1.5;
-	    border-radius: .25rem;
-	}
-    }
-
-    // Smart phones in landscape mode 
-    @include media-breakpoint-up(sm) {
-        img {
-            width: 100%;
-            margin-left: inherit;
-        }
-
-        h1 {
-            max-width: 80%;
-        }
-    }
-}
-
-
 // Featured content
 .featured-box {
 
