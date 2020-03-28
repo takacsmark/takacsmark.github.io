@@ -1,7 +1,7 @@
 items:
   - image: /assets/images/in-content/get-started-with-docker-in-your-projects-cover_370.png
     title: Learn Docker with my book
-    sub: <s>$34.99</s> $0.00 - Help solve the coronavirus crsis, download the book for free until April 31 and build something useful.  
+    sub: <s>$34.99</s> $0.00 - Help solve the coronavirus crisis, download the book for free until April 31 and build something useful.  
     url: /get-started-with-docker-in-your-projects-through-examples/
     type: own 
     tag: Docker
