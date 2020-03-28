@@ -9,6 +9,17 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
     <div class="col-12 col-sm-4 mt-2 text-center">
 	    <img src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png" class="img-thumbnail rounded-0 border-light" alt="Get Started with Docker in your Projects Book Cover by Mark Takacs">
     </div>
+
+	<div class="col mt-2 mt-lg-5 pl-lg-5">
+        <h1 class="mb-4 mt-lg-5 display-4">Help solve the coronavirus crisis, download the book for free!</h1>
+        <ul class="list-unstyled">
+            <li class="lead mb-2">In times of the global coronavirus pandemic, I belive it is very important to make knowledge freely available to those who want to do something for all of us.</li>
+            <li class="lead mb-2 font-weight-bold">In order to support creators and problem solvers you can download the book for free until April 31.</li>
+            <li class="lead mb-2">Stay safe!</li>
+        </ul>
+	</div>
+
+    <!--
 	<div class="col mt-2 mt-lg-5 pl-lg-5">
         <h1 class="mb-4 mt-lg-5 display-4">The one book that turns you into a pro Docker builder</h1>
         <ul class="list-unstyled">
@@ -17,6 +28,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
             <li class="lead mb-2">Would you like to build, ship and run real applications to get ready for project work?</li>
         </ul>
 	</div>
+    -->
 </section>
 
 <section class="row">
