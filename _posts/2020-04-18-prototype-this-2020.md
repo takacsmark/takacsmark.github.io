@@ -3,6 +3,7 @@ layout: post
 title: "What to Prototype in 2020 to be on Top of Your Game?"
 description: "Get learning and prototyping ideas with this FREE Ebook based on Stackoverflow data in the field of Web & Mobile app building, Machine Learning and DevOps."
 date: 2020-04-18 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/prototype-this-2020.png"
 categories: technology, prototyping, trends
 ---

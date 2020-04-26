@@ -3,6 +3,7 @@ layout: post
 title: "DevOps and Docker Trends 2019 | Based on Stackoverflow Data"
 description: "Everybody seems to be implementing DevOps and Docker these days. Let's see what tools they use and what actions you may take to keep up."
 date: 2019-09-08 07:19:00 +0100
+author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/devops-docker-trends.png"
 categories: Technology, Trends, TechBiz
 ---
