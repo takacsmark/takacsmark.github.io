@@ -27,7 +27,29 @@
 	<!-- Sticky Sidebar -->
 	<script src="/assets/js/sticky-kit.min.js"></script>
 	<!-- End Sticky Sidebar -->
-	
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
+        authDomain: "takacsmark-com.firebaseapp.com",
+        databaseURL: "https://takacsmark-com.firebaseio.com",
+        projectId: "takacsmark-com",
+        storageBucket: "takacsmark-com.appspot.com",
+        messagingSenderId: "81292702129",
+        appId: "1:81292702129:web:f01f94ae7df07eda130d90"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
 	<!-- Custom JS -->
 	<script src="/assets/js/app.js"></script>
 	<!-- End Custom JS -->
