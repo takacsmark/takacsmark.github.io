@@ -39,7 +39,7 @@ $enable-responsive-font-sizes: true;
 // @import "modal";
 // @import "tooltip";
 // @import "popover";
-// @import "carousel";
+@import "../node_modules/bootstrap/scss/carousel";
 // @import "spinners";
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
@@ -55,8 +55,6 @@ $tmdc-ligh-blue: #0099FF;
 	max-width: 100%;
     }
 }
-
-
 
 // Component customization
 

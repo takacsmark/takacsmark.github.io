@@ -1,26 +1,45 @@
 ---
 layout: default
 ---
+
 <!-- Greeting Box -->
-<section class="container mb-5" id="greeting-box">
+<section class="container mt-3 mb-5" id="greeting-box">
     <div class="row">
         <div class="col-12">
-        
             <div class="card bg-light border-light">
                 <div class="row no-gutters">
-                  <div class="col-sm-4 col-lg-3">
-                    <img class="card-img" src="/assets/images/site-greeting/mark-mike.png" alt="Build tech with Mark Takacs on takacsmark.com">
-                  </div>
-                  <div class="col-sm-8 offset-lg-1 col-lg-6">
-                    <div class="card-body mt-lg-4">
-                      <h5 class="card-title display-4">Build Something Wonderful!</h5>
-                      <p class="card-text font-wieght-bold"><a href="http://localhost:4000/get-started-with-docker-in-your-projects-through-examples/">Help solve the coronavirus crisis, download the Docker book for free!</a></p>
-                      <p class="card-text"><small><a href="/mailing-list-signup" class="text-muted text-un"><u>Never miss a post.</u></a></small></p>
+                    <div class="col-sm-4 col-lg-3">
+                        <img
+                            class="card-img"
+                            src="/assets/images/site-greeting/mark-mike.png"
+                            alt="Build tech with Mark Takacs on takacsmark.com"
+                        />
                     </div>
-                  </div>
+                    <div class="col-sm-8 offset-lg-1 col-lg-6">
+                        <div class="card-body mt-lg-4">
+                            <h5 class="card-title display-4">
+                                Build Something Wonderful!
+                            </h5>
+                            <p class="card-text font-wieght-bold">
+                                <a
+                                    href="http://localhost:4000/get-started-with-docker-in-your-projects-through-examples/"
+                                    >Help solve the coronavirus crisis, download
+                                    the Docker book for free!</a
+                                >
+                            </p>
+                            <p class="card-text">
+                                <small
+                                    ><a
+                                        href="/mailing-list-signup"
+                                        class="text-muted text-un"
+                                        ><u>Never miss a post.</u></a
+                                    ></small
+                                >
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -28,69 +47,86 @@ layout: default
 
 <!-- Featured Posts -->
 <section class="container" id="free-docker-course">
-  <div class="row">
-    <div class="col-12">
-      {% include featured.html %}
+    <div class="row">
+        <div class="col-12">
+            {% include featured.html %}
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Featured Posts -->
 
 <!-- Most Popular Posts -->
 <section class="container">
-  <div class="row">
-    <div class="col-12">
-
-	<div class="card mb-5 featured-box bg-light border-white">
-	  <div class="card-body">
-	    <h5 class="card-title text-center mb-4 text-uppercase display-4">Most popular articles</h5>
-	    <div class="card-text d-flex flex-wrap">	
-              {% for item in site.data.most-popular.items %}
-              {% assign pl = item.image | size | minus: 4 %}
-              <div class="media pr-3 position-relative">
-                  <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
-                  <div class="media-body">
-                    <h6 class="mt-0">{{ item.title }}</h6>
-                    <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a> 
-                  </div> 
-              </div>
-	            {% endfor %}
-	     </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-5 featured-box bg-light border-white">
+                <div class="card-body">
+                    <h5
+                        class="card-title text-center mb-4 text-uppercase display-4"
+                    >
+                        Most popular articles
+                    </h5>
+                    <div class="card-text d-flex flex-wrap">
+                        {% for item in site.data.most-popular.items %} {% assign
+                        pl = item.image | size | minus: 4 %}
+                        <div class="media pr-3 position-relative">
+                            <img
+                                src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}"
+                                class="mr-3 mb-3"
+                                alt="{{ item.title }}"
+                            />
+                            <div class="media-body">
+                                <h6 class="mt-0">{{ item.title }}</h6>
+                                <a
+                                    href="{{ item.url | prepend: site.baseurl }}"
+                                    class="stretched-link"
+                                ></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
-
-  </div>
-  </div>
 </section>
 <!-- End Most Popular Posts -->
 
 <!-- Main Content -->
 <section class="container">
     <div class="row sticky-container">
-
         <!-- Post Listing -->
         <section class="col">
             <div class="row">
-
                 {% for post in site.posts %}
                 <div class="post-listing-item col-12 col-sm-6 col-lg-4">
-
                     <div class="card border-white">
                         {% assign pl = post.thumbnail | size | minus: 4 %}
-                        <img class="card-img-top rounded-0" src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}" alt="{{ post.title }}">
+                        <img
+                            class="card-img-top rounded-0"
+                            src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}"
+                            alt="{{ post.title }}"
+                        />
                         <div class="card-body p-3">
                             <h2 class="card-title">{{ post.title }}</h2>
                             <p class="card-text">{{ post.description }}</p>
                             <p class="card-text">
-                                <small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small>
-                                <small class="text-muted" id="{{ post.url }}"></small>
+                                <small class="text-muted"
+                                    >{{ post.date | date: "%b %-d, %Y" }}</small
+                                >
+                                <small
+                                    class="text-muted"
+                                    id="{{ post.url }}"
+                                ></small>
                             </p>
-                            <a href="{{ post.url | prepend: site.baseurl }}" class="card-link stretched-link"></a>
+                            <a
+                                href="{{ post.url | prepend: site.baseurl }}"
+                                class="card-link stretched-link"
+                            ></a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
         </section>
         <!-- End Post Listing -->
@@ -100,7 +136,6 @@ layout: default
             {% include sidebar.html %}
         </section>
         <!-- End Sidebar -->
-
     </div>
 </section>
 <!-- End Main Content -->
