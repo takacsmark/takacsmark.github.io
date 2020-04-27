@@ -40,21 +40,47 @@ $enable-responsive-font-sizes: true;
 // @import "tooltip";
 // @import "popover";
 @import "../node_modules/bootstrap/scss/carousel";
-// @import "spinners";
+@import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
+
+@import "./color-scheme";
 
 $tmdc-light-green:#82C928; 
 $tmdc-ligh-blue: #0099FF;
 
 // Global overrides
 
+body {
+    background-color: $tmdc-gray-1;
+}
+
+//TODO you can do this with built-in stuff
 //override container width for medium and down
 .container {
     @include media-breakpoint-down(lg) {
 	max-width: 100%;
     }
 }
+
+//Styles carousel
+
+.carousel {
+    .card,
+    .card-img {
+        border: none;
+        border-radius: 0px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(40%);
+    }
+}
+
+
+
+
 
 // Component customization
 
