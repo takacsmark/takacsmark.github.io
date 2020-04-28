@@ -1,19 +1,28 @@
-	<div class="card mb-5 featured-box bg-light border-white">
-	  <div class="card-body">
-	    <h5 class="card-title text-center text-uppercase display-4">Featured - FREE Docker course</h5>
-	    <h5 class="card-title text-muted text-center mb-4"><small class="text-uppercase lead">Start here! These posts and videos teach you the basics of Docker.</small></h5>
-	    <div class="card-text d-flex flex-wrap">	
-              {% for item in site.data.docker-course.items %}
-              {% assign pl = item.image | size | minus: 4 %}
-              <div class="media pr-3 position-relative">
-                  <img src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}" class="mr-3 mb-3" alt="{{ item.title }}">
-                  <div class="media-body">
-                    <h6 class="mt-0">{{ item.order }}. {{ item.title }}</h6>
-                    <a href="{{ item.url | prepend: site.baseurl }}" class="stretched-link"></a>
-	                </div>
-              </div>
-              {% endfor %}
-	    </div>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="h6 font-weight-bold">Free Docker Course</div>
+        </div>
     </div>
-    <div class="gradient-separator"></div>
-  </div>
+    <div class="row">
+        {% for item in site.data.docker-course.items %} {% assign pl =
+        item.image | size | minus: 4 %}
+        <div class="col col-12 col-sm-6 col-md-3">
+            <div class="media pr-3 position-relative">
+                <img
+                    src="{{ site.url }}{{ item.image | slice: 0, pl }}_300{{ item.image | slice: -4, 4 }}"
+                    class="mr-3 mb-3 w-25"
+                    alt="{{ item.title }}"
+                />
+                <div class="media-body">
+                    <h6 class="mt-0">{{ item.order }}. {{ item.title }}</h6>
+                    <a
+                        href="{{ item.url | prepend: site.baseurl }}"
+                        class="stretched-link"
+                    ></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

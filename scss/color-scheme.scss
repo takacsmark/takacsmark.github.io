@@ -4,18 +4,32 @@
  * created by Mark Takacs
  * on April 27, 2020
  ***************************************/
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
 
 //grays
-$tmdc-gray-1: #f7f7f8;
-$tmdc-gray-2: rgba(0, 0, 0, .2);
-$tmdc-gray-3: rgba(0, 0, 0, .3);
-$tmdc-gray-4: rgba(0, 0, 0, .4);
-$tmdc-gray-5: rgba(0, 0, 0, .5);
-$tmdc-gray-6: rgba(0, 0, 0, .6);
-$tmdc-gray-7: rgba(0, 0, 0, .7);
-$tmdc-gray-8: rgba(0, 0, 0, .8);
-$tmdc-gray-9: #141416;
+$l-g-1: #f9f9f9; //menubar search icon bg
+$l-g-2: #f2f2f2; //menubar search field bg
+$l-g-3: #e5e5e5; //gray buttom backround
+$l-g-4: #d4d4d4; //menu bar search icon text
+//$l-g-5: ;
+$l-g-6: #979797; //menubar search text 
+$l-g-7: #464646; //category text color
+$l-g-8: #1f1f23; //content header text color
+//$l-g-9: ;
 
+//off-grays
+$l-og-1: #f7f7f8; //site background
+$l-og-3: #efeff1; //sidebar background
+$l-og-4: #eaeaeb; //category background
+$l-og-5: #e3e3e5; //search bar background in sidebar
+//#dededf separator line color
+//#d7d7d9 separator in sidebar
+$l-og-6: #8d8d8f; //text in sidebar search
+$l-og-7: #53535f; //mid gray content text color - text under title, search icon in sidebar, 
+//#313134 //content counter text
+$l-og-8: #141416;
+$l-og-9: #0e0e10; //menu text color, carousel arrow color
 //dark
 
 //bright
@@ -23,3 +37,28 @@ $tmdc-gray-9: #141416;
 //muted
 $tmdc-light-green: #82C928; 
 $tmdc-ligh-blue: #0099FF;
+
+
+
+
+//body
+$body-bg: $gray-100;
+
+
+$list-group-bg:                     transparent;
+$list-group-border-width:           0;
+$list-group-border-radius:          0; 
+
+//$list-group-item-padding-y:         .75rem !default;
+//$list-group-item-padding-x:         1.25rem !default;
+
+$list-group-hover-bg:               $gray-300;
+//$list-group-active-color:           $component-active-color !default;
+//$list-group-active-bg:              $component-active-bg !default;
+//$list-group-active-border-color:    $list-group-active-bg !default;
+
+//$list-group-action-color:           $gray-700 !default;
+//$list-group-action-hover-color:     $list-group-action-color !default;
+
+//$list-group-action-active-color:    $body-color !default;
+//$list-group-action-active-bg:       $gray-300 !default;

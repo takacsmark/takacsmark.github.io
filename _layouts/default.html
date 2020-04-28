@@ -8,10 +8,25 @@
         <!-- End Google Tag Manager (noscript) -->
 
         {% include header.html %}
-
-        {{ content }}
-
-        {% include footer.html %}
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col sticky-top" id="sidebar">
+                    {% include sidebar.html %}
+                </div>
+                <div class="col">
+                    {{ content }}
+                    <!-- Copyright Notice -->
+                    <section class="mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <small class="text-muted">&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} - <a href="https://savalera.com/" target="_blank">Savalera Kft.</a></small>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Copyright Notice -->
+                </div>
+            </div>
+        </section>
 
 	<!-- Bootstrap 4 and its dependencies -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -23,10 +38,6 @@
 	<script src="{{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 	<!-- End Syntax highlight -->
-
-	<!-- Sticky Sidebar -->
-	<script src="/assets/js/sticky-kit.min.js"></script>
-	<!-- End Sticky Sidebar -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>

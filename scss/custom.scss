@@ -2,6 +2,8 @@
 
 $enable-responsive-font-sizes: true;
 
+@import "./color-scheme";
+
 //Import Bootstrap 4 source
 // Required
 @import "../node_modules/bootstrap/scss/functions";
@@ -33,7 +35,7 @@ $enable-responsive-font-sizes: true;
 // @import "alert";
 // @import "progress";
 @import "../node_modules/bootstrap/scss/media";
-// @import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/list-group";
 // @import "close";
 // @import "toasts";
 // @import "modal";
@@ -44,28 +46,42 @@ $enable-responsive-font-sizes: true;
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-@import "./color-scheme";
-
-$tmdc-light-green:#82C928; 
-$tmdc-ligh-blue: #0099FF;
+$tmdc-light-green: #82c928;
+$tmdc-ligh-blue: #0099ff;
 
 // Global overrides
-
-body {
-    background-color: $tmdc-gray-1;
-}
 
 //TODO you can do this with built-in stuff
 //override container width for medium and down
 .container {
     @include media-breakpoint-down(lg) {
-	max-width: 100%;
+        max-width: 100%;
+    }
+}
+//Sets up main layout
+#sidebar {
+    flex: 0 0 240px;
+    background-color: $gray-200;
+
+    height: calc(100vh - 60px);
+    top: 60px;
+    
+    .list-group-horizontal .list-group-item {
+        padding: .75rem .5rem;
     }
 }
 
 //Styles carousel
-
 .carousel {
+    .carousel-inner {
+        max-width: 750px;
+    }
+
+    .carousel-item {
+        height: 300px;
+        background-color: white;
+    }
+
     .card,
     .card-img {
         border: none;
@@ -78,41 +94,45 @@ body {
     }
 }
 
-
-
-
+#post-listing {
+    .card {
+        background-color: $gray-100;
+    }
+}
 
 // Component customization
 
-
-// Navbar styling 
+// Navbar styling
 .navbar-light .navbar-toggler {
-    border-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0, 0, 0);
 }
 
 // Featured content
 .featured-box {
-
     .media img {
         width: 64px;
     }
 
     @include media-breakpoint-up(sm) {
-        .media {
-	    width: 50%;
+        .media img {
+            width: 50%;
         }
     }
 
     @include media-breakpoint-up(lg) {
-        .media {
-	    width: 25%;
+        .media img {
+            width: 25%;
         }
     }
 }
 
 .gradient-separator {
-    height: .5rem;
-    background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(130,201,40,1) 100%);
+    height: 0.5rem;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 153, 255, 1) 0%,
+        rgba(130, 201, 40, 1) 100%
+    );
 }
 
 // Footer styling
@@ -125,22 +145,21 @@ body {
     }
 
     @include media-breakpoint-up(lg) {
-	img {
-	    width: 50%;
-	}
+        img {
+            width: 50%;
+        }
     }
-    
+
     .container-fluid {
-	background-color: rgb(10, 10, 10);
-	font-size: .75rem;
+        background-color: rgb(10, 10, 10);
+        font-size: 0.75rem;
     }
 }
 
 // Inline sponsored links
 .inline-sponsored {
-
     img {
-	max-width: 64px;
-	max-height: 64px;
+        max-width: 64px;
+        max-height: 64px;
     }
 }

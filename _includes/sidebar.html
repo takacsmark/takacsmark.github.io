@@ -1,63 +1,104 @@
-<section>
+<aside class="h-100">
+    <div class="row h-100">
+        <div class="col-12 mt-4 align-self-start">
+            <!-- Greeting -->
+            <div class="text-center">
+                <img
+                    class="img-fluid w-75 mb-2 text-center"
+                    src="/assets/images/Mark.png"
+                    alt="Mark Takacs | takacsmark.com"
+                />
+                <small class="lead font-weight-lighter">Mark's Blog</small>
+            </div>
+            <!-- Greeting -->
 
-    <!-- Mailing List -->
-    <section class="row">
-        <div class="col">
+            <!-- Join the Discussion -->
+            <p class="h6 mt-5 text-uppercase font-weight-bold">
+                Join the discussion
+            </p>
+            <div class="list-group w-100">
+                <a
+                    href="/mailing-list-signup/"
+                    class="list-group-item list-group-item-action"
+                    >Mailing List
+                </a>
+                <a
+                    href="https://discord.gg/KxaQd4W"
+                    target="_blank"
+                    class="list-group-item list-group-item-action"
+                    >Discord Server</a
+                >
+            </div>
+            <!-- Join the Discussion -->
 
-	    <div class="card mb-4">
-  	        <div class="card-header">
-		    Regular learning updates
-		</div>
-	        <div class="card-body">
-		    <h5 class="card-title">Join the mailing list!</h5> 
-	            <p class="card-text">Get notified about new tutorials and articles.</p>
-                    <a href="/mailing-list-signup" class="btn btn-primary btn-block stretched-link">Subscribe</a>
-                </div>
-	    </div>
-
+            <!-- Learn Docker -->
+            <p class="h6 mt-5 text-uppercase font-weight-bold">
+                Learn Docker
+            </p>
+            <div class="text-center">
+                <img
+                    class="img-fluid w-75 mb-2"
+                    src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover_370.png"
+                    alt="Get started with Docker in your projects through exmples"
+                />
+            </div>
+            <a
+                href="/get-started-with-docker-in-your-projects-through-examples/"
+                class="btn btn-primary btn-block"
+                >Get the book</a
+            >
+            <!-- Learn Docker -->
         </div>
-    </section>
-    <!-- End Mailing List -->
-    
-    <!-- Discord Server -->
-    <section class="row">
-        <div class="col">
 
-	    <div class="card mb-4">
-	        <div class="card-header">
-		    Community chat server
-		</div>
-		<div class="card-body">
-		    <h5 class="card-title">Join the discussion!</h5>
-		    <p class="card-text">Chat about tech questions and topics in our newly forming community.</p>
-	            <a class="stretched-link" href="https://discord.gg/KxaQd4W" target="_blank"><img class="img-fluid" src="/assets/images/discord-logo.svg" alt="Discord logo"></img></a> 
-		</div>    
-	    </div>
+        <div class="col-12 align-self-end">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">
+                    <a
+                        href="https://youtube.com/{{ site.youtube_channel}}"
+                        target="_blank"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a
+                        href="https://facebook.com/{{ site.facebook_page }}"
+                        target="_blank"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
 
+                <li class="list-group-item">
+                    <a
+                        href="https://twitter.com/{{ site.twitter_username }}"
+                        target="_blank"
+                    >
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a
+                        href="https://github.com/{{ site.github_username }}"
+                        target="_blank"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a
+                        href="https://linkedin.com/in/{{ site.linkedin_username }}"
+                        target="_blank"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="mailto:{{ site.email }}">
+                        <i class="fas fa-envelope-open"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </section>
-    <!-- End Discord Server -->
-
-    <!-- Book Promo -->
-    <section id="sidebar-book-promo" class="row">
-        <div class="col">
-
-	    <div class="card bg-light mb-4">
-	        <div class="card-header">
-		    Get job ready with Docker 
-		</div>
-		<div class="card-body text-center">
-		    <h5 class="card-title">Learn Docker from my book!</h5>
-		    <p class="card-text text-primary font-weight-bolder">Learn Docker from zero to building a real project.</p>
-	            <img class="img-fluid w-75 mb-2" src="/assets/images/in-content/get-started-with-docker-in-your-projects-cover_370.png" alt="Get started with Docker in your projects through exmples"></img> 
-		    <p class="card-text text-success font-weight-bolder">Step-by-step instructions.</p>
-            <p class="card-text text-danger font-weight-bolder"><s class="text-body">$34.99</s> $0.00 - Help solve the coronavirus crisis, download the book for free until April 31 and build something useful.</p>
-                    <a href="/get-started-with-docker-in-your-projects-through-examples/" class="btn btn-primary btn-block stretched-link">Get the book</a>
-		</div>    
-	    </div>
-	  
-        </div>
-    </section>
-    <!-- End Book Promo -->
-
-</section>
+    </div>
+</aside>
