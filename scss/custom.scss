@@ -2,6 +2,15 @@
 
 $enable-responsive-font-sizes: true;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1040px,
+  xl: 1400px
+);
+
+
 @import "./color-scheme";
 
 //Import Bootstrap 4 source
@@ -50,6 +59,7 @@ $tmdc-light-green: #82c928;
 $tmdc-ligh-blue: #0099ff;
 
 // Global overrides
+
 
 //TODO you can do this with built-in stuff
 //override container width for medium and down

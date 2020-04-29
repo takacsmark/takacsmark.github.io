@@ -109,13 +109,13 @@ layout: default
 <!-- Main Content -->
 <section class="container-fluid mt-4 mb-5">
     <div class="row">
-        <div class="col-12">
+        <div class="col">
             <div class="h6 font-weight-bold mt-2">Browse All Articles</div>
         </div>
     </div>
-    <div class="row" id="post-listing">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5" id="post-listing">
         {% for post in site.posts %}
-        <div class="col col-sm-6 col-lg-3 col-xl-2 mb-2">
+        <div class="col mb-2">
             <div class="card border-0">
                 {% assign pl = post.thumbnail | size | minus: 4 %}
                 <img
