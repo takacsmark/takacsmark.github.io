@@ -1,14 +1,14 @@
 items:
   - image: /assets/images/in-content/get-started-with-docker-in-your-projects-cover_370.png
-    title: Learn Docker with my book
-    sub: <s>$34.99</s> $0.00 - Help solve the coronavirus crisis, download the book for free until April 31 and build something useful.  
+    title: Learn Docker from my Book that I Teach in Corporate Trainings 
+    sub: <s>$34.99</s> $0.00 - Help solve the coronavirus crisis, download the book for free until April 30.  
     url: /get-started-with-docker-in-your-projects-through-examples/
     type: own 
     tag: Docker
     ends: 
 
   - image: /assets/images/brands/udemy-logo.svg
-    title: Check out the top Docker courses on Udemy
+    title: Check out the Top Docker Courses on Udemy
     sub: sponsored link
     url: http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fsearch%2F%3Fsrc%3Dukw%26q%3Ddocker
     type: ad 
@@ -16,7 +16,7 @@ items:
     ends:
       
   - image: /assets/images/brands/building-microservices.jpg
-    title: Great reading - Building Microservices - Designing Fine Grained Systems
+    title: A Great Read - Building Microservices - Designing Fine Grained Systems
     sub: sponsored link 
     url: http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FBuilding-Microservices-Designing-Fine-Grained-Systems-ebook%2Fdp%2FB00T3N7XB4%2Fref%3Dsr_1_1%3Fkeywords%3Ddocker%26qid%3D1559046937%26s%3Dbooks%26sr%3D1-1
     type: ad 
@@ -40,7 +40,7 @@ items:
     ends:
 
   - image: /assets/images/brands/udemy-logo.svg
-    title: Rank higher with Udemy SEO courses
+    title: Rank higher with Udemy SEO Courses
     sub: sponsored link 
     url:  http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fsearch%2F%3Fsrc%3Dukw%26q%3Dseo
     type: ad 
@@ -48,7 +48,7 @@ items:
     ends:
 
   - image: /assets/images/brands/Python-book.jpg
-    title: Start learning Python with this great book 
+    title: Start Learning Python with this Great Book 
     sub: sponsored link 
     url:  http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FLearning-Python-5th-Mark-Lutz%2Fdp%2F1449355730%2Fref%3Dsr_1_2%3Fkeywords%3Dpython%26qid%3D1559026657%26s%3Dbooks%26sr%3D1-2
     type: ad 
