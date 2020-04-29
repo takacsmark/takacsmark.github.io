@@ -38,7 +38,7 @@ $grid-breakpoints: (
 @import "../node_modules/bootstrap/scss/card";
 // @import "breadcrumb";
 // @import "pagination";
-// @import "badge";
+@import "../node_modules/bootstrap/scss/badge";
 // @import "jumbotron";
 // @import "alert";
 // @import "progress";
@@ -111,6 +111,10 @@ $tmdc-ligh-blue: #0099ff;
 
     .post-description {
         color: $gray-800;
+    }
+
+    .badge {
+        background-color: $gray-300;
     }
 }
 

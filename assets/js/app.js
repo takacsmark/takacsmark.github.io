@@ -64,7 +64,7 @@ $(function() {
             querySnapshot.forEach(function(doc) {
                 node = document.getElementById("/" + doc.id + "/")
                 if(!!node){
-                    newHTML = " - " + doc.data().viewCount.toLocaleString() + " views"
+                    newHTML = doc.data().viewCount.toLocaleString() + " views"
                     if(node.innerHTML != newHTML){
                         node.innerHTML = newHTML;
                     }
@@ -78,7 +78,7 @@ $(function() {
             querySnapshot.forEach(function(doc) {
                 node = document.getElementById("/" + doc.id + "/")
                 if(!!node){
-                    node.innerHTML = " - " + doc.data().viewCount.toLocaleString() + " views";
+                    node.innerHTML = doc.data().viewCount.toLocaleString() + " views";
                 }
             });
         })

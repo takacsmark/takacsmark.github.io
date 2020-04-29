@@ -130,7 +130,7 @@ layout: default
                         <small class="text-muted"
                             >{{ post.date | date: "%b %-d, %Y" }}</small
                         >
-                        <small class="text-muted" id="{{ post.url }}"></small>
+                        <small class="font-weight-normal text-muted badge badge-pill" id="{{ post.url }}"></small>
                     </p>
                     <a
                         href="{{ post.url | prepend: site.baseurl }}"
