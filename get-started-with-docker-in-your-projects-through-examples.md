@@ -356,19 +356,3 @@ Any personal information received will only be used to fill your order. We will 
 	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 </div>
 
-{% if site.disqus %}
-<div class="container">
-    <section class="row">
-        <div id="disqus_thread" class="col-12"></div>
-        <script type="text/javascript">
-            var disqus_shortname = '{{ site.disqus }}';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-</div>
-{% endif %}

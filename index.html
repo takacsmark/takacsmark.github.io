@@ -3,143 +3,17 @@ layout: default
 ---
 
 <!-- Carousel -->
-<section class="container mt-4 mb-5">
-    <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-ride="carousel"
-        data-interval="false"
-    >
-        <div class="carousel-inner shadow mx-auto">
-            <div class="carousel-item active">
-                <div class="card w-100 h-100">
-                    <div class="row justify-content-center h-100">
-                        <div
-                            class="d-none d-md-block col-md-3 align-self-center"
-                        >
-                            <img
-                                src="{{ site.url }}/assets/images/in-content/get-started-with-docker-in-your-projects-cover.png"
-                                class="card-img shadow-sm "
-                                alt="Get Started with Docker in your Projects by Mark Takacs"
-                            />
-                        </div>
-                        <div class="col col-10 col-md-7 align-self-center">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    Download the Docker Book!
-                                </h5>
-                                <p class="card-text">
-                                    Learn Docker step-by-step through real-life
-                                    examples from the book that I teach in
-                                    corporate traninigs.
-                                </p>
-                                <a
-                                    href="{{ site.url }}/get-started-with-docker-in-your-projects-through-examples"
-                                    class="btn btn-primary btn-sm"
-                                    >Available as free download until April
-                                    31.</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card w-100 h-100">
-                    <div class="row justify-content-center h-100">
-                        <div
-                            class="d-none d-md-block col-md-3 align-self-center"
-                        >
-                            <img
-                                src="{{ site.url }}/assets/images/post-thumbs/prototype-this-cover.png"
-                                class="card-img"
-                                alt="What to prototype in 2020 and stay on top of your game? by Mark Takacs"
-                            />
-                        </div>
-                        <div class="col col-10 col-md-7 align-self-center">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    What to Prototype in 2020? | Based on
-                                    Stackoverflow Data
-                                </h5>
-                                <p class="card-text">
-                                    Find trending prototyping ideas in the field
-                                    of Machine Learning, Data Science,
-                                    Application Development, Mobile and DevOps.
-                                </p>
-                                <a
-                                    href="{{ site.url }}/prototype-this-2020/"
-                                    class="btn btn-primary btn-sm"
-                                    >Free PDF Download</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a
-            class="carousel-control-prev"
-            href="#carouselExampleCaptions"
-            role="button"
-            data-slide="prev"
-        >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a
-            class="carousel-control-next"
-            href="#carouselExampleCaptions"
-            role="button"
-            data-slide="next"
-        >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
-<!-- Carousel -->
+<div class="container mt-4">
+    {% include index/carousel.html %}
+</div>
 
 <!-- Featured Posts -->
-{% include featured.html %}
-<!-- End Featured Posts -->
+<div class="container-fluid mt-5">
+    {% include shared/featured.html %}
+    <hr />
+</div>
 
-<hr/>
-
-<!-- Main Content -->
-<section class="container-fluid mt-4 mb-5">
-    <div class="row">
-        <div class="col">
-            <div class="h6 font-weight-bold mt-2">Browse All Articles</div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5" id="post-listing">
-        {% for post in site.posts %}
-        <div class="col mb-2">
-            <div class="card border-0">
-                {% assign pl = post.thumbnail | size | minus: 4 %}
-                <img
-                    class="card-img-top rounded-0"
-                    src="{{ site.url }}{{ post.thumbnail | slice: 0, pl }}_570{{ post.thumbnail | slice: -4, 4 }}"
-                    alt="{{ post.title }}"
-                />
-                <div class="card-body p-3">
-                    <h4 class="card-title">{{ post.title }}</h4>
-                    <p class="card-text font-weight-light post-description">{{ post.description }}</p>
-                    <p class="card-text">
-                        <small class="text-muted"
-                            >{{ post.date | date: "%b %-d, %Y" }}</small
-                        >
-                        <small class="font-weight-normal text-muted badge badge-pill" id="{{ post.url }}"></small>
-                    </p>
-                    <a
-                        href="{{ post.url | prepend: site.baseurl }}"
-                        class="card-link stretched-link"
-                    ></a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-<!-- End Main Content -->
+<!-- Post Listing -->
+<div class="container-fluid mt-4">
+    {% include index/post-listing.html %}
+</div>

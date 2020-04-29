@@ -1,0 +1,17 @@
+<script>
+    const promos = [
+        {% for item in site.data.ads.items %}
+        {% if page.categories contains item.tag %}
+        {
+     image: "{{ item.image }}",
+     title: "{{ item.title }}",
+     sub: "{{ item.sub }}",
+     url: "{{ item.url }}",
+     type: "{{ item.type }}",
+     tags: "{{ item.tags }}",
+     ends: "{{ item.ends }}"
+        },
+        {% endif %}
+        {% endfor %}
+    ];
+</script>

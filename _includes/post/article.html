@@ -1,0 +1,74 @@
+<article itemscope itemtype="https://schema.org/BlogPosting">
+    <!-- Post Title -->
+    <div class="row">
+        <div class="col">
+            <h1 itemprop="name headline">{{ page.title }}</h1>
+        </div>
+    </div>
+
+    <!-- Author, Date Published, View Count -->
+    <div class="row mt-2">
+        <div class="col-auto">
+            <img
+                class="img-fluid"
+                style="width: 52px;"
+                src="{{ site.url }}/assets/images/Mark.jpg"
+            />
+        </div>
+
+        <div class="col pl-0">
+            {% if page.author %}
+            <div
+                class="small text-muted text-uppercase font-weight-bolder"
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+            >
+                <span itemprop="name">{{ page.author }}</span>
+            </div>
+            {% endif %}
+
+            <div class="small text-muted">
+                <time
+                    datetime="{{ page.date | date_to_xmlschema }}"
+                    itemprop="datePublished"
+                    >{{ page.date | date: "%b %-d, %Y" }}</time
+                >
+                <span id="view-count"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="row mt-3" itemprop="articleBody">
+        <div class="col">
+            <!-- Video Thumb -->
+            {% if page.videothumb %}
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe
+                    class="embed-responsive-item"
+                    src="{{ page.videothumb }}"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            {% endif %}
+
+            <!-- Post Content -->
+            <div class="row">
+                <div class="col">
+                    {{ content }}
+                </div>
+            </div>
+
+            <!-- Social Share -->
+            <section class="row">
+                <div class="col text-right mb-4">
+                    <span class="small font-weight-bolder text-uppercase"
+                        >Share this article!</span
+                    >
+                    {% include post/social-share.html %}
+                </div>
+            </section>
+        </div>
+    </div>
+</article>

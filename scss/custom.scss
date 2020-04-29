@@ -1,23 +1,43 @@
-// Custom.scss | takacsmark.com
+/****************************************
+ * Custom Styles for  takacsmark.com
+ * 
+ * created by Mark Takacs
+ * on April 27, 2020
+ ***************************************/
 
+/******************************
+ * Bootstrap overrides
+ *****************************/
 $enable-responsive-font-sizes: true;
-
+//Increases lg and xl breakpoint values to accomodate fixed full height left sidebar
 $grid-breakpoints: (
     xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 1040px,
-    xl: 1400px
+    //default
+        sm: 576px,
+    //default
+        md: 768px,
+    //default
+        lg: 1040px,
+    //increased
+        xl: 1400px //increased
 );
+//Sets body background color
+$body-bg: $gray-100;
+//List groups are used in sidebar only
+//Customizes list groups sitewide
+$list-group-bg:                     transparent;
+$list-group-border-width:           0;
+$list-group-border-radius:          0; 
+$list-group-item-padding-y:         .5rem;
+$list-group-hover-bg:               $gray-300;
 
-@import "./color-scheme";
-
-//Import Bootstrap 4 source
+/******************************
+ * Bootstrap imports
+ *****************************/
 // Required
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-
 // Optional
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
@@ -54,103 +74,85 @@ $grid-breakpoints: (
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-$tmdc-light-green: #82c928;
-$tmdc-ligh-blue: #0099ff;
-
-//TODO you can do this with built-in stuff
-//override container width for medium and down
-.container {
-    @include media-breakpoint-down(lg) {
-        max-width: 100%;
-    }
+/******************************
+ * Navbar styling
+ ******************************/
+//Removes border around hamburger menu
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
 }
-//Sets up main layout
+
+/******************************
+ * Sidebar styling
+ ******************************/
+//Styles full width fixed sidebar
 #sidebar {
-    flex: 0 0 240px;
+    flex: 0 0 240px; //sets width to 240px using flex
     background-color: $gray-200;
 
+    //sets up full height sidebar
     height: calc(100vh - 60px);
     top: 60px;
 
+    //sets up content height to accomodate social icons always aligned to end
     #sidebar-content {
         max-height: calc(100vh - 134px);
     }
 
+    //sets listgroup item height a bit lower than default
     .list-group-horizontal .list-group-item {
         padding: 0.75rem 0.5rem;
     }
 }
 
-//Styles carousel
+/******************************
+ * Index page styling
+ ******************************/
+//Styles carousel on index page
 .carousel {
+    //Makes carousel narrower than default
     .carousel-inner {
         max-width: 750px;
     }
-
+    //Sets height to make carousel look about 21x9 movie
     .carousel-item {
         height: 300px;
         background-color: white;
     }
-
+    //We use cards to layout content
+    //Removes card borders
     .card,
     .card-img {
         border: none;
         border-radius: 0px;
     }
-
+    //Sets arrow color darker
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         filter: invert(40%);
     }
 }
 
+//Styles post listing on index page
 #post-listing {
+    //We use cards to display posts in list
+    //Sets background color same as body background
     .card {
         background-color: $gray-100;
     }
-
+    //Makes post description less black
     .post-description {
         color: $gray-800;
     }
-
+    //Sets view count badge background color
     .badge {
         background-color: $gray-300;
     }
 }
 
-// Navbar styling
-.navbar-light .navbar-toggler {
-    border-color: rgba(0, 0, 0, 0);
-}
-
-// Featured content
-.featured-box {
-    .media img {
-        width: 64px;
-    }
-
-    @include media-breakpoint-up(sm) {
-        .media img {
-            width: 50%;
-        }
-    }
-
-    @include media-breakpoint-up(lg) {
-        .media img {
-            width: 25%;
-        }
-    }
-}
-
-.gradient-separator {
-    height: 0.5rem;
-    background: linear-gradient(
-        90deg,
-        rgba(0, 153, 255, 1) 0%,
-        rgba(130, 201, 40, 1) 100%
-    );
-}
-
+/******************************
+ * Post content styling
+ ******************************/
 // Inline sponsored links
 .inline-sponsored {
     background-color: white;

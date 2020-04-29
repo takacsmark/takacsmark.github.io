@@ -2,143 +2,29 @@
 layout: default
 ---
 
-<section class="container mt-4">
-    {% include featured.html %}
+<!-- Featured Posts -->
+<div class="container mt-4">
+    {% include shared/featured.html %}
     <hr />
-</section>
+</div>
 
-<article
-    class="container mt-4"
-    itemscope
-    itemtype="https://schema.org/BlogPosting"
->
-    <!-- Post Title -->
-    <section class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-            <h1 itemprop="name headline">{{ page.title }}</h1>
-        </div>
-    </section>
-
-    <section class="row justify-content-center mt-2 mb-3">
+<!-- Article -->
+<div class="container mt-4">
+    <div class="row justify-content-center">
         <div class="col col-lg-8">
-            <div class="row">
-                <div class="col-auto">
-                    <img
-                        class="img-fluid"
-                        style="width: 52px;"
-                        src="{{ site.url }}/assets/images/Mark.jpg"
-                    />
-                </div>
-
-                <div class="col pl-0">
-                    {% if page.author %}
-                    <div
-                        class="small text-muted text-uppercase font-weight-bolder"
-                        itemprop="author"
-                        itemscope
-                        itemtype="https://schema.org/Person"
-                    >
-                        <span itemprop="name">{{ page.author }}</span>
-                    </div>
-                    {% endif %}
-
-                    <div class="small text-muted">
-                        <time
-                            datetime="{{ page.date | date_to_xmlschema }}"
-                            itemprop="datePublished"
-                            >{{ page.date | date: "%b %-d, %Y" }}</time
-                        >
-                        <span id="view-count"></span>
-                    </div>
-                </div>
-            </div>
+            {% include post/article.html %}
         </div>
-    </section>
-    <!-- End Post Title -->
-
-    <!-- Main Content and Sidebar Container -->
-    <section class="row justify-content-center" itemprop="articleBody">
-        <!-- Main Content -->
-        <div class="col-12 col-lg-8">
-            <!-- Video Thumb -->
-            {% if page.videothumb %}
-            <div class="embed-responsive embed-responsive-16by9 mb-4">
-                <iframe
-                    class="embed-responsive-item"
-                    src="{{ page.videothumb }}"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            {% endif %}
-            <!-- End Video Thumb -->
-
-            <!-- Post Content -->
-            <section class="row" itemprop="articleBody">
-                <div class="col-12">
-                    {{ content }}
-                </div>
-            </section>
-
-            <!-- Social Share -->
-            <section class="row">
-                <div class="col-12 text-right mb-4">
-                    <span class="small font-weight-bolder text-uppercase"
-                        >Share this article!</span
-                    >
-                    {% include social-share.html %}
-                </div>
-            </section>
-        </div>
-        <!-- End Main Content -->
-    </section>
-    <!-- End Main Content and Sidebar Container -->
-</article>
+    </div>
+</div>
 
 <!-- Inline Sponsored Links -->
-<script>
-    const promos = [
-        {% for item in site.data.ads.items %}
-        {% if page.categories contains item.tag %}
-        {
-     image: "{{ item.image }}",
-     title: "{{ item.title }}",
-     sub: "{{ item.sub }}",
-     url: "{{ item.url }}",
-     type: "{{ item.type }}",
-     tags: "{{ item.tags }}",
-     ends: "{{ item.ends }}"
-        },
-        {% endif %}
-        {% endfor %}
-    ];
-</script>
-<!-- End Inline Sponsored Links -->
+{% include post/sponsored-link.html %}
 
 <!-- Comments -->
-{% if site.disqus %}
-<section class="container">
-    <section class="row justify-content-center">
-        <div id="disqus_thread" class="col-12 col-lg-8"></div>
-        <script type="text/javascript">
-            var disqus_shortname = "{{ site.disqus }}";
-            (function() {
-                var dsq = document.createElement("script");
-                dsq.type = "text/javascript";
-                dsq.async = true;
-                dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-                (
-                    document.getElementsByTagName("head")[0] ||
-                    document.getElementsByTagName("body")[0]
-                ).appendChild(dsq);
-            })();
-        </script>
-        <noscript
-            >Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript"
-                >comments powered by Disqus.</a
-            ></noscript
-        >
-    </section>
-</section>
-{% endif %}
-<!-- End Comments -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col-lg-8">
+            {% include shared/comments.html %}
+        </div>
+    </div>
+</div>
