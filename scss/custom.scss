@@ -3,13 +3,12 @@
 $enable-responsive-font-sizes: true;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 1040px,
-  xl: 1400px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1040px,
+    xl: 1400px
 );
-
 
 @import "./color-scheme";
 
@@ -58,9 +57,6 @@ $grid-breakpoints: (
 $tmdc-light-green: #82c928;
 $tmdc-ligh-blue: #0099ff;
 
-// Global overrides
-
-
 //TODO you can do this with built-in stuff
 //override container width for medium and down
 .container {
@@ -75,9 +71,13 @@ $tmdc-ligh-blue: #0099ff;
 
     height: calc(100vh - 60px);
     top: 60px;
-    
+
+    #sidebar-content {
+        max-height: calc(100vh - 134px);
+    }
+
     .list-group-horizontal .list-group-item {
-        padding: .75rem .5rem;
+        padding: 0.75rem 0.5rem;
     }
 }
 
@@ -114,8 +114,6 @@ $tmdc-ligh-blue: #0099ff;
     }
 }
 
-// Component customization
-
 // Navbar styling
 .navbar-light .navbar-toggler {
     border-color: rgba(0, 0, 0, 0);
@@ -147,27 +145,6 @@ $tmdc-ligh-blue: #0099ff;
         rgba(0, 153, 255, 1) 0%,
         rgba(130, 201, 40, 1) 100%
     );
-}
-
-// Footer styling
-#site-footer {
-    background-color: #1e1e1f;
-    color: rgb(254, 254, 254);
-
-    img {
-        width: 75%;
-    }
-
-    @include media-breakpoint-up(lg) {
-        img {
-            width: 50%;
-        }
-    }
-
-    .container-fluid {
-        background-color: rgb(10, 10, 10);
-        font-size: 0.75rem;
-    }
 }
 
 // Inline sponsored links
