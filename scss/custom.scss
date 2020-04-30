@@ -22,14 +22,14 @@ $grid-breakpoints: (
         xl: 1400px //increased
 );
 //Sets body background color
-$body-bg: $gray-100;
+$body-bg: #f8f9fa;
 //List groups are used in sidebar only
 //Customizes list groups sitewide
 $list-group-bg:                     transparent;
 $list-group-border-width:           0;
 $list-group-border-radius:          0; 
 $list-group-item-padding-y:         .5rem;
-$list-group-hover-bg:               $gray-300;
+$list-group-hover-bg:               #dee2e6;
 
 /******************************
  * Bootstrap imports
@@ -160,5 +160,15 @@ $list-group-hover-bg:               $gray-300;
     img {
         max-width: 64px;
         max-height: 64px;
+    }
+}
+
+article pre > code {
+    max-width: 900px;
+}
+
+.container {
+    @include media-breakpoint-down(lg) {
+        max-width: 100%;
     }
 }

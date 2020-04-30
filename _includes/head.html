@@ -5,7 +5,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N9XNNB9');</script>
-    <!-- End Google Tag Manager -->
 
     <!-- Site Meta DO NOT CHANGE -->
     <meta charset="utf-8">
@@ -22,32 +21,28 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% assign pl = page.thumbnail | size | minus: 4 %}
     <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}" />
-    <!-- End Site Meta DO NOT CHANGE-->
 
     <!-- Google Site Verfication -->
     <meta name="google-site-verification" content="2DFgqqJVnbuSGjOdyKJZFbGKPGHqu99tt4aBBmbuiKc" />
-    <!-- End Google Site Verfication -->
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    <!-- End RSS Feed -->
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
-    <!-- End Fontawesome CSS -->
 
     <!-- Montserrat font CSS -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> 
-    <!-- End Montserrat font CSS -->
-
 
     <!-- Code highlight CSS -->
     <link rel="stylesheet" href="{{ "/assets/highlight/styles/default.css" | prepend: site.baseurl | prepend: site.url }}">
-    <!-- End Code highlight CSS -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ /favicon.ico | relative_url }}" type="image/x-icon">
+    <link rel="icon" href="{{ /favicon.ico | relative_url }}" type="image/x-icon">
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="{{ "/assets/custom.css" | prepend: site.baseurl | prepend: site.url }}">
-    <!-- End Site CSS -->
 </head>
