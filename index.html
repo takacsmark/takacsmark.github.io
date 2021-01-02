@@ -3,17 +3,15 @@ layout: default
 ---
 
 <!-- Carousel -->
-<div class="container mt-4">
-    {% include index/carousel.html %}
-</div>
+<div class="container mt-4">{% include index/carousel.html %}</div>
 
 <!-- Featured Posts -->
-<div class="container-fluid mt-5">
-    {% include shared/featured.html %}
-    <hr />
-</div>
+<div class="container mt-5">{% include shared/featured.html %}</div>
 
 <!-- Post Listing -->
-<div class="container-fluid mt-4">
-    {% include index/post-listing.html %}
+<div class="container mt-4">
+  <div class="row justify-content-between">
+    <div class="col col-lg-8">{% include index/post-listing.html %}</div>
+    <div class="col col-lg-3 d-none d-lg-block">{% include sidebar.html %}</div>
+  </div>
 </div>

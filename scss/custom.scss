@@ -8,7 +8,18 @@
 /******************************
  * Bootstrap overrides
  *****************************/
-$enable-responsive-font-sizes: true;
+//@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+//@import "../node_modules/charter-webfont/charter.css";
+
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Libre Baskerville", "Charter", serif !default;
+$font-family-base: $font-family-serif !default;
+
+//$font-size-base: 1.3rem !default;
+$line-height-base: 1.6 !default;
+
+//$enable-responsive-font-sizes: true;
 //Increases lg and xl breakpoint values to accomodate fixed full height left sidebar
 $grid-breakpoints: (
     xs: 0,
@@ -22,7 +33,7 @@ $grid-breakpoints: (
         xl: 1400px //increased
 );
 //Sets body background color
-$body-bg: #f8f9fa;
+//$body-bg: #f8f9fa;
 //List groups are used in sidebar only
 //Customizes list groups sitewide
 $list-group-bg:                     transparent;
@@ -30,6 +41,8 @@ $list-group-border-width:           0;
 $list-group-border-radius:          0; 
 $list-group-item-padding-y:         .5rem;
 $list-group-hover-bg:               #dee2e6;
+
+
 
 /******************************
  * Bootstrap imports
@@ -74,35 +87,20 @@ $list-group-hover-bg:               #dee2e6;
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-/******************************
- * Navbar styling
- ******************************/
-//Removes border around hamburger menu
-.navbar-light .navbar-toggler {
-    border-color: rgba(0, 0, 0, 0);
+a {
+    color: theme-color("dark") !important;
+    text-decoration: underline !important;
 }
 
 /******************************
- * Sidebar styling
+ * Navbar styling
  ******************************/
-//Styles full width fixed sidebar
-#sidebar {
-    flex: 0 0 240px; //sets width to 240px using flex
-    background-color: $gray-200;
-
-    //sets up full height sidebar
-    height: calc(100vh - 60px);
-    top: 60px;
-
-    //sets up content height to accomodate social icons always aligned to end
-    #sidebar-content {
-        max-height: calc(100vh - 134px);
-    }
-
-    //sets listgroup item height a bit lower than default
-    .list-group-horizontal .list-group-item {
-        padding: 0.75rem 0.5rem;
-    }
+.navbar {
+    font-family: $font-family-sans-serif;
+}
+//Removes border around hamburger menu
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
 }
 
 /******************************
@@ -138,11 +136,11 @@ $list-group-hover-bg:               #dee2e6;
     //We use cards to display posts in list
     //Sets background color same as body background
     .card {
-        background-color: $gray-100;
+        //background-color: $gray-100;
     }
     //Makes post description less black
     .post-description {
-        color: $gray-800;
+        //color: $gray-800;
     }
     //Sets view count badge background color
     .badge {
@@ -150,9 +148,37 @@ $list-group-hover-bg:               #dee2e6;
     }
 }
 
+#sidebar {
+    font-family: $font-family-sans-serif;
+    background-color: $gray-100;
+}
+
 /******************************
  * Post content styling
  ******************************/
+article {
+    h2, h3, h4, h5, h6 {
+        font-family: 'Barlow', sans-serif;
+        margin-top: 3rem;
+    }
+
+    h1 {
+        margin-bottom: 1rem;    
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+
+    .author-photo {
+        border-radius: 50%;
+    }
+
+    div[itemprop=author], time[itemprop=datePublished], #view-count {
+        font-family: $font-family-sans-serif;
+    }
+
+}
 // Inline sponsored links
 .inline-sponsored {
     background-color: white;
