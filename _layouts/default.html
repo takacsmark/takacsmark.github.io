@@ -8,14 +8,8 @@
         <!-- End Google Tag Manager (noscript) -->
 
         {% include navbar.html %}
-        <div class="container">
-            <div class="row row-cols-1">
-                <div class="col">
-                    {{ content }}
-                    {% include footer.html %}
-                </div>
-            </div>
-        </div>
+        {{ content }}
+        {% include footer.html %}
 
         <!-- Bootstrap 4 and its dependencies -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

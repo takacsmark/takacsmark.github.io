@@ -1,10 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
   <div class="container">
     <a class="navbar-brand" href="{{ site.url }}"
-      ><img
-        src="{{ site.url }}/assets/images/tmdc-logo.png"
-        style="height: 2rem"
-    /></a>
+        <span style="font-family: Dancing Script, cursive; font-weight: 700;">takacsmark.com</span>
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -19,20 +17,12 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item mr-1 active">
-          <a class="nav-link" href="/"
-            >Home <span class="sr-only">(current)</span></a
-          >
-        </li>
-        <li class="nav-item mr-1">
+        <li class="nav-item  mr-1 text-black font-weight-bolder">
           <a
             class="nav-link"
             href="/get-started-with-docker-in-your-projects-through-examples"
             >Docker Book</a
           >
-        </li>
-        <li class="nav-item mr-1">
-          <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -44,9 +34,13 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            More
+           More
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/about/"
+              >About</a
+            >
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/terms-of-service/"
               >Terms of Service</a
             >

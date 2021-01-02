@@ -9,8 +9,12 @@
  * Bootstrap overrides
  *****************************/
 //@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap');
+// Default serif font
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+// Default sans serif font
 //@import "../node_modules/charter-webfont/charter.css";
+// takacsmark.com nav brand handwriting font
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif: "Libre Baskerville", "Charter", serif !default;
@@ -34,15 +38,6 @@ $grid-breakpoints: (
 );
 //Sets body background color
 //$body-bg: #f8f9fa;
-//List groups are used in sidebar only
-//Customizes list groups sitewide
-$list-group-bg:                     transparent;
-$list-group-border-width:           0;
-$list-group-border-radius:          0; 
-$list-group-item-padding-y:         .5rem;
-$list-group-hover-bg:               #dee2e6;
-
-
 
 /******************************
  * Bootstrap imports
@@ -87,9 +82,13 @@ $list-group-hover-bg:               #dee2e6;
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-a {
+article a, #sidebar a {
     color: theme-color("dark") !important;
     text-decoration: underline !important;
+}
+
+.navbar, #site-greeting {
+    background-color: #F59A44 !important;
 }
 
 /******************************
@@ -106,6 +105,18 @@ a {
 /******************************
  * Index page styling
  ******************************/
+#site-greeting {
+    height: 25rem;
+    margin-bottom: 5rem;
+
+    #greeting-img-container {
+        margin-bottom: -4rem;
+        border-radius: 1rem;
+        border: solid 1rem white;
+    }
+}
+
+
 //Styles carousel on index page
 .carousel {
     //Makes carousel narrower than default
