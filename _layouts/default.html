@@ -8,62 +8,53 @@
         <!-- End Google Tag Manager (noscript) -->
 
         {% include navbar.html %}
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col sticky-top d-none d-lg-flex" id="sidebar">
-                    {% include sidebar.html %}
-                </div>
-                <div class="col">
-                    {{ content }}
-                    {% include footer.html %}
-                </div>
-            </div>
-        </div>
+        {{ content }}
+        {% include footer.html %}
 
-	<!-- Bootstrap 4 and its dependencies -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<!-- End Bootstrap 4 and its dependencies -->
+        <!-- Bootstrap 4 and its dependencies -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- End Bootstrap 4 and its dependencies -->
 
-	<!-- Syntax highlight -->
-	<script src="{{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- End Syntax highlight -->
+        <!-- Syntax highlight -->
+        <script src="{{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- End Syntax highlight -->
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
-        authDomain: "takacsmark-com.firebaseapp.com",
-        databaseURL: "https://takacsmark-com.firebaseio.com",
-        projectId: "takacsmark-com",
-        storageBucket: "takacsmark-com.appspot.com",
-        messagingSenderId: "81292702129",
-        appId: "1:81292702129:web:f01f94ae7df07eda130d90"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
+            authDomain: "takacsmark-com.firebaseapp.com",
+            databaseURL: "https://takacsmark-com.firebaseio.com",
+            projectId: "takacsmark-com",
+            storageBucket: "takacsmark-com.appspot.com",
+            messagingSenderId: "81292702129",
+            appId: "1:81292702129:web:f01f94ae7df07eda130d90"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
 
-	<!-- Custom JS -->
-	<script src="/assets/js/app.js"></script>
-	<!-- End Custom JS -->
-	
-	<!-- Mailchimp -->
+        <!-- Custom JS -->
+        <script src="/assets/js/app.js"></script>
+        <!-- End Custom JS -->
+
+        <!-- Mailchimp -->
         <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"ced6e070ab6dca9ddc1f65334","lid":"3983723c21"}) })</script>
-	<!-- End Mailchimp -->
+        <!-- End Mailchimp -->
 
-	<!-- Google platform.js -->
+        <!-- Google platform.js -->
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-	<!-- End Google platform.js -->
+        <!-- End Google platform.js -->
 
     </body>
 </html>

@@ -8,28 +8,20 @@
 /******************************
  * Bootstrap overrides
  *****************************/
+//@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap');
+// Default serif font
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+// Default sans serif font
+//@import "../node_modules/charter-webfont/charter.css";
+// takacsmark.com nav brand handwriting font
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Libre Baskerville", "Charter", serif !default;
+$font-family-base: $font-family-serif !default;
 $enable-responsive-font-sizes: true;
-//Increases lg and xl breakpoint values to accomodate fixed full height left sidebar
-$grid-breakpoints: (
-    xs: 0,
-    //default
-        sm: 576px,
-    //default
-        md: 768px,
-    //default
-        lg: 1040px,
-    //increased
-        xl: 1400px //increased
-);
-//Sets body background color
-$body-bg: #f8f9fa;
-//List groups are used in sidebar only
-//Customizes list groups sitewide
-$list-group-bg:                     transparent;
-$list-group-border-width:           0;
-$list-group-border-radius:          0; 
-$list-group-item-padding-y:         .5rem;
-$list-group-hover-bg:               #dee2e6;
+
+$line-height-base: 1.6 !default;
 
 /******************************
  * Bootstrap imports
@@ -63,112 +55,128 @@ $list-group-hover-bg:               #dee2e6;
 // @import "alert";
 // @import "progress";
 @import "../node_modules/bootstrap/scss/media";
-@import "../node_modules/bootstrap/scss/list-group";
+//@import "../node_modules/bootstrap/scss/list-group";
 // @import "close";
 // @import "toasts";
 // @import "modal";
 // @import "tooltip";
 // @import "popover";
-@import "../node_modules/bootstrap/scss/carousel";
+// @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
 /******************************
- * Navbar styling
- ******************************/
-//Removes border around hamburger menu
+ * Custom styling
+ *****************************/
+// Sets link formatting in articles and sidebar, all the rest is default Bootstrap
+article a, #invitation a {
+    color: theme-color("dark") !important;
+    text-decoration: underline !important;
+}
+// Sets main page greeting background color
+.navbar, #site-greeting {
+    background-color: #F59A44 !important;
+}
+
+.navbar {
+    font-family: $font-family-sans-serif;
+}
+// Removes border around hamburger menu
 .navbar-light .navbar-toggler {
     border-color: rgba(0, 0, 0, 0);
 }
+// Formats main page site greeting
+#site-greeting {
+    height: 25rem;
+    margin-bottom: 5rem;
+    
+    #greeting-img-container {
+        border-radius: 1rem;
+        border: solid .5rem white;
 
-/******************************
- * Sidebar styling
- ******************************/
-//Styles full width fixed sidebar
-#sidebar {
-    flex: 0 0 240px; //sets width to 240px using flex
-    background-color: $gray-200;
+        width: 75%; 
+        margin-top: 1.5rem;
+        margin-bottom: -2rem;
 
-    //sets up full height sidebar
-    height: calc(100vh - 60px);
-    top: 60px;
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
 
-    //sets up content height to accomodate social icons always aligned to end
-    #sidebar-content {
-        max-height: calc(100vh - 134px);
-    }
+        @include media-breakpoint-up(md) {
+            width: 80%;
+        }
 
-    //sets listgroup item height a bit lower than default
-    .list-group-horizontal .list-group-item {
-        padding: 0.75rem 0.5rem;
-    }
-}
-
-/******************************
- * Index page styling
- ******************************/
-//Styles carousel on index page
-.carousel {
-    //Makes carousel narrower than default
-    .carousel-inner {
-        max-width: 750px;
-    }
-    //Sets height to make carousel look about 21x9 movie
-    .carousel-item {
-        height: 300px;
-        background-color: white;
-    }
-    //We use cards to layout content
-    //Removes card borders
-    .card,
-    .card-img {
-        border: none;
-        border-radius: 0px;
-    }
-    //Sets arrow color darker
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(40%);
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            margin-bottom: -4rem;
+        }
     }
 }
 
-//Styles post listing on index page
+// Styles post listing on index page
 #post-listing {
-    //We use cards to display posts in list
-    //Sets background color same as body background
-    .card {
-        background-color: $gray-100;
-    }
-    //Makes post description less black
-    .post-description {
-        color: $gray-800;
-    }
     //Sets view count badge background color
     .badge {
         background-color: $gray-300;
+    }
+}
+// Styles invitation
+#invitation {
+    font-family: $font-family-sans-serif;
+    background-color: $gray-100;
+    
+    img {
+        max-width: 52px;
     }
 }
 
 /******************************
  * Post content styling
  ******************************/
-// Inline sponsored links
+article {
+    h2, h3, h4, h5, h6 {
+        font-family: 'Barlow', sans-serif;
+        margin-top: 3rem;
+    }
+
+    h1 {
+        margin-bottom: 1rem;    
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+
+    .author-photo {
+        border-radius: 50%;
+    }
+
+    div[itemprop=author], time[itemprop=datePublished], #view-count {
+        font-family: $font-family-sans-serif;
+    }
+
+}
+// Styles inline sponsored links in articles
 .inline-sponsored {
-    background-color: white;
+    font-family: $font-family-sans-serif;
 
     img {
         max-width: 64px;
         max-height: 64px;
     }
 }
-
+// Styles code in articles
 article pre > code {
     max-width: 726px;
 }
 
-.container {
-    @include media-breakpoint-down(lg) {
-        max-width: 100%;
+.social-share {
+    a {
+        text-decoration: none !important;
     }
 }
+
+
+
+

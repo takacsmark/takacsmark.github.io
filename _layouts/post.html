@@ -2,19 +2,14 @@
 layout: default
 ---
 
-<!-- Featured Posts -->
-<div class="container mt-4">
-    {% include shared/featured.html %}
-    <hr />
-</div>
-
 <!-- Article -->
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col col-lg-8">
-            {% include post/article.html %}
-        </div>
+<div class="container mt-5">
+  <div class="row justify-content-between">
+    <div class="col col-lg-8">{% include post/article.html %}</div>
+    <div class="col col-lg-4 col-xl-4 d-none d-lg-block">
+      {% include sidebar.html %}
     </div>
+  </div>
 </div>
 
 <!-- Inline Sponsored Links -->
@@ -22,9 +17,7 @@ layout: default
 
 <!-- Comments -->
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col col-lg-8">
-            {% include shared/comments.html %}
-        </div>
-    </div>
+  <div class="row">
+    <div class="col col-lg-8">{% include shared/comments.html %}</div>
+  </div>
 </div>
