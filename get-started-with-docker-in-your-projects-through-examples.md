@@ -66,7 +66,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 ##### Published in June, 2018.
 
 <div class="text-center mt-4 mb-2">
-	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f59a44" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 </div>
 
 ## What you will learn
@@ -268,7 +268,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
 </table>
 
 <div class="text-center mt-4 mb-2">
-	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f59a44" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 </div>
 
 ## Read the preface from the book
@@ -344,5 +344,5 @@ We take your privacy seriously and will take all measures to protect your person
 Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
 <div class="text-center mt-4 mb-2">
-	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f22918" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
+	<a data-dpd-type="button" data-variant="price-right" data-text="PURCHASE NOW" data-button-size="dpd-large" data-bg-color="f59a44" data-bg-color-hover="d5291b" data-text-color="ffffff" data-pr-bg-color="ffffff" data-pr-color="000000" data-lightbox="1" href="https://takacsmark-com.dpdcart.com/cart/add?product_id=167055&amp;method_id=179393">PURCHASE NOW</a><script src="https://takacsmark-com.dpdcart.com/dpd.js"></script>
 </div>
