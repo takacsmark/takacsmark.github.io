@@ -19,25 +19,9 @@
 $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif: "Libre Baskerville", "Charter", serif !default;
 $font-family-base: $font-family-serif !default;
+$enable-responsive-font-sizes: true;
 
-//$font-size-base: 1.3rem !default;
 $line-height-base: 1.6 !default;
-
-//$enable-responsive-font-sizes: true;
-//Increases lg and xl breakpoint values to accomodate fixed full height left sidebar
-$grid-breakpoints: (
-    xs: 0,
-    //default
-        sm: 576px,
-    //default
-        md: 768px,
-    //default
-        lg: 1040px,
-    //increased
-        xl: 1400px //increased
-);
-//Sets body background color
-//$body-bg: #f8f9fa;
 
 /******************************
  * Bootstrap imports
@@ -71,97 +55,80 @@ $grid-breakpoints: (
 // @import "alert";
 // @import "progress";
 @import "../node_modules/bootstrap/scss/media";
-@import "../node_modules/bootstrap/scss/list-group";
+//@import "../node_modules/bootstrap/scss/list-group";
 // @import "close";
 // @import "toasts";
 // @import "modal";
 // @import "tooltip";
 // @import "popover";
-@import "../node_modules/bootstrap/scss/carousel";
+// @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/utilities";
 // @import "print";
 
-article a, #sidebar a {
+/******************************
+ * Custom styling
+ *****************************/
+// Sets link formatting in articles and sidebar, all the rest is default Bootstrap
+article a, #invitation a {
     color: theme-color("dark") !important;
     text-decoration: underline !important;
 }
-
+// Sets main page greeting background color
 .navbar, #site-greeting {
     background-color: #F59A44 !important;
 }
 
-/******************************
- * Navbar styling
- ******************************/
 .navbar {
     font-family: $font-family-sans-serif;
 }
-//Removes border around hamburger menu
+// Removes border around hamburger menu
 .navbar-light .navbar-toggler {
     border-color: rgba(0, 0, 0, 0);
 }
-
-/******************************
- * Index page styling
- ******************************/
+// Formats main page site greeting
 #site-greeting {
     height: 25rem;
     margin-bottom: 5rem;
-
+    
     #greeting-img-container {
-        margin-bottom: -4rem;
         border-radius: 1rem;
-        border: solid 1rem white;
+        border: solid .5rem white;
+
+        width: 75%; 
+        margin-top: 1.5rem;
+        margin-bottom: -2rem;
+
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 80%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            margin-bottom: -4rem;
+        }
     }
 }
 
-
-//Styles carousel on index page
-.carousel {
-    //Makes carousel narrower than default
-    .carousel-inner {
-        max-width: 750px;
-    }
-    //Sets height to make carousel look about 21x9 movie
-    .carousel-item {
-        height: 300px;
-        background-color: white;
-    }
-    //We use cards to layout content
-    //Removes card borders
-    .card,
-    .card-img {
-        border: none;
-        border-radius: 0px;
-    }
-    //Sets arrow color darker
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(40%);
-    }
-}
-
-//Styles post listing on index page
+// Styles post listing on index page
 #post-listing {
-    //We use cards to display posts in list
-    //Sets background color same as body background
-    .card {
-        //background-color: $gray-100;
-    }
-    //Makes post description less black
-    .post-description {
-        //color: $gray-800;
-    }
     //Sets view count badge background color
     .badge {
         background-color: $gray-300;
     }
 }
-
-#sidebar {
+// Styles invitation
+#invitation {
     font-family: $font-family-sans-serif;
     background-color: $gray-100;
+    
+    img {
+        max-width: 52px;
+    }
 }
 
 /******************************
@@ -190,7 +157,7 @@ article {
     }
 
 }
-// Inline sponsored links
+// Styles inline sponsored links in articles
 .inline-sponsored {
     background-color: white;
 
@@ -199,13 +166,7 @@ article {
         max-height: 64px;
     }
 }
-
+// Styles code in articles
 article pre > code {
     max-width: 726px;
-}
-
-.container {
-    @include media-breakpoint-down(lg) {
-        max-width: 100%;
-    }
 }
