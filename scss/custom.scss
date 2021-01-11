@@ -157,6 +157,17 @@ article {
     }
 
 }
+// Show tables a bit smaller, leaner than other text
+.table {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: .8rem;
+    line-height: .8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 // Styles inline sponsored links in articles
 .inline-sponsored {
     font-family: $font-family-sans-serif;
