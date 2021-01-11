@@ -1,6 +1,20 @@
 <article itemscope itemtype="https://schema.org/BlogPosting">
-  <!-- Post Title -->
+  <!-- Post thumb -->
   <div class="row">
+    <div class="col">
+      {% assign pl = page.thumbnail | size | minus: 4 %}
+      <img
+        class="img w-75"
+        src="{{
+          site.url
+        }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}"
+        alt="{{ post.title }}"
+      />
+    </div>
+  </div>
+
+  <!-- Post Title -->
+  <div class="row mt-5">
     <div class="col">
       <h1 itemprop="name headline">{{ page.title }}</h1>
     </div>
