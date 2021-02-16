@@ -25,4 +25,6 @@ google_analytics: UA-41064919-3
 plugins:
     - jekyll-sitemap
 
+include:
+  - _pages
 exclude: [node_modules, .gulpfile.js, package.json, docs, vendor/bundle, _sass]
