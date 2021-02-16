@@ -27,4 +27,4 @@ plugins:
 
 include:
   - _pages
-exclude: [node_modules, .gulpfile.js, package.json, docs, vendor/bundle, _sass]
+exclude: [node_modules, gulpfile.js, package.json, docs, vendor/bundle, _sass, docker-compose.yml, Gemfile, Gemfile.lock, package-lock.json, postcss.config.js, tailwind.config.js ]

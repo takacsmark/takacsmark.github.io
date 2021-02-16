@@ -23,7 +23,7 @@ const runSequence = require("run-sequence");
 
 gulp.task("css", (done) => {
   gulp
-    .src("./styles/*.css")
+    .src("./_css/*.css")
     .pipe(sourcemaps.init())
     .pipe(postcss())
     .pipe(sourcemaps.write("."))
@@ -35,7 +35,7 @@ gulp.task("css", (done) => {
  *
  */
 gulp.task("watch", () => {
-  gulp.watch("./styles/*.css", gulp.series(["css"]));
+  gulp.watch("./_css/*.css", gulp.series(["css"]));
 });
 
 /**
