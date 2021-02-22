@@ -4,17 +4,7 @@ permalink: /
 ---
 
 <!-- Greeting -->
-{% include index/greeting.html %}
-
-<!-- Invitation -->
-<div class="container mt-5 d-lg-none">{% include shared/invitation.html %}</div>
+{% include index/hero.html %}
 
 <!-- Post Listing -->
-<div class="container mt-5">
-  <div class="row justify-content-between">
-    <div class="col col-12 col-lg-8">{% include index/post-listing.html %}</div>
-    <div class="col col-lg-4 col-xl-4 d-none d-lg-block">
-      {% include sidebar.html %}
-    </div>
-  </div>
-</div>
+{% include index/post-listing.html %}
