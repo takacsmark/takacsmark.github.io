@@ -3,8 +3,9 @@ layout: default
 permalink: /
 ---
 
-<!-- Greeting -->
-{% include index/hero.html %}
-
-<!-- Post Listing -->
-{% include index/post-listing.html %}
+<div x-data="{ slideOverOpen: false }">
+  <!-- Greeting -->
+  {% include index/hero.html %} {% include shared/slide-over.html %}
+  <!-- Post Listing -->
+  {% include index/post-listing.html %}
+</div>
