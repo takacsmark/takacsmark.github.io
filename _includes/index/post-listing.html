@@ -33,7 +33,7 @@
         <div class="flex flex-col justify-between flex-1 p-6 bg-white">
           <div class="flex-1">
             <p class="text-sm font-medium text-indigo-600">
-              <a href="#" class="hover:underline"> Case Study </a>
+            <a href="#" class="hover:underline">{{ post.category }}</a>
             </p>
             <a href="{{ post.url | prepend: site.baseurl | prepend: site.url}}" class="block mt-2">
               <p class="text-xl font-semibold text-gray-900">

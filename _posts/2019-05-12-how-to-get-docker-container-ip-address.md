@@ -5,15 +5,17 @@ description: "Need to find the IP address of a Docker container? Need to know ho
 date: 2019-05-12 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-tips-container-ip.png"
-categories: Docker Tutorials 
+category: Tech tips
 ---
- * TOC
+
+<!-- prettier-ignore -->
+* TOC
+<!-- prettier-ignore -->
 {:toc}
 
 Let's shed some light on a questions that readers often ask me in email or comments.
 
 **How do I get the IP address of a Docker container?**
-
 
 ## tl;dr
 
@@ -22,7 +24,7 @@ This is a tricky point, because the solution itself is short and simple, but in 
 For the above reason, I think it's useful to read the whole post, but in case you don't have the time, here you have the one-liner to solve the issue.
 
     {% raw %}
-    docker inspect -f "{{ .NetworkSettings.Networks.<network_name>.IPAddress }}" <container_name||container_id> 
+    docker inspect -f "{{ .NetworkSettings.Networks.<network_name>.IPAddress }}" <container_name||container_id>
     {% endraw %}
 
 With a specific example to check the IP of a container called `boring_noyce` on the default bridge network the command looks like this:
@@ -35,35 +37,33 @@ With a specific example to check the IP of a container called `boring_noyce` on 
 
 Let's come back to the main point now; why and when you might want to use the IP address of a Docker container?
 
-
 ## Why would you need the IP address of a Docker container?
 
 When you work with Docker in real projects, you may work on various levels, namely:
 
--   the container level
--   with Docker Compose or
--   Swarm or another orchestrator
+- the container level
+- with Docker Compose or
+- Swarm or another orchestrator
 
-The idea behind containerization is that your containers are meant to be *ephemeral by design*. What does this mean?
+The idea behind containerization is that your containers are meant to be _ephemeral by design_. What does this mean?
 
-The meaning of empheral is something short-lived, the Docker documentation explains it like this: 
+The meaning of empheral is something short-lived, the Docker documentation explains it like this:
 
 "By “ephemeral”, we mean that the container can be stopped and destroyed, then rebuilt and replaced with an absolute minimum set up and configuration."
 
-You can read about this in the [Docker docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/){:target="_blank"} or in my [in my Dockerfile best practices tutorial](https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/#containers-should-be-ephemeral){:target="_blank"}.
+You can read about this in the [Docker docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/){:target="\_blank"} or in my [in my Dockerfile best practices tutorial](https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/#containers-should-be-ephemeral){:target="\_blank"}.
 
 **The real meaning of this is that your containers are just temporary workers that can be destroyed and recreated as you need them.**
 
-The mechanism to construct a complex application with containers that you can throw away and replace any time is built into Docker. You use user defined networks, Compose and Swarm configuration to drive your application stack. 
+The mechanism to construct a complex application with containers that you can throw away and replace any time is built into Docker. You use user defined networks, Compose and Swarm configuration to drive your application stack.
 
 On the abstract orchestration levels of Compose and Swarm, you don't work with IP addresses directly. You rather work with your definition of the desired state of your entire stack.
 
-*This is why I said in the beginning that you are supposed to work with IP adrersses directly on an exceptional basis only; like tracking down a bug or testing out something new while you are building your configuration.*
+_This is why I said in the beginning that you are supposed to work with IP adrersses directly on an exceptional basis only; like tracking down a bug or testing out something new while you are building your configuration._
 
 **It's important that you build your production system with the Compose file to be used with Compose or Swarm, or deployment descriptors for other orhestrators like Kubernetes rather than relying on container IPs.**
 
 Having said all this, let's see how to get the IP address of a Docker container.
-
 
 ## Understand your networks
 
@@ -82,18 +82,17 @@ These networks are created by the Docker engine when it starts up on the host ma
 
 The meaning of these networks is the following:
 
--   The **bridge** network is the default network; if you create a new container, it will be connected to the bridge network by default. The bridge network provides isolation from your host machine, thus your containers are isolated from the host network. The containers can refer each other by IP address on the bridge network. (They cannot however refer each other by container name.)
--   If you connect a container to the **host** network, then your container will share your host machine's network. This is benefitial if you containerise a legacy system that is heavily dependent on the host IP. The **host** network configuration only works as expected on Linux systems, beacuase Docker uses a virtual machine under the hood on Mac and Windows, thus the host network in these cases refers to the VM rather than the real host itself. (I have not used a host network on a Windows machine with a Windows based container, so I cannot comment on that scenario.)
--   If you connect your container to the **none** network, this means that your contaienr is not connected to any network.
+- The **bridge** network is the default network; if you create a new container, it will be connected to the bridge network by default. The bridge network provides isolation from your host machine, thus your containers are isolated from the host network. The containers can refer each other by IP address on the bridge network. (They cannot however refer each other by container name.)
+- If you connect a container to the **host** network, then your container will share your host machine's network. This is benefitial if you containerise a legacy system that is heavily dependent on the host IP. The **host** network configuration only works as expected on Linux systems, beacuase Docker uses a virtual machine under the hood on Mac and Windows, thus the host network in these cases refers to the VM rather than the real host itself. (I have not used a host network on a Windows machine with a Windows based container, so I cannot comment on that scenario.)
+- If you connect your container to the **none** network, this means that your contaienr is not connected to any network.
 
-In order to create a good design for your application, you usually create user defined networks. You use these networks to isolate parts of your application architecture and you define contianers that serve as gateways between these networks. *This implies that some of your containers are connected to one user defined network, while other containers are connected to two networks, or even more depending on your design.*
+In order to create a good design for your application, you usually create user defined networks. You use these networks to isolate parts of your application architecture and you define contianers that serve as gateways between these networks. _This implies that some of your containers are connected to one user defined network, while other containers are connected to two networks, or even more depending on your design._
 
 **So it's important to understand the network context of your application before going after the IP address.**
 
-You use the `docker network` commands or the Compose file to define your networks. Please refer to the [Compose tutorial](https://takacsmark.com/docker-compose-tutorial-beginners-by-example-basics/){:target="_blank"}, the [Swarm tutorial](https://takacsmark.com/docker-swarm-tutorial-for-beginners/){:target="_blank"} for more details, or [get the book](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples){:target="_blank"} for an in-depth learning experience.
+You use the `docker network` commands or the Compose file to define your networks. Please refer to the [Compose tutorial](https://takacsmark.com/docker-compose-tutorial-beginners-by-example-basics/){:target="\_blank"}, the [Swarm tutorial](https://takacsmark.com/docker-swarm-tutorial-for-beginners/){:target="\_blank"} for more details, or [get the book](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples){:target="\_blank"} for an in-depth learning experience.
 
 Please note that Swarm mode adds further networks to the list. If you create a service in Swarm mode, requests are routed to the right node and right container by the default overlay network. You can, of course create user defined overlay networks.
-
 
 ## Get the IP address of your containers
 
@@ -183,9 +182,9 @@ You can get the IP address of a single container inspecting the container itself
 
     172.17.0.4
 
-This one-liner may look elegant, but I think it's impractical, because it's too long and you need to enter the network name (`bridge`) in the middle manually. 
+This one-liner may look elegant, but I think it's impractical, because it's too long and you need to enter the network name (`bridge`) in the middle manually.
 
-*You may think now that the one-liner is better, because you can use it in scripts. Please remember that you are not supposed to do that. If you need the IP address in production scripting, your should probably improve your network design.*
+_You may think now that the one-liner is better, because you can use it in scripts. Please remember that you are not supposed to do that. If you need the IP address in production scripting, your should probably improve your network design._
 
 Let's add a user defined network to the picture and see what happens.
 
@@ -238,7 +237,7 @@ Let's add a user defined network to the picture and see what happens.
 Now our container called `boring_noyce` is connected to `mynet`, too. Let's inspect the container's network settings.
 
     {% raw %}
-    docker container inspect -f "{{ .NetworkSettings }}" boring_noyce 
+    docker container inspect -f "{{ .NetworkSettings }}" boring_noyce
     {% endraw %}
 
 {% raw %}
@@ -283,8 +282,6 @@ The same command on the user defined network gives only one IP, because only one
     <no value>
     <no value>
 
-
 ## A note on Swarm mode
 
 If you are in Swarm mode, you work with services directly. You are not supposed to touch containers. If you need to work with a container (on an exceptional basis) to check something, your best option is to `ssh` into one of the nodes in the Swarm and use `docker container ls` and the commands I showed you in this post.
-

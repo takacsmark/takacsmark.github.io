@@ -5,26 +5,29 @@ description: "Discover high growth technology solutions used by companies worldw
 date: 2019-01-31 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/2019-Technology-Trends-Stackoverflow-Analysis.png"
-categories: Trends Python Javascript 
+category: Tech trends
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
-This post is the result of several days of Stackoverflow data mining. The insights and figures you find in this article come from the December 2, 2018 [Stack Exchange data dump](https://archive.org/download/stackexchange){:target="_blank"}.
+This post is the result of several days of Stackoverflow data mining. The insights and figures you find in this article come from the December 2, 2018 [Stack Exchange data dump](https://archive.org/download/stackexchange){:target="\_blank"}.
 
 _The goal of this post is to show you what's happening in popular enterprise and web application domains, data science, machine learning and cloud technologies._
 
 First, I give you a short introduction to the big picture presenting the top technology domains on Stackoverflow.
 Next, we explore the high growth technologies of 2019 grouped into practical categories:
 
-* **Growth of the most established technologies** - find the focus of the industry.
-* **Growth of trending technologies** - trending skills you should already have or build right now.
-* **Growth of emerging technologies** - up and coming technologies that increase the overall value of your work.
-* **High growth newcomers** - new releases you should keep an eye on.
+- **Growth of the most established technologies** - find the focus of the industry.
+- **Growth of trending technologies** - trending skills you should already have or build right now.
+- **Growth of emerging technologies** - up and coming technologies that increase the overall value of your work.
+- **High growth newcomers** - new releases you should keep an eye on.
 
 ## The leading technical domains on Stackoverflow
 
-[The first Stackoverflow question](https://stackoverflow.com/questions/6/percentage-width-child-element-in-absolutely-positioned-parent-on-internet-explo){:target="_blank"} was created on July 31, 2008. Questions and answers are added continuously since that day. Questions are tagged with the label of their specific domain by Stackoverflow users. The all-time top ranking tags are the ones you see in the table below.
+[The first Stackoverflow question](https://stackoverflow.com/questions/6/percentage-width-child-element-in-absolutely-positioned-parent-on-internet-explo){:target="\_blank"} was created on July 31, 2008. Questions and answers are added continuously since that day. Questions are tagged with the label of their specific domain by Stackoverflow users. The all-time top ranking tags are the ones you see in the table below.
 
 <table class="table table-striped">
   <thead class="thead-dark">
@@ -117,11 +120,11 @@ The table shows the overall number of questions tagged with the specific "TagNam
 
 Let's examine what the table shows us.
 
-* The table features the technologies that are most heavily used to build enterprise applications and web applications. **Javascript, Java, C# and PHP are clearly the top technologies that you see in most businesses, no wonder they have such a high number of questions.**
-* **Android and iOS** are also in the top ten, clearly signaling that mobile application development is a high business priority.
-* **JQuery, HTML and CSS** are all building blocks of modern websites, although we have to look into the detailed trends to see where these technologies are going.
-* **Python is a great general purpose language. Traditionally it is not a preferred choice for enterprise application development, still it holds the sixth position.** Is this due to the increased popularity of Python's machine learning and data mining libraries? This is something we have to explore together.
-* In the **database domain MySQL and SQL** made it to the top fifteen and Ruby on Rails seems to be the most popular web application framework.
+- The table features the technologies that are most heavily used to build enterprise applications and web applications. **Javascript, Java, C# and PHP are clearly the top technologies that you see in most businesses, no wonder they have such a high number of questions.**
+- **Android and iOS** are also in the top ten, clearly signaling that mobile application development is a high business priority.
+- **JQuery, HTML and CSS** are all building blocks of modern websites, although we have to look into the detailed trends to see where these technologies are going.
+- **Python is a great general purpose language. Traditionally it is not a preferred choice for enterprise application development, still it holds the sixth position.** Is this due to the increased popularity of Python's machine learning and data mining libraries? This is something we have to explore together.
+- In the **database domain MySQL and SQL** made it to the top fifteen and Ruby on Rails seems to be the most popular web application framework.
 
 Please note the huge difference in the numbers between number one and number fifteen; 1.7M vs 300k.
 
@@ -278,11 +281,11 @@ Based on the detailed figures that I show you later in this post, my working ass
 
 Looking at the table we get the feeling that everything around 4% growth shows a stable domain. (The growth mean is 4.57% and the growth median is 4.25%.)
 
-* **We see two distinct high growth areas; namely Javascript and Python, with Python having an extraordinary 11% increase.**
-* **SQL** also performs above average, it's quite natural if you think of the growing data processing need of the world.
-* **JQuery** added over 23 thousand questions, still it lags behind the overall growth rate of the Javascript ecosystem. We look at Angular and React and see how the rise of these frameworks affect JQuery.
-* **Asp.net** has the lowest number on this list, but this does not necessarily mean the abandonment of the asp.net framework. Looking at Asp.net Core, we see 27% growth and a total of 24 thousand questions on Stackoverflow.
-* **Ruby on Rails** shows a below average growth rate.
+- **We see two distinct high growth areas; namely Javascript and Python, with Python having an extraordinary 11% increase.**
+- **SQL** also performs above average, it's quite natural if you think of the growing data processing need of the world.
+- **JQuery** added over 23 thousand questions, still it lags behind the overall growth rate of the Javascript ecosystem. We look at Angular and React and see how the rise of these frameworks affect JQuery.
+- **Asp.net** has the lowest number on this list, but this does not necessarily mean the abandonment of the asp.net framework. Looking at Asp.net Core, we see 27% growth and a total of 24 thousand questions on Stackoverflow.
+- **Ruby on Rails** shows a below average growth rate.
 
 Let's turn the question around and see the top growth tags in the last six months.
 
@@ -427,10 +430,10 @@ We start with those tags that had at least 100k questions on Stackoverflow in Ju
 
 This table gives us the overall trends of the industry.
 
-* **Data mining, statistical computing and AI** made it to the top fifteen with Python, Excel, R, SQL and some of the JSON questions.
-* Web application frameworks are also a significant group with Angular, Node, Django and Spring. A good portion of the JSON questions is attributed to API development, so **web applications and APIs** are still amongst the hottest topics.
-* Android was ahead of iOS in the first chart with 4.4% growth vs 3.45%, but this may be misleading. Looking at this table, we can clearly see that Swift produces a 10.17% growth. **Mobile development** is the third biggest growth area in our analysis.
-* Although you don't hear much about Wordpress these days, note that this good old piece of tech still keeps up with today's demand and it sees growing use in the blogging, personal website and SME/SOHO website domains.
+- **Data mining, statistical computing and AI** made it to the top fifteen with Python, Excel, R, SQL and some of the JSON questions.
+- Web application frameworks are also a significant group with Angular, Node, Django and Spring. A good portion of the JSON questions is attributed to API development, so **web applications and APIs** are still amongst the hottest topics.
+- Android was ahead of iOS in the first chart with 4.4% growth vs 3.45%, but this may be misleading. Looking at this table, we can clearly see that Swift produces a 10.17% growth. **Mobile development** is the third biggest growth area in our analysis.
+- Although you don't hear much about Wordpress these days, note that this good old piece of tech still keeps up with today's demand and it sees growing use in the blogging, personal website and SME/SOHO website domains.
 
 ## Growth of trending tags
 
@@ -573,12 +576,12 @@ Another interesting segment is the group of tags with over 10k questions on Stac
 
 **This is the list that shows you which skills you should develop right now in your company or in your own profile to stay competitive.**
 
-* [Kotlin](https://kotlinlang.org/){:target="_blank"} is an exceptional programming language, you have the ability to code for JVM, develop Android, Javascript and Native applications with the use of the same language. This unique and powerful value proposition brought Kotlin to the top of this list.
-* [Vue](https://vuejs.org/){:target="_blank"}, [React](https://reactjs.org/){:target="_blank"}, [React Native](https://facebook.github.io/react-native/){:target="_blank"}, [Redux](https://redux.js.org/){:target="_blank"} and [Angular](https://angular.io/){:target="_blank"} (on the established tags list) represent the **single page application** libraries and frameworks with their versatile solutions to bring the same code also to mobile devices.
-* Python, Pandas, dataframe, VBA and Tensorflow reinforce the growing significance of **data science, statistical computing and machine learning**.
-* Asp.net Core and Spring Boot are the high growth enterprise web application frameworks.
-* [Firebase](https://firebase.google.com/){:target="_blank"}, Google's web application and mobile development platform with excellent integration options and cloud backed features also made it to the top 15.
-* **Docker** appears on this list for the first time representing containerization. Docker is so far the only technology from the infrastructure/DevOps related domains that made it to the top list.
+- [Kotlin](https://kotlinlang.org/){:target="\_blank"} is an exceptional programming language, you have the ability to code for JVM, develop Android, Javascript and Native applications with the use of the same language. This unique and powerful value proposition brought Kotlin to the top of this list.
+- [Vue](https://vuejs.org/){:target="\_blank"}, [React](https://reactjs.org/){:target="\_blank"}, [React Native](https://facebook.github.io/react-native/){:target="\_blank"}, [Redux](https://redux.js.org/){:target="\_blank"} and [Angular](https://angular.io/){:target="\_blank"} (on the established tags list) represent the **single page application** libraries and frameworks with their versatile solutions to bring the same code also to mobile devices.
+- Python, Pandas, dataframe, VBA and Tensorflow reinforce the growing significance of **data science, statistical computing and machine learning**.
+- Asp.net Core and Spring Boot are the high growth enterprise web application frameworks.
+- [Firebase](https://firebase.google.com/){:target="\_blank"}, Google's web application and mobile development platform with excellent integration options and cloud backed features also made it to the top 15.
+- **Docker** appears on this list for the first time representing containerization. Docker is so far the only technology from the infrastructure/DevOps related domains that made it to the top list.
 
 ## Growth of emerging tags
 
@@ -721,10 +724,10 @@ Let's see what's happening to those tags that have over 1000 questions. These ta
 
 **This list contains smaller libraries, frameworks that you should consider for your overall project toolkit.**
 
-* Google's mobile application SDK, [Flutter](https://flutter.io/){:target="_blank"} just reached version 1.0.
-* Flutter is not the only emerging product by Google; cloud components like the [Firestore](https://firebase.google.com/docs/firestore/){:target="_blank"} NoSQL database, [Google Assistant Actions](https://developers.google.com/actions/){:target="_blank"} and [Google Cloud Functions](https://firebase.google.com/docs/functions/functions-and-firebase){:target="_blank"} are gaining momentum.
-* Web application development is strongly represented by [Bootstrap 4](https://blog.getbootstrap.com/){:target="_blank"}, [Vuex](https://vuex.vuejs.org/){:target="_blank"}, [Axios](https://github.com/axios/axios){:target="_blank"} and [Jest](https://jestjs.io/){:target="_blank"}, the first testing framework on the top list.
-* We find exciting niche tags here like the [Discord messaging API](https://discordapp.com/){:target="_blank"} and [Hyperledger](https://www.hyperledger.org/){:target="_blank"} an umbrella project for open-source blockchain related tools by the Linux Foundation.
+- Google's mobile application SDK, [Flutter](https://flutter.io/){:target="\_blank"} just reached version 1.0.
+- Flutter is not the only emerging product by Google; cloud components like the [Firestore](https://firebase.google.com/docs/firestore/){:target="\_blank"} NoSQL database, [Google Assistant Actions](https://developers.google.com/actions/){:target="\_blank"} and [Google Cloud Functions](https://firebase.google.com/docs/functions/functions-and-firebase){:target="\_blank"} are gaining momentum.
+- Web application development is strongly represented by [Bootstrap 4](https://blog.getbootstrap.com/){:target="\_blank"}, [Vuex](https://vuex.vuejs.org/){:target="\_blank"}, [Axios](https://github.com/axios/axios){:target="\_blank"} and [Jest](https://jestjs.io/){:target="\_blank"}, the first testing framework on the top list.
+- We find exciting niche tags here like the [Discord messaging API](https://discordapp.com/){:target="\_blank"} and [Hyperledger](https://www.hyperledger.org/){:target="\_blank"} an umbrella project for open-source blockchain related tools by the Linux Foundation.
 
 ## High growth newcomers
 
@@ -865,11 +868,11 @@ Let's look at those tags that had a low number of questions (between 100 and 100
   </tbody>
 </table>
 
-**Web application development** is again heavily present with Angular, Webpack, [Cypress](https://www.cypress.io/){:target="_blank"}, an end-to-end Javascript testing framework, [nest](https://nestjs.com/){:target="_blank"} and [Next.js](https://nextjs.org/){:target="_blank"}, a production grade React framework.
+**Web application development** is again heavily present with Angular, Webpack, [Cypress](https://www.cypress.io/){:target="\_blank"}, an end-to-end Javascript testing framework, [nest](https://nestjs.com/){:target="\_blank"} and [Next.js](https://nextjs.org/){:target="\_blank"}, a production grade React framework.
 
 Most tags in this category are related to a specific release of a given technology. These versions entered the market during the last year and most of them are not the current latest, but **they clearly show which technologies are continuously used on real projects.**
 
-[Laravel](https://laravel.com/){:target="_blank"}, [Postgres](https://www.postgresql.org/){:target="_blank"} and [Kubernetes](https://kubernetes.io/){:target="_blank"} are a nice addition to your focus list.
+[Laravel](https://laravel.com/){:target="\_blank"}, [Postgres](https://www.postgresql.org/){:target="\_blank"} and [Kubernetes](https://kubernetes.io/){:target="\_blank"} are a nice addition to your focus list.
 
 Let's look at the tags that are completely new and growing in the December 2018 Stackoverflow data dump.
 
@@ -966,15 +969,15 @@ This list re-confirms that **iOS mobile development is a top priority with Xcode
 
 I hope you find the various data views in this article useful. Depending on your use-case and profession you may focus on different parts of the data presented here. Let me give you a short summary of the key points and general takeaways:
 
-* **Enterprise applications**, web applications and mobile applications dominate the scene from a helicopter view. Javascript, Java and C# are the go to languages in this domain.
-* **Python is the fastest growing language overall.** This growth may be mostly justified with the boom of data science, statistical computing and machine learning applications.
-* Both **Android and iOS** development is growing at a standard rate.
-* Excel, Python, R and SQL are the key tools for **data science** with Pandas being a key skill in this domain. (I used Python and Pandas for this data analysis myself.)
-* **Angular, React and Vue** are leading the SPA and native application development arena.
-* If you are looking for **new skills with great potential**, have a look at Kotlin, Firebase, Flutter, nest.js and Next.js.
-* Tensorflow has emerged as the key **machine learning** framework.
-* **Add Docker and Kubernetes to your skill set.**
-* Interested in **Blockchain**? Check out Hyperledger!
-* If you need professional, beautiful and easy to use online presence, your best bet is still **Wordpress**.
+- **Enterprise applications**, web applications and mobile applications dominate the scene from a helicopter view. Javascript, Java and C# are the go to languages in this domain.
+- **Python is the fastest growing language overall.** This growth may be mostly justified with the boom of data science, statistical computing and machine learning applications.
+- Both **Android and iOS** development is growing at a standard rate.
+- Excel, Python, R and SQL are the key tools for **data science** with Pandas being a key skill in this domain. (I used Python and Pandas for this data analysis myself.)
+- **Angular, React and Vue** are leading the SPA and native application development arena.
+- If you are looking for **new skills with great potential**, have a look at Kotlin, Firebase, Flutter, nest.js and Next.js.
+- Tensorflow has emerged as the key **machine learning** framework.
+- **Add Docker and Kubernetes to your skill set.**
+- Interested in **Blockchain**? Check out Hyperledger!
+- If you need professional, beautiful and easy to use online presence, your best bet is still **Wordpress**.
 
 Have fun and build great skills!

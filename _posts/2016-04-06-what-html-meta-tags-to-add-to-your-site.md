@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "What HTML meta tags to add to your site and what do they do?"
+title: "What HTML meta tags to add to your site and what do they do?"
 description: "Eager to clarify what meta tags you need in your HTML markup? Need some info on where, why and how to add them? Could use a few examples?"
-date:   2016-04-04 16:07:00 +0100
+date: 2016-04-04 16:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/html_meta_tags.jpg"
-categories: HTML SEO
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
 So you can't wait to release your new site? Eager to clarify what meta tags you need in your HTML markup? Need some info on where, why and how to add them? Could use a few examples?
@@ -18,13 +21,13 @@ Search no more, here is the post you've been looking for.
 
 I bet, you already heard that you need meta tags for SEO. I think that this definition is somewhat narrow in 2016.
 
->These days I would define the purpose of meta tags that they enrich the human readable information on webpages with computer understandable meta information. This way your pages' contents can be successfully included into the on-line collaboration of people, web apps and computers in general.
+> These days I would define the purpose of meta tags that they enrich the human readable information on webpages with computer understandable meta information. This way your pages' contents can be successfully included into the on-line collaboration of people, web apps and computers in general.
 
 Yep, this goes beyond SEO.
 
 **Search engines massively rely on some meta tags, but today there are dedicated meta tags for social sites like Facebook, Twitter and LinkedIn, too.**
 
-**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](https://schema.org){:target="_blank"}.**
+**Besides the social tags, there are meta tags that are used to describe your content in more detail. The most widely used content description system is provided by [schema.org](https://schema.org){:target="\_blank"}.**
 
 These are the meta tags you'll need on your site to successfully work with today's on-line ecosystem:
 
@@ -43,16 +46,16 @@ Everybody knows these two guys: `title` and `description`, every page has them (
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- The page title comes into the <title> tag -->
-        <title>This is the title of your page</title>
-        <!-- The page description is defined in the meta format -->
-        <meta name="description" content="This is the description of your page">
-    </head>
+  <head>
+    <!-- The page title comes into the <title> tag -->
+    <title>This is the title of your page</title>
+    <!-- The page description is defined in the meta format -->
+    <meta name="description" content="This is the description of your page" />
+  </head>
 
-    <body>
-        <!-- Page content comes here... -->
-    </body>
+  <body>
+    <!-- Page content comes here... -->
+  </body>
 </html>
 ```
 
@@ -98,37 +101,37 @@ There is not one magic number for the length of title or description, because th
 
 Google typically displays 50-60 characters from the title, and about 150-160 from the description. The rest of the information in these tags will not be visible on the results page.
 
-If you're wondering how you can make sure that you don't mess up, use this [Google snippet optimization tool on-line](http://snippetoptimizer.net){:target="_blank"}.
+If you're wondering how you can make sure that you don't mess up, use this [Google snippet optimization tool on-line](http://snippetoptimizer.net){:target="\_blank"}.
 
-If you wanna know more details about length, [here is an information-rich study by Moz.](https://moz.com/blog/new-title-tag-guidelines-preview-tool){:target="_blank"}
+If you wanna know more details about length, [here is an information-rich study by Moz.](https://moz.com/blog/new-title-tag-guidelines-preview-tool){:target="\_blank"}
 
 ## Miscellaneous meta
 
 There are some meta tags that you should add to all of your webpages under `<head>`. These are:
 
 - `charset` specifies the character encoding of the HTML document. The browser uses this information to display the page correctly.
-- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp){:target="_blank"}
+- `http-viewport` denotes the user visible area of a webpage. It was introduced with responsive web design. You can control the initial dimensions and scaling when the page is loaded. You can read a [good explanation of http-viewport featuring examples on w3schools.](https://www.w3schools.com/css/css_rwd_viewport.asp){:target="\_blank"}
 
 Let's extend our previous example:
 
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- UTF8 is a broad character encoding  -->
-        <meta charset="utf-8">
-        <!-- Setting page width to the width of the device with scaling 1 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- UTF8 is a broad character encoding  -->
+    <meta charset="utf-8" />
+    <!-- Setting page width to the width of the device with scaling 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- The page title comes into the <title> tag -->
-        <title>This is the title of your page</title>
-        <!-- The page description is defined in the meta format -->
-        <meta name="description" content="This is the description of your page">
-    </head>
+    <!-- The page title comes into the <title> tag -->
+    <title>This is the title of your page</title>
+    <!-- The page description is defined in the meta format -->
+    <meta name="description" content="This is the description of your page" />
+  </head>
 
-    <body>
-        <!-- Page content comes here... -->
-    </body>
+  <body>
+    <!-- Page content comes here... -->
+  </body>
 </html>
 ```
 
@@ -143,7 +146,7 @@ There is another important piece of meta information we should mention, although
 Bloggers, web masters and other nerdy people will have to prove the ownership of their websites when using online services. You're required to do this when
 
 - your site's data is used by a service
--  or your site's identity is part of your service identity.
+- or your site's identity is part of your service identity.
 
 Let me explain.
 
@@ -158,25 +161,27 @@ Let's add a Google example to our sample code, where the value of the content fi
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- UTF8 is broad character encoding  -->
-        <meta charset="utf-8">
-        <!-- Setting page width to the width of the device with scaling 1 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- UTF8 is broad character encoding  -->
+    <meta charset="utf-8" />
+    <!-- Setting page width to the width of the device with scaling 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- The page title comes into the <title> tag -->
-        <title>This is the title of your page</title>
-        <!-- The page description is defined in the meta format -->
-        <meta name="description" content="This is the description of your page">
+    <!-- The page title comes into the <title> tag -->
+    <title>This is the title of your page</title>
+    <!-- The page description is defined in the meta format -->
+    <meta name="description" content="This is the description of your page" />
 
-        <!-- Google site Verification -->
-        <meta name="google-site-verification" content="59408yhfuhfjskdlhfasdhfuoyHJHLJHK__Random__BLAH_BLAH" />
+    <!-- Google site Verification -->
+    <meta
+      name="google-site-verification"
+      content="59408yhfuhfjskdlhfasdhfuoyHJHLJHK__Random__BLAH_BLAH"
+    />
+  </head>
 
-    </head>
-
-    <body>
-        <!-- Page content comes here... -->
-    </body>
+  <body>
+    <!-- Page content comes here... -->
+  </body>
 </html>
 ```
 
@@ -186,7 +191,7 @@ I like this part a lot, because it'll give you spectacular results. **Social met
 
 The minimum information you should provide is title, description and an image.
 
-Most social sites support the [Open Graph protocol](http://ogp.me){:target="_blank"} to acquire useful information about a webpage.
+Most social sites support the [Open Graph protocol](http://ogp.me){:target="\_blank"} to acquire useful information about a webpage.
 
 Twitter uses its own notation, but if it's not present on your page Twitter will use Open Graph data.
 
@@ -195,38 +200,47 @@ Let's define a set of Open Graph tags to be used by Facebook, Google Plus and Li
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- UTF8 is broad character encoding  -->
-        <meta charset="utf-8">
-        <!-- Setting page width to the width of the device with scaling 1 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- UTF8 is broad character encoding  -->
+    <meta charset="utf-8" />
+    <!-- Setting page width to the width of the device with scaling 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- The page title comes into the <title> tag -->
-        <title>This is the title of your page</title>
-        <!-- The page description is defined in the meta format -->
-        <meta name="description" content="This is the description of your page">
+    <!-- The page title comes into the <title> tag -->
+    <title>This is the title of your page</title>
+    <!-- The page description is defined in the meta format -->
+    <meta name="description" content="This is the description of your page" />
 
-        <!-- Google site Verification -->
-        <meta name="google-site-verification" content="59408yhfuhfjskdlhfasdhfuoyHJHLJHK__Random__BLAH_BLAH" />
+    <!-- Google site Verification -->
+    <meta
+      name="google-site-verification"
+      content="59408yhfuhfjskdlhfasdhfuoyHJHLJHK__Random__BLAH_BLAH"
+    />
 
-        <!-- Open Graph Data -->
-        <meta property="og:title" content="This is the title of your page<" />
-        <meta property="twitter:title" content="This is the title of your page<" />
-        <meta property="og:description" content="This is the description of your page">
-        <meta property="og:image" content="http://yourtsite.com/yourimagedir/yourthumbnail.jpg" />
-    </head>
+    <!-- Open Graph Data -->
+    <meta property="og:title" content="This is the title of your page<" />
+    <meta property="twitter:title" content="This is the title of your page<" />
+    <meta
+      property="og:description"
+      content="This is the description of your page"
+    />
+    <meta
+      property="og:image"
+      content="http://yourtsite.com/yourimagedir/yourthumbnail.jpg"
+    />
+  </head>
 
-    <body>
-        <!-- Page content comes here... -->
-    </body>
+  <body>
+    <!-- Page content comes here... -->
+  </body>
 </html>
 ```
 
-**If you have issues with your Open Graph meta start debugging with [Facebook's Open Graph debugger.](https://developers.facebook.com/tools/debug/){:target="_blank"}**
+**If you have issues with your Open Graph meta start debugging with [Facebook's Open Graph debugger.](https://developers.facebook.com/tools/debug/){:target="\_blank"}**
 
 ## Schema.org to describe your content
 
-[Schema.org](https://schema.org){:target="_blank"} provides schemas for structured data on the internet.
+[Schema.org](https://schema.org){:target="\_blank"} provides schemas for structured data on the internet.
 
 Use them to describe articles, blog posts, products, product listings, events, people, and so on.
 
@@ -236,22 +250,24 @@ Let's see a blog post example:
 
 ```html
 <article itemscope itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="image" content="http://yoursite.com/image.jpg">
-    <img src="http://yoursite.com/image.jpg">
+  <meta itemprop="image" content="http://yoursite.com/image.jpg" />
+  <img src="http://yoursite.com/image.jpg" />
 
-    <h1 itemprop="name headline">Post title</h1>
+  <h1 itemprop="name headline">Post title</h1>
 
-    <p>
-        <time datetime="date_to_xmlschema" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+  <p>
+    <time datetime="date_to_xmlschema" itemprop="datePublished"
+      >{{ page.date | date: "%b %-d, %Y" }}</time
+    >
 
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">Post author name</span>
-        </span>
-    </p>
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">Post author name</span>
+    </span>
+  </p>
 
-    <div itemprop="articleBody">
-        <!-- Post body comes here -->
-    </div>
+  <div itemprop="articleBody">
+    <!-- Post body comes here -->
+  </div>
 </article>
 ```
 

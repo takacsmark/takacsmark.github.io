@@ -1,23 +1,26 @@
 ---
 layout: post
-title:  "Docker tutorial for beginners through examples - a step by step tutorial"
+title: "Docker tutorial for beginners through examples - a step by step tutorial"
 description: "With this beginner's Docker tutorial you'll learn to use Docker in your projects, understand Docker's purpose and build routine using Docker tools."
-date:   2016-10-15 8:07:00 +0100
+date: 2016-10-15 8:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-tutorial-getting-started.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
-****Update********
-Now you can follow along the video and learn with my youtube tutorial. 
+\***\*Update**\*\*\*\*\*\*
+Now you can follow along the video and learn with my youtube tutorial.
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
+<div class="mb-4 embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vyp5_F42NGs" allowfullscreen></iframe>
 </div>
 
-So you decided to learn Docker? This tutorial, unlike other tutorials, takes a solution focused approach, rather than a toolkit focused approach. We start from the big picture, understanding what problems Docker is meant to solve and start using Docker as we make progress.  
+So you decided to learn Docker? This tutorial, unlike other tutorials, takes a solution focused approach, rather than a toolkit focused approach. We start from the big picture, understanding what problems Docker is meant to solve and start using Docker as we make progress.
 
 I will use an experience from a recent project and solve common computing challenges I had to face. I think I could have solved such challenges with much less headache if I had this tutorial. So I decided to write it.
 
@@ -31,12 +34,11 @@ So in this tutorial we'll start from the big picture, with a state-of-the-art ov
 
 In the beginning let me give you my short and concise definition of the problem Docker is built to solve. So we'll start from there and move on step by step.
 
-
 ## What problem does docker solve?
 
 This is the fundamental question of everyone who wants to start out with Docker. Let's answer the question in the clearest and simplest way possible, with everyday words, not Docker terminology.
 
-**What problem does Docker solve?** Docker solves the problem of having identical environments across various stages of development and having isolated environments for your individual applications.  
+**What problem does Docker solve?** Docker solves the problem of having identical environments across various stages of development and having isolated environments for your individual applications.
 
 The problem itself is as old as software development. Environment setup and management is a tedious task in every project.
 
@@ -73,13 +75,13 @@ The strength of Docker is that they have gone through the tedious task of stripp
 Let me give you an example of the containers I have on my local machine so that you get a better idea. Docker and the community say that every container should have one main executable. In practice I translated this to one application per container. These are the running containers on my Mac right now:
 
 ```terminal
-CONTAINER ID        IMAGE                 COMMAND                  CREATED             
+CONTAINER ID        IMAGE                 COMMAND                  CREATED
 STATUS              PORTS                                      NAMES
 
-f3c88680252a        jwilder/nginx-proxy   "/app/docker-entrypoi"   3 weeks ago  
+f3c88680252a        jwilder/nginx-proxy   "/app/docker-entrypoi"   3 weeks ago
 Up 32 seconds       0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   nginx-proxy
 
-ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago  
+ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago
 Up 32 seconds       0.0.0.0:3306->3306/tcp                     mariadb
 ```
 
@@ -91,19 +93,19 @@ Similarly, mariadb is listening on the default port, which means that this is my
 
 Well, I'm not running apache or mysql on my Mac anymore. I do my development in Docker containers.
 
-I'll tell you a lot more about this, I just wanted to show a few containers running. Now if I wanted to work on a Wordpress site, for example, I could start a Wordpress container next to nginx-proxy and mariadb and make these guys work together.   
+I'll tell you a lot more about this, I just wanted to show a few containers running. Now if I wanted to work on a Wordpress site, for example, I could start a Wordpress container next to nginx-proxy and mariadb and make these guys work together.
 
 ```terminal
-CONTAINER ID        IMAGE                 COMMAND                  CREATED      
+CONTAINER ID        IMAGE                 COMMAND                  CREATED
 STATUS              PORTS                                      NAMES
 
-f3c88680252a        jwilder/nginx-proxy   "/app/docker-entrypoi"   3 weeks ago         
+f3c88680252a        jwilder/nginx-proxy   "/app/docker-entrypoi"   3 weeks ago
 Up 11 minutes       0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp   nginx-proxy
 
-1c8ebe30f62a        wordpress             "/entrypoint.sh apach"   3 weeks ago         
+1c8ebe30f62a        wordpress             "/entrypoint.sh apach"   3 weeks ago
 Up 3 seconds        80/tcp                                     vs-api
 
-ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago         
+ff25d1fb2770        mariadb               "docker-entrypoint.sh"   3 weeks ago
 Up 11 minutes       0.0.0.0:3306->3306/tcp                     mariadb
 ```
 
@@ -117,7 +119,7 @@ So let's make it happen for you, too. Let's install docker first, and then talk 
 
 ## Running Docker on your machine
 
-**In order to use Docker on your local machine or on your server, you need Docker Engine.** [You can download and install Docker Engine for Mac, Windows and Linux from the Docker site, follow this link.](https://docs.docker.com/engine/installation/){:target="_blank"}
+**In order to use Docker on your local machine or on your server, you need Docker Engine.** [You can download and install Docker Engine for Mac, Windows and Linux from the Docker site, follow this link.](https://docs.docker.com/engine/installation/){:target="\_blank"}
 
 Please note that the way we run Docker on Mac and Windows used to be much different not too long ago. I'm writing this on October 13th, 2016. If you see tutorials that say that you need Docker Toolbox, Docker Machine or boot2docker to run docker containers on Mac and Windows, then be aware that those are outdated.
 
@@ -158,10 +160,10 @@ The first thing you need for your development is the image that servers your goa
 
 Images may come from two sources:
 
-- image repository, I use the [Docker Hub](https://hub.docker.com/explore/){:target="_blank"}, I'm not aware of any other significant repository, the hub serves me well.
+- image repository, I use the [Docker Hub](https://hub.docker.com/explore/){:target="\_blank"}, I'm not aware of any other significant repository, the hub serves me well.
 - you can create your own images. We will talk about this in more details, because this part is awesome. Docker images are layered, so you can build them layer by layer, and you can build your images starting from other images.
 
-Let's just visit [Docker Hub](https://hub.docker.com/explore/){:target="_blank"} and lay your hands on your first image. You can sign up if you want to, you don't need a registration to browse and use images though.
+Let's just visit [Docker Hub](https://hub.docker.com/explore/){:target="\_blank"} and lay your hands on your first image. You can sign up if you want to, you don't need a registration to browse and use images though.
 
 On the page you'll see a list of images. Most of them have the label "official" , which means that they are provided as the official package of a specific technology. (OK, this is pretty obvious).
 
@@ -170,22 +172,22 @@ Some images are provided by third parties, including community members. Those ar
 Let me show you my machine, before we get your package. I use the `docker images` command to list images on my local machine.
 
 ```terminal
-REPOSITORY                           TAG                 IMAGE ID            
+REPOSITORY                           TAG                 IMAGE ID
 CREATED             SIZE
 
-node                                 6.6.0               f4e366168fa6        
+node                                 6.6.0               f4e366168fa6
 3 weeks ago         650.8 MB
 
-jwilder/nginx-proxy                  latest              1d942ca55e4f        
+jwilder/nginx-proxy                  latest              1d942ca55e4f
 4 weeks ago         248.4 MB
 
-wordpress                            latest              de013c4e03e8        
+wordpress                            latest              de013c4e03e8
 4 weeks ago         421.6 MB
 
-node                                 latest              348237a1e6c9        
+node                                 latest              348237a1e6c9
 4 weeks ago         652.9 MB
 
-mariadb                              latest              7e149af02fc0        
+mariadb                              latest              7e149af02fc0
 6 weeks ago         391.9 MB
 ```
 
@@ -229,13 +231,13 @@ So, let's just pull first. :) We will specify the version when we do so. Let's p
 If you are wondering about the size difference between Jessie and Alpine, I pulled them both to show the numbers to you:
 
 ```terminal
-REPOSITORY                           TAG                 IMAGE ID            
+REPOSITORY                           TAG                 IMAGE ID
 CREATED             SIZE
 
-nginx                                1.10.1              bf2b4c2d7bf5        
+nginx                                1.10.1              bf2b4c2d7bf5
 3 weeks ago         180.7 MB
 
-nginx                                1.10.1-alpine       e84e20a9b8b5        
+nginx                                1.10.1-alpine       e84e20a9b8b5
 3 weeks ago         54.03 MB
 ```
 
@@ -249,7 +251,7 @@ I typed almost a whopping 2900 words so far. All of the above shall become a 5 s
 
 Please make sure that you're not running a web server on your local machine on port 80, otherwise we'll have a conflict. The Terminal command is:
 
-`docker run --name my-nginx  -p 80:80  nginx:1.10.1-alpine`
+`docker run --name my-nginx -p 80:80 nginx:1.10.1-alpine`
 
 `docker run` is the command that starts up containers from images. If it cannot find the image locally it will pull it for you.
 
@@ -287,11 +289,11 @@ You should see something like this:
 
 ```terminal
 ➜  ~ docker ps
-CONTAINER ID        IMAGE                 COMMAND                  
+CONTAINER ID        IMAGE                 COMMAND
 CREATED             STATUS              PORTS                         NAMES
 
-01041c82947c        nginx:1.10.1-alpine   "nginx -g 'daemon off"   
-41 minutes ago      Up 41 minutes       0.0.0.0:80->80/tcp, 443/tcp   my-nginx       
+01041c82947c        nginx:1.10.1-alpine   "nginx -g 'daemon off"
+41 minutes ago      Up 41 minutes       0.0.0.0:80->80/tcp, 443/tcp   my-nginx
 3 weeks ago         54.03 MB
 ```
 
@@ -311,7 +313,7 @@ Run `docker rm my-nginx`. This will remove the container. I usually remove my un
 
 Let's start a new container with new parameters:
 
-`docker run --name my-nginx -d -p 80:80  nginx:1.10.1-alpine`
+`docker run --name my-nginx -d -p 80:80 nginx:1.10.1-alpine`
 
 We added `-d` to start the container in detached mode, so it will run in the background. `http://localhost` should display the page we saw before.
 
@@ -389,9 +391,9 @@ http {
 
 We'll map this file as a volume into our container. As a result our nginx.conf file on the host machine will be shared with the container. If you change the file on the host, the container will pick up the changes.
 
- Let's `docker stop my-nginx` and `docker rm my-nginx` and then recreate the continer with the following command:
+Let's `docker stop my-nginx` and `docker rm my-nginx` and then recreate the continer with the following command:
 
- `docker run --name my-nginx -d  -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro  nginx:1.10.1-alpine`
+`docker run --name my-nginx -d -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro nginx:1.10.1-alpine`
 
 I added the part that that starts with `-v`, this maps the local directory to the container. Make sure that you use your own local path as the first parameter after `-v`. `/etc/nginx/nginx.conf` is the path of the nginx.conf file in the container, you can find this information on the image's page on the Docker Hub, too.
 
@@ -399,7 +401,7 @@ I added the part that that starts with `-v`, this maps the local directory to th
 
 Now our container uses the config file on the local machine. How can you test this?
 
-Open the `nginx.conf` file locally in a text editor like Vim, and remove the `#` from the line that says `#gzip  on;`. You just uncommented the gzip feature of nginx, now nginx will send the responses compressed.
+Open the `nginx.conf` file locally in a text editor like Vim, and remove the `#` from the line that says `#gzip on;`. You just uncommented the gzip feature of nginx, now nginx will send the responses compressed.
 
 Restart the container so it will pick up the new configuration with `docker restart my-nginx`.
 
@@ -421,7 +423,7 @@ Wow, how about source code? Let's add a webpage to nginx with another volume map
 
 `docker stop my-nginx` and `docker rm my-nginx` before we recreate it. Use a command similar to mine:
 
-`docker run --name my-nginx -d  -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro -v /Users/marktakacs/Development/tutorials/docker/src:/usr/share/nginx/html:ro  nginx:1.10.1-alpine`
+`docker run --name my-nginx -d -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/nginx.conf:/etc/nginx/nginx.conf:ro -v /Users/marktakacs/Development/tutorials/docker/src:/usr/share/nginx/html:ro nginx:1.10.1-alpine`
 
 We added a new volume `-v` parameter to the command. It points to the `src` folder on the host (please use your own full path) and mounts it to `/usr/share/nginx/html` in the container. Again I got the container path of html files on Docker Hub. If you go to `http://localhost` now, you should see a familiar hello world page.
 
@@ -433,7 +435,7 @@ You don't need to restart you container now. Just refresh the page and smile, sm
 
 If you want to start a project or pilot with some new tech, don't think installation, brew or package management as your first choice. Just grab a docker images and start coding.
 
-If you ever used python's virtualenv or node's nvm, you'll immediately understand the significance of this moment.  
+If you ever used python's virtualenv or node's nvm, you'll immediately understand the significance of this moment.
 
 The tools I've given you so far are good enough to run containers both locally and even in production. To get you started with more real-life use cases, I want you to meet two other possibilities.
 
@@ -480,25 +482,25 @@ Every line creates a new layer in our image. The process of creating an image fr
 
 Build the image with `docker build -t zip-nginx:1.0 .`.
 
-I used `-t  zip-nginx:1.0` to give a name and a version tag to my image. Note the `.` at the end of the line, it tells Docker to build an image from the Dockerfile in the current directory.
+I used `-t zip-nginx:1.0` to give a name and a version tag to my image. Note the `.` at the end of the line, it tells Docker to build an image from the Dockerfile in the current directory.
 
 If you issue the command `docker images` in terminal now, you should see a new image called zip-nginx on the list.
 
 Let's start a container with the command we used to use, just remove the mounting of the config file, because we do not need it in this image, since we just made it part of the image itself. Don't forget to change the image name to zip-nginx. I changed the container name, too. My command looks like this:
 
-`docker run --name my-zip-nginx -d  -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/src:/usr/share/nginx/html:ro  zip-nginx:1.0`
+`docker run --name my-zip-nginx -d -p 80:80 -v /Users/marktakacs/Development/tutorials/docker/src:/usr/share/nginx/html:ro zip-nginx:1.0`
 
 Looking at `http://localhost` in your browser will result in the Hello world example, and if you check the Network tab in the developer tools, you'll see that the response comes gzipped by default.
 
 We just created a new image that has a small functional improvement compared to the original one.
 
-[You can find the complete Dockerfile reference here.](https://docs.docker.com/engine/reference/builder/){:target="_blank"}
+[You can find the complete Dockerfile reference here.](https://docs.docker.com/engine/reference/builder/){:target="\_blank"}
 
 ## Docker compose
 
 We use docker-compose to define and run multi container applications. I use compose to start up my local development environment with the database, wordpress and node components. Compose has a very similar syntax to the docker command line tools, but with compose we use a file called `docker-compose.yml` by default.
 
-This post is long enough already, so it's better if I dedicate another post to this topic. While you wait you can read the [official docker-compose documentation](https://docs.docker.com/compose/overview/){:target="_blank"}.
+This post is long enough already, so it's better if I dedicate another post to this topic. While you wait you can read the [official docker-compose documentation](https://docs.docker.com/compose/overview/){:target="\_blank"}.
 
 ## Wrap up
 

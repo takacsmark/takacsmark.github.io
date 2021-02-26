@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Fat-Free PHP Framework Tutorial – 3 MVC Project Structure"
+title: "Fat-Free PHP Framework Tutorial – 3 MVC Project Structure"
 description: "This the third video in our Fat-Free Tutorial series. The time has come, we will use what we learnt so far to create our first Fat-Free MVC project."
-date:   2015-09-15 16:11:31 +0100
+date: 2015-09-15 16:11:31 +0100
 author: Márk Takács
-categories: PHP Tutorials
+category: Tutorial
 thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: "https://www.youtube.com/embed/DQT5sDO1_Ck"
 ---
-The time has come, we will use what we learnt so far to create our first Fat-Free MVC project.  This is the third video in our Fat-Free PHP Framework Tutorial series. As usual, let me ask you to follow the video, because it contains all the steps and therefore it is the ultimate resource to teach you how to build the MVC project structure. This writeup summarizes the key takeaways and this is the place where I give you code snippets that you can copy and paste into your own projects, so that you don't need to type so much.
+
+The time has come, we will use what we learnt so far to create our first Fat-Free MVC project. This is the third video in our Fat-Free PHP Framework Tutorial series. As usual, let me ask you to follow the video, because it contains all the steps and therefore it is the ultimate resource to teach you how to build the MVC project structure. This writeup summarizes the key takeaways and this is the place where I give you code snippets that you can copy and paste into your own projects, so that you don't need to type so much.
 
 ## The MVC Project Structure
 
@@ -29,14 +30,14 @@ drwxr-xr-x  5 markgyorgyiimac  staff   170B Aug 12 19:04 vendor
 
 This is the structure of our MVC web application project folder now.
 
-* 'app' is a folder that I created. I use this folder to store all the source code that I write for my application.
-* 'composer.json' is a file we have seen before. It's the config file of the composer PHP package manager.
-* 'composer.lock' is a file created and used by composer, let's handle it as a black box.
-* 'index.php' is the main file of our web application. We use this file to configure and run the Fat-Free Framework. This was the only file we worked on so far.
-* 'routes.ini' is the config file where we store our routes. Yeah, we move our routes from index.php to routes.ini in this lesson.
-* 'config.ini' is the file where we store our config f3 variables.
-* 'tmp' directory is created by Fat-Free. f3 has built in caching features. As soon as you add templates to your project, the tmp folder will appear with cached files.
-* 'vendor' we have seen this directory in the first lesson. It's created and managed by Composer. It contains third party libraries used in your project.
+- 'app' is a folder that I created. I use this folder to store all the source code that I write for my application.
+- 'composer.json' is a file we have seen before. It's the config file of the composer PHP package manager.
+- 'composer.lock' is a file created and used by composer, let's handle it as a black box.
+- 'index.php' is the main file of our web application. We use this file to configure and run the Fat-Free Framework. This was the only file we worked on so far.
+- 'routes.ini' is the config file where we store our routes. Yeah, we move our routes from index.php to routes.ini in this lesson.
+- 'config.ini' is the file where we store our config f3 variables.
+- 'tmp' directory is created by Fat-Free. f3 has built in caching features. As soon as you add templates to your project, the tmp folder will appear with cached files.
+- 'vendor' we have seen this directory in the first lesson. It's created and managed by Composer. It contains third party libraries used in your project.
 
 The 'app' folder, the 'config.ini' and 'routes.ini' files were created by me, so you should also create these files and the directory for your own project. 'index.php' should already be there. The other files and folders are managed by Composer or f3, so don't worry about them.
 
@@ -52,7 +53,7 @@ Let's have a look at the structure of the app folder, now. This is where MVC wil
 | |____template.htm
 ```
 
-A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx){:target="_blank"}.
+A side note: the first geeky line is just a tree command for Mac that I found on this blog [https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx](https://www.kingluddite.com/tools/adding-tree-command-to-the-terminal-mac-osx){:target="\_blank"}.
 
 I created two directories under 'app' for this lesson. These are 'controllers' and 'views'. The 'models' folder will come also under 'app' later when we will use a database.
 
@@ -101,7 +102,7 @@ GET /=MainController->render
 GET /hello=MainController->sayhello
 ```
 
-This file contains the route definitions. This is the same info we used to add to our $f3->route() functions in the past, but now we have a different format that you see in the code.
+This file contains the route definitions. This is the same info we used to add to our \$f3->route() functions in the past, but now we have a different format that you see in the code.
 
 `;` on line 3 denotes a comment, while the [routes] tag on line 1 tells f3 that this is the section where routes are defined. This is important because you could have only one file for all of your config needs in f3, in that scenario you would separate different config sections with different tags. You'll see that our config.ini starts with the tag [globals], because that's where we define global variables.
 
@@ -117,9 +118,9 @@ AUTOLOAD=app/controllers/
 
 This is the config file of global variables. Right now we have set three crucial variables.
 
-* DEBUG specifies the debug level from 0 to 3, 0 being the least informative meant for production systems.
-* UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory
-* AUTOLOAD takes care of automatic inclusion of our classes. This is where we tell f3 to find the controller classes under `app/controllers/`. Sooner than later you'll need more than one entry in this setting. Use `|` to separate entries. (e.g. `app/controllers/|app/models/`)
+- DEBUG specifies the debug level from 0 to 3, 0 being the least informative meant for production systems.
+- UI tells f3 where to look for view templates. This is where we tell f3 that our views reside under our newly created app/views/ directory
+- AUTOLOAD takes care of automatic inclusion of our classes. This is where we tell f3 to find the controller classes under `app/controllers/`. Sooner than later you'll need more than one entry in this setting. Use `|` to separate entries. (e.g. `app/controllers/|app/models/`)
 
 ## Files under app/controllers/
 
@@ -163,7 +164,7 @@ class MainController extends Controller{
 
 This is our main controller class. Its parent class is Controller. As you see, we moved the functions from the previous lesson from 'index.php' into this class. Render will render the main page of our web application. Sayhello is a function that will simply say hello.
 
-### How does f3  invoke these class functions?
+### How does f3 invoke these class functions?
 
 It all starts in index.php, where we defined where to find the config files. The routes config points the address '/' to MainController->render, therefore f3 will create an instance of MainController and invoke the render function.
 
@@ -184,29 +185,31 @@ Then we tell f3 to render the template called 'template.htm'. f3 will use the UI
 ### template.htm
 
 {% raw %}
+
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Tutorial page</title>
-</head>
-<body>
-	<p>Hello, {{ @name }}!</p>
-	<p>This is rendered from the template</p>
-</body>
+  <head>
+    <title>Tutorial page</title>
+  </head>
+  <body>
+    <p>Hello, {{ @name }}!</p>
+    <p>This is rendered from the template</p>
+  </body>
 </html>
 ```
+
 {% endraw %}
 
 You can write f3 templates in plain HTML. If you need to use variables that are provided by controllers, you need to add your variables as globals in the controller and use f3's template syntax to display or use those values. You can pass all variable types, as well as arrays and objects to templates in global variables.
 
 You should use double curly braces to access globals. Variable names must be preceded by the `@` symbol. E.g. `{{ "{{ @name " }}}}` in the above example.
 
-[There is lot more to templating than this, you can read more about it on the Fat-Free site.](https://fatfreeframework.com/views-and-templates){:target="_blank"}
+[There is lot more to templating than this, you can read more about it on the Fat-Free site.](https://fatfreeframework.com/views-and-templates){:target="\_blank"}
 
 ## Wrap-up
 
-In this lesson we defined a basic MVC project structure.  This way you have all the tools you need to start your own web application based on the Fat-Free Framework. You can create really complex solutions with f3.
+In this lesson we defined a basic MVC project structure. This way you have all the tools you need to start your own web application based on the Fat-Free Framework. You can create really complex solutions with f3.
 
 f3 does not have features like scaffolding or database migrations like Django or Rails. Still I find f3 comparable to the big name frameworks, because it gives me the right foundations to build on.
 

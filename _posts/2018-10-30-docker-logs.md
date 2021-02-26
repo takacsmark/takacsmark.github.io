@@ -5,9 +5,12 @@ description: "The easiest way to see Docker logs is to start containers in the f
 date: 2018-10-30 07:39:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-logs.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
 Let's explore Docker logs from containers to Compose, Swarm and the Docker Engine in a single post.
@@ -132,7 +135,7 @@ app_1    |  * Debugger PIN: 119-685-546
 
 ### Docker Compose logs options
 
-You can use the `--follow`, `--timestamps` and `--tail` options with `docker-compose logs` with  the same meaning you have seen earlier in the post. The `--since` and `--until` options are not available.
+You can use the `--follow`, `--timestamps` and `--tail` options with `docker-compose logs` with the same meaning you have seen earlier in the post. The `--since` and `--until` options are not available.
 
 ## Docker Swarm logs
 
@@ -187,14 +190,14 @@ $ docker service logs --raw mystifying_lamarr
 
 Docker logs are not only about containers, they're also about the logs of the Docker Engine itself. The location of the Docker Engine logs is different on different platforms.
 
-You can find the up-to-date spec on the [Docker site](https://docs.docker.com/config/daemon/#read-the-logs){:target="_blank"}. 
+You can find the up-to-date spec on the [Docker site](https://docs.docker.com/config/daemon/#read-the-logs){:target="\_blank"}.
 
 Let me share the current info here:
 
-* RHEL, Oracle Linux - `/var/log/messages`
-* Debian - `/var/log/daemon.log`
-* Ubuntu 16.04+, CentOS - `$ journalctl -u docker.service`
-* Ubuntu 14.10- - `/var/log/upstart/docker.log`
-* macOS (Docker 18.01+) - `~/Library/Containers/com.docker.docker/Data/vms/0/console-ring`
-* macOS (Docker <18.01) - `~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/console-ring`
-* Windows - `AppData\Local`
+- RHEL, Oracle Linux - `/var/log/messages`
+- Debian - `/var/log/daemon.log`
+- Ubuntu 16.04+, CentOS - `$ journalctl -u docker.service`
+- Ubuntu 14.10- - `/var/log/upstart/docker.log`
+- macOS (Docker 18.01+) - `~/Library/Containers/com.docker.docker/Data/vms/0/console-ring`
+- macOS (Docker <18.01) - `~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/console-ring`
+- Windows - `AppData\Local`

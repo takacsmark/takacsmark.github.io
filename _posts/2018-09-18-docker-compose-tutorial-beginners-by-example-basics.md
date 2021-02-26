@@ -5,16 +5,19 @@ description: "Learn everything you need to get started with Docker Compose in yo
 date: 2018-09-18 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-compose-beginners-all-you-need-to-know.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
 In previous tutorials we learned the basics of Docker containers and Docker images, and we've built several examples together. If you missed those lessons or need a refresher, please check out my previous tutorials, we'll build on top of the learning points from those articles here.
 
 **This post is available as a Youtube video, too.**
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
+<div class="mb-4 embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4EqysCR3mjo" allowfullscreen></iframe>
 </div>
 
@@ -32,8 +35,8 @@ I don't want to make this article confusing for beginners, so we'll stay with th
 
 There are two key forms of Docker Compose that you'll use in your project:
 
-* Docker Compose comes in the form of a command line command that you'll use to build, ship and run multi-container applications. The command is called `docker-compose`.
-* Docker Compose provides the Compose file, where you'll define your application stack and the way components in your stack interact with each other. The Compose file is a text file in the `yml` format.
+- Docker Compose comes in the form of a command line command that you'll use to build, ship and run multi-container applications. The command is called `docker-compose`.
+- Docker Compose provides the Compose file, where you'll define your application stack and the way components in your stack interact with each other. The Compose file is a text file in the `yml` format.
 
 ## Compose file basics
 
@@ -43,8 +46,8 @@ I decided to build a Python Flask sample application with a Redis data store. I 
 
 Our Flask stack will contain the following components:
 
-* The Flask application server that takes user requests and manipulates data in the data store.
-* The Redis data store.
+- The Flask application server that takes user requests and manipulates data in the data store.
+- The Redis data store.
 
 People new to Docker often try to build containers that contain both the application server and the database in one container. While this is technically feasible, it is not the Docker way.
 
@@ -54,14 +57,14 @@ As we learned before, one Docker container should have one concern. Containers a
 
 This means that we'll run two containers in our stack, and we'll have to define the two images to be used for these two containers:
 
-* The Flask container will contain our Flask application source code, so we'll build a custom Docker image based on the Dockerfile that we'll create for this example.
-* The data store container will use the official Redis image from the Docker Hub .
+- The Flask container will contain our Flask application source code, so we'll build a custom Docker image based on the Dockerfile that we'll create for this example.
+- The data store container will use the official Redis image from the Docker Hub .
 
 Let's prepare the basis of the application server. We'll create the following files:
 
-* `requirements.txt` - describes the Python dependencies, we'll use this file to install Flask and the Redis Python interface to be used in the Python application.
-* `app.py` - defines our Flask application
-* `Dockerfile` - defines the Docker image of the Flask application
+- `requirements.txt` - describes the Python dependencies, we'll use this file to install Flask and the Redis Python interface to be used in the Python application.
+- `app.py` - defines our Flask application
+- `Dockerfile` - defines the Docker image of the Flask application
 
 Please create a directory for this exercise on your machine, I call mine `flask-redis` and place the file into this directory. My directory looks like this now:
 
@@ -161,7 +164,7 @@ $ tree
 Let's add the below contents to the compose file, and I'll explain what's going on:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -176,7 +179,7 @@ services:
     image: redis:4.0.11-alpine
 ```
 
-This file is in the `YAML` format, which is a "human friendly data serialization standard for all programming languages", as seen on [yaml.org.](http://yaml.org/){:target="_blank"}
+This file is in the `YAML` format, which is a "human friendly data serialization standard for all programming languages", as seen on [yaml.org.](http://yaml.org/){:target="\_blank"}
 
 On the first line we specify the version of the Compose file format as `version: '3'`. Docker Compose file format has various versions as new features are added to the Compose file. Versioning is essential to make sure that changes won't break your applications.
 
@@ -195,13 +198,13 @@ We'll use the `docker-compose` command soon to start up containers using the ima
 Our first service looks like this:
 
 ```yml
-  app:
-    build: .
-    image: takacsmark/flask-redis:1.0
-    environment:
-      - FLASK_ENV=development
-    ports:
-      - 5000:5000
+app:
+  build: .
+  image: takacsmark/flask-redis:1.0
+  environment:
+    - FLASK_ENV=development
+  ports:
+    - 5000:5000
 ```
 
 This section starts by defining `build: .`. This means that this service uses a custom image that is built using the Dockerfile in the current directory (hence `.`).
@@ -215,15 +218,15 @@ In the example we define an environment variable for the containers we start fro
 The code of the Redis service is much shorter:
 
 ```yaml
-  redis:
-    image: redis:4.0.11-alpine
+redis:
+  image: redis:4.0.11-alpine
 ```
 
 We tell Docker Compose to use the official Redis image for this service. Docker Compose will pull this image from the Docker Hub when we start up the application.
 
 ### Run the example
 
-To run the example you need to have `docker-compose` installed on your system. The Docker for Mac and Windows apps come with `docker-compose` included, but on Linux systems you need to install it yourself. If you are on Linux, please follow [this guide](https://docs.docker.com/compose/install/#install-compose){:target="_blank"} to install Compose.
+To run the example you need to have `docker-compose` installed on your system. The Docker for Mac and Windows apps come with `docker-compose` included, but on Linux systems you need to install it yourself. If you are on Linux, please follow [this guide](https://docs.docker.com/compose/install/#install-compose){:target="\_blank"} to install Compose.
 
 Let's run the example with a single command:
 
@@ -233,7 +236,7 @@ $ docker-compose up
 
 This command will build the custom image for the `app` service and pull the Redis image from the Docker Hub and start them as we described the stack in our Compose file.
 
-To test the app, you can post a student with curl like this (or alternatively you can use a tool like [Postman](https://www.getpostman.com/){:target="_blank"}):
+To test the app, you can post a student with curl like this (or alternatively you can use a tool like [Postman](https://www.getpostman.com/){:target="\_blank"}):
 
 ```console
 $ curl --header "Content-Type: application/json" \
@@ -261,6 +264,7 @@ $ curl localhost:5000
 As you can see, the containers are automagically connected when we run the stack with `docker-compose up`. Our Flask app can access the Redis data store without any further configuration. It's crucial to understand the mechanism behind this magic.
 
 To look into this, let's stop the stack with the following command:
+
 ```console
 $ docker-compose down
 ```
@@ -359,7 +363,7 @@ Compose provides a huge number of options, let me point out a crucial resource t
 
 ### The Compose file reference
 
-The best resource for writing Compose files is the [official Compose file reference](https://docs.docker.com/compose/compose-file/){:target="_blank"}. I usually have this page open all the time, this single page contains all options and possibilities that you can use in the Compose file.
+The best resource for writing Compose files is the [official Compose file reference](https://docs.docker.com/compose/compose-file/){:target="\_blank"}. I usually have this page open all the time, this single page contains all options and possibilities that you can use in the Compose file.
 
 It's best to use it as a mere reference to find out how to specify various aspects of your stack in the Compose file. The reference will not give you a broad overview of the concepts around Docker Compose, but don't worry we'll do this in this article.
 
@@ -367,7 +371,7 @@ The Compose file reference is a practical resource, I would only highlight a few
 
 ### Docker Compose vs Swarm
 
-To understand the usage of the Compose file reference, we need to understand a broader concept, namely the difference between Docker Compose and Docker Swarm.  
+To understand the usage of the Compose file reference, we need to understand a broader concept, namely the difference between Docker Compose and Docker Swarm.
 
 I know that this might be a bit overwhelming for a beginner, but we have to see this, I'll try to explain it gently.
 
@@ -393,12 +397,12 @@ You can read more about practical implications of this evolution in the chapter 
 
 The compose file reference documentation is layed out following the structure of the Compose file. The main chapters in the docs are related to the top-level entries of the Compose file, these are the following as of today:
 
-* version - specifies the version of the Compose file reference, you have seen it in the example.
-* services - specifies the services in your application, we used it in the example.
-* networks - you can define the networking set-up of your application here, we'll see an example in a minute.
-* volumes - you can define the volumes used by your applicaiton here, we'll see an example.
-* secrets - secrets are related to Swarm mode only, you can use them to provide secret information like passwords in a secure way to your application services.
-* configs - configs lets you add external configuration to your containers. Keeping configurations external will make your containers more generic. Configs is available both in Compose and in Swarm mode.
+- version - specifies the version of the Compose file reference, you have seen it in the example.
+- services - specifies the services in your application, we used it in the example.
+- networks - you can define the networking set-up of your application here, we'll see an example in a minute.
+- volumes - you can define the volumes used by your applicaiton here, we'll see an example.
+- secrets - secrets are related to Swarm mode only, you can use them to provide secret information like passwords in a secure way to your application services.
+- configs - configs lets you add external configuration to your containers. Keeping configurations external will make your containers more generic. Configs is available both in Compose and in Swarm mode.
 
 ### Service configuration options
 
@@ -467,7 +471,7 @@ I think this option is so significant that we should update our example quickly.
 Let's change the Compose file like this:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -650,11 +654,11 @@ _In other words, compose will analyze the actual state of your application and t
 Let's change the Compose file of our application to demonsrate this. I changed the host machine port to port 80 in the port mapping of the app service:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
-    build: 
+    build:
       context: .
       args:
         - IMAGE_VERSION=3.7.0-alpine3.8
@@ -707,11 +711,11 @@ If you need scalability and load balancing features, it's better to use Swarm or
 You can connect your service with custom, user defined networks using the Compose file. Let's see how we can add our own network to our application:
 
 ```yml
-version: '3'
+version: "3"
 
 services:
   app:
-    build: 
+    build:
       context: .
       args:
         - IMAGE_VERSION=3.7.0-alpine3.8
@@ -822,7 +826,7 @@ local               b221ff8751f0e57e1d20830f6238f1ff1255a9c5fd08c2132974b4486e93
 This volume is automatically created whenever we start up a container from the Redis image. The volume is created automatically with a random name. This means that we cannot re-use the data in the volume between server runs. In order to achieve this, we can define a named volume in the Compose file:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -884,11 +888,11 @@ We usually prefer to use environment files in our projects to pass environment v
 Let's add an `env_file` to our app:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
-    build: 
+    build:
       context: .
       args:
         - IMAGE_VERSION=3.7.0-alpine3.8
@@ -936,7 +940,7 @@ DOCKER_USER=takacsmark
 You can use these variables in the Compose file like this:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -969,8 +973,8 @@ Running the application will give the same results as before.
 
 In most projects, you'll use multiple compose files. The best practice for small projects is the following:
 
-* use the file named `docker-compose.yml` to store your production configuration.
-* use the file named `docker-compose.override.yml` to override the setting in your `docker-compose.yml` for development.
+- use the file named `docker-compose.yml` to store your production configuration.
+- use the file named `docker-compose.override.yml` to override the setting in your `docker-compose.yml` for development.
 
 Docker Compose will pick up both file names automatically and will apply the overrides in the override file on top of `docker-compose.yml`.
 
@@ -978,13 +982,13 @@ You can stack multiple Compose files on top of each other. In more complex proje
 
 You can use custom compose file names with the `-f` option of Docker Compose, for example:
 
-``` console
+```console
 $ docker-compose -f docker-compose.dev.yml up
 ```
 
 You can stack Compose file on top of each other with a single command using multiple `-f` arguments:
 
-``` console
+```console
 $ docker-compose -f docker-compose.1.yml -f docker-compose.2.yml -f docker-compose.3.yml up
 ```
 

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Are online courses good enough to change careers?"
+title: "Are online courses good enough to change careers?"
 description: "Shall I start learning on-line? Is it feasible to acquire the required knowledge in on-line courses? Can I change careers with the help of on-line courses?"
-date:   2015-08-21 18:29:00 +0100
+date: 2015-08-21 18:29:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/change-careers-with-online-courses.jpg"
-categories: Education 
+category: Blog
 ---
+
 This is the start of a new blog category on tmdc today. This is the first post in a section where I'll share my e-learning learnings on my journey towards becoming an on-line entrepreneur.
 
 **Shall I start learning on-line? Is it feasible at all to acquire the required knowledge in on-line courses? Can I change careers with the help of on-line courses? If questions like these keep you awake at night, read on.**
@@ -81,7 +82,7 @@ Picking the wrong course or the right courses but at the wrong time may cost you
 
 ## Working out your curriculum
 
-If you're watching the news of the on-line learning arena, you see a good number of new players appearing on the market. There are websites like [lynda.com](https://lynda.com){:target="_blank"}, [Treehouse](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fteamtreehouse.com%2F){:target="_blank"} and [Udemy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2F){:target="_blank"}, just to name a few, who offer short on-line courses for people who want to build new skills.
+If you're watching the news of the on-line learning arena, you see a good number of new players appearing on the market. There are websites like [lynda.com](https://lynda.com){:target="\_blank"}, [Treehouse](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fteamtreehouse.com%2F){:target="\_blank"} and [Udemy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2F){:target="\_blank"}, just to name a few, who offer short on-line courses for people who want to build new skills.
 
 Messaging varies, but the key selling point these companies would emphasize is, that you are in the right place, if you wanna change careers. And it's never been easier to change careers.
 
@@ -89,7 +90,7 @@ Well, I somewhat disagree. It's never been easy to change careers and it never w
 
 Therefore it's essential to work on your on-line training plan.
 
-Some websites already offer packages that contain several courses in a bundle. Like the nano degrees on [Udacity](https://www.udacity.com/){:target="_blank"}. Udacity's nano degrees (there are 6 right now) , take about six months to complete and cover a broader field of software development or data science. There are nano degrees like front-end development, iOS development, Android and so on.
+Some websites already offer packages that contain several courses in a bundle. Like the nano degrees on [Udacity](https://www.udacity.com/){:target="\_blank"}. Udacity's nano degrees (there are 6 right now) , take about six months to complete and cover a broader field of software development or data science. There are nano degrees like front-end development, iOS development, Android and so on.
 
 These are one step closer to what I think shall bring real success. They not only provide a 3-5 hours video material, they also provide a series of lectures throughout 6 months with project assignments, reviews and feedback.
 

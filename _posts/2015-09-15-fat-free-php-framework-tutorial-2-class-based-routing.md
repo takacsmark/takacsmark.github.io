@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Fat-Free PHP Framework Tutorial – 2 Class Based Routing"
+title: "Fat-Free PHP Framework Tutorial – 2 Class Based Routing"
 description: "Set and get values of global variables and see how Fat-Free enables building a completely modular MVC project with class based routing."
-date:   2015-09-15 16:09:24 +0100
+date: 2015-09-15 16:09:24 +0100
 author: Márk Takács
-categories: PHP Tutorials
+category: Tutorial
 thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-3.jpg
 videothumb: "https://www.youtube.com/embed/fAng7nIQKpM"
 ---
-In this lesson, I will explain how you can set and get values of global variables and I will also explain how Fat-Free enables building a completely modular MVC project with class based routing. 
+
+In this lesson, I will explain how you can set and get values of global variables and I will also explain how Fat-Free enables building a completely modular MVC project with class based routing.
 
 This is the writeup of the second video in the Fat-Free PHP Framework Tutorial series. Again, please watch the video for all the details, the writeup contains the key takeaways, while the video explains every little step, plus you can watch me building the sample files.
 
@@ -16,7 +17,7 @@ Let's get started!
 
 ## Global variables
 
-I found that global variables in Fat-Free are very useful for certain purposes, like storing application config information, or passing variables from controller to views and other miscellaneous stuff. Let's learn  how we can set global variables. It's actually pretty simple.
+I found that global variables in Fat-Free are very useful for certain purposes, like storing application config information, or passing variables from controller to views and other miscellaneous stuff. Let's learn how we can set global variables. It's actually pretty simple.
 
 ```php
 <?php
@@ -38,7 +39,7 @@ $f3->run();
 
 Look at lines 7 and 11 above. On line 7 we use f3's set method to create a new custom variable. The first argument is its name, and the second is the value. Yep, it's just a key-value pair. On line 11 we use f3's get method to get the value for the key 'message'. It's as simple as that. This piece of knowledge will be very useful later.
 
-I would also point out line 10, where we have to apply some change to make this work. We had to pass $f3 to the routing function.
+I would also point out line 10, where we have to apply some change to make this work. We had to pass \$f3 to the routing function.
 
 ## Class based routing
 
@@ -162,7 +163,7 @@ class Main extends AppController {
 }
 
 class AboutController extends AppController {
-	
+
 	function render() {
 		echo 'This is the about page';
 	}

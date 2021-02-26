@@ -5,12 +5,15 @@ description: "How are containers different from VMs? What are the benefits of co
 date: 2018-08-08 01:59:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/containers-vs-vms.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
-This the second part of the Docker introduction article that I published recently on my [blog](https://takacsmark.com/what-is-docker-what-it-can-do-for-you/) and [medium](https://medium.com/@takacsmark/what-is-docker-and-what-it-can-do-for-you-2018-tutorial-842ddf2b2bf6){:target="_blank"}.
+This the second part of the Docker introduction article that I published recently on my [blog](https://takacsmark.com/what-is-docker-what-it-can-do-for-you/) and [medium](https://medium.com/@takacsmark/what-is-docker-and-what-it-can-do-for-you-2018-tutorial-842ddf2b2bf6){:target="\_blank"}.
 
 **My goal is to give you a gentle introduction to Docker with practical examples, explaining what Docker is, what you can achieve with it, why you’d want to use it and what benefits you may expect.**
 
@@ -18,13 +21,13 @@ I’d definitely suggest to start with the [first post](https://takacsmark.com/w
 
 This introduction is a bit higher level, than a step-by-step, code-along tutorial. I decided to start the series on this level, so that less techie people may also find value in this introduction.
 
-You can find code-along Docker tutorials for free on my [blog](https://takacsmark.com) and my [youtube channel](https://www.youtube.com/takacsmark){:target="_blank"}, if you prefer a more techie approach. I’ll keep adding more hard-core tech stuff, so stay tuned.
+You can find code-along Docker tutorials for free on my [blog](https://takacsmark.com) and my [youtube channel](https://www.youtube.com/takacsmark){:target="\_blank"}, if you prefer a more techie approach. I’ll keep adding more hard-core tech stuff, so stay tuned.
 
 In this article we’ll cover the following points about Docker:
 
-* Why is Docker compared to virtual machines? What is the difference?
-* How are container resources isolated?
-* Linux containers vs Windows containers
+- Why is Docker compared to virtual machines? What is the difference?
+- How are container resources isolated?
+- Linux containers vs Windows containers
 
 ## Why is Docker compared to virtual machines? What is the difference?
 
@@ -54,7 +57,7 @@ So, I like to think of images and containers as application services and I think
 
 **Let’s address the big question now: Why is Docker compared to virtual machines so often?**
 
-If you think of a virtual machine, it’s a complete operating system running on a server that runs a hypervisor. A VM runs an OS kernel,  runs multiple system services, has additional programs, tools, files and configuration options.
+If you think of a virtual machine, it’s a complete operating system running on a server that runs a hypervisor. A VM runs an OS kernel, runs multiple system services, has additional programs, tools, files and configuration options.
 
 On the contrary, a Docker image (or container) is geared towards a specific purpose and it does not feature additional processes besides its main purpose and it does not contain too much bloated stuff.
 
@@ -70,7 +73,7 @@ Here is when Docker comes into play.
 
 **Docker containers are an operating system level virtualization technique. **
 
-**Operating system level virtualization means, that the kernel of the operating system provides services that enable isolated user-space instances. These instances are called containers.** You can read more about this on [Wikipedia](https://en.wikipedia.org/wiki/Operating-system-level_virtualization){:target="_blank"}.
+**Operating system level virtualization means, that the kernel of the operating system provides services that enable isolated user-space instances. These instances are called containers.** You can read more about this on [Wikipedia](https://en.wikipedia.org/wiki/Operating-system-level_virtualization){:target="\_blank"}.
 
 The idea of Linux containers is basically this: _You take a Linux machine and build isolated virtual environments (i.e. containers) right on the Linux operating system level that have dedicated CPU, memory, block I/O, networking resources, plus you make sure that the processes, file systems, users and networking are isolated._
 
@@ -124,7 +127,7 @@ With these tools, you can accomplish various provisioning and configuration mana
 
 Docker containers running on a Linux host are isolated with the use of Linux kernel features.
 
-**[Kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces){:target="_blank"}** isolate containers so that processes running in different containers cannot see or affect processes running in another container on the same host.
+**[Kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces){:target="\_blank"}** isolate containers so that processes running in different containers cannot see or affect processes running in another container on the same host.
 
 Containers also get their own **network stack**. This way you can start multiple containers listening on the same port.
 
@@ -132,7 +135,7 @@ You can, for example, start two Nginx servers in two containers both listening o
 
 The containers can access each other on the Docker network, and you can set up networking to access the containers from the outside.
 
-Resource allocation and limiting is achieved with [control groups](https://en.wikipedia.org/wiki/Cgroups){:target="_blank"}. Cgroups are also a feature of the Linux kernel.
+Resource allocation and limiting is achieved with [control groups](https://en.wikipedia.org/wiki/Cgroups){:target="\_blank"}. Cgroups are also a feature of the Linux kernel.
 
 ## Linux containers and Windows containers
 
@@ -142,7 +145,7 @@ Docker started out as a container management platform for Linux machines. The co
 
 As a result of a cooperation between Docker and Microsoft, today you can use containers on Windows server machines, too. These containers are called Windows based containers and they share the kernel of the Windows server machine and the Docker images are built with Windows tools and Windows binaries.
 
-You’ll find both Linux based and Windows based containers on the Docker Hub these days. A simple example is [the Python repository on the Docker Hub ](https://hub.docker.com/_/python/){:target="_blank"} that has image variants for both Linux and Windows server.
+You’ll find both Linux based and Windows based containers on the Docker Hub these days. A simple example is [the Python repository on the Docker Hub ](https://hub.docker.com/_/python/){:target="\_blank"} that has image variants for both Linux and Windows server.
 
 Today Docker containers are run on Linux servers and Windows servers in production.
 
@@ -154,7 +157,7 @@ Similarly, you can develop Linux containers on Windows machines, in this case th
 
 ## Next steps
 
-**We have learned that Docker containers are an operating system level virtualization technology and they provide high level of isolation for your application components while they remain light-weight.** 
+**We have learned that Docker containers are an operating system level virtualization technology and they provide high level of isolation for your application components while they remain light-weight.**
 
 **Containers are much lighter than virtual machines, because VMs use a Guest OS to isolate application environments, while containers share the same host OS kernel and therefore isolated components don't carry the overhead of a Guest OS.**
 

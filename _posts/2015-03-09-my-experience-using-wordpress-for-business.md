@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "My experience using Wordpress for business"
+title: "My experience using Wordpress for business"
 description: "The story of why I decided to use WordPress for business purposes. My approach to product selection, challenges and great discoveries along the way."
-date:   2015-03-09 07:48:00 +0100
+date: 2015-03-09 07:48:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/wordpress-on-table.jpg"
-categories: Wordpress
+category: Blog
 ---
+
 I have started using WordPress for business a little more than a year ago, when I set up an [online sock shop](https://vanitysocks.com), an affiliate marketing site with a storefront and a blog. I have chosen WordPress to kick-start the project, and I am still happy with my decision.
 
 **I found that using WordPress for business purposes is a great way to start my on-line journey. Here is the story.**
-
 
 ## Platform choice
 
@@ -20,7 +20,7 @@ I installed WordPress, Joomla and Drupal, knowing that all three are widely used
 
 All three contenders were still on my list, so I took my corporate business experience to ask the next question.
 
->Which product will best support my strategic objectives?
+> Which product will best support my strategic objectives?
 
 Wow, sounds like real corporate bullshit, right? So what are those mysterious objectives?
 
@@ -46,24 +46,24 @@ I had to take care of some basic stuff to get started. I thought the first thing
 
 Here is my refined list of theme selection criteria when using WordPress for business:
 
-* must have good support
-* clarity - it's your content that is supposed to shine, not your theme
-* clean and small code - bulky themes made my life harder, they have a negative impact on speed, there is a higher chance of bugs and plugin conflicts
-* must be SEO friendly
-* should support custom post types, so that I can add my own special content
-* should provide good aggregated views of posts, like several list views and grid views with highly customizable options for category selection and field filtering
-* blog posts should use a large, readable font
-* custom CSS
-* a visual editor is essential to create nice posts and pages
-* must be responsive
-* and finally the theme should be elegant
-* I wanted to start fast, so I decided to purchase a commercial WordPress theme. I checked out a few theme building frameworks, but I thought, I don't wanna make a living from theme development, so I'd better move on with a turn-key solution and do my stuff.
+- must have good support
+- clarity - it's your content that is supposed to shine, not your theme
+- clean and small code - bulky themes made my life harder, they have a negative impact on speed, there is a higher chance of bugs and plugin conflicts
+- must be SEO friendly
+- should support custom post types, so that I can add my own special content
+- should provide good aggregated views of posts, like several list views and grid views with highly customizable options for category selection and field filtering
+- blog posts should use a large, readable font
+- custom CSS
+- a visual editor is essential to create nice posts and pages
+- must be responsive
+- and finally the theme should be elegant
+- I wanted to start fast, so I decided to purchase a commercial WordPress theme. I checked out a few theme building frameworks, but I thought, I don't wanna make a living from theme development, so I'd better move on with a turn-key solution and do my stuff.
 
-First I purchased the [Enfold theme](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fenfold-responsive-multipurpose-theme%2F4519990%3F%2BWT.ac%3Dsearch_list%26WT.oss_phrase%3Denfold%26WT.oss_rank%3D2%26WT.z_author%3DKriesi%26ref%3Dtakacsmark%26clickthrough_id%3D1398411395%26redirect_back%3Dtrue){:target="_blank"} by Kriesi. It met most of my requirements, except for three. It had a bulky code base, it broke the WordPress SEO plugin by Yoast and their support did not provide a fix for the SEO issue for months.
+First I purchased the [Enfold theme](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fenfold-responsive-multipurpose-theme%2F4519990%3F%2BWT.ac%3Dsearch_list%26WT.oss_phrase%3Denfold%26WT.oss_rank%3D2%26WT.z_author%3DKriesi%26ref%3Dtakacsmark%26clickthrough_id%3D1398411395%26redirect_back%3Dtrue){:target="\_blank"} by Kriesi. It met most of my requirements, except for three. It had a bulky code base, it broke the WordPress SEO plugin by Yoast and their support did not provide a fix for the SEO issue for months.
 
 I used the Enfold theme for six months, it helped me reach the first page of Google with some of my posts and finally it sent all my efforts down the drain when I was totally de-ranked by Google because my permalinks got all messed up due to the above SEO issue.
 
-I moved on and purchased a WordPress theme called [the7](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe7-responsive-multipurpose-wordpress-theme%2F5556590%3FWT.oss_phrase%3D%26WT.oss_rank%3D7%26WT.z_author%3DDream-Theme%26WT.ac%3Dsearch_list%26ref%3Dtakacsmark){:target="_blank"} by Dream Theme. I found that this theme supports my business site much better than Enfold. First of all it stays out of my way. It has a clean code, it is simple, stable, lighter than Enfold and works like charm. I saw great improvement in page speed that is an important SEO ranking factor. The visual editor is more reliable and support is outstanding.
+I moved on and purchased a WordPress theme called [the7](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe7-responsive-multipurpose-wordpress-theme%2F5556590%3FWT.oss_phrase%3D%26WT.oss_rank%3D7%26WT.z_author%3DDream-Theme%26WT.ac%3Dsearch_list%26ref%3Dtakacsmark){:target="\_blank"} by Dream Theme. I found that this theme supports my business site much better than Enfold. First of all it stays out of my way. It has a clean code, it is simple, stable, lighter than Enfold and works like charm. I saw great improvement in page speed that is an important SEO ranking factor. The visual editor is more reliable and support is outstanding.
 
 Dream Theme provides something I call consultative support. If I ask a question they come back with alternatives and give me an opportunity to make a decision. My experience is that other vendors often take their virtual hammer and "fix" something on your site without you knowing what's going on. The hammer approach may work with some users, but I am building a business and I wanna run a meaningful discussion with partners and I prefer to take my own decisions regarding changes.
 
@@ -73,24 +73,24 @@ Dream Theme provides something I call consultative support. If I ask a question 
 
 There are several fundamental plugins a small WordPress based business needs. I guess I will create another post about my story behind Plugin selection. Here is the list of plugins that I use at the moment:
 
-* W3 Total cache gives my site a great speed boost, W3 Total cache is the recommended plugin by my hosting provider,
-* Leverage browser caching ninjas completes the caching picture,
-* UpdraftPlus is a free backup/restore utility that uploads backup files to my Google Drive every day. I use these backup files to update my dev environment,
-* Skimlinks affiliate network plugin,
-* [Premium Seo pack](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fpremium-seo-pack-wordpress-plugin%2F6109437%3FWT.ac%3Dsearch_list%26WT.oss_phrase%3Dpremium%2Bseo%26WT.oss_rank%3D1%26WT.trending%3Dtrending%26WT.z_author%3DAA-Team%26ref%3Dtakacsmark%26clickthrough_id%26redirect_back%3Dtrue){:target="_blank"} is a feature rich premium SEO plugin,
-* External links adds rel no-follow to my external links,
-* Verify ownership,
-* Imsanity image compression utility,
-* Akisment, because comment spam is the first sign that somebody found your fresh site,
-* GTmetrix and P3(Plugin Performance Profiler) for performance tuning,
-* Jetpack, because I am addicted to its traffic dashboard,
-* Jetpack lite is a plugin that disables everything in Jetpack except for, well, the traffic dashboard,
-* Rename wp-login renames the log-in page
-* Velvet blues update URLs for backup restore URL fixes
-* Admin post navigation gives handy next and prev buttons on the post edit page,
-* And my own custom plugin to support my business objectives.
+- W3 Total cache gives my site a great speed boost, W3 Total cache is the recommended plugin by my hosting provider,
+- Leverage browser caching ninjas completes the caching picture,
+- UpdraftPlus is a free backup/restore utility that uploads backup files to my Google Drive every day. I use these backup files to update my dev environment,
+- Skimlinks affiliate network plugin,
+- [Premium Seo pack](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fpremium-seo-pack-wordpress-plugin%2F6109437%3FWT.ac%3Dsearch_list%26WT.oss_phrase%3Dpremium%2Bseo%26WT.oss_rank%3D1%26WT.trending%3Dtrending%26WT.z_author%3DAA-Team%26ref%3Dtakacsmark%26clickthrough_id%26redirect_back%3Dtrue){:target="\_blank"} is a feature rich premium SEO plugin,
+- External links adds rel no-follow to my external links,
+- Verify ownership,
+- Imsanity image compression utility,
+- Akisment, because comment spam is the first sign that somebody found your fresh site,
+- GTmetrix and P3(Plugin Performance Profiler) for performance tuning,
+- Jetpack, because I am addicted to its traffic dashboard,
+- Jetpack lite is a plugin that disables everything in Jetpack except for, well, the traffic dashboard,
+- Rename wp-login renames the log-in page
+- Velvet blues update URLs for backup restore URL fixes
+- Admin post navigation gives handy next and prev buttons on the post edit page,
+- And my own custom plugin to support my business objectives.
 
-Most plugins are free and available on [Wordpress.org](https://wordpress.org/plugins/){:target="_blank"}. The security and performance plugins were suggested by [A2hosting](https://www.a2hosting.com/6278-0-3-18.html){:target="_blank"}, where I host my sites. Premium SEO pack is the only commercial plugin. I tried four different SEO plugins and stayed with this one, although I am not completely happy with it, but this is for another post.
+Most plugins are free and available on [Wordpress.org](https://wordpress.org/plugins/){:target="\_blank"}. The security and performance plugins were suggested by [A2hosting](https://www.a2hosting.com/6278-0-3-18.html){:target="\_blank"}, where I host my sites. Premium SEO pack is the only commercial plugin. I tried four different SEO plugins and stayed with this one, although I am not completely happy with it, but this is for another post.
 
 > I found that I can add most critical corporate IT support capabilities to my site with free plugins. I have backup/restore, speed metrics, caching, security and monitoring all available.
 
@@ -124,5 +124,4 @@ Plugin development is easy to learn, at least with and IT background, and PHP is
 
 **I have time to run campaigns to find out what works in on-line marketing. I have time to create the big data back-end that I have in mind.**
 
-**I have time to dive into the world of web economy with [Udemy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2F){:target="_blank"} and [Coursera](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2F){:target="_blank"} courses and plan for the next steps of my business.**
-
+**I have time to dive into the world of web economy with [Udemy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.udemy.com%2F){:target="\_blank"} and [Coursera](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2F){:target="\_blank"} courses and plan for the next steps of my business.**
