@@ -58,7 +58,7 @@ $(function () {
       if (!doc.metadata.hasPendingWrites) {
         console.log("Server data: ", doc.data());
         document.getElementById("view-count").innerHTML =
-          " - " + doc.data().viewCount.toLocaleString() + " views";
+          doc.data().viewCount.toLocaleString() + " views";
       }
     });
 

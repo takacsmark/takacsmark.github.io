@@ -117,7 +117,7 @@ layout: default
       </figure>
       <h1>
         <span
-          class="block mt-6 text-base font-semibold tracking-wide text-center text-indigo-600 uppercase"
+          class="block mt-10 text-base font-semibold tracking-wide text-center text-indigo-600 uppercase"
           >{{ page.category }}</span
         >
         <span
@@ -125,9 +125,36 @@ layout: default
           >{{ page.title }}</span
         >
       </h1>
+
+          <div class="flex items-center mt-6">
+            <div class="flex-shrink-0">
+              <span class="sr-only">{{ page.author }}</span>
+              <img
+                class="w-10 h-10 rounded-full"
+                src="{{ "/assets/images/Mark.png" | prepend: site.baseurl | prepend: site.url }}"
+                alt="Mark Takacs"
+              />
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+              <span> {{ page.author }} </span>
+              </p>
+              <div class="flex text-sm text-gray-500 space-x-1">
+                  <time datetime="{{
+                  page.date | date: "%b %-d, %Y"
+                }}"> {{
+                  page.date | date: "%b %-d, %Y"
+                }} </time>
+                <span aria-hidden="true"> &middot; </span>
+                <span id="view-count"></span>
+              </div>
+            </div>
+          </div>
     </div>
+
     <div class="mx-auto mt-6 text-gray-500 prose prose-indigo prose-lg">
       {{ content }}
+      {% include post/social-share.html %}
       {% include shared/comments.html %}
     </div>
   </div>
