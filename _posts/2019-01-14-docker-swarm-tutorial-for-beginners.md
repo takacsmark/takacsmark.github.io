@@ -38,7 +38,7 @@ Swarm comes built into the Docker Engine, you don't need to install anything to 
 
 Let's go to terminal and turn your local computer into a one machine Swarm cluster.
 
-```console
+```shell
 $ docker swarm init
 
 Swarm initialized: current node (dw78e2gl8jm13basl0nqmcivz) is now a manager.
@@ -65,7 +65,7 @@ Your local machine is the manager node in the cluster, and at the same time it i
 
 Let's create a Node Express application with the following files:
 
-```console
+```shell
 $ tree
 .
 ├── Dockerfile
@@ -77,7 +77,7 @@ $ tree
 
 Let's create the `package.json` and `package-lock.json` files first with the use of a Docker container:
 
-```console
+```shell
 $ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm init -y
 $ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm i -S express
 ```
@@ -139,7 +139,7 @@ We specified one service in the Compose file for the Express server, mapped the 
 
 Let's build our image.
 
-```console
+```shell
 $ docker-compose build
 ```
 
@@ -151,7 +151,7 @@ You might be asking yourself right now; **how are we going to start the stack in
 
 Let's do this and I'll explain what's happening. The command to start the stack is the following:
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -173,7 +173,7 @@ Let's see the results of our work first, please visit [http://localhost](http://
 
 We deployed a stack to the Swarm based on the description in the Compose file. We can see our deployed stack with a simple command:
 
-```console
+```shell
 $ docker stack ls
 NAME                SERVICES            ORCHESTRATOR
 nodeapp             1                   Swarm
@@ -181,7 +181,7 @@ nodeapp             1                   Swarm
 
 The output says that we have one service running, which is in line with what we defined in the Compose file. Docker gives us more control over our stack, we can explore services in the stack in more details:
 
-```console
+```shell
 $ docker stack services nodeapp
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 og72l2onptng        nodeapp_web         replicated          1/1                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -189,7 +189,7 @@ og72l2onptng        nodeapp_web         replicated          1/1                 
 
 Now we have access to the service identifier, the service name, number of replicas, image and port information. We can go one level deeper and explore a lower level scheduling entity in the stack, called the task:
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                IMAGE                          NODE                    DESIRED STATE       CURRENT STATE               ERROR               PORTS
 nv0vu1micwh7        nodeapp_web.1       takacsmark/swarm-example:1.0   linuxkit-025000000001   Running             Running about an hour ago
@@ -201,7 +201,7 @@ As you can see, we have exactly one task running in our stack on the single node
 
 Let's scale our service to run multiple replicas.
 
-```console
+```shell
 $ docker service scale nodeapp_web=4
 nodeapp_web scaled to 4
 overall progress: 4 out of 4 tasks
@@ -214,7 +214,7 @@ verify: Service converged
 
 We used the `docker service scale` command to start more replicas of our service. Let's check the service status:
 
-```console
+```shell
 $ docker service ls
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 og72l2onptng        nodeapp_web         replicated          4/4                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -222,7 +222,7 @@ og72l2onptng        nodeapp_web         replicated          4/4                 
 
 The output says that we have 4/4 replicas running. Let's check the individual tasks:
 
-```console
+```shell
 $ docker service ps nodeapp_web
 ID                  NAME                IMAGE                          NODE                    DESIRED STATE       CURRENT STATE               ERROR               PORTS
 nv0vu1micwh7        nodeapp_web.1       takacsmark/swarm-example:1.0   linuxkit-025000000001   Running             Running about an hour ago
@@ -243,7 +243,7 @@ If you go to [http://localhost](http://localhost){:target="\_blank"} and refresh
 
 Let's step one level higher and create a cluster with multiple machines. Let's remove our stack first and leave the Swarm on the local machine.
 
-```console
+```shell
 $ docker stack rm nodeapp
 Removing service nodeapp_web
 Removing network nodeapp_mynet
@@ -258,7 +258,7 @@ Docker has a handy tool called Docker machine that lets us create virtual machin
 
 Let's start up two VMs locally. Please make sure you have [Virtualbox](https://www.virtualbox.org/){:target="\_blank"} installed before proceeding. Issue the below commands in terminal, please be patient it will take a while to create the machines.
 
-```console
+```shell
 $ docker-machine create --driver virtualbox myvm1
 $ docker-machine create --driver virtualbox myvm2
 ```
@@ -267,7 +267,7 @@ Both machines should be up and running after creation. You can check their statu
 
 Let's `ssh` into machine 1 and start our Swarm. This machine has multiple network interfaces, so we need to fine-tune to our command to advertise the right network address in the Swarm.
 
-```console
+```shell
 $ docker-machine ssh myvm1
    ( '>')
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
@@ -285,7 +285,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 Leave the machine with the `exit` command and `ssh` into machine 2 and join the Swarm on machine 1. We can do this by using the command from the above command output `docker swarm join --token SWMTKN-1-678250sc60og59wbwf25z6xwiz5a1ufg2q6skgxh7ccu0lx7w5-4dza21v2frlv5dbali96x8mw4 192.168.99.100:2377`. Please make sure that you copy the join command from your command output.
 
-```console
+```shell
 $ docker-machine ssh myvm2
    ( '>')
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
@@ -297,13 +297,13 @@ This node joined a swarm as a worker.
 
 Now we have two machines in the Swarm. In order to deploy our Node example application to the Swarm we need to make sure that our project's Docker image is available to the virtual machines. Our workflow on a real project would be to automatically build and push our tested Docker images to a central repository. So we'll do exactly this, we'll push our Docker image to the Docker Hub into a public repository.
 
-```console
+```shell
 $ docker-compose push
 ```
 
 Once the image is pushed, we want to find a way to use the Compose file that is stored on our host machine in the Docker machine VM. Docker machine has a feature to enable this. We just need to set our shell to talk to the Docker daemon in the VM. We use the `docker-machine env <vm_name>` command to configure the shell, and then grab the last line of the command output and execute it.
 
-```console
+```shell
 $ docker-machine env myvm1
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://192.168.99.100:2376"
@@ -313,13 +313,13 @@ export DOCKER_MACHINE_NAME="myvm1"
 # eval $(docker-machine env myvm1)
 ```
 
-```console
+```shell
 $ eval $(docker-machine env myvm1)
 ```
 
 Now we can deploy our application the usual way.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -329,7 +329,7 @@ Creating service nodeapp_web
 
 Once the deployment is done, you can access your application at the address of the virtual machines. You can find out the address with a simple command.
 
-```console
+```shell
 $ docker-machine ls
 NAME    ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER     ERRORS
 myvm1   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.09.1
@@ -342,13 +342,13 @@ You can use the IP address of any of the machines to access the application. Let
 
 Why not load the cluster with a few replicas and check out the whole thing in a nice visual representation?
 
-```console
+```shell
 $ docker service scale nodeapp_web=4
 ```
 
 We just scaled up our service, let's add another service to the Swarm to create a visualizer.
 
-```console
+```shell
 $ docker service create \
 -p 8080:8080 \
 --constraint=node.role==manager \
@@ -404,7 +404,7 @@ The logical hierarchy of components is stack, service, task and container, so we
 
 To see our stack(s) we use the `docker stack ls` command.
 
-```console
+```shell
 $ docker stack ls
 NAME                SERVICES            ORCHESTRATOR
 nodeapp             1                   Swarm
@@ -414,7 +414,7 @@ Our deployed stack is displayed in the output. It has one service (visualizer wa
 
 We can list the services in our stack with `docker stack services nodeapp` or the services in the entire Swarm with `docker service ls`, let's try the latter.
 
-```console
+```shell
 $ docker service ls
 ID                  NAME                     MODE                REPLICAS            IMAGE                             PORTS
 vtj81lstp1lw        nodeapp_web              replicated          4/4                 takacsmark/swarm-example:1.0      *:80->3000/tcp
@@ -425,7 +425,7 @@ This is the overview of all the services in our Swarm cluster. We are running fo
 
 Let's look at the tasks in the `nodeapp_web` service.
 
-```console
+```shell
 $ docker service ps nodeapp_web
 4alkk6og8pae        nodeapp_web.1       takacsmark/swarm-example:1.0   myvm1               Running             Running about an hour ago
 ixjb3ztdumfw        nodeapp_web.2       takacsmark/swarm-example:1.0   myvm2               Running             Running 44 minutes ago
@@ -449,7 +449,7 @@ Use the `docker stack ls` command to list stacks in your Swarm. Remember, you ca
 
 Use the `docker stack services` command to list the services in a stack.
 
-```console
+```shell
 $ docker stack services nodeapp
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 vtj81lstp1lw        nodeapp_web         replicated          4/4                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -459,7 +459,7 @@ vtj81lstp1lw        nodeapp_web         replicated          4/4                 
 
 Use the `docker stack ps` command to list tasks in a stack.
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                IMAGE                          NODE                DESIRED STATE       CURRENT STATE               ERROR               PORTS
 4alkk6og8pae        nodeapp_web.1       takacsmark/swarm-example:1.0   myvm1               Running             Running about an hour ago
@@ -498,7 +498,7 @@ We used the `docker service scale` command before to scale our service.
 
 Use the `docker service logs` command to see the logs of a service, the options are similar to the options of `docker container logs`.
 
-```console
+```shell
 $ docker service logs --tail 1 nodeapp_web
 nodeapp_web.1.4alkk6og8pae@myvm1    | Server is running on port 3000
 nodeapp_web.3.fyl2c8gw7rqe@myvm1    | Server is running on port 3000
@@ -530,7 +530,7 @@ Docker Swarm has dedicated commands for node management.
 
 Use the `docker node ls` command to list nodes in the Swarm.
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -578,7 +578,7 @@ networks:
 
 Let's update our stack! Please remove the visualizer service first, because we will recreate it with the use of the Compose file. Use the service name that you get with `docker service ls` in the `docker servicer rm` command. My looks like this:
 
-```console
+```shell
 $ docker service rm recursing_visvesvaraya
 recursing_visvesvaraya
 ```
@@ -591,7 +591,7 @@ In the visualizer service I have specified the placement of the container with t
 
 Let's re-deploy our stack.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -602,7 +602,7 @@ Updating service nodeapp_web (id: vtj81lstp1lwcexhyhdr02xi1)
 
 As you can see, Docker has updated our stack automatically. Let's see what's happening in our stack.
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                   IMAGE                             NODE                DESIRED STATE       CURRENT STATE                 ERROR               PORTS
 iimb6icg7a7j        nodeapp_web.1          takacsmark/swarm-example:1.0      myvm1               Running             Running about a minute ago
@@ -632,7 +632,7 @@ You may want to drain a node in your Swarm to conduct maintenance activities. Wh
 
 Let's check our nodes first.
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -641,14 +641,14 @@ tsmjsfj4f9ht5fefxwy2h7nve     myvm2               Ready               Active    
 
 Both nodes are active. Let's drain `myvm2`.
 
-```console
+```shell
 $ docker node update --availability=drain myvm2
 myvm2
 ```
 
 Let's check the status of the nodes:
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -659,7 +659,7 @@ If you check the visualizer output now, you'll see that all 6 replicas of the No
 
 Let's bring the node back to life.
 
-```console
+```shell
 $ docker node update --availability=active myvm2
 myvm2
 ```
@@ -668,7 +668,7 @@ If you check visualizer now, then you'll notice that all 6 replicas are still ru
 
 Let's redistribute our containers with the following command.
 
-```console
+```shell
 $ docker service update --force nodeapp_web
 nodeapp_web
 overall progress: 6 out of 6 tasks
@@ -693,14 +693,14 @@ image: takacsmark/swarm-example:1.1
 
 Let's build and push the new image to the Docker Hub.
 
-```console
+```shell
 $ docker-compose build
 $ docker-compose push
 ```
 
 Start the rolling update by deploying the stack.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 ```
 
@@ -708,7 +708,7 @@ Docker will start updating the running containers in groups of 2 with 10 second 
 
 You can follow the progress regularly running the command to list the tasks in the Node service. You'll see that the containers are updated in waves as expected.
 
-```console
+```shell
 $ docker service ps nodeapp_web
 ```
 

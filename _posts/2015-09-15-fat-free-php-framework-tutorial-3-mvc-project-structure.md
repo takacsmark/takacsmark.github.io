@@ -43,7 +43,7 @@ The 'app' folder, the 'config.ini' and 'routes.ini' files were created by me, so
 
 Let's have a look at the structure of the app folder, now. This is where MVC will take place:
 
-```console
+```shell
 ➜  app  find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 .
 |____controllers

@@ -19,7 +19,7 @@ Let's explore Docker logs from containers to Compose, Swarm and the Docker Engin
 
 The easiest way to see Docker logs is to start containers in the foreground. Your log messages are printed to your terminal:
 
-```console
+```shell
 ~ docker run -p 80:80 nginx:latest
 172.17.0.1 - - [02/Oct/2018:12:57:59 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:62.0) Gecko/20100101 Firefox/62.0" "-"
 ```
@@ -32,14 +32,14 @@ Use the `docker container logs` command to see the logs of detached Docker conta
 
 Let's start a container in detached mode:
 
-```console
+```shell
 $ docker run -p 80:80 -d nginx:latest
 3f840a82aabe788ecf7c7d3865e4fd3403f8de5e4b93ced5e0fd807dfc2d7180
 ```
 
 Check the logs:
 
-```console
+```shell
 $ docker container logs 3f840a82aabe
 172.17.0.1 - - [02/Oct/2018:13:08:18 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -50,7 +50,7 @@ The `docker logs` command is an alias of `docker container logs`. **They show th
 
 Often you need to keep the log open and follow messages, you can do this with the `--follow` or `-f` flag.
 
-```console
+```shell
 $ docker container logs --follow 3f840a82aabe
 ```
 
@@ -58,7 +58,7 @@ $ docker container logs --follow 3f840a82aabe
 
 Limit the output to a certain number of lines from the end of the log.
 
-```console
+```shell
 $ docker container logs --tail 1 3f840a82aabe
 172.17.0.1 - - [02/Oct/2018:13:08:18 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -67,7 +67,7 @@ $ docker container logs --tail 1 3f840a82aabe
 
 Display timestamps in Docker log output with `--timestamps` or `-t`.
 
-```console
+```shell
 docker container logs --tail 1 --timestamps 3f840a82aabe
 2018-10-02T13:08:18.661924100Z 172.17.0.1 - - [02/Oct/2018:13:08:18 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -76,14 +76,14 @@ docker container logs --tail 1 --timestamps 3f840a82aabe
 
 Use relative time.
 
-```console
+```shell
 $ docker container logs --since 15m --timestamps 3f840a82aabe
 2018-10-02T13:08:18.004863500Z 172.17.0.1 - - [02/Oct/2018:13:08:18 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
 
 Use absolute time.
 
-```console
+```shell
 $ docker container logs --since 2018-10-02T13:08:15 --timestamps 3f840a82aabe
 2018-10-02T13:08:18.004863500Z 172.17.0.1 - - [02/Oct/2018:13:08:18 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -98,7 +98,7 @@ Docker Compose will send logs to stdout and stderr if started in the foreground 
 
 When starting your application in detached mode, i.e. with `docker-compose up -d`, then the `docker-compose logs` command is used to analyze logs. Let's see an example of an app that has two services:
 
-```console
+```shell
 $ docker-compose logs
 Attaching to flask-redis-final_app_1, flask-redis-final_redis_1
 redis_1  | 1:C 02 Oct 13:25:30.164 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -121,7 +121,7 @@ app_1    |  * Debugger PIN: 119-685-546
 
 View logs of a single service in the form `docker-compose logs SERVICE`:
 
-```console
+```shell
 docker-compose logs app
 Attaching to flask-redis-final_app_1
 app_1    |  * Serving Flask app "app.py" (lazy loading)
@@ -141,7 +141,7 @@ You can use the `--follow`, `--timestamps` and `--tail` options with `docker-com
 
 In the Swarm you analyize logs on the Docker service level. Use the `docker service logs SERVICE` command.
 
-```console
+```shell
 $ docker service logs mystifying_lamarr
 mystifying_lamarr.1.y1dh43k1ckv3@linuxkit-025000000001    | 10.255.0.2 - - [02/Oct/2018:14:14:17 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -154,7 +154,7 @@ Docker service logs has some extra options.
 
 The above log output contains the service name (`mystifying_lamarr`). You can tell Docker to use the service ID instead with `--no-resolve`.
 
-```console
+```shell
 $ docker service logs --no-resolve mystifying_lamarr
 ms2px19ievti796cq6dhsqy5w.1.y1dh43k1ckv3@757cwv4l0fi68pzho3wwldxpz    | 10.255.0.2 - - [02/Oct/2018:14:14:17 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -163,7 +163,7 @@ ms2px19ievti796cq6dhsqy5w.1.y1dh43k1ckv3@757cwv4l0fi68pzho3wwldxpz    | 10.255.0
 
 You can tell Docker no to print task IDs with `--no-task-ids`.
 
-```console
+```shell
 $ docker service logs --no-task-ids mystifying_lamarr
 mystifying_lamarr.1@linuxkit-025000000001    | 10.255.0.2 - - [02/Oct/2018:14:14:17 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -172,7 +172,7 @@ mystifying_lamarr.1@linuxkit-025000000001    | 10.255.0.2 - - [02/Oct/2018:14:14
 
 If you use the `--no-trunc` option, Docker will not truncate the output, this will give you the full IDs in the logs, like task IDs, for example.
 
-```console
+```shell
 $ docker service logs --no-trunc mystifying_lamarr
 mystifying_lamarr.1.y1dh43k1ckv32wjoqd49j7avn@linuxkit-025000000001    | 10.255.0.2 - - [02/Oct/2018:14:14:17 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```
@@ -181,7 +181,7 @@ mystifying_lamarr.1.y1dh43k1ckv32wjoqd49j7avn@linuxkit-025000000001    | 10.255.
 
 Using the `--raw` option, you'll get raw output, note how the service identifier has been replaced with the IP address.
 
-```console
+```shell
 $ docker service logs --raw mystifying_lamarr
 10.255.0.2 - - [02/Oct/2018:14:14:17 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 ```

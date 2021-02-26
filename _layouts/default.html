@@ -1,52 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9XNNB9"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+  {% include head.html %}
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N9XNNB9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-        {% include navbar.html %}
-        {{ content }}
-        {% include footer.html %}
+    {% include navbar.html %}
+    {{ content }}
+    {% include footer.html %}
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
 
-        <!-- Syntax highlight -->
-        <script src="{{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <!-- End Syntax highlight -->
+    <!-- Syntax highlight -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
+      integrity="sha512-xR+IAyN+t9EBIOOJw5m83FTVMDsPd63IhJ3ElP4gmfUFnQlX9+eWGLp3P4t3gIjpo2Z1JzqtW/5cjgn+oru3yQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+      integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Syntax highlight -->
 
-        <!-- Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
-        <script>
-          var firebaseConfig = {
-            apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
-            authDomain: "takacsmark-com.firebaseapp.com",
-            databaseURL: "https://takacsmark-com.firebaseio.com",
-            projectId: "takacsmark-com",
-            storageBucket: "takacsmark-com.appspot.com",
-            messagingSenderId: "81292702129",
-            appId: "1:81292702129:web:f01f94ae7df07eda130d90"
-          };
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
+        authDomain: "takacsmark-com.firebaseapp.com",
+        databaseURL: "https://takacsmark-com.firebaseio.com",
+        projectId: "takacsmark-com",
+        storageBucket: "takacsmark-com.appspot.com",
+        messagingSenderId: "81292702129",
+        appId: "1:81292702129:web:f01f94ae7df07eda130d90",
+      };
 
-          firebase.initializeApp(firebaseConfig);
-        </script>
+      firebase.initializeApp(firebaseConfig);
+    </script>
 
-        <!-- Custom JS -->
-        <script src="/assets/js/app.js"></script>
-        <!-- End Custom JS -->
+    <!-- Custom JS -->
+    <script src="/assets/js/app.js"></script>
+    <!-- End Custom JS -->
 
-        <!-- Mailchimp -->
-        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"ced6e070ab6dca9ddc1f65334","lid":"3983723c21"}) })</script>
-        <!-- End Mailchimp -->
+    <!-- Mailchimp -->
+    <script
+      type="text/javascript"
+      src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js"
+      data-dojo-config="usePlainJson: true, isDebug: false"
+    ></script>
+    <script type="text/javascript">
+      require(["mojo/signup-forms/Loader"], function (L) {
+        L.start({
+          baseUrl: "mc.us3.list-manage.com",
+          uuid: "ced6e070ab6dca9ddc1f65334",
+          lid: "3983723c21",
+        });
+      });
+    </script>
+    <!-- End Mailchimp -->
 
-        <!-- Google platform.js -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <!-- End Google platform.js -->
-
-    </body>
+    <!-- Google platform.js -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- End Google platform.js -->
+  </body>
 </html>

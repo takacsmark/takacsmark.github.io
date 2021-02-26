@@ -68,7 +68,7 @@ Let's prepare the basis of the application server. We'll create the following fi
 
 Please create a directory for this exercise on your machine, I call mine `flask-redis` and place the file into this directory. My directory looks like this now:
 
-```console
+```shell
 $ tree
 .
 ├── Dockerfile
@@ -152,7 +152,7 @@ The name `docker-compose.yml` is the default name of the compose file. The `dock
 
 The structure of my project directory is this right now:
 
-```console
+```shell
 $ tree
 .
 ├── Dockerfile
@@ -230,7 +230,7 @@ To run the example you need to have `docker-compose` installed on your system. T
 
 Let's run the example with a single command:
 
-```console
+```shell
 $ docker-compose up
 ```
 
@@ -238,7 +238,7 @@ This command will build the custom image for the `app` service and pull the Redi
 
 To test the app, you can post a student with curl like this (or alternatively you can use a tool like [Postman](https://www.getpostman.com/){:target="\_blank"}):
 
-```console
+```shell
 $ curl --header "Content-Type: application/json" \
 --request POST \
 --data '{"name":"Kumar"}' \
@@ -251,7 +251,7 @@ localhost:5000
 
 Let's get the list of students back with another request:
 
-```console
+```shell
 $ curl localhost:5000
 
 [
@@ -265,7 +265,7 @@ As you can see, the containers are automagically connected when we run the stack
 
 To look into this, let's stop the stack with the following command:
 
-```console
+```shell
 $ docker-compose down
 ```
 
@@ -273,7 +273,7 @@ Yes, it is to simple to stop a stack, we'll talk about this later in this post.
 
 Let's see what Docker does when we we issue the `docker-compose up` command again. I added the `-d` flag to the command to start the stack in the background to get less output info:
 
-```console
+```shell
 $ docker-compose up -d
 Creating network "flask-redis_default" with the default driver
 Creating flask-redis_app_1   ... done
@@ -300,7 +300,7 @@ This way you can easily connect containers to each other with Docker Compose. Yo
 
 If you inspect the custom network that Compose has created, you'll find that there are exactly two containers connected to this network; `flask-redis_app_1` and `flask-redis_redis_1`.
 
-```console
+```shell
 $ docker network inspect flask-redis_default
 [
     {
@@ -442,7 +442,7 @@ You can read more about this later in this article.
 
 The Docker Compose command has various subcommands that you can use during your everyday work. We'll use the most important ones in this article. If you are in need of an overview or a refresher, you can always use this command in Terminal to get help:
 
-```console
+```shell
 $ docker-compose --help
 ```
 
@@ -452,7 +452,7 @@ This command will give you a list of subcommands and options. We have used the `
 
 Docker Compose provides a dedicated subcommand to build images, it's called `docker-compose build`. You can get detailed help about subcommands, too:
 
-```console
+```shell
 $ docker-compose build --help
 ```
 
@@ -516,7 +516,7 @@ Then we use the value of the build argument on the next line: `FROM python:$IMAG
 
 Please run the stack with:
 
-```console
+```shell
 $ docker-compose up -d --build
 ```
 
@@ -528,7 +528,7 @@ Docker Compose gives you various subcommands to manage multi-container applicati
 
 The command `docker-compose ps` will list the containers in your application
 
-```console
+```shell
 $ docker-compose ps
        Name                      Command               State           Ports
 -------------------------------------------------------------------------------------
@@ -538,7 +538,7 @@ flask-redis_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp
 
 You can access the logs of all containers like this:
 
-```console
+```shell
 $ docker-compose logs
 ```
 
@@ -548,7 +548,7 @@ If you want to access the logs of one service only, you can use this form: `dock
 
 To see the processes in your containers use the following command:
 
-```console
+```shell
 $ docker-compose top
 
 flask-redis_app_1
@@ -569,7 +569,7 @@ You also have subcommands to start, stop, kill and restart containers for all or
 
 We need to execute commands in running containers quite often, especially during development. We can easily do this with the use of the service name:
 
-```console
+```shell
 $ docker-compose exec app ps
 PID   USER     TIME  COMMAND
     1 root      0:00 {flask} /usr/local/bin/python /usr/local/bin/flask run --h
@@ -579,7 +579,7 @@ PID   USER     TIME  COMMAND
 
 Or you can double check the data in the data store:
 
-```console
+```shell
 $ docker-compose exec redis redis-cli lrange students 0 -1
 1) "{'name': 'Mark'}"
 ```
@@ -592,13 +592,13 @@ There is one key difference between `run` and `up`. When you use `run` Docker wi
 
 Let's run an example:
 
-```console
+```shell
 $ docker-compose run app tail -f > dev0
 ```
 
 Let's see the running containers in a new Terminal window:
 
-```console
+```shell
 $ docker-compose ps
         Name                       Command               State           Ports
 ---------------------------------------------------------------------------------------
@@ -613,7 +613,7 @@ You can find the container we started with `run` without any mapped ports on the
 
 Once you tested your application, you will want to ship your image to a Docker registry like the Docker Hub, or your own private registry. Docker Compose gives you tools to achieve this with a single command:
 
-```console
+```shell
 $ docker-compose push
 Pushing app (takacsmark/flask-redis:1.0)...
 The push refers to repository [docker.io/takacsmark/flask-redis]
@@ -635,7 +635,7 @@ Pulling your image to a new machine is also a single command exercise, however t
 
 Use the following command to pull the images for your solution:
 
-```console
+```shell
 $ docker-compose pull
 Pulling app   ... done
 Pulling redis ... done
@@ -673,7 +673,7 @@ services:
 
 Let's issue `docker-compose up` again (note the application is already running):
 
-```console
+```shell
 $ docker-compose up -d
 Recreating flask-redis_app_1 ...
 Recreating flask-redis_app_1 ... done
@@ -685,7 +685,7 @@ Compose has recreated our app service, but did not touch the Redis service. Our 
 
 Docker compose provides an option to scale a service to the specified number of replicas. You can try this for exmaple:
 
-```console
+```shell
 $ docker-compose up -d --scale app=3
 WARNING: The "app" service specifies a port on the host. If multiple containers for this service are created on a single host, the port will clash.
 Starting flask-redis_app_2 ...
@@ -743,7 +743,7 @@ Under each service I added the `networks` key to specify that these services sho
 
 Let's change the state of our application to the desired state described in the updated Compose file:
 
-```console
+```shell
 $ docker-compose up -d
 Creating network "flask-redis_mynet" with the default driver
 Recreating flask-redis_redis_1 ... done
@@ -752,7 +752,7 @@ Recreating flask-redis_app_1   ... done
 
 Compose has created the new network and recreated the containers and attached them to this network. You can inspect this like this:
 
-```console
+```shell
 $ docker network inspect flask-redis_mynet
 [
     {
@@ -817,7 +817,7 @@ As we have seen in previous tutorials, volumes are used to store data outside co
 
 Our example uses one volume currently that is defined in the the Redis image:
 
-```console
+```shell
 $ docker volume ls
 DRIVER              VOLUME NAME
 local               b221ff8751f0e57e1d20830f6238f1ff1255a9c5fd08c2132974b4486e937c86
@@ -858,7 +858,7 @@ We defined the `mydata` volume in the top-level `volumes` section at the end of 
 
 In order to make this work, we need to destroy and recreate our stack:
 
-```console
+```shell
 $ docker-compose down
 Stopping flask-redis_redis_1 ... done
 Stopping flask-redis_app_1   ... done
@@ -874,7 +874,7 @@ Creating flask-redis_redis_1 ... done
 
 Our Redis service is using a named volume now:
 
-```console
+```shell
 $ docker volume ls
 DRIVER              VOLUME NAME
 local               b221ff8751f0e57e1d20830f6238f1ff1255a9c5fd08c2132974b4486e937c86
@@ -982,13 +982,13 @@ You can stack multiple Compose files on top of each other. In more complex proje
 
 You can use custom compose file names with the `-f` option of Docker Compose, for example:
 
-```console
+```shell
 $ docker-compose -f docker-compose.dev.yml up
 ```
 
 You can stack Compose file on top of each other with a single command using multiple `-f` arguments:
 
-```console
+```shell
 $ docker-compose -f docker-compose.1.yml -f docker-compose.2.yml -f docker-compose.3.yml up
 ```
 

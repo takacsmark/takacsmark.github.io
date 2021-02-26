@@ -42,7 +42,7 @@ Before we move to the cleaning instructions, let me give you a few tips to remov
 
 After a while we all have something to clean up, so let's see how to do this. I started up a few Docker containers on my machine:
 
-```console
+```shell
 ~ docker container ls -a
 CONTAINER ID        IMAGE                                                   COMMAND                  CREATED             STATUS                    PORTS                                              NAMES
 b805f67ec113        nginx:1.15.1-alpine                                     "nginx -g 'daemon of…"   13 seconds ago      Up 11 seconds             0.0.0.0:8080->80/tcp                               hardcore_archimedes
@@ -61,7 +61,7 @@ We can clean up the containers with the `docker container prune` command. Docker
 
 Let's see how it works:
 
-```console
+```shell
 ~ docker container prune
 WARNING! This will remove all stopped containers.
 Are you sure you want to continue? [y/N] y
@@ -76,7 +76,7 @@ This command will ask for confirmation (that you can suppress with the `-f` flag
 
 This is the list of containers now:
 
-```console
+```shell
 ~ docker container ls -a
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                              NAMES
 b805f67ec113        nginx:1.15.1-alpine   "nginx -g 'daemon of…"   About an hour ago   Up About an hour    0.0.0.0:8080->80/tcp                               hardcore_archimedes
@@ -87,7 +87,7 @@ As you can see the containers in "Exited" or "Created" state were removed from m
 
 You can use `docker container prune` in a bit more sophisticated way with filters. You can, for example, remove containers created more than 10 hours ago like this:
 
-```console
+```shell
 ~ docker container prune --force --filter "until=10h"
 ```
 
@@ -106,7 +106,7 @@ Dangling images are the images that are not tagged on your system. They are crea
 
 Here is an example:
 
-```console
+```shell
 ~ docker image ls
 REPOSITORY                                          TAG                       IMAGE ID            CREATED              SIZE
 takacsmark/flask-redis                              1.0                       027a4f101492        2 seconds ago        88.2MB
@@ -118,13 +118,13 @@ These images are the result of the same build process, but they have been built 
 
 You can list dangling images on your system with this command:
 
-```console
+```shell
 ~ docker image ls -f "dangling=true"
 ```
 
 You can prune dangling images with the `docker image prune` command:
 
-```console
+```shell
 ~ docker image prune
 WARNING! This will remove all dangling images.
 Are you sure you want to continue? [y/N] y
@@ -156,7 +156,7 @@ Docker volumes are not removed by Docker by default, because Docker volumes cont
 
 If you list the Docker volumes on your machine, you might be surprised:
 
-```console
+```shell
 ~ docker volume ls
 DRIVER              VOLUME NAME
 local               4760c2d78bf6de835421aed7a2dba9a3b401d874af9ccc2bf608e0d785718f1a
@@ -179,7 +179,7 @@ You may accumulate quite many Docker volumes on your system over time. It's a go
 
 The `docker volume prune` command will remove all volumes that are not used by at least one container. This may get dangerous, because you may loose some prepared data. **Therefore it is essential to set up REPEATABLE data initiation and migration tools for your projects, don't just store critical data in your Docker volumes.**
 
-```console
+```shell
 ~ docker volume prune
 WARNING! This will remove all local volumes not used by at least one container.
 Are you sure you want to continue? [y/N] y
@@ -208,7 +208,7 @@ Nonetheless, you may crate networks with `docker netwrok create` or you may end 
 
 These are the Docker networks on my machine now:
 
-```console
+```shell
 ~ docker network ls
 NETWORK ID          NAME                         DRIVER              SCOPE
 adb3e03409a4        bridge                       bridge              local
@@ -225,7 +225,7 @@ The last Docker network is custom and it is not used by containers.
 
 If I clean them, the custom network will be removed:
 
-```console
+```shell
 ~ docker network prune
 WARNING! This will remove all networks not used by at least one container.
 Are you sure you want to continue? [y/N] y
