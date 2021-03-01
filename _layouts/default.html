@@ -1,6 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N9XNNB9");
+    </script>
+
+    <!-- Site Meta DO NOT CHANGE -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+    </title>
+    <meta
+      name="description"
+      content="{% if page.description %}{{
+        page.description | strip_html | strip_newlines | truncate: 160
+      }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="{{ site.author }}" />
+    <link
+      rel="canonical"
+      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
+
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{
+        site.title
+      }}{% endif %}"
+    />
+    <meta
+      property="twitter:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{
+        site.title
+      }}{% endif %}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.description %}{{
+        page.description | strip_html | strip_newlines | truncate: 160
+      }}{% else %}{{ site.description }}{% endif %}"
+    />
+    {% assign pl = page.thumbnail | size | minus: 4 %}
+    <meta
+      property="og:image"
+      content="{% if page.thumbnail %}{{
+        site.url
+      }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}"
+    />
+
+    <!-- Google Site Verfication -->
+    <meta
+      name="google-site-verification"
+      content="2DFgqqJVnbuSGjOdyKJZFbGKPGHqu99tt4aBBmbuiKc"
+    />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{
+      site.title
+    }}" href="{{
+      "/feed.xml" | prepend: site.baseurl | prepend: site.url
+    }}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{
+      "/favicon.ico" | prepend: site.baseurl | prepend: site.url
+    }}}" type="image/x-icon" /> <link rel="icon" href="{{
+      "/favicon.ico" | prepend: site.baseurl | prepend: site.url
+    }}}" type="image/x-icon" />
+
+    <!-- Plotly js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{
+      "/assets/custom.css" | prepend: site.baseurl | prepend: site.url
+    }}">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
+      integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -11,11 +114,8 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    {% include navbar.html %}
-    {{ content }}
-    {% include footer.html %}
+    {% include navbar.html %} {{ content }} {% include footer.html %}
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -34,7 +134,6 @@
       integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A=="
       crossorigin="anonymous"
     ></script>
-    <!-- End Syntax highlight -->
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
@@ -73,10 +172,8 @@
         });
       });
     </script>
-    <!-- End Mailchimp -->
 
     <!-- Google platform.js -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- End Google platform.js -->
   </body>
 </html>

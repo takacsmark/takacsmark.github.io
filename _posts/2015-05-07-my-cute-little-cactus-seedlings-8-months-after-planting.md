@@ -31,8 +31,8 @@ Then I thought I would be very happy to use the seeds of this cactus to create m
 
 So I harvested the fruits and extracted the seeds with a swiss knife. I ate the fruits afterwards and I'm still alive. Then it was time for the video by Cactusmain.
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4m7JMH6uzyg" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/4m7JMH6uzyg" allowfullscreen></iframe>
 </div>
  
 ## Seed planting considerations

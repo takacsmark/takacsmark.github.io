@@ -16,8 +16,8 @@ category: Tutorial
 \***\*Update**\*\*\*\*\*\*
 Now you can follow along the video and learn with my youtube tutorial.
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vyp5_F42NGs" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/Vyp5_F42NGs" allowfullscreen></iframe>
 </div>
 
 So you decided to learn Docker? This tutorial, unlike other tutorials, takes a solution focused approach, rather than a toolkit focused approach. We start from the big picture, understanding what problems Docker is meant to solve and start using Docker as we make progress.

@@ -26,8 +26,8 @@ In order to get the most out of this article you should be familiar with basic D
 
 This tutorial is available as a Youtube video, too.
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
 </div>
 
 ## Your first Swarm cluster

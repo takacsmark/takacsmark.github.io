@@ -31,7 +31,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
                 Build the Docker skills you need
               </h1>
               <p class="mt-6 text-xl text-gray-500">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                Learn to build, ship and run highly scalable applications with Docker containers.
               </p>
             </div>
             <div class="mt-6">
@@ -801,7 +801,7 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
       </div>
     </div>
 
-{% include shared/comments.html %}
+    {% include comments.html %}
 
   </div>
 </div>

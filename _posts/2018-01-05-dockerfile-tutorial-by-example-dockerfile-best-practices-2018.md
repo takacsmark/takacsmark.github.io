@@ -27,8 +27,8 @@ This article is the writeup of 2 Dockerfile video tutorials on my Youtube channe
 
 Let's start the first video.
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6Er8MAvTWlI" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/6Er8MAvTWlI" allowfullscreen></iframe>
 </div>
 
 ## What is a Dockerfile and why you'd want to use one?

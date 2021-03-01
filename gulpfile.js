@@ -3,9 +3,6 @@ const gulp = require("gulp");
 //sass processing
 const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
-const precss = require("precss");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
 //image optimization
 const path = require("path");
 const fs = require("fs");
@@ -61,19 +58,19 @@ const destDir = "assets/images";
 const responsiveImgGenConfig = [
   {
     src: srcDir + "/post-thumbs/*",
-    widths: [960, 570, 300],
+    widths: [640, 128],
     dest: destDir + "/post-thumbs/",
   },
-  {
-    src: srcDir + "/site-greeting/*",
-    widths: [1920, 960, 600],
-    dest: destDir + "/site-greeting/",
-  },
-  {
-    src: srcDir + "/in-content/*",
-    widths: [750, 550, 370],
-    dest: destDir + "/in-content/",
-  },
+  //  {
+  //    src: srcDir + "/site-greeting/*",
+  //    widths: [1920],
+  //    dest: destDir + "/site-greeting/",
+  //  },
+  //  {
+  //    src: srcDir + "/in-content/*",
+  //    widths: [768],
+  //    dest: destDir + "/in-content/",
+  //  },
 ];
 
 gulp.task("default", () => {

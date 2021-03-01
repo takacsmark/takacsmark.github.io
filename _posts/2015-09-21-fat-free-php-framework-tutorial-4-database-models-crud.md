@@ -5,7 +5,7 @@ description: "4th lesson in our tutorial series covers Fat-Free models, database
 date: 2015-09-21 17:36:00 +0100
 author: Márk Takács
 category: Tutorial
-thumbnail: /assets/images/post-thumbs/Fatfree_PHP_Framework_Tutorial_-_4_-_YouTube.jpg
+thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-4.jpg
 videothumb: "https://www.youtube.com/embed/XydAAp3ZF-M"
 ---
 

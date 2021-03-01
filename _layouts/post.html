@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-
-
-<!-- Article -->
-<div class="relative py-16 overflow-hidden bg-white" x-data="{ slideOverOpen: false }">
+<article 
+    itemscope itemtype="https://schema.org/BlogPosting"
+    class="relative py-16 overflow-hidden bg-white" x-data="{ slideOverOpen: false }"
+  >
   <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
     <div class="relative h-full mx-auto text-lg max-w-prose" aria-hidden="true">
       <svg
@@ -111,7 +111,7 @@ layout: default
         <img
           class="w-full rounded-lg"
           src="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}"
-          alt="{{ page.thumbnail }}"
+          alt="{{ page.title }}"
           width="1310"
           height="873"
         />
@@ -122,43 +122,51 @@ layout: default
           >{{ page.category }}</span
         >
         <span
+          itemprop="name headline"
           class="block mt-2 text-3xl font-extrabold tracking-tight text-center text-gray-900 leading-8 sm:text-4xl"
-          >{{ page.title }}</span
-        >
-      </h1>
+          >
+            {{ page.title }}
+          </span
+            >
+          </h1>
 
-          <div class="flex items-center mt-6">
-            <div class="flex-shrink-0">
-              <span class="sr-only">{{ page.author }}</span>
-              <img
-                class="w-10 h-10 rounded-full"
-                src="{{ "/assets/images/Mark.png" | prepend: site.baseurl | prepend: site.url }}"
-                alt="Mark Takacs"
-              />
-            </div>
-            <div class="ml-3">
-              <p class="text-sm font-medium text-gray-900">
-              <span> {{ page.author }} </span>
-              </p>
-              <div class="flex text-sm text-gray-500 space-x-1">
-                  <time datetime="{{
-                  page.date | date: "%b %-d, %Y"
-                }}"> {{
-                  page.date | date: "%b %-d, %Y"
-                }} </time>
-                <span aria-hidden="true"> &middot; </span>
-                <span id="view-count"></span>
+              <div class="flex items-center mt-6">
+                <div class="flex-shrink-0">
+                  <span class="sr-only">{{ page.author }}</span>
+                  <img
+                    class="w-10 h-10 rounded-full"
+                    src="{{ "/assets/images/Mark.png" | prepend: site.baseurl | prepend: site.url }}"
+                    alt="Mark Takacs"
+                  />
+                </div>
+                <div class="ml-3">
+                  <p 
+                    itemprop="author"
+                    itemscope
+                    itemtype="https://schema.org/Person"
+                  class="text-sm font-medium text-gray-900">
+                  <span itemprop="name"> {{ page.author }} </span>
+                  </p>
+                  <div class="flex text-sm text-gray-500 space-x-1">
+                    <time 
+                    datetime="{{ page.date | date: "%b %-d, %Y" }}"
+                    itemprop="datePublished"
+                    > {{ page.date | date: "%b %-d, %Y" }} </time>
+                    <span aria-hidden="true"> &middot; </span>
+                    <span id="view-count"></span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-        <div class="mt-6 rounded-lg bg-gray-50">
+            <div class="mt-6 rounded-lg bg-gray-50">
           <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:py-16 lg:px-8 lg:py-20">
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               <span class="block">Get started with</span>
               <span class="block text-indigo-600">Docker today</span>
             </h2>
-          <p class="mt-4 text-lg text-gray-500 leading-6">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
+          <p class="mt-4 text-lg text-gray-500 leading-6">
+              Learn to build, ship and run highly scalable applications with Docker containers.
+          </p>
             <div class="flex mt-8">
               <div class="inline-flex shadow rounded-md">
                 <a 
@@ -179,17 +187,25 @@ layout: default
         </div>
     </div>
 
-    {% include shared/slide-over.html %}
+    {% include slide-over.html %}
 
-    <div class="mx-auto mt-6 text-gray-500 prose prose-indigo prose-lg">
+    <div 
+      itemprop="articleBody"
+      class="mx-auto mt-6 text-gray-500 prose prose-indigo prose-lg"
+      >
+      <!-- Video Thumb -->
+      {% if page.videothumb %}
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe
+          src="{{ page.videothumb }}"
+          allowfullscreen
+        ></iframe>
+      </div>
+      {% endif %}
+
       {{ content }}
-      {% include post/social-share.html %}
-      {% include shared/comments.html %}
+      {% include social-share.html %}
+      {% include comments.html %}
     </div>
   </div>
-</div>
-
-<!-- Inline Sponsored Links -->
-{% include post/sponsored-link.html %}
-
-<!-- Comments -->
+</article>

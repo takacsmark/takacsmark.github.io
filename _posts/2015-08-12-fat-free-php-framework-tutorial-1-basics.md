@@ -5,7 +5,7 @@ description: "First lecture of my video tutorial series on solving web programmi
 date: 2015-08-12 16:06:00 +0100
 author: Márk Takács
 category: Tutorial
-thumbnail: /assets/images/post-thumbs/Fat-Free_PHP_Framework_Tutorial_-_1_Basics_and_1__markgyorgyiimac_Mark-es-Gyorgyi____Documents_Development_Tutorials_fatfree_1_base__zsh_.jpg
+thumbnail: /assets/images/post-thumbs/Fat-Free-PHP-Tutorial-1.jpg
 videothumb: "https://www.youtube.com/embed/R-ydcTTrR5s"
 ---
 

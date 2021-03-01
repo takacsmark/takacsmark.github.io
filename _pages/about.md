@@ -28,4 +28,6 @@ Mark and his wife live and work in Budapest, Hungary.
 
 ## Contact
 
-{% include contactinfo.html %}
+<div class="flex justify-left space-x-6 md:order-2">
+    {% include social-contacts.html %}
+</div>

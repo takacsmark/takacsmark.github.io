@@ -31,8 +31,8 @@ _This article is designed to be a functional introduction of Docker concepts wit
 
 Let's start with a video!
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EmrikChpdfY" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/EmrikChpdfY" allowfullscreen></iframe>
 </div>
 
 **You can download the presentation using the button below.**

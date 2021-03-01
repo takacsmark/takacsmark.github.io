@@ -17,8 +17,8 @@ In previous tutorials we learned the basics of Docker containers and Docker imag
 
 **This post is available as a Youtube video, too.**
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4EqysCR3mjo" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/4EqysCR3mjo" allowfullscreen></iframe>
 </div>
 
 ## What is Docker Compose

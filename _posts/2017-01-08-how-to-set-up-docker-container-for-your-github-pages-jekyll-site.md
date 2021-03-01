@@ -19,8 +19,8 @@ If you are absolutely new to Docker, please start with the [beginners tutorial w
 \***\*Tip**\*\*\*\*\*\*
 Watch the video that I created for this post on Youtube. I show you what issue I faced when I tried to serve my existing GitHub Pages sites from the official Jekyll container. I also give you the fix that I created.
 
-<div class="mb-4 embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6UAf8b_2juk" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/6UAf8b_2juk" allowfullscreen></iframe>
 </div>
 
 This article is the writeup of the video tutorial, meaning I created the video first and I'm adding the details in written form now.
