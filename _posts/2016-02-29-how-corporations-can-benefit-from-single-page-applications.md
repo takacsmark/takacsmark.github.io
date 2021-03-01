@@ -77,9 +77,6 @@ _Improving customer service experience is continuously a top priority of corpora
 
 A good example is [Gap Inc.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fsecure-www.gap.com%2Fbuy%2Fshopping_bag.do){:target="\_blank"}(built with Angular), where you can connect your shopping bag across devices.
 
-![Gap Angular example]({{ site.url }}/assets/images/in-content/gap_angular_example.jpg){:.img-fluid}
-author: Márk Takács
-
 Such experiences greatly improve customer loyalty and engagement. SPAs have an extra, soft plus being fluid and responsive, giving way to personalization and intuition.
 
 Besides the above mentioned cool factor, there are hard facts supporting the customer experience case.

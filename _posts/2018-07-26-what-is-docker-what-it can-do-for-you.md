@@ -60,7 +60,7 @@ _I'm sure you'll get the idea if I show what's inside an image._
 
 These images are technically file system snapshots, in the form of a Linux file system. The Nginx image, for example, contains the below Linux file system directories:
 
-```terminal
+```shell
 / # ls
 bin    dev    etc    home   lib    media  mnt    proc   root   run    sbin   srv    sys    tmp    usr    var
 ```
@@ -69,7 +69,7 @@ The standard directories contain a set of Linux files, that the creator of the i
 
 The Nginx image also contains an Nginx installation. The Nginx binary is located under `/usr/sbin/nginx`:
 
-```terminal
+```shell
 / # ls /usr/sbin
 add-shell     brctl         delgroup      fdformat      nanddump      nginx-debug   rdate         remove-shell  setlogcons
 addgroup      chpasswd      deluser       killall5      nandwrite     ntpd          rdev          rfkill        zdump
@@ -79,7 +79,7 @@ arping        crond         fbset         lspci         nginx         powertop  
 
 The location of the Nginx config files in the Nginx image is `/etc/nginx`:
 
-```terminal
+```shell
 / # ls /etc/nginx/
 conf.d                  fastcgi_params.default  mime.types.default      scgi_params             win-utf
 fastcgi.conf            koi-utf                 modules                 scgi_params.default
@@ -253,7 +253,7 @@ We expose port 8080, which indicates that our Webpack dev server will run on por
 
 Now I have a new Docker image on my computer that I can list with the `docker image ls` command:
 
-```terminal
+```shell
 $ docker image ls
 REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
 takacsmark/web-intro.exmple     dev-1.0             1facbf4ac56b        17 minutes ago      164MB

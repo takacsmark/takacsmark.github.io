@@ -74,7 +74,7 @@ The strength of Docker is that they have gone through the tedious task of stripp
 
 Let me give you an example of the containers I have on my local machine so that you get a better idea. Docker and the community say that every container should have one main executable. In practice I translated this to one application per container. These are the running containers on my Mac right now:
 
-```terminal
+```shell
 CONTAINER ID        IMAGE                 COMMAND                  CREATED
 STATUS              PORTS                                      NAMES
 
@@ -95,7 +95,7 @@ Well, I'm not running apache or mysql on my Mac anymore. I do my development in 
 
 I'll tell you a lot more about this, I just wanted to show a few containers running. Now if I wanted to work on a Wordpress site, for example, I could start a Wordpress container next to nginx-proxy and mariadb and make these guys work together.
 
-```terminal
+```shell
 CONTAINER ID        IMAGE                 COMMAND                  CREATED
 STATUS              PORTS                                      NAMES
 
@@ -133,7 +133,7 @@ When the installation is complete you should have Docker Engine up and running o
 
 If you are on Mac, you can check the little whale icon in the top bar near the clock. You should be having the necessary command line tools to run containers. Let's check if this is the case. Let's run these commands in the Terminal app.
 
-```terminal
+```shell
 ➜  ~ docker --version
 Docker version 1.12.1, build 6f9534c
 ➜  ~ docker-compose --version
@@ -171,7 +171,7 @@ Some images are provided by third parties, including community members. Those ar
 
 Let me show you my machine, before we get your package. I use the `docker images` command to list images on my local machine.
 
-```terminal
+```shell
 REPOSITORY                           TAG                 IMAGE ID
 CREATED             SIZE
 
@@ -230,7 +230,7 @@ So, let's just pull first. :) We will specify the version when we do so. Let's p
 
 If you are wondering about the size difference between Jessie and Alpine, I pulled them both to show the numbers to you:
 
-```terminal
+```shell
 REPOSITORY                           TAG                 IMAGE ID
 CREATED             SIZE
 
@@ -287,7 +287,7 @@ This container is running in the foreground. If you look at your terminal, you'l
 
 You should see something like this:
 
-```terminal
+```shell
 ➜  ~ docker ps
 CONTAINER ID        IMAGE                 COMMAND
 CREATED             STATUS              PORTS                         NAMES
@@ -355,7 +355,7 @@ Let's create a directory for this step, and create a file called `nginx.conf` in
 
 For the sake of the tutorial let's copy the default nginx configuration from the container into the `nginx.conf` file on the host. This doesn't make much functional sense, it's just a technical example. Let's use this content:
 
-```conf
+```nginx
 user  nginx;
 worker_processes  1;
 

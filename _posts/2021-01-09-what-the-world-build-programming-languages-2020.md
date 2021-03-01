@@ -7,6 +7,8 @@ thumbnail: "/assets/images/post-thumbs/what-the-world-built-programming-language
 category: Tech trends
 ---
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 <!-- prettier-ignore -->
  * TOC
 <!-- prettier-ignore -->

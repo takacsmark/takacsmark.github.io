@@ -61,7 +61,7 @@ Let's run this command in terminal:
 
 If you run the command `docker images` now in terminal, you should see a new line under your Docker images. It should look something like this:
 
-```terminal
+```shell
 REPOSITORY                      TAG                   IMAGE ID            CREATED             SIZE
 mariadb                         10.0.25               bb3fc12095a7        7 months ago        344.4 MB
 ```
@@ -102,7 +102,7 @@ Here is the entire command, please run it in terminal:
 
 This will start up your database container plus it will create the database files in your data directory. The contents of your data folder will be something like this:
 
-```terminal
+```shell
 -rw-rw----@  1 takacsmark  staff    16K Jan  8 11:51 aria_log.00000001
 -rw-rw----@  1 takacsmark  staff    52B Jan  8 11:51 aria_log_control
 -rw-rw----@  1 takacsmark  staff    48M Jan  8 11:51 ib_logfile0
@@ -134,7 +134,7 @@ So let's pull the [official Wordpress image from the Docker Store](https://store
 
 After the pull you should see the new image, just issue the command `docker images`. Mine looks like this:
 
-```terminal
+```shell
 REPOSITORY                      TAG                   IMAGE ID            CREATED             SIZE
 wordpress                       4.6.1-php7.0-apache   80f218d7d14e        7 weeks ago         433.2 MB
 mariadb                         10.0.25               bb3fc12095a7        7 months ago        344.4 MB

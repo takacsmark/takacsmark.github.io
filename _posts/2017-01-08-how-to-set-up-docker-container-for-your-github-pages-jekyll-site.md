@@ -51,7 +51,7 @@ So once I dug my way through the docs, I launched a command like this (note that
 
 What happens is that the container starts up and it will try to install the dependencies listed in the `Gemfile` and `Gemfile.lock` files of your project. These files are in your project to make sure that the same packages are installed wherever you develop your blog. So this stuff is good for you. The problem is that the installation fails with error messages like the ones below:
 
-```terminal
+```shell
 Fetching gem metadata from https://rubygems.org/..........
 Fetching version metadata from https://rubygems.org/...
 Fetching dependency metadata from https://rubygems.org/..

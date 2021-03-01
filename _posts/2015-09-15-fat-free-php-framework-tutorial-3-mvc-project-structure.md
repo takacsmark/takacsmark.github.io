@@ -15,7 +15,7 @@ The time has come, we will use what we learnt so far to create our first Fat-Fre
 
 Unlike in previous posts in this tutorial series, this time let me start with the end result and explain the structure. Later on, I will come back to each file in detail.
 
-```terminal
+```shell
 ➜  1 base  ll
 total 40
 drwxr-xr-x  4 markgyorgyiimac  staff   136B Júl 20 20:02 app
@@ -94,7 +94,7 @@ Now that we told f3 to use the config files, let's move on to these files in the
 
 ### routes.ini
 
-```conf
+```ini
 [routes]
 
 ;base routes

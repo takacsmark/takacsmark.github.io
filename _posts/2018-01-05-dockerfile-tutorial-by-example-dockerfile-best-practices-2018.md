@@ -183,7 +183,7 @@ This command is structured as follows:
 
 You should see a similar output in terminal now:
 
-![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-build_750.png){:.img-fluid}
+![Dockerfile tutorial - Docker image list]({{ site.url }}/assets/images/in-content/dockerfile-tutorial-image-build.png){:.img-fluid}
 
 #### 5. Enjoy the results
 
@@ -492,7 +492,7 @@ ONBUILD RUN /usr/src/app/mybuild.sh
 
 It's time to have a look at the second video on Youtube. Please have a look and let's move on.
 
-<div class="video-thumb"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZcMr4G5DH7c" frameborder="0" allowfullscreen></iframe></div>
+<div class="aspect-w-16 aspect-h-9"><iframe src="https://www.youtube.com/embed/ZcMr4G5DH7c" frameborder="0" allowfullscreen></iframe></div>
 
 Now that we looked at the toolset and best practices, you might be wondering, what is the best way of building your Dockerfile.
 

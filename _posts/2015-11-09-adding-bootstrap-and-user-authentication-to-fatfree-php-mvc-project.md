@@ -337,7 +337,7 @@ body {
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
-```conf
+```ini
 [routes]
 
 ;base routes

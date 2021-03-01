@@ -82,7 +82,7 @@ Let's see what to put into the files!
 
 Let's add the contents to `requirements.txt`:
 
-```text
+```python
 flask
 redis<3.0.0
 ```
@@ -163,7 +163,7 @@ $ tree
 
 Let's add the below contents to the compose file, and I'll explain what's going on:
 
-```yaml
+```yml
 version: "3"
 
 services:
@@ -217,7 +217,7 @@ In the example we define an environment variable for the containers we start fro
 
 The code of the Redis service is much shorter:
 
-```yaml
+```yml
 redis:
   image: redis:4.0.11-alpine
 ```
@@ -470,7 +470,7 @@ I think this option is so significant that we should update our example quickly.
 
 Let's change the Compose file like this:
 
-```yaml
+```yml
 version: "3"
 
 services:
@@ -653,7 +653,7 @@ _In other words, compose will analyze the actual state of your application and t
 
 Let's change the Compose file of our application to demonsrate this. I changed the host machine port to port 80 in the port mapping of the app service:
 
-```yaml
+```yml
 version: "3"
 
 services:
@@ -825,7 +825,7 @@ local               b221ff8751f0e57e1d20830f6238f1ff1255a9c5fd08c2132974b4486e93
 
 This volume is automatically created whenever we start up a container from the Redis image. The volume is created automatically with a random name. This means that we cannot re-use the data in the volume between server runs. In order to achieve this, we can define a named volume in the Compose file:
 
-```yaml
+```yml
 version: "3"
 
 services:
@@ -887,7 +887,7 @@ We usually prefer to use environment files in our projects to pass environment v
 
 Let's add an `env_file` to our app:
 
-```yaml
+```yml
 version: "3"
 
 services:
@@ -917,7 +917,7 @@ volumes:
 
 I changed the `environment` section under the app service and turned it into `env_file: .env.txt`. Let's add `.env.txt` to our project:
 
-```config
+```ini
 FLASK_ENV=development
 ```
 
@@ -931,7 +931,7 @@ Let's see an example. Docker Compose will automatically pick up the contents of 
 
 Let's add a file called `.env` to our project with the below lines:
 
-```configuration
+```ini
 PYTHON_VERSION=3.7.0-alpine3.8
 REDIS_VERSION=4.0.11-alpine
 DOCKER_USER=takacsmark
@@ -939,7 +939,7 @@ DOCKER_USER=takacsmark
 
 You can use these variables in the Compose file like this:
 
-```yaml
+```yml
 version: "3"
 
 services:

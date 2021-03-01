@@ -3,7 +3,25 @@ layout: default
 ---
 <article 
     itemscope itemtype="https://schema.org/BlogPosting"
-    class="relative py-16 overflow-hidden bg-white" x-data="{ slideOverOpen: false }"
+    class="relative py-16 overflow-hidden bg-white" x-data="{ slideOverOpen: false, db: firebase.firestore() }"
+    x-init="() =>{
+        let urlPath = window.location.pathname.replace('/', '');
+        let docRef = db.collection('page-stats').doc(urlPath);
+
+        docRef.onSnapshot(function (doc) {
+          if (!doc.metadata.hasPendingWrites) {
+            document.getElementById('view-count').innerHTML =
+              doc.data().viewCount.toLocaleString() + ' views';
+          }
+        });
+
+        docRef.set(
+          {
+            viewCount: firebase.firestore.FieldValue.increment(1),
+          },
+          { merge: true }
+        );
+    }"
   >
   <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
     <div class="relative h-full mx-auto text-lg max-w-prose" aria-hidden="true">

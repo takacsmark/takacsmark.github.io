@@ -1,5 +1,35 @@
 <main
   class="relative px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+  x-data="{db: firebase.firestore()}"
+  x-init="() =>{
+      let pageStatsRef = db.collection('page-stats');
+
+      pageStatsRef.onSnapshot(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          node = document.getElementById('/' + doc.id + '/');
+          if (!!node) {
+            newHTML = doc.data().viewCount.toLocaleString() + ' views';
+            if (node.innerHTML != newHTML) {
+              node.innerHTML = newHTML;
+            }
+          }
+        });
+      });
+
+      pageStatsRef
+        .get()
+        .then(function (querySnapshot) {
+          querySnapshot.forEach(function (doc) {
+            node = document.getElementById('/' + doc.id + '/');
+            if (!!node) {
+              node.innerHTML = doc.data().viewCount.toLocaleString() + ' views';
+            }
+          });
+        })
+        .catch(function (error) {
+          console.log('Error getting page veiws ', error);
+        });
+  }"
 >
   <div class="absolute inset-0">
     <div class="bg-white h-96"></div>

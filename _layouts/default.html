@@ -80,12 +80,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{
       "/favicon.ico" | prepend: site.baseurl | prepend: site.url
-    }}}" type="image/x-icon" /> <link rel="icon" href="{{
+    }}" type="image/x-icon" /> <link rel="icon" href="{{
       "/favicon.ico" | prepend: site.baseurl | prepend: site.url
-    }}}" type="image/x-icon" />
-
-    <!-- Plotly js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    }}" type="image/x-icon" />
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="{{
@@ -117,12 +114,6 @@
 
     {% include navbar.html %} {{ content }} {% include footer.html %}
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- Syntax highlight -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
@@ -152,10 +143,6 @@
 
       firebase.initializeApp(firebaseConfig);
     </script>
-
-    <!-- Custom JS -->
-    <script src="/assets/js/app.js"></script>
-    <!-- End Custom JS -->
 
     <!-- Mailchimp -->
     <script
