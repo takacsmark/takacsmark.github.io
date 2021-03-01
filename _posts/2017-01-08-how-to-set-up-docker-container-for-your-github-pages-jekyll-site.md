@@ -5,18 +5,22 @@ description: "Serving my existing GitHub Pages Jekyll sites from a Docker contai
 date: 2017-01-08 10:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-jekyll.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
-****Tip********
+
+\***\*Tip**\*\*\*\*\*\*
 If you are absolutely new to Docker, please start with the [beginners tutorial with examples]({{ site.url }}/getting-started-with-docker-in-your-project-step-by-step-tutorial/).
 
-****Tip********
-Watch the video that I created for this post on Youtube. I show you what issue I faced when I tried to serve my existing GitHub Pages sites from the official Jekyll container. I also give you the fix that I created.    
+\***\*Tip**\*\*\*\*\*\*
+Watch the video that I created for this post on Youtube. I show you what issue I faced when I tried to serve my existing GitHub Pages sites from the official Jekyll container. I also give you the fix that I created.
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6UAf8b_2juk" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/6UAf8b_2juk" allowfullscreen></iframe>
 </div>
 
 This article is the writeup of the video tutorial, meaning I created the video first and I'm adding the details in written form now.
@@ -35,19 +39,19 @@ Let's see what is the cause of these issues and let's see how to fix it.
 
 ## Understanding the problem
 
-Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll){:target="_blank"}.
+Jekyll has an official Docker images that you can find in the [Docker Store](https://store.docker.com/community/images/jekyll/jekyll){:target="\_blank"}.
 
 Unlike other images on the Docker Store, this one has a very poor documentation. I know, I can always contribute to the project, instead of bitching about poor documentation on my blog, so let's just take my remark as a statement of an obvious fact.
 
-If you want to understand how to use the Jekyll image, you can directly [go the Wiki](https://github.com/jekyll/docker/wiki/Usage:-Running){:target="_blank"}. It would be nice to bring this information in front of new users, instead of hiding it behind a couple of links. (OK, I stop whining.)
+If you want to understand how to use the Jekyll image, you can directly [go the Wiki](https://github.com/jekyll/docker/wiki/Usage:-Running){:target="\_blank"}. It would be nice to bring this information in front of new users, instead of hiding it behind a couple of links. (OK, I stop whining.)
 
-So once I dug my way through the docs, I launched a command like this (note that you need to use the :pages tag to get the GitHub Pages version of the image):   
+So once I dug my way through the docs, I launched a command like this (note that you need to use the :pages tag to get the GitHub Pages version of the image):
 
-`docker run -p 4400:4000 -v $(pwd):/srv/jekyll  jekyll/jekyll:pages`
+`docker run -p 4400:4000 -v $(pwd):/srv/jekyll jekyll/jekyll:pages`
 
 What happens is that the container starts up and it will try to install the dependencies listed in the `Gemfile` and `Gemfile.lock` files of your project. These files are in your project to make sure that the same packages are installed wherever you develop your blog. So this stuff is good for you. The problem is that the installation fails with error messages like the ones below:
 
-```terminal
+```shell
 Fetching gem metadata from https://rubygems.org/..........
 Fetching version metadata from https://rubygems.org/...
 Fetching dependency metadata from https://rubygems.org/..
@@ -227,7 +231,6 @@ Make sure that `gem install RedCloth -v '4.2.9'` succeeds before bundling.
 sh: can't kill pid 455: No such process
 ```
 
-
 It seems that the "jekyll" user does not have permission to install these gems.
 
 ## Making it work
@@ -263,19 +266,19 @@ In case you still get issues you may want to add more packages to your specific 
 In order to build and run the image I added a docker-compose.yml file to my project with the following content:
 
 ```yml
-version: '2'
+version: "2"
 services:
   takacsmark:
     build: .
     ports:
-     - "4000:4000"
+      - "4000:4000"
     volumes:
-     - .:/srv/jekyll
+      - .:/srv/jekyll
     command: bundle exec jekyll serve --drafts --config _config.yml,_config_dev.yml
 ```
 
 If I execute `docker-compose up -d` from terminal, the image will be built and the site comes up on `http://localhost:4000`.
 
-[If you wanna check out the entire source, please feel free to read it on GitHub.](https://github.com/takacsmark/takacsmark.github.io){:target="_blank"}
+[If you wanna check out the entire source, please feel free to read it on GitHub.](https://github.com/takacsmark/takacsmark.github.io){:target="\_blank"}
 
 Please note that I'm using stuff like Gulp on my blog, but I haven't added Gulp to the Dockerfile yet, so you won't find it there.

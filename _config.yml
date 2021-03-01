@@ -1,6 +1,6 @@
 title: takacsmark.com
 description: > # this means to ignore newlines until "baseurl:"
-    Hacking your way through web economy with 15 years of high-end consulting experience is super exciting. You've seen a lot, and there is a lot to learn. My site is all about this.
+  Demystify tech so everyone can build.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://takacsmark.com" # the base hostname & protocol for your site
 permalink: "/:title/"
@@ -8,8 +8,6 @@ permalink: "/:title/"
 author: takacsmark
 
 email: mark@takacsmark.com
-500px_username: takacsmark
-
 twitter_username: takacsmark
 github_username:  takacsmark
 facebook_page: takacsmarkdotcom
@@ -17,12 +15,13 @@ instagram_username: takacsmark111
 linkedin_username: takacsmark
 stackoverflow_username: users/3379134/mark
 youtube_channel: takacsmark
-googleplus_username: +Takacsmark
-
 disqus: takacsmark
 google_analytics: UA-41064919-3
 
 plugins:
     - jekyll-sitemap
 
-exclude: [node_modules, .gulpfile.js, package.json, docs, vendor/bundle, _sass]
+include:
+  - _pages
+
+exclude: [node_modules, gulpfile.js, package.json, docs, vendor/bundle, _sass, docker-compose.yml, Gemfile, Gemfile.lock, package-lock.json, postcss.config.js, tailwind.config.js ]

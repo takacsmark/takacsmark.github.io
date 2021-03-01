@@ -1,60 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9XNNB9"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N9XNNB9");
+    </script>
 
-        {% include navbar.html %}
-        {{ content }}
-        {% include footer.html %}
+    <!-- Site Meta DO NOT CHANGE -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-        <!-- Bootstrap 4 and its dependencies -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!-- End Bootstrap 4 and its dependencies -->
+    <title>
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+    </title>
+    <meta
+      name="description"
+      content="{% if page.description %}{{
+        page.description | strip_html | strip_newlines | truncate: 160
+      }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="{{ site.author }}" />
+    <link
+      rel="canonical"
+      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
 
-        <!-- Syntax highlight -->
-        <script src="{{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <!-- End Syntax highlight -->
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{
+        site.title
+      }}{% endif %}"
+    />
+    <meta
+      property="twitter:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{
+        site.title
+      }}{% endif %}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.description %}{{
+        page.description | strip_html | strip_newlines | truncate: 160
+      }}{% else %}{{ site.description }}{% endif %}"
+    />
+    {% assign pl = page.thumbnail | size | minus: 4 %}
+    <meta
+      property="og:image"
+      content="{% if page.thumbnail %}{{
+        site.url
+      }}{{ page.thumbnail | slice: 0, pl }}_960{{ page.thumbnail | slice: -4, 4 }}{% endif %}"
+    />
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <!-- Google Site Verfication -->
+    <meta
+      name="google-site-verification"
+      content="2DFgqqJVnbuSGjOdyKJZFbGKPGHqu99tt4aBBmbuiKc"
+    />
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-             https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{
+      site.title
+    }}" href="{{
+      "/feed.xml" | prepend: site.baseurl | prepend: site.url
+    }}">
 
-        <script>
-          // Your web app's Firebase configuration
-          var firebaseConfig = {
-            apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
-            authDomain: "takacsmark-com.firebaseapp.com",
-            databaseURL: "https://takacsmark-com.firebaseio.com",
-            projectId: "takacsmark-com",
-            storageBucket: "takacsmark-com.appspot.com",
-            messagingSenderId: "81292702129",
-            appId: "1:81292702129:web:f01f94ae7df07eda130d90"
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-        </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{
+      "/favicon.ico" | prepend: site.baseurl | prepend: site.url
+    }}" type="image/x-icon" /> <link rel="icon" href="{{
+      "/favicon.ico" | prepend: site.baseurl | prepend: site.url
+    }}" type="image/x-icon" />
 
-        <!-- Custom JS -->
-        <script src="/assets/js/app.js"></script>
-        <!-- End Custom JS -->
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{
+      "/assets/custom.css" | prepend: site.baseurl | prepend: site.url
+    }}">
 
-        <!-- Mailchimp -->
-        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"ced6e070ab6dca9ddc1f65334","lid":"3983723c21"}) })</script>
-        <!-- End Mailchimp -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
+      integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
+      crossorigin="anonymous"
+    />
 
-        <!-- Google platform.js -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <!-- End Google platform.js -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N9XNNB9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
 
-    </body>
+    {% include navbar.html %} {{ content }} {% include footer.html %}
+
+    <!-- Syntax highlight -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
+      integrity="sha512-xR+IAyN+t9EBIOOJw5m83FTVMDsPd63IhJ3ElP4gmfUFnQlX9+eWGLp3P4t3gIjpo2Z1JzqtW/5cjgn+oru3yQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+      integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBepU2Tr35G8FdTm4pjgaHAHBGBJd0U9dM",
+        authDomain: "takacsmark-com.firebaseapp.com",
+        databaseURL: "https://takacsmark-com.firebaseio.com",
+        projectId: "takacsmark-com",
+        storageBucket: "takacsmark-com.appspot.com",
+        messagingSenderId: "81292702129",
+        appId: "1:81292702129:web:f01f94ae7df07eda130d90",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Mailchimp -->
+    <script
+      type="text/javascript"
+      src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js"
+      data-dojo-config="usePlainJson: true, isDebug: false"
+    ></script>
+    <script type="text/javascript">
+      require(["mojo/signup-forms/Loader"], function (L) {
+        L.start({
+          baseUrl: "mc.us3.list-manage.com",
+          uuid: "ced6e070ab6dca9ddc1f65334",
+          lid: "3983723c21",
+        });
+      });
+    </script>
+
+    <!-- Google platform.js -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </body>
 </html>

@@ -4,12 +4,17 @@ title: "What the world built with programming languages in 2020"
 description: "We are all triyng to stay relevant, we learn, experiement and keep building to keep up with tech trends. In this article we explore what the projects of the world built with the top programming languages."
 date: 2021-01-09 07:19:00 +0100
 thumbnail: "/assets/images/post-thumbs/what-the-world-built-programming-languages-2020.png"
-categories: technology, prototyping, trends
+category: Tech trends
 ---
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- prettier-ignore -->
  * TOC
+<!-- prettier-ignore -->
 {:toc}
 
-I see how we all are trying to stay informed and keep up with tech trends. It's vital for both newcomers and old hands to understand where the industry is heading and shape our skills and profiles to stay relevant. 
+I see how we all are trying to stay informed and keep up with tech trends. It's vital for both newcomers and old hands to understand where the industry is heading and shape our skills and profiles to stay relevant.
 
 When I say relevant, I mean two things; on one hand we seek access to good projects to be able to provide for our families, on the other hand we all try to build something meaningful and new tech usually enables new solutions.
 
@@ -23,7 +28,6 @@ As these applications evolve a few tech components emerge as the potential winne
 
 This may help us to decide what language or library to learn next, and see what alternatives other people are using in situations similar to ours.
 
-
 ## Most used programming languages in the world
 
 A few years ago I saw a graph that was very similar to the one below. It showed the growth trends of the top programming languages on Stackoverflow. When I saw that graph I became truly excited because I found a way to get a sneak peek at how real people and projects are using today's tech.
@@ -34,11 +38,11 @@ The figures shows how many Stackoverflow questions were tagged with a given prog
 
 You may remember heated articles from around 2018 when Python overtook Javascript as the leading programming language on Stackoverflow.
 
-I would not directly compare these languages though and would not really think in terms of overtaking. 
+I would not directly compare these languages though and would not really think in terms of overtaking.
 
 I rather think of the lines as indicators; a strong upward slope (e.g. `Python`) is a clear sign of something new and interesting happening, and an obvious downward slope (e.g. `PHP`) is a clear sign of a decline in new applications.
 
-Javascript's line looks fairly stable, but we all know that there is a lot going on  and it's one of the most thrilling languages to be involved with.
+Javascript's line looks fairly stable, but we all know that there is a lot going on and it's one of the most thrilling languages to be involved with.
 
 Python's line means that we found a killer application, which is data science and machine learning as we'll see later.
 
@@ -200,7 +204,7 @@ Let's draw the graph of the rest of the programming languages on the list.
 
 {% include plots/2021-01-09/questions-per-month-tier2-programming-languages.html %}
 
-`Dart` immediately pops out, it's the language of [Flutter](https://flutter.dev){:target="_blank"}, Google's mobile and web app building framework, a contender of React Native. We found a gem you may want to explore later.
+`Dart` immediately pops out, it's the language of [Flutter](https://flutter.dev){:target="\_blank"}, Google's mobile and web app building framework, a contender of React Native. We found a gem you may want to explore later.
 
 I'm a bit baffled by `C`, the line looks like Google trends of seasonal demand, as if people would go to Stackoverflow and ask a lot of `C` questions every year during the holiday season.
 
@@ -212,16 +216,15 @@ In the third group `R` and `Typescript` are the languages to watch. I expected t
 
 Ruby on Rails used to be a highly preferred web application framework some 6-7 years ago, but many things happened, Node came, serverless emerged, Python stayed strong and Ruby seems to slowly decrease.
 
-
 ## Programming language trends in 2020
 
 Please find below the overview of programming languages in 2020, the graph shows the number of new questions as the percentage of all questions created on Stackoverflow in 2020.
 
 {% include plots/2021-01-09/2020-share-total.html %}
 
-The data I used to look into the 2020 trends is from the Stackoverflow dump published on December 6, 2020. In order to look at an entire year, I defined 2020 as the period between December 6, 2019 and December 6, 2020 and defined the year 2019 as the period between December 6, 2018 and December 6 2019. 
+The data I used to look into the 2020 trends is from the Stackoverflow dump published on December 6, 2020. In order to look at an entire year, I defined 2020 as the period between December 6, 2019 and December 6, 2020 and defined the year 2019 as the period between December 6, 2018 and December 6 2019.
 
-I think it would be wrong to argue that we build most projects with `Python` and `Javascript`, I know this is not the case. 
+I think it would be wrong to argue that we build most projects with `Python` and `Javascript`, I know this is not the case.
 
 I'd rather interpret the figure like this: the world needs more of what we build with `Python` and `Javascript` right now.
 
@@ -231,20 +234,19 @@ Which means that the main focus of most projects is data and apps (web and mobil
 
 One questions remains: What kind of problems are people solving with these programming languages? Let's find out in the next chapter!
 
-
 ## What we built in 2020
 
-I tried to depict the details on sunburst diagrams and I found that the largest 2-3 segments under each programming language will give a good idea of the domains where most projects use them. 
+I tried to depict the details on sunburst diagrams and I found that the largest 2-3 segments under each programming language will give a good idea of the domains where most projects use them.
 
 Feel free to hover over the narrow parts though, maybe you'll find something exciting.
 
 {% include plots/2021-01-09/pl-2020-sb.html %}
 
-Seeing data crunching and machine learning related tech under `Python` was expected. On the other hand, I found it interesting to see `Django` with so much weight under `Python`. 
+Seeing data crunching and machine learning related tech under `Python` was expected. On the other hand, I found it interesting to see `Django` with so much weight under `Python`.
 
 We can see so much debate online whether using `Javascript` on the server side is a good solution, the tags show that `node.js` is a strong `Javascript` application, which is in line with our real-life experience of working with more and more Node apps at work.
 
-Please let's not compare React and Angular based on this graph, because Angular is Typescript based, so most Angular questions are not marked with `Javascript` (although some are, as you can see), hence this comparison would be misleading. 
+Please let's not compare React and Angular based on this graph, because Angular is Typescript based, so most Angular questions are not marked with `Javascript` (although some are, as you can see), hence this comparison would be misleading.
 
 On the `Java` side you'll find that the Android mobile development use case gives the largest portion, and `Spring` is the other big item.
 
@@ -256,24 +258,22 @@ This slide seems obvious at first, but looking at the details, we might find som
 
 One would be that `JQuery` is still a thing and investing some time into learning `JQuery` might be useful.
 
-Flexbox might be another point worth noting. I ignored it for many years, but it's incorporated in the latest facelift of my blog and serves me well. 
+Flexbox might be another point worth noting. I ignored it for many years, but it's incorporated in the latest facelift of my blog and serves me well.
 
 {% include plots/2021-01-09/pl-2020-sb3.html %}
 
-The last graph is clear: we still don't understand pointers. You might need `C`, because embedded programming is a thing now. `Python` is, of course strongly used in the domain, but let's remember that `Python` (besides so many more things) was also written in `C`. So, learning `C` is eternal.  
+The last graph is clear: we still don't understand pointers. You might need `C`, because embedded programming is a thing now. `Python` is, of course strongly used in the domain, but let's remember that `Python` (besides so many more things) was also written in `C`. So, learning `C` is eternal.
 
-I think there is one pretty cool tech hidden in this figure that I'd recommend. It's [Firebase](https://firebase.google.com/){:target="_blank"}; you can find it under `Dart`. Firebase is a cloud service by Google, that gives you all the necessary services to start your app with minimum hassle.
+I think there is one pretty cool tech hidden in this figure that I'd recommend. It's [Firebase](https://firebase.google.com/){:target="\_blank"}; you can find it under `Dart`. Firebase is a cloud service by Google, that gives you all the necessary services to start your app with minimum hassle.
 
 They give you just the right basis; a document database, static file hosting, Javascript and Mobile SDK, cloud functions, authentication (!) and ML (and analytics and stuff). I use Firebase to display post view counts on my blog, I think it's ideal to bring your online app ideas to life.
 
-I also included `Bash` on this list as a reminder that it's a skill we all have to maintain from time to time. 
-
+I also included `Bash` on this list as a reminder that it's a skill we all have to maintain from time to time.
 
 ## Wrap up
 
 I hope you enjoyed the post and graphs. If I had to give you three takeaways, I'd give you these:
 
--   Data science and machine learning are really booming, explore `Python` and `R` and don't forget about `SQL`.
--   Build your applications with `Typescript` for web, mobile and the server. Use `Python` or `Spring boot` as a server side alternative and experiment with `Dart` for web and mobile.
--   Check out Firebase.
-
+- Data science and machine learning are really booming, explore `Python` and `R` and don't forget about `SQL`.
+- Build your applications with `Typescript` for web, mobile and the server. Use `Python` or `Spring boot` as a server side alternative and experiment with `Dart` for web and mobile.
+- Check out Firebase.

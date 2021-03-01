@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+pre code {
+  padding: 0 1rem !important;
+}

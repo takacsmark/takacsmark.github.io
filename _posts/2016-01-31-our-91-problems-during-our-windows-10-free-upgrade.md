@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Our 9+1 Problems During Our Windows 10 Free Upgrade"
+title: "Our 9+1 Problems During Our Windows 10 Free Upgrade"
 description: "I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations. I provide tips and solutions in this post."
-date:   2016-01-31 16:38:44 +0100
+date: 2016-01-31 16:38:44 +0100
 author: Márk Takács
-categories: Hobby
+category: Blog
 thumbnail: "/assets/images/post-thumbs/window-10-install-post.png"
 ---
+
 **I created this post, because I faced issues during a Windows 10 free upgrade that could happen to anyone in everyday situations.**
 
 **Still, some solutions I found on-line are not meant for the average user.**
@@ -15,7 +16,7 @@ thumbnail: "/assets/images/post-thumbs/window-10-install-post.png"
 
 **If you are looking for tips and solutions, I'll provide them in this post.**
 
-*This post is not against Microsoft, as you'll see most of our problems are caused by external circumstances. I think it's still worth reading for MS folks, maybe you guys can improve our experience by addressing some of this stuff.*
+_This post is not against Microsoft, as you'll see most of our problems are caused by external circumstances. I think it's still worth reading for MS folks, maybe you guys can improve our experience by addressing some of this stuff._
 
 This story happened to me and my father-in-law just yesterday. He's always been a very accurate person, like most 74 year olds, he takes technical warnings seriously and he is very keen to keep deadlines.
 
@@ -45,12 +46,13 @@ Some points are usual challenges, I hope I can give you some good hints to solve
 
 I wanted to start the process by creating a bootable USB stick in the old Windows 7 system that was originally on the machine. I expected some issues, but the fact, that I could not even logon to Windows 7 came early.
 
-I got stuck on the login screen with the message "The User Profile Service failed the logon. User profile cannot be loaded". [I was not the first person facing this problem, there is a related answer on Microsoft's support site.](https://support.microsoft.com/en-us/kb/947215){:target="_blank"}
+I got stuck on the login screen with the message "The User Profile Service failed the logon. User profile cannot be loaded". [I was not the first person facing this problem, there is a related answer on Microsoft's support site.](https://support.microsoft.com/en-us/kb/947215){:target="\_blank"}
 
 Let me show you the nature of the problem by quoting the official explanation:
->Occasionally, Windows might not read your user profile correctly, such as if your antivirus software is scanning your computer while you try to log on.
 
-Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215){:target="_blank"}.
+> Occasionally, Windows might not read your user profile correctly, such as if your antivirus software is scanning your computer while you try to log on.
+
+Now, this sounds weird. Let's see the solution. You'll have to restart your computer in safe mode and edit certain entries in your Registry manually. You can find the full solution behind the [MS support link I posted above](https://support.microsoft.com/en-us/kb/947215){:target="\_blank"}.
 
 ![Windows regisrty edit](/assets/images/in-content/ms-registry-edit.png){:.img-fluid}
 
@@ -58,11 +60,11 @@ Finally I could log on after rebooting and face the real challenge.
 
 ## 2. How to download the Windows 7 installation iso?
 
-This step went a lot smoother than I anticipated. I found a [direct Windows 7 download link on Microsoft's site](https://www.microsoft.com/en-us/software-download/windows7){:target="_blank"}.
+This step went a lot smoother than I anticipated. I found a [direct Windows 7 download link on Microsoft's site](https://www.microsoft.com/en-us/software-download/windows7){:target="\_blank"}.
 
 The page is super helpful, because it gives you the available Windows 7 versions for your own license key. You won't waste time trying to install the home edition with a professional license, for instance.
 
-I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](https://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit){:target="_blank"}.
+I downoaded the 64 bit version, [you can check if your computer shall run a 32 bit or 64 bit version based on this guide (for Windows)](https://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit){:target="\_blank"}.
 
 ## 3. How to create a Windows 7 bootable install USB?
 
@@ -70,13 +72,13 @@ Now that the iso image was downloaded, it was time to create a bootable USB stic
 
 According to MS, a 4GB stick shall be enough. My smallest stick had 8 GB, so I cannot confirm a smaller number, but 8 GB is enough for sure.
 
-[Microsoft officially provides a tool to create bootable USB sticks or DVDs from downloaded iso installation images.](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool){:target="_blank"} The tool is easy to use, unfortunately I cannot give any feedback about the results.
+[Microsoft officially provides a tool to create bootable USB sticks or DVDs from downloaded iso installation images.](https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool){:target="\_blank"} The tool is easy to use, unfortunately I cannot give any feedback about the results.
 
 Why, you may ask? Because my father-in-law's PC cannot boot from a USB stick. I found this out after writing three different sticks. Well, it took some time...
 
 This may have something to do with the fact that it was thunderstruck two times in the last year.
 
-I tried [another USB creator tool, called Rufus,](https://rufus.akeo.ie/){:target="_blank"} before I realized that the problem is with the PC.
+I tried [another USB creator tool, called Rufus,](https://rufus.akeo.ie/){:target="\_blank"} before I realized that the problem is with the PC.
 
 I tried to burn the iso to DVD with Microsoft's USB/DVD download tool, but failed miserably. I cannot tell if this is a fault of the tool or the frequent thunder storms attacking my family.
 
@@ -84,7 +86,7 @@ To be completely fair, let me add that my Mac was able to boot from the Windows 
 
 And so I had to face a new problem.
 
-## 4.  How to install Windows 7 if your computer cannot boot from USB and DVD?
+## 4. How to install Windows 7 if your computer cannot boot from USB and DVD?
 
 We were still able to boot from the old Windows 7 installation on the old SSD. So I plugged in the installation USB that I could not use for booting and started browsing the files in Windows Explorer.
 
@@ -151,12 +153,12 @@ After about an hour I grew suspicious. Even though I'm not using Windows, I used
 
 Ctr+Shift+Esc for Task manager! I found that the upgrade process was not using any RAM, Network or CPU. It was not hanging, it just looked like it was not doing anything.
 
-After some desparate googling on my Mac I found the following [answer on Microsoft answers](https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399){:target="_blank"}:
+After some desparate googling on my Mac I found the following [answer on Microsoft answers](https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399){:target="\_blank"}:
 
-* open cmd
-* type "net stop wuauserv"  (this will stop windows update service)
-* wait for a few minutes
-* type "net start "wuauserv"  (this will start windows update service).
+- open cmd
+- type "net stop wuauserv" (this will stop windows update service)
+- wait for a few minutes
+- type "net start "wuauserv" (this will start windows update service).
 
 WOW...
 
@@ -185,6 +187,7 @@ My father-in-law uses an internet banking solution based on java applets. I know
 It turns out that the new Edge browser does not support plugins, and therefore it cannot not run java components.
 
 You have two options:
+
 1. you can use Internet Explorer 11, or
 2. you can use Firefox
 
@@ -194,9 +197,9 @@ I spent a few minutes looking for IE 11 download on the internet, but could not 
 
 I put the IE icon next to the Edge icon and pinned it to the system tray. These two look so ugly next to each other.
 
-![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/in-content/edge-ie-icons.png){:.img-fluid} 
+![Edge and Internet Explorer logos in system tray]({{ site.url }}/assets/images/in-content/edge-ie-icons.png){:.img-fluid}
 
-[Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912){:target="_blank"}
+[Image taken from here.](https://www.google.hu/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjLw9-KxtTKAhVHaQ8KHdRJAHgQjRwIBw&url=http%3A%2F%2Fwww.tenforums.com%2Fbrowsers-email%2F28477-desktop-shortcut-google-2.html&psig=AFQjCNGk8B_NNH_LjkPz-uVjqvYZy0wa3Q&ust=1454346749325912){:target="\_blank"}
 
 **So I installed Firefox.**
 
@@ -206,11 +209,10 @@ I tried to describe the issues I met with facts and only a few emotional stateme
 
 **I really appreciate what you're doing for the developer community and I totally love my XBox.**
 
-I have written this post using [Microsoft Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} running on Arch Linux in a VMWare Virtual Machine on my iMac.
+I have written this post using [Microsoft Visual Studio Code](https://code.visualstudio.com/){:target="\_blank"} running on Arch Linux in a VMWare Virtual Machine on my iMac.
 
-I dumped my $70 sublime license for Code. Code is a fantastic product and I really love the way you can do markdown editing with an immediate preview.
+I dumped my \$70 sublime license for Code. Code is a fantastic product and I really love the way you can do markdown editing with an immediate preview.
 
 I use it for programming tasks in my own venture and it does a fantastic job for node, Javascript, PHP, react and a lot of other stuff.
 
 ![Arch Linux with Visual Studio Code]({{ site.url }}/assets/images/in-content/window-10-install-post.png){:.img-fluid}
-

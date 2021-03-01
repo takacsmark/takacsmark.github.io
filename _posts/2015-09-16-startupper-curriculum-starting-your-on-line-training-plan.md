@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Startupper Curriculum - Starting Your On-Line Training Plan"
+title: "Startupper Curriculum - Starting Your On-Line Training Plan"
 description: "This the first step towards your startupper curriculum. These are the guiding principles we'll use to put together your on-line training plan."
-date:   2015-09-16 17:06:00 +0100
+date: 2015-09-16 17:06:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/startupper-online-curriculum.jpg"
-categories: Education 
+category: Blog
 ---
-I promised in my previous post, ["Are online courses good enough to change careers?"]({{ site.url }}/are-online-courses-good-enough-to-change-careers/){:target="_blank"}, that I will start a series of posts and help you build your own online training curriculum. I decided to call this Startupper Curriculum.
+
+I promised in my previous post, ["Are online courses good enough to change careers?"]({{ site.url }}/are-online-courses-good-enough-to-change-careers/){:target="\_blank"}, that I will start a series of posts and help you build your own online training curriculum. I decided to call this Startupper Curriculum.
 
 You don't need to be a startupper though to enjoy the benefits of these posts. If you are about to acquire new skills on-line for your day job, or you are transitioning to an on-line career now, you may find these posts useful. I use the startup world as a guiding principle to structure the curriculum.
 
@@ -25,7 +26,7 @@ My goal is to help you with this task.
 
 ## Business vs. technical skills
 
-We often think that startups are built around tech innovation. In many cases this is true. My company ([Savalera](https://savalera.com)) is built on a platform  that acquires product data from the web and presents the products in a smart shop.
+We often think that startups are built around tech innovation. In many cases this is true. My company ([Savalera](https://savalera.com)) is built on a platform that acquires product data from the web and presents the products in a smart shop.
 
 Even though this sounds very technical, reality is, that in a startupper journey, business and technical skills are equally important.
 

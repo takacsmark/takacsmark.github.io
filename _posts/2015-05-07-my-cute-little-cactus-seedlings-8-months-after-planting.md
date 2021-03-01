@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  "My cute little cactus seedlings 8 months after planting"
+title: "My cute little cactus seedlings 8 months after planting"
 description: "What if I told you that I have grown these cactus seedlings based on a Youtube video? 8 months later I'm proud and a bit wiser."
-date:   2015-05-07 17:14:00 +0100
+date: 2015-05-07 17:14:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/cactus-seedlings.jpg"
-categories: Hobby
+category: Blog
 ---
+
 **What if I told you that I have grown these cactus seedlings based on a Youtube video?** Not even just any video, the first one that comes right up for the search term "growing cactus from seeds" on Youtube.
 
-Maybe I was just lucky, anyway I tend to believe that you can learn anything  online, and you can learn a lot of stuff on Youtube for free.
+Maybe I was just lucky, anyway I tend to believe that you can learn anything online, and you can learn a lot of stuff on Youtube for free.
 
 "Cactusmain" (the author) explained everything I needed to know about cactus seedlings in a 12 minute video. Don't worry the video is embedded down here. This knowledge helped me survive the first couple of months and brought me here. I had some difficulties on the way, that I managed to solve alone.
 
@@ -19,12 +20,10 @@ I guess people have different reasons for growing cactus from seeds. Mine was a 
 
 I have a cactus that got injured when it was young, you can tell by the large brown spot on its body. I love this cactus a lot, because it is one of my first ones and it brings white flowers and little red fruits every year.
 
-
 ![Damaged cactus]({{ site.url }}/assets/images/in-content/damaged-cactus.jpg){:.img-fluid}
-![Junior cactus]({{ site.url }}/assets/images/in-content/junior-cactus.jpg){:.img-fluid} 
+![Junior cactus]({{ site.url }}/assets/images/in-content/junior-cactus.jpg){:.img-fluid}
 
- 							 						
-So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf){:target="_blank"}.
+So first I started propagation from a cutting that you can see on the second picture above. This plant looks healthy and has grown a lot. I did not make this process too complicated, I read a general pdf by the [University of Arizona and moved on](https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1483.pdf){:target="\_blank"}.
 
 I planted the cutting in the late spring and I saw the first signs of growth in a matter of weeks.
 
@@ -32,8 +31,8 @@ Then I thought I would be very happy to use the seeds of this cactus to create m
 
 So I harvested the fruits and extracted the seeds with a swiss knife. I ate the fruits afterwards and I'm still alive. Then it was time for the video by Cactusmain.
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4m7JMH6uzyg" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/4m7JMH6uzyg" allowfullscreen></iframe>
 </div>
  
 ## Seed planting considerations
@@ -54,8 +53,8 @@ My wife was so nice to give me one of her very valuable plastic boxes that are p
 
 ## So now the plastic box vs. the Petri dish
 
-![Cactus greenhouse in plastic box]({{ site.url }}/assets/images/in-content/cactus-greenhouse-plastic-box.jpg){:.img-fluid} 
-![Petri dish]({{ site.url }}/assets/images/in-content/petri-dish.jpg){:.img-fluid}  					 
+![Cactus greenhouse in plastic box]({{ site.url }}/assets/images/in-content/cactus-greenhouse-plastic-box.jpg){:.img-fluid}
+![Petri dish]({{ site.url }}/assets/images/in-content/petri-dish.jpg){:.img-fluid}
 I poured water into the plastic box so that it covered the entire surface and reached up to 1-2 millimeters above the bottom of the pots. I closed the box and put the desk lamp back on.
 
 This happened sometime in November. My cactus seeds had a long way to go, but I was relaxed to see the moisture on the walls of the box all the time. Same with the Petri dish, so I left things alone and waited.
@@ -66,7 +65,7 @@ It happened unexpectedly on a February morning. I started growing some early pla
 
 Then I looked over to the plastic box and could not really see a thing because of the moisture. I don't know why, but I took a closer look and saw these little guys.
 
-![Cactus seedlings in plastic box greenhouse]({{ site.url }}/assets/images/in-content/cactus-seedlings-in-box.jpg){:.img-fluid} 
+![Cactus seedlings in plastic box greenhouse]({{ site.url }}/assets/images/in-content/cactus-seedlings-in-box.jpg){:.img-fluid}
 
 The miracle has happened and I knew I have come to the point that was not covered in the Youtube video.
 
@@ -89,6 +88,3 @@ Now I will be more careful reading the signs, and will consult my wife before mo
 Here is the photo of the little guys today.
 
 ![Cactus seedlings]({{ site.url }}/assets/images/in-content/cactus-seedlings.jpg){:.img-fluid}
- 
-
- 

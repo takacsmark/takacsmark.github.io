@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "The top 5 Linux systems for elderly people"
+title: "The top 5 Linux systems for elderly people"
 description: "Evaluation of the top 5 Linux distributions for elderly people based on our assessment of their needs and lifestyle. "
-date:   2016-03-27 16:07:00 +0100
+date: 2016-03-27 16:07:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/the-top-5-linux-systems-for-elderly-people.jpg"
-categories: Linux
+category: Tech tips
 ---
-* TOC
+
+<!-- prettier-ignore -->
+- TOC
+<!-- prettier-ignore -->
 {:toc}
 
 The free Windows 10 upgrade raised many eyebrows in our family last year. To my great surprise, the elder members of our family were the ones who got most excited. And I was the one who got all the questions and almost formal support requests to conduct the technical upgrade.
@@ -22,8 +25,8 @@ I'm going to share our findings in this post. You'll learn
 - What are the most common desktop use-cases of senior people?
 - Which proved to be the right Linux distribution and why?
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uFL0J8-_M0U" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/uFL0J8-_M0U" allowfullscreen></iframe>
 </div>
 
 ## Motivation
@@ -32,7 +35,7 @@ Based on our discussions, I think our seniors urge the free Windows 10 upgrade b
 
 According to our seniors, missing the Windows 10 upgrade may result in a lot of uncertainty. They are afraid that their current Windows 7 and 8 systems will stop working soon, and they will have to spend a considerable amount of money to re-join the Windows universe.
 
-Another concern is that they will have to pay for new Windows releases that they do not need. Some family members still use the  Windows XP instance that came with the machine in 2003. They don't want to pay for upgrades every year. Same for Windows 7 and 8 users, seniors will usually try to avoid change. Making them change their systems and make them pay for it, is not in line with their expectations.    
+Another concern is that they will have to pay for new Windows releases that they do not need. Some family members still use the Windows XP instance that came with the machine in 2003. They don't want to pay for upgrades every year. Same for Windows 7 and 8 users, seniors will usually try to avoid change. Making them change their systems and make them pay for it, is not in line with their expectations.
 
 Learning all this, I decided to search outside the box. What is it they really need? Would a simple lightweight Linux distribution do the trick? Especially if we are on a budget.
 
@@ -133,7 +136,7 @@ Some distributions have an office package bundled, some come with the Firefox br
 
 Distributions are usually born to fulfill a special need that may come from a business motivation or tech motivation. Some distributions are designed to be simple or lightweight, some others are designed to be full featured, or are meant for developers, or to replace windows.
 
-*I think it's time to address the myth of Linux being overly complicated and for advanced users only. Some distributions are definitely meant for advanced users. However there are a good number of Linux distributions that were created with the purpose to be super user friendly and simple.*
+_I think it's time to address the myth of Linux being overly complicated and for advanced users only. Some distributions are definitely meant for advanced users. However there are a good number of Linux distributions that were created with the purpose to be super user friendly and simple._
 
 Based on our family feedback and internet research we consider the following distributions for elderly people:
 
@@ -163,16 +166,15 @@ All-in-all these are the most common desktop environments that I considered for 
 - LXDE (lightweight and clean, good option for old hardware)
 - Xfce (another fast and light weight alternative)
 
-
 ## Which Linux distribution to choose?
 
 Let's review and evaluate the selected Linux distributions for our needs.
 
-### [Puppy Linux](http://puppylinux.org){:target="_blank"}
+### [Puppy Linux](http://puppylinux.org){:target="\_blank"}
 
 ![Puppy linux screenshot 2016](/assets/images/in-content/puppy-linux-2016.png){:.img-fluid}
 
-The [Puppy site](http://puppylinux.org){:target="_blank"} starts with a testimonial that says that Puppy Linux is the best and fastest OS in the world. Unluckily, the quote comes from 2011.
+The [Puppy site](http://puppylinux.org){:target="\_blank"} starts with a testimonial that says that Puppy Linux is the best and fastest OS in the world. Unluckily, the quote comes from 2011.
 
 The whole system looks and feels outdated. I actually re-visited their site to check if they are still maintaining the distribution.
 
@@ -211,7 +213,7 @@ Puppy gave a messy impression, using the system was most of the time confusing a
 </tbody>
 </table>
 
-### [Debian](https://www.debian.org/){:target="_blank"}
+### [Debian](https://www.debian.org/){:target="\_blank"}
 
 Debian is one of the most robust base distributions, there are several other distributions built on top of it. There are many Debian users in the senior community.
 
@@ -295,7 +297,7 @@ LXDE is another light desktop option. My opinion is that this is the one that th
 
 The file manager also looks like the one on Windows, even the colors are very similar. Folder shortcuts help you organize your documents.
 
-### [Ubuntu](https://www.ubuntu.com/){:target="_blank"}
+### [Ubuntu](https://www.ubuntu.com/){:target="\_blank"}
 
 ![Ubuntu screenshot](/assets/images/in-content/Ubuntu-screenshot.png){:.img-fluid}
 
@@ -303,7 +305,7 @@ Ubuntu is a super successful Linux flavor, it's popular with senior people, busi
 
 It's a great general purpose distro, with a lots of features, helpful management tools and a unique desktop environment.
 
-The last point is not necessarily a plus, because users need to learn the ways of the desktop, which is often demanding for senior people.  
+The last point is not necessarily a plus, because users need to learn the ways of the desktop, which is often demanding for senior people.
 
 I think Ubuntu would be a great option for easy going, flexible seniors.
 
@@ -338,9 +340,9 @@ I think Ubuntu would be a great option for easy going, flexible seniors.
 </tbody>
 </table>
 
-### [Lubuntu](https://lubuntu.net/){:target="_blank"}
-![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png){:.img-fluid}
+### [Lubuntu](https://lubuntu.net/){:target="\_blank"}
 
+![Lubuntu screenshot](/assets/images/in-content/Lubuntu-screenshot.png){:.img-fluid}
 
 Lubuntu is a lightweight port of Ubuntu. Its main purpose is to run on less powerful hardware and it provides more simplicity than its big brother.
 It comes with a simple set of software products installed in the base package.
@@ -379,7 +381,8 @@ Due to it's XP like appearance and low hardware requirements it's a great option
 </tbody>
 </table>
 
-### [LinuxMint](https://linuxmint.com/){:target="_blank"}
+### [LinuxMint](https://linuxmint.com/){:target="\_blank"}
+
 ![LinuxMint screenshot](/assets/images/in-content/LinuxMint-screenshot.png){:.img-fluid}
 
 I saved the best for last. Our entire family agreed that this is the one we prefer.
@@ -435,4 +438,4 @@ If you need a light option, check out Lubuntu.
 If the grannies in your family have a cool and flexible approach, have a look at Ubuntu.
 
 You can find further interesting reading on-line here:
-[Linux for the elderly on Voice of the masses](https://www.linuxvoice.com/voice-of-the-masses-best-distro-for-older-users/){:target="_blank"}
+[Linux for the elderly on Voice of the masses](https://www.linuxvoice.com/voice-of-the-masses-best-distro-for-older-users/){:target="\_blank"}

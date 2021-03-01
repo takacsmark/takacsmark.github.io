@@ -5,11 +5,13 @@ description: "What are the top trends in the Javascript ecosystem in 2019? What 
 date: 2019-03-12 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/25-Top-Javascript-Trends-Actions-2019.png"
-categories: Trends Javascript
+category: Tech trends
 ---
- * TOC
-{:toc}
 
+<!-- prettier-ignore -->
+* TOC
+<!-- prettier-ignore -->
+{:toc}
 
 ## tl;dr
 
@@ -17,78 +19,76 @@ In this article we take Stackoverflow data dumps and analyze vital aspects of th
 
 **Let me summarize the key trends you find in the article in case you don't have the time to read the whole thing.**
 
--   **Javascript is all about user experience**. It seems that everything that comes in front of the eyes of your customers and users is made with Javascript these days. **Javascript is not only used to create applications for the web, it's also an increasingly popular tool for mobile and desktop applications.**
--   **Angular, React and Vue take the lead** and keep growing at super high speed. Other similar frameworks like Ember and Knockout and also JQuery are loosing ground.
--   User experience creation with Javascript is reaching beyond the front-end. **Javascipt based backend solutions like Node and Express, as well as Javascript based databases like Mongo are coming up**.
--   The **Firebase realtime database** is a great example of the Javascript based realtime user experience reaching as deep as the database level.
+- **Javascript is all about user experience**. It seems that everything that comes in front of the eyes of your customers and users is made with Javascript these days. **Javascript is not only used to create applications for the web, it's also an increasingly popular tool for mobile and desktop applications.**
+- **Angular, React and Vue take the lead** and keep growing at super high speed. Other similar frameworks like Ember and Knockout and also JQuery are loosing ground.
+- User experience creation with Javascript is reaching beyond the front-end. **Javascipt based backend solutions like Node and Express, as well as Javascript based databases like Mongo are coming up**.
+- The **Firebase realtime database** is a great example of the Javascript based realtime user experience reaching as deep as the database level.
 
 **I've put the summary of the action points from the article right here.**
 
-*Industry trends where you should be active right now.*
+_Industry trends where you should be active right now._
 
--   Use **Angular or React to create fresh user experiences** and applications for desktop and mobile.
--   Use **Node.js in the backend** to support your applications especially in real-time event based scenarios.
--   Work with **d3.js and serve data driven documents** to your users.
+- Use **Angular or React to create fresh user experiences** and applications for desktop and mobile.
+- Use **Node.js in the backend** to support your applications especially in real-time event based scenarios.
+- Work with **d3.js and serve data driven documents** to your users.
 
-*Capabilities you should be actively developing.*
+_Capabilities you should be actively developing._
 
--   If you are starting a new web project, **give [Vue](https://vuejs.org/){:target="_blank"} a try**.
--   Integrate **[Ecmascript 6](http://es6-features.org/#Constants){:target="_blank"} into your development standards**.
--   Consider **[Typescript](https://www.typescriptlang.org/){:target="_blank"} in complex Javascript applications**.
--   Experiment with the **[MEAN stack](http://mean.io/){:target="_blank"}** to combine the benefits of Angular, Node with Express and Mongodb.
--   You can use **Wordpress with React or Angular**, check it out.
+- If you are starting a new web project, **give [Vue](https://vuejs.org/){:target="\_blank"} a try**.
+- Integrate **[Ecmascript 6](http://es6-features.org/#Constants){:target="\_blank"} into your development standards**.
+- Consider **[Typescript](https://www.typescriptlang.org/){:target="\_blank"} in complex Javascript applications**.
+- Experiment with the **[MEAN stack](http://mean.io/){:target="\_blank"}** to combine the benefits of Angular, Node with Express and Mongodb.
+- You can use **Wordpress with React or Angular**, check it out.
 
-*Domains you should consider for future skill building.*
+_Domains you should consider for future skill building._
 
--   Are you already into React? **Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="_blank"}**.
--   Definitely **run a pilot with [Firebase](https://firebase.google.com/){:target="_blank"}**, here is some [good reading](https://medium.freecodecamp.org/firebase-the-great-the-meh-and-the-ugly-a07252fbcf15){:target="_blank"}.
--   **[Webpack](https://webpack.js.org/){:target="_blank"}** emerged as the packaging tool of choice.
--   **Connecting to MongoDB from Node?** [Mongoose](https://mongoosejs.com/){:target="_blank"} is the preferred tool by most projects.
--   **Not using [Redux](https://redux.js.org/){:target="_blank"} for state management?** Revisit this point.
--   **Combine Javascript with Python's power** to solve new kind of problems.
--   Try **[the Charts library](https://www.chartjs.org/){:target="_blank"}** to create beautiful charts with Javascript.
--   **Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="_blank"}** and use Angular, React or Vue during the process.
--   **Use [three.js](https://threejs.org/){:target="_blank"} to create 3D** visuals.
+- Are you already into React? **Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="\_blank"}**.
+- Definitely **run a pilot with [Firebase](https://firebase.google.com/){:target="\_blank"}**, here is some [good reading](https://medium.freecodecamp.org/firebase-the-great-the-meh-and-the-ugly-a07252fbcf15){:target="\_blank"}.
+- **[Webpack](https://webpack.js.org/){:target="\_blank"}** emerged as the packaging tool of choice.
+- **Connecting to MongoDB from Node?** [Mongoose](https://mongoosejs.com/){:target="\_blank"} is the preferred tool by most projects.
+- **Not using [Redux](https://redux.js.org/){:target="\_blank"} for state management?** Revisit this point.
+- **Combine Javascript with Python's power** to solve new kind of problems.
+- Try **[the Charts library](https://www.chartjs.org/){:target="\_blank"}** to create beautiful charts with Javascript.
+- **Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="\_blank"}** and use Angular, React or Vue during the process.
+- **Use [three.js](https://threejs.org/){:target="\_blank"} to create 3D** visuals.
 
-*New tech to explore.*
+_New tech to explore._
 
--   **Get started with [Angular 7](https://angular.io/guide/quickstart){:target="_blank"} and prepare for Angular 8**.
--   Building an enterprise grade app? **Consider [Next.js](https://nextjs.org/){:target="_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="_blank"} with Vue**.
--   Need help with **UI testing and test automation**? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="_blank"} might just be right.
--   Need a good **React UI component framework for internal desktop applications**? Have a look at [Ant design](https://ant.design/){:target="_blank"}.
--   Get started with programming bots for **[Discord](https://discordapp.com/){:target="_blank"}**, the all-in-one voice and text chat for gamers.
--   Experiment with **[Apollo and GraphQL](https://www.apollographql.com/){:target="_blank"}**.
--   **Consider [Axios](https://github.com/axios/axios){:target="_blank"} for HTTP request from web and Node.js**.
--   **Start learning React** with [create-react-app](https://github.com/facebook/create-react-app){:target="_blank"}.
+- **Get started with [Angular 7](https://angular.io/guide/quickstart){:target="\_blank"} and prepare for Angular 8**.
+- Building an enterprise grade app? **Consider [Next.js](https://nextjs.org/){:target="\_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="\_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="\_blank"} with Vue**.
+- Need help with **UI testing and test automation**? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="\_blank"} might just be right.
+- Need a good **React UI component framework for internal desktop applications**? Have a look at [Ant design](https://ant.design/){:target="\_blank"}.
+- Get started with programming bots for **[Discord](https://discordapp.com/){:target="\_blank"}**, the all-in-one voice and text chat for gamers.
+- Experiment with **[Apollo and GraphQL](https://www.apollographql.com/){:target="\_blank"}**.
+- **Consider [Axios](https://github.com/axios/axios){:target="\_blank"} for HTTP request from web and Node.js**.
+- **Start learning React** with [create-react-app](https://github.com/facebook/create-react-app){:target="\_blank"}.
 
 Javascript is a broad domain and most of our findings in this article are focused around big players, because their numbers bring them to the top.
 
 **We are well able to confirm the leading Javascript trends, we also highlighted the key niche players emerging in the field. In order to find more of Javascript we need to dig deeper. We'll do this in another future report focusing on Node.**
 
-
 ## How far have we come with Javascript in the past years
 
 In this post I take you to a journey into Javascript's engaging world. In this article we explore the answers to questions like the ones below.
 
--   What makes Javascript **the most sought for programming language** of the past decade?
--   How are people **revolutionizing web and mobile user experience** with the use of Javascript? What makes Javascript the most suitable toolkit for this evolution?
--   **Where should I start learning** Javascript if I start today? What are the new skills I should acquire to keep up with the ecosystem?
+- What makes Javascript **the most sought for programming language** of the past decade?
+- How are people **revolutionizing web and mobile user experience** with the use of Javascript? What makes Javascript the most suitable toolkit for this evolution?
+- **Where should I start learning** Javascript if I start today? What are the new skills I should acquire to keep up with the ecosystem?
 
 This report is based on the analysis of Stackoverflow data dumps and has the following key features.
 
--   We start with the list of the **world's leading programming languages** and we look at the number of questions created on Stackoverflow. We also look at the number of times these questions are viewed by users. *You'll see tangible numbers about programming languages today.*
--   We move on to see the **key technologies in the Javascript domain and other technologies that Javascript is used with**. We do this by checking which tags are most used together with the `Javascript` tag on Stackoverflow questions. *This will give you a good idea of what real-life projects use Javascript for.*
--   Next, we look at the growth trends of these domains and see how many new questions are created under these tags every month. *This will tell us if something is buzzing in the given technology's domain.*
--   In the last point we identify the **key growth segments of Javascript and create an action plan for you and your team**.
+- We start with the list of the **world's leading programming languages** and we look at the number of questions created on Stackoverflow. We also look at the number of times these questions are viewed by users. _You'll see tangible numbers about programming languages today._
+- We move on to see the **key technologies in the Javascript domain and other technologies that Javascript is used with**. We do this by checking which tags are most used together with the `Javascript` tag on Stackoverflow questions. _This will give you a good idea of what real-life projects use Javascript for._
+- Next, we look at the growth trends of these domains and see how many new questions are created under these tags every month. _This will tell us if something is buzzing in the given technology's domain._
+- In the last point we identify the **key growth segments of Javascript and create an action plan for you and your team**.
 
 What makes this report unique?
 
--   **We combine two Stackoverflow data dumps from June 2018 and December 2018** and create growth figures of this period.
--   The two dumps let you look at the **growth in question views which is a great measure of real life usage**.
--   Special **growth segments give you insights that we turn into a tangible action plan right in the report**.
+- **We combine two Stackoverflow data dumps from June 2018 and December 2018** and create growth figures of this period.
+- The two dumps let you look at the **growth in question views which is a great measure of real life usage**.
+- Special **growth segments give you insights that we turn into a tangible action plan right in the report**.
 
 Let's get started!
-
 
 ## Is Javascript the world's leading programming language
 
@@ -165,9 +165,9 @@ The first table shows us the number of questions created for the top tags on Sta
 </tr>
 </tbody>
 </table>
-The overall top Stackoverflow tags are all related to a programming language or a platform directly. **Javascript takes the first place**. 
+The overall top Stackoverflow tags are all related to a programming language or a platform directly. **Javascript takes the first place**.
 
-This seems reasonable, because we spent a great amount of time and effort in the past decade **making our web applications and web-sites more dynamic and user friendly** with the use of Javascript. *This was our main Javascript use-case*.
+This seems reasonable, because we spent a great amount of time and effort in the past decade **making our web applications and web-sites more dynamic and user friendly** with the use of Javascript. _This was our main Javascript use-case_.
 
 **Large enterprises, small/medium businesses, individuals and hobbyists** all turned towards Javascript to create the features their users were requesting.
 
@@ -183,11 +183,11 @@ Javascript's position may look stable now, you may think that building front-end
 
 There is one technology whose significance is drastically increasing while all other top tags go down. Even Javascript seems to be in a mild decline. **Python, denoted by the brown line, however is shooting for the stars**.
 
-The meaning of this is that Python is providing capabilities to solve in-demand challenges and more and more projects include Python in their toolkit. If you are wondering what the key Python use-cases are, please check out my [Python report](https://takacsmark.com/top-14-python-skills-businesses-2019-stackoverflow-data/){:target="_blank"}.
+The meaning of this is that Python is providing capabilities to solve in-demand challenges and more and more projects include Python in their toolkit. If you are wondering what the key Python use-cases are, please check out my [Python report](https://takacsmark.com/top-14-python-skills-businesses-2019-stackoverflow-data/){:target="\_blank"}.
 
 You may look at the figure and say that Javascript's dominance is over, but reality is more sophisticated than this. **Javascript is still the number 1 tool for creating user experiences and real-time applications, and real-life projects ADD Python as the preferred tool for data processing (including machine learning), scripting and certain back-end functions.**
 
-*In fact, Javascript is still growing in absolute numbers as you can see in the table below.*
+_In fact, Javascript is still growing in absolute numbers as you can see in the table below._
 
 The next table shows the growth percentage in the number of new questions created on Stackoverflow for the above programming languages and platforms from June 2018 to December 2018.
 
@@ -268,12 +268,11 @@ The growth percentage of the number of new questions created for a specific tag 
 
 **Above average growth** indicates that the given tool-set provides solutions that are in high demand in the marketplace.
 
-You find two programming languages with above average growth; **Python and Javascript**. Python demonstrates extremely high demand, you can read more about the details in my [Python article](https://takacsmark.com/top-14-python-skills-businesses-2019-stackoverflow-data/){:target="_blank"}.  
+You find two programming languages with above average growth; **Python and Javascript**. Python demonstrates extremely high demand, you can read more about the details in my [Python article](https://takacsmark.com/top-14-python-skills-businesses-2019-stackoverflow-data/){:target="\_blank"}.
 
-*Javascript shows above average growth, too. JQuery is apparently diminishing, the growth of Javascript is attributed to other technologies that are very popular in software projects.*
+_Javascript shows above average growth, too. JQuery is apparently diminishing, the growth of Javascript is attributed to other technologies that are very popular in software projects._
 
 Let's have a closer look at the top players in the Javascript ecosystem.
-
 
 ## Top technologies in the Javascript ecosystem
 
@@ -448,16 +447,15 @@ The table shows the total **number of new questions created**, thus you can see 
 </table>
 The top tag is `javascript`, because our basis was the questions tagged with the `javascript` tag. Let's have a look at the rest of the items.
 
--   **JQuery, Ajax, HTML, CSS, Java, asp.net and C#** are all related to the classic dynamic web-site/web application building use-case we mentioned before. Although these numbers are high in the all-time view, we already know that other technologies drive the growth in the Javascript domain.
--   **Angular, Node.js and React** are the Javascript superstars of the recent years. They are amongst the most used tags in combination with `javascript`.
--   **Angularjs appears first**, this may be a bit misleading, because Angular has multiple tags. `Angularjs` is used for Angular 1.x, and `angular` is used for all later versions on Stackoverflow.
--   **Node.js** is used both as a standalone solution and in combination with Angular, React and other frameworks and libraries. Angular and Node.js are part of the so popular MEAN stack, which further strengthens their adoption.
--   **React** is the top alternative to Angular. Enterprise projects tend to use Angular more (at least in my experience) due to its well defined framework services, React has a large base in cloud-native and online companies who are looking for more freedom and flexibility.
--   **Other front-end frameworks did not make it to the top 25.** Vue comes in at place 42, Backbone at 44 and Meteor at 49. Aurelia, Ember and Knockout are not in the top 50.
--   The arrival of **D3.js** at place 20 is a nice surprise. The front-end frameworks we mentioned so far let you create stunning user experiences for desktop and mobile. **D3.js is a great addition to the list in a data driven world; it gives you the data visualization magic that your customers deserve in 2019**. (I'm using Python to compile this report and plan to add d3.js sometime in the near future to replace the Matplotlib plots that you see in the report now.)
+- **JQuery, Ajax, HTML, CSS, Java, asp.net and C#** are all related to the classic dynamic web-site/web application building use-case we mentioned before. Although these numbers are high in the all-time view, we already know that other technologies drive the growth in the Javascript domain.
+- **Angular, Node.js and React** are the Javascript superstars of the recent years. They are amongst the most used tags in combination with `javascript`.
+- **Angularjs appears first**, this may be a bit misleading, because Angular has multiple tags. `Angularjs` is used for Angular 1.x, and `angular` is used for all later versions on Stackoverflow.
+- **Node.js** is used both as a standalone solution and in combination with Angular, React and other frameworks and libraries. Angular and Node.js are part of the so popular MEAN stack, which further strengthens their adoption.
+- **React** is the top alternative to Angular. Enterprise projects tend to use Angular more (at least in my experience) due to its well defined framework services, React has a large base in cloud-native and online companies who are looking for more freedom and flexibility.
+- **Other front-end frameworks did not make it to the top 25.** Vue comes in at place 42, Backbone at 44 and Meteor at 49. Aurelia, Ember and Knockout are not in the top 50.
+- The arrival of **D3.js** at place 20 is a nice surprise. The front-end frameworks we mentioned so far let you create stunning user experiences for desktop and mobile. **D3.js is a great addition to the list in a data driven world; it gives you the data visualization magic that your customers deserve in 2019**. (I'm using Python to compile this report and plan to add d3.js sometime in the near future to replace the Matplotlib plots that you see in the report now.)
 
 Let's explore these tags!
-
 
 ## Growth trends of the key Javascript domains
 
@@ -465,31 +463,29 @@ In the previous chapter we identified the top technology niches in the Javascrip
 
 **In this chapter let's draw the growth trends in terms of number of new questions created a month per each domain.**
 
-*These figures give us an overall health check of each tag. Growing trends are a sign of new innovation with strong market adoption.*
+_These figures give us an overall health check of each tag. Growing trends are a sign of new innovation with strong market adoption._
 
 Stagnating or declining trends don't necessary mean declining usage. They mean lack of new features, but the technology may be solid and may play a stable role in the ecosystem.
 
 We look at the following segments in this part of the article.
 
--   **Javascript base toolkit** covers the basic libraries and language constructs like Javascript, JQuery, Promises and JSON.
--   **Classic dynamic websites** shows the status of tools that we use in a classic website building scenario, like PHP, HTML and CSS.
--   **Modern web applications** is all about Angular, React and Vue.
--   **Server side Javascript** covers Node and related technology components.
-
+- **Javascript base toolkit** covers the basic libraries and language constructs like Javascript, JQuery, Promises and JSON.
+- **Classic dynamic websites** shows the status of tools that we use in a classic website building scenario, like PHP, HTML and CSS.
+- **Modern web applications** is all about Angular, React and Vue.
+- **Server side Javascript** covers Node and related technology components.
 
 ### Javascript base toolkit
 
 The figure below depicts the overall number of new monthly questions created over time as a percentage of new Javascript questions for **JQuery, Ajax, JSON, Ecmascript-6, Promises and Typescript**.
 
--   **JQuery and Ajax are clearly declining**, which means that these components do not provide significant fresh value. Their capabilities are substituted with other components. Note, however, that JQuery still has about 7000 new questions a month, which is a pretty high number.
--   **JSON has stable use** in web applications, mobile applications, APIs and in any kind of Javascript solution overall.
--   **Ecmascript-6 and Promises** are catching up quickly and becoming mainstream. (You can see this in the zoomed-in version of this graph below.)
--   **Typescript sees exceptional growth**, it's widely used by large teams and Angular projects.
+- **JQuery and Ajax are clearly declining**, which means that these components do not provide significant fresh value. Their capabilities are substituted with other components. Note, however, that JQuery still has about 7000 new questions a month, which is a pretty high number.
+- **JSON has stable use** in web applications, mobile applications, APIs and in any kind of Javascript solution overall.
+- **Ecmascript-6 and Promises** are catching up quickly and becoming mainstream. (You can see this in the zoomed-in version of this graph below.)
+- **Typescript sees exceptional growth**, it's widely used by large teams and Angular projects.
 
 ![img]({{ site.url }}/assets/images/in-content/js-base-so-questions-trends-2018.png){:.img-fluid}
 
 ![img]({{ site.url }}/assets/images/in-content/jszoom-base-so-questions-trends-2018.png){:.img-fluid}
-
 
 ### Classic dynamic websites
 
@@ -497,18 +493,17 @@ Wouldn't it be nice to have a look at old school website building before moving 
 
 In this section we look at **PHP, HTML, HTML5, CSS and DOM**. These plots show either a stable number of new questions or a slight decline over time. This means that these items have a stable position with a strong base, but **no major innovation has been added recently that would answer new challenges in the marketplace**.
 
--   **PHP, HTML and CSS all have a high number of new questions every month**; ~10k, ~8k and ~6k respectively. These are high numbers which means that they are in the base toolkit of website building despite the fact that they are not amongst the top growth areas. On the other hand let's also mention that some of these techniques are replaced by other new techniques like JSX and Virtual DOM.
+- **PHP, HTML and CSS all have a high number of new questions every month**; ~10k, ~8k and ~6k respectively. These are high numbers which means that they are in the base toolkit of website building despite the fact that they are not amongst the top growth areas. On the other hand let's also mention that some of these techniques are replaced by other new techniques like JSX and Virtual DOM.
 
 ![img]({{ site.url }}/assets/images/in-content/classic-jsweb-so-questions-per-total-2018.png){:.img-fluid}
-
 
 ### Modern web applications
 
 Here we go with **Angular, React and Vue**. I also added a figure about Knockout, Ember, Backbone, Meteor and Aurelia to see what's happening to that segment.
 
--   As you may expect, **both Angular and React grow at high pace**. I'll show you more detailed figures later.
--   **Vue is growing rapidly, too**, with about 800 new questions a month.
--   **React-native and Redux** grow with React.js, demonstrating good progress all across React's services.
+- As you may expect, **both Angular and React grow at high pace**. I'll show you more detailed figures later.
+- **Vue is growing rapidly, too**, with about 800 new questions a month.
+- **React-native and Redux** grow with React.js, demonstrating good progress all across React's services.
 
 ![img]({{ site.url }}/assets/images/in-content/modern-jsweb-so-questions-trends-2018.png){:.img-fluid}
 
@@ -516,31 +511,28 @@ Our old friends are all going down, their role is taken over by Angular, React a
 
 ![img]({{ site.url }}/assets/images/in-content/modern-t2-jsweb-so-questions-trends-2018.png){:.img-fluid}
 
-
 ### Server side Javascript
 
 Server side Javascript is a mature member of our back-end toolbox used in various scenarios. Let's look at the key components.
 
 **Node.js, Express, Mongo and Mongoose are all in an upward trajectory**.
 
-The numbers at this level don't give us much information as to what Node.js is used for in real-life. *I'm working on another report dedicated to Node.js and server side Javascript; stay tuned!*
+The numbers at this level don't give us much information as to what Node.js is used for in real-life. _I'm working on another report dedicated to Node.js and server side Javascript; stay tuned!_
 
 ![img]({{ site.url }}/assets/images/in-content/server-side-js-so-questions-trends-2018.png){:.img-fluid}
 
-
 ## Growth segments of the Javascript ecosystem
 
-Let's identify the high-growth domains of Javascript by looking at the **growth in question views** in the 6 month period between June 2018 and December 2018. *Note that this time we are looking at the number of question views, which I believe is the best measure of real life usage.*
+Let's identify the high-growth domains of Javascript by looking at the **growth in question views** in the 6 month period between June 2018 and December 2018. _Note that this time we are looking at the number of question views, which I believe is the best measure of real life usage._
 
 Let's look at growth percentage in the following tables.
 
 We examine Javascript segments based on the number of questions a tag has:
 
--   **Established technologies** - tags with over 20k questions
--   **Emerging technologies**- tags with 20k to 10k questions
--   **Trending technologies** - tags with 5k to 10k questions
--   **Top newcomers** - tags with 150 to 5k questions
-
+- **Established technologies** - tags with over 20k questions
+- **Emerging technologies**- tags with 20k to 10k questions
+- **Trending technologies** - tags with 5k to 10k questions
+- **Top newcomers** - tags with 150 to 5k questions
 
 ### Growth of established technologies
 
@@ -649,15 +641,14 @@ These are the heavy tags that have been around for long enough to have a stable 
 </table>
 **These are industry trends you should be active in right now**.
 
--   **Angular's and React's 38% growth** in question views shows that the use of these technologies in real projects is growing continuously.
--   Besides Angular and React **Node.js** and **d3.js** are the technologies you should be working with.
+- **Angular's and React's 38% growth** in question views shows that the use of these technologies in real projects is growing continuously.
+- Besides Angular and React **Node.js** and **d3.js** are the technologies you should be working with.
 
 > Actions you may take:
-> 
-> -   Use Angular or React to create fresh user experiences and applications for desktop and mobile.
-> -   Use Node.js in the backend to support your web and mobile applications.
-> -   Work with d3.js to serve data driven documents to your users.
-
+>
+> - Use Angular or React to create fresh user experiences and applications for desktop and mobile.
+> - Use Node.js in the backend to support your web and mobile applications.
+> - Work with d3.js to serve data driven documents to your users.
 
 ### Growth of emerging technologies
 
@@ -766,21 +757,20 @@ These tags are also established with a strong base, although somewhat smaller th
 </table>
 **These are the capabilities you should be actively developing**.
 
--   **Vue's views (pun intended) are growing at an astonishing 66% rate**.
--   **Typescript and Ecmascript-6** are mainstream and expanding.
+- **Vue's views (pun intended) are growing at an astonishing 66% rate**.
+- **Typescript and Ecmascript-6** are mainstream and expanding.
 
 > Actions you may take:
-> 
-> -   If you are starting a new web project, give [Vue](https://vuejs.org/){:target="_blank"} a try.
-> -   Integrate [Ecmascript 6](http://es6-features.org/#Constants){:target="_blank"} into your development standards.
-> -   Consider [Typescript](https://www.typescriptlang.org/){:target="_blank"} for complex Javascript applications.
-> -   Experiment with the [MEAN stack](http://mean.io/){:target="_blank"}.
-> -   You can use Wordpress with React or Angular, check it out.
-
+>
+> - If you are starting a new web project, give [Vue](https://vuejs.org/){:target="\_blank"} a try.
+> - Integrate [Ecmascript 6](http://es6-features.org/#Constants){:target="\_blank"} into your development standards.
+> - Consider [Typescript](https://www.typescriptlang.org/){:target="\_blank"} for complex Javascript applications.
+> - Experiment with the [MEAN stack](http://mean.io/){:target="\_blank"}.
+> - You can use Wordpress with React or Angular, check it out.
 
 ### Growth of trending technologies
 
-These tags are from smaller niche segments. 
+These tags are from smaller niche segments.
 
 <table class="table table-striped">
 <thead class="thead-dark">
@@ -885,26 +875,25 @@ These tags are from smaller niche segments.
 </table>
 **These are the technologies to watch, and these are the domains you should consider for future skill building.**
 
--   **React Native**, React's mobile solution is getting super popular.
--   **Firebase** is the mobile and web application development platform you cannot miss.
--   **Redux** is the go-to central state management library for Javascript applications, especially in React apps.
--   **Webpack** emerged as the web packer of choice in Javascript projects.
--   **Python** has grown so much that it's amongst Javascript's top growth areas, too.
--   **Visualization appears again** with Charts for charts and three.js for 3D applications.
--   Deploying apps to all platforms from a single codebase is a dream come true for any team. **Ionic is on top of this trend.**
+- **React Native**, React's mobile solution is getting super popular.
+- **Firebase** is the mobile and web application development platform you cannot miss.
+- **Redux** is the go-to central state management library for Javascript applications, especially in React apps.
+- **Webpack** emerged as the web packer of choice in Javascript projects.
+- **Python** has grown so much that it's amongst Javascript's top growth areas, too.
+- **Visualization appears again** with Charts for charts and three.js for 3D applications.
+- Deploying apps to all platforms from a single codebase is a dream come true for any team. **Ionic is on top of this trend.**
 
 > Actions you may take:
-> 
-> -   Are you already into React? Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="_blank"}.
-> -   Definitely experiment with [Firebase](https://firebase.google.com/){:target="_blank"}.
-> -   Consider moving to [Webpack](https://webpack.js.org/){:target="_blank"}.
-> -   Connecting to MongoDB from Node? [Mongoose](https://mongoosejs.com/){:target="_blank"} is probably to package you need.
-> -   Not using [Redux](https://redux.js.org/){:target="_blank"} for state management? Revisit the point.
-> -   Combine Javascript with Python's power to solve new kind of problems.
-> -   Try [the Charts library](https://www.chartjs.org/){:target="_blank"} to create beautiful charts with Javascript.
-> -   Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="_blank"} and use Angular, React or Vue during the process.
-> -   Use [three.js](https://threejs.org/){:target="_blank"} to create 3D visuals.
-
+>
+> - Are you already into React? Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="\_blank"}.
+> - Definitely experiment with [Firebase](https://firebase.google.com/){:target="\_blank"}.
+> - Consider moving to [Webpack](https://webpack.js.org/){:target="\_blank"}.
+> - Connecting to MongoDB from Node? [Mongoose](https://mongoosejs.com/){:target="\_blank"} is probably to package you need.
+> - Not using [Redux](https://redux.js.org/){:target="\_blank"} for state management? Revisit the point.
+> - Combine Javascript with Python's power to solve new kind of problems.
+> - Try [the Charts library](https://www.chartjs.org/){:target="\_blank"} to create beautiful charts with Javascript.
+> - Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="\_blank"} and use Angular, React or Vue during the process.
+> - Use [three.js](https://threejs.org/){:target="\_blank"} to create 3D visuals.
 
 ### Top newcomers
 
@@ -1099,77 +1088,75 @@ These tags appeared recently and may or may not become a rising star of the next
 </table>
 Let's highlight a few special points.
 
--   Angular 6 leads the pack, the latest stable Angular version is 7.2.8 right now, so I'd suggest to check out Angular 7 and Angular 8 instead.
--   **[Vuetify.js](https://v1.vuetifyjs.com/en/){:target="_blank"}** is a Material design component library for Vue.js. 1.0.0 was released in February 2018, 2.0.0 alpha has been released recently.
--   **[Nuxt.js](https://nuxtjs.org/){:target="_blank"}** is a framework for Vue.js that you can use to build applications for web, desktop and mobile.
--   **[Next.js](https://nextjs.org/){:target="_blank"}** is a React framework that features all best practices to create a production grade enterprise React application. The project has over 35k stars on GitHub.
--   **[Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="_blank"}** is a headless Chrome Node API for all your scraping needs be it integrated testing, UI testing or pre-rendered content generation.
--   **[Ant design](https://ant.design/docs/spec/introduce){:target="_blank"}** is a design specification focused on internal desktop applications in the enterprise. The design principles are available in an implemented form for React, Angular and Vue.
--   **[Gatsby](https://www.gatsbyjs.org/){:target="_blank"}** is another React website framework with over 32k stars on GitHub.
--   The appearance of **[Discord](https://discordapp.com/){:target="_blank"}**, the all-in-one voice and text chat for gamers, on this list means that the world of Javascript is also touched by gaming/streaming/e-sports revolution.
--   Our report would not be complete without **[the Apollo platform](https://www.apollographql.com/){:target="_blank"}** and GraphQL.
--   **[Axios](https://github.com/axios/axios){:target="_blank"}** is the HTTP request library that I use in all Node.js projects. It seems I'm not alone.
--   **Starting out with React?** Check out [create-react-app](https://github.com/facebook/create-react-app){:target="_blank"}.
+- Angular 6 leads the pack, the latest stable Angular version is 7.2.8 right now, so I'd suggest to check out Angular 7 and Angular 8 instead.
+- **[Vuetify.js](https://v1.vuetifyjs.com/en/){:target="\_blank"}** is a Material design component library for Vue.js. 1.0.0 was released in February 2018, 2.0.0 alpha has been released recently.
+- **[Nuxt.js](https://nuxtjs.org/){:target="\_blank"}** is a framework for Vue.js that you can use to build applications for web, desktop and mobile.
+- **[Next.js](https://nextjs.org/){:target="\_blank"}** is a React framework that features all best practices to create a production grade enterprise React application. The project has over 35k stars on GitHub.
+- **[Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="\_blank"}** is a headless Chrome Node API for all your scraping needs be it integrated testing, UI testing or pre-rendered content generation.
+- **[Ant design](https://ant.design/docs/spec/introduce){:target="\_blank"}** is a design specification focused on internal desktop applications in the enterprise. The design principles are available in an implemented form for React, Angular and Vue.
+- **[Gatsby](https://www.gatsbyjs.org/){:target="\_blank"}** is another React website framework with over 32k stars on GitHub.
+- The appearance of **[Discord](https://discordapp.com/){:target="\_blank"}**, the all-in-one voice and text chat for gamers, on this list means that the world of Javascript is also touched by gaming/streaming/e-sports revolution.
+- Our report would not be complete without **[the Apollo platform](https://www.apollographql.com/){:target="\_blank"}** and GraphQL.
+- **[Axios](https://github.com/axios/axios){:target="\_blank"}** is the HTTP request library that I use in all Node.js projects. It seems I'm not alone.
+- **Starting out with React?** Check out [create-react-app](https://github.com/facebook/create-react-app){:target="\_blank"}.
 
 > Actions you may take:
-> 
-> -   Get started with [Angular 7](https://angular.io/guide/quickstart){:target="_blank"} and Angular 8.
-> -   Building an enterprise grade app? Consider [Next.js](https://nextjs.org/){:target="_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="_blank"} with Vue.
-> -   Need help with UI testing and test automation? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="_blank"} might just be right.
-> -   Need a good React UI component framework for internal desktop applications? Have a look at [Ant design](https://ant.design/){:target="_blank"}.
-> -   Get started with programming bots for [Discord](https://discordapp.com/){:target="_blank"}, the all-in-one voice and text chat for gamers.
-> -   Experiment with [Apollo and GraphQL](https://www.apollographql.com/){:target="_blank"}.
-> -   Consider [Axios](https://github.com/axios/axios){:target="_blank"} for HTTP request from web and Node.js.
-> -   Start learning React with [create-react-app](https://github.com/facebook/create-react-app){:target="_blank"}.
-
+>
+> - Get started with [Angular 7](https://angular.io/guide/quickstart){:target="\_blank"} and Angular 8.
+> - Building an enterprise grade app? Consider [Next.js](https://nextjs.org/){:target="\_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="\_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="\_blank"} with Vue.
+> - Need help with UI testing and test automation? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="\_blank"} might just be right.
+> - Need a good React UI component framework for internal desktop applications? Have a look at [Ant design](https://ant.design/){:target="\_blank"}.
+> - Get started with programming bots for [Discord](https://discordapp.com/){:target="\_blank"}, the all-in-one voice and text chat for gamers.
+> - Experiment with [Apollo and GraphQL](https://www.apollographql.com/){:target="\_blank"}.
+> - Consider [Axios](https://github.com/axios/axios){:target="\_blank"} for HTTP request from web and Node.js.
+> - Start learning React with [create-react-app](https://github.com/facebook/create-react-app){:target="\_blank"}.
 
 ## Wrap-up
 
 Let's summarize the key trends we found along the way.
 
--   **Javascript is all about user experience**. It seems that everything that comes in front of the eyes of your customers and users is made with Javascript these days. **Javascript is not only used to create applications for the web, it's also an increasingly popular tool for mobile and desktop applications.**
--   **Angular, React and Vue take the lead** and keep growing at super high speed. Other similar frameworks like Ember and Knockout and also JQuery are loosing ground.
--   User experience creation with Javascript is reaching beyond the front-end. **Javascipt based backend solutions like Node and Express, as well as Javascript based databases like Mongo are coming up**.
--   The **Firebase realtime database** is a great example of the Javascript based realtime user experience reaching as deep as the database level.
+- **Javascript is all about user experience**. It seems that everything that comes in front of the eyes of your customers and users is made with Javascript these days. **Javascript is not only used to create applications for the web, it's also an increasingly popular tool for mobile and desktop applications.**
+- **Angular, React and Vue take the lead** and keep growing at super high speed. Other similar frameworks like Ember and Knockout and also JQuery are loosing ground.
+- User experience creation with Javascript is reaching beyond the front-end. **Javascipt based backend solutions like Node and Express, as well as Javascript based databases like Mongo are coming up**.
+- The **Firebase realtime database** is a great example of the Javascript based realtime user experience reaching as deep as the database level.
 
 Let's list the actions you may take again, so that you have them all in one place.
 
-*Industry trends where you should be active right now.*
+_Industry trends where you should be active right now._
 
--   Use **Angular or React to create fresh user experiences** and applications for desktop and mobile.
--   Use **Node.js in the backend** to support your applications especially in real-time event based scenarios.
--   Work with **d3.js and serve data driven documents** to your users.
+- Use **Angular or React to create fresh user experiences** and applications for desktop and mobile.
+- Use **Node.js in the backend** to support your applications especially in real-time event based scenarios.
+- Work with **d3.js and serve data driven documents** to your users.
 
-*Capabilities you should be actively developing.*
+_Capabilities you should be actively developing._
 
--   If you are starting a new web project, **give [Vue](https://vuejs.org/){:target="_blank"} a try**.
--   Integrate **[Ecmascript 6](http://es6-features.org/#Constants){:target="_blank"} into your development standards**.
--   Consider **[Typescript](https://www.typescriptlang.org/){:target="_blank"} in complex Javascript applications**.
--   Experiment with the **[MEAN stack](http://mean.io/){:target="_blank"}** to combine the benefits of Angular, Node with Express and Mongodb.
--   You can use **Wordpress with React or Angular**, check it out.
+- If you are starting a new web project, **give [Vue](https://vuejs.org/){:target="\_blank"} a try**.
+- Integrate **[Ecmascript 6](http://es6-features.org/#Constants){:target="\_blank"} into your development standards**.
+- Consider **[Typescript](https://www.typescriptlang.org/){:target="\_blank"} in complex Javascript applications**.
+- Experiment with the **[MEAN stack](http://mean.io/){:target="\_blank"}** to combine the benefits of Angular, Node with Express and Mongodb.
+- You can use **Wordpress with React or Angular**, check it out.
 
-*Domains you should consider for future skill building.*
+_Domains you should consider for future skill building._
 
--   Are you already into React? **Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="_blank"}**.
--   Definitely **run a pilot with [Firebase](https://firebase.google.com/){:target="_blank"}**, here is some [good reading](https://medium.freecodecamp.org/firebase-the-great-the-meh-and-the-ugly-a07252fbcf15){:target="_blank"}.
--   **[Webpack](https://webpack.js.org/){:target="_blank"}** emerged as the packaging tool of choice.
--   **Connecting to MongoDB from Node?** [Mongoose](https://mongoosejs.com/){:target="_blank"} is the preferred tool by most projects.
--   **Not using [Redux](https://redux.js.org/){:target="_blank"} for state management?** Revisit this point.
--   **Combine Javascript with Python's power** to solve new kind of problems.
--   Try **[the Charts library](https://www.chartjs.org/){:target="_blank"}** to create beautiful charts with Javascript.
--   **Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="_blank"}** and use Angular, React or Vue during the process.
--   **Use [three.js](https://threejs.org/){:target="_blank"} to create 3D** visuals.
+- Are you already into React? **Bring your user experience to mobile with [React Native](https://facebook.github.io/react-native/){:target="\_blank"}**.
+- Definitely **run a pilot with [Firebase](https://firebase.google.com/){:target="\_blank"}**, here is some [good reading](https://medium.freecodecamp.org/firebase-the-great-the-meh-and-the-ugly-a07252fbcf15){:target="\_blank"}.
+- **[Webpack](https://webpack.js.org/){:target="\_blank"}** emerged as the packaging tool of choice.
+- **Connecting to MongoDB from Node?** [Mongoose](https://mongoosejs.com/){:target="\_blank"} is the preferred tool by most projects.
+- **Not using [Redux](https://redux.js.org/){:target="\_blank"} for state management?** Revisit this point.
+- **Combine Javascript with Python's power** to solve new kind of problems.
+- Try **[the Charts library](https://www.chartjs.org/){:target="\_blank"}** to create beautiful charts with Javascript.
+- **Build cross-platform applications with the [Ionic framework](https://ionicframework.com/){:target="\_blank"}** and use Angular, React or Vue during the process.
+- **Use [three.js](https://threejs.org/){:target="\_blank"} to create 3D** visuals.
 
-*New tech to explore.*
+_New tech to explore._
 
--   **Get started with [Angular 7](https://angular.io/guide/quickstart){:target="_blank"} and prepare for Angular 8**.
--   Building an enterprise grade app? **Consider [Next.js](https://nextjs.org/){:target="_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="_blank"} with Vue**.
--   Need help with **UI testing and test automation**? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="_blank"} might just be right.
--   Need a good **React UI component framework for internal desktop applications**? Have a look at [Ant design](https://ant.design/){:target="_blank"}.
--   Get started with programming bots for **[Discord](https://discordapp.com/){:target="_blank"}**, the all-in-one voice and text chat for gamers.
--   Experiment with **[Apollo and GraphQL](https://www.apollographql.com/){:target="_blank"}**.
--   **Consider [Axios](https://github.com/axios/axios){:target="_blank"} for HTTP request from web and Node.js**.
--   **Start learning React** with [create-react-app](https://github.com/facebook/create-react-app){:target="_blank"}.
+- **Get started with [Angular 7](https://angular.io/guide/quickstart){:target="\_blank"} and prepare for Angular 8**.
+- Building an enterprise grade app? **Consider [Next.js](https://nextjs.org/){:target="\_blank"} and [Gatsby](https://www.gatsbyjs.org/){:target="\_blank"} with React or [Nuxt.js](https://nuxtjs.org/){:target="\_blank"} with Vue**.
+- Need help with **UI testing and test automation**? [Puppeteer](https://github.com/GoogleChrome/puppeteer){:target="\_blank"} might just be right.
+- Need a good **React UI component framework for internal desktop applications**? Have a look at [Ant design](https://ant.design/){:target="\_blank"}.
+- Get started with programming bots for **[Discord](https://discordapp.com/){:target="\_blank"}**, the all-in-one voice and text chat for gamers.
+- Experiment with **[Apollo and GraphQL](https://www.apollographql.com/){:target="\_blank"}**.
+- **Consider [Axios](https://github.com/axios/axios){:target="\_blank"} for HTTP request from web and Node.js**.
+- **Start learning React** with [create-react-app](https://github.com/facebook/create-react-app){:target="\_blank"}.
 
 **We are well able to confirm the leading Javascript trends, we also highlighted the key niche players emerging in the field. In order to find more of Javascript we need to dig deeper. We'll do this in another three future reports focusing on React, Angular and Node.**
-

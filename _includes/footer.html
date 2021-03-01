@@ -1,14 +1,17 @@
-<footer>
-    <!-- Copyright Notice -->
-    <div class="row mb-4">
-        <div class="col">
-            <small class="text-muted"
-                >&copy; 2011 - {{ site.time | date: '%Y' }} {{ site.title }} -
-                <a href="https://savalera.com/" target="_blank"
-                    >Savalera Kft.</a
-                ></small
-            >
-        </div>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<footer class="bg-white">
+  <div
+    class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+  >
+    <div class="flex justify-center space-x-6 md:order-2">
+      {% include social-contacts.html %}
     </div>
-    <!-- Copyright Notice -->
+    <div class="mt-8 md:mt-0 md:order-1">
+      <p class="text-base text-center text-gray-400">
+        &copy; 2011 - {{ site.time | date: "%Y" }}
+        <a href="https://savalera.com/" target="_blank">Savalera Kft.</a>
+        All rights reserved.
+      </p>
+    </div>
+  </div>
 </footer>

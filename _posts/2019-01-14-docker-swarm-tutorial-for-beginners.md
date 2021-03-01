@@ -5,9 +5,12 @@ description: "Would you like to run your projects in high-availability scalable 
 date: 2019-01-14 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-swarm.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
 In this Docker Swarm tutorial we'll build the basic Swarm skills that you'll need in your project work. You'll learn to set up a Swarm cluster, Deploy applications, explore and manage your stack in the cluster, and we'll also go through typical maintenance activities that you'll need.
@@ -19,12 +22,12 @@ This is a code-along tutorial, so please open up your terminal and get ready. We
 
 If you want to jump to a specific step, please check out the table of contents above.
 
-In order to get the most out of this article you should be familiar with basic Docker concepts, like containers, images, the Dockerfile and Docker Compose. If you need a refresher on these topics, please go to my previous tutorials first. Alternatively you can get [my book](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/){:target="_blank"} for a complete guided experience.
+In order to get the most out of this article you should be familiar with basic Docker concepts, like containers, images, the Dockerfile and Docker Compose. If you need a refresher on these topics, please go to my previous tutorials first. Alternatively you can get [my book](https://takacsmark.com/get-started-with-docker-in-your-projects-through-examples/){:target="\_blank"} for a complete guided experience.
 
 This tutorial is available as a Youtube video, too.
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe src="https://www.youtube.com/embed/3-7gZS4ePak" allowfullscreen></iframe>
 </div>
 
 ## Your first Swarm cluster
@@ -35,7 +38,7 @@ Swarm comes built into the Docker Engine, you don't need to install anything to 
 
 Let's go to terminal and turn your local computer into a one machine Swarm cluster.
 
-```console
+```shell
 $ docker swarm init
 
 Swarm initialized: current node (dw78e2gl8jm13basl0nqmcivz) is now a manager.
@@ -49,8 +52,8 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 Computers in a Swarm cluster are called nodes. Nodes can play two roles in a Swarm:
 
-* The role of **manager nodes** is to manage the cluster; you can execute Swarm management commands on manager nodes.
-* The role of **worker nodes** is to run your containers that do the actual job (like running a web server).
+- The role of **manager nodes** is to manage the cluster; you can execute Swarm management commands on manager nodes.
+- The role of **worker nodes** is to run your containers that do the actual job (like running a web server).
 
 A Swarm node acts as both worker and manager by default, the default behavior is to schedule worker containers on manager nodes, too.
 
@@ -62,7 +65,7 @@ Your local machine is the manager node in the cluster, and at the same time it i
 
 Let's create a Node Express application with the following files:
 
-```console
+```shell
 $ tree
 .
 ├── Dockerfile
@@ -74,7 +77,7 @@ $ tree
 
 Let's create the `package.json` and `package-lock.json` files first with the use of a Docker container:
 
-```console
+```shell
 $ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm init -y
 $ docker run --rm -v $(pwd):/home/node -w /home/node node:11.1.0-alpine npm i -S express
 ```
@@ -87,14 +90,14 @@ Let's create `server.js` with the following code:
 const express = require("express");
 const os = require("os");
 
-const app=express();
+const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Hello from Swarm " + os.hostname());
+  res.send("Hello from Swarm " + os.hostname());
 });
 
 app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+  console.log("Server is running on port 3000");
 });
 ```
 
@@ -117,26 +120,26 @@ CMD npm start
 In order to define the build and runtime behavior of our project, we add the following Compose file:
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
-    web:
-        build: .
-        image: takacsmark/swarm-example:1.0
-        ports:
-            - 80:3000
-        networks:
-            - mynet
+  web:
+    build: .
+    image: takacsmark/swarm-example:1.0
+    ports:
+      - 80:3000
+    networks:
+      - mynet
 
 networks:
-    mynet:
+  mynet:
 ```
 
 We specified one service in the Compose file for the Express server, mapped the port to port 80 and defined a default network for the stack.
 
 Let's build our image.
 
-```console
+```shell
 $ docker-compose build
 ```
 
@@ -148,7 +151,7 @@ You might be asking yourself right now; **how are we going to start the stack in
 
 Let's do this and I'll explain what's happening. The command to start the stack is the following:
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -162,7 +165,7 @@ Docker created the network that we defined in the Compose file and prefixed the 
 
 Please also note the first line of the command output above that says `Ignoring unsupported options: build`. This line tells us that Swarm does not support the `build` option in the Compose file. I'll also tell you about the difference between Compose and Swarm in a minute.
 
-Let's see the results of our work first, please visit [http://localhost](http://localhost){:target="_blank"}; you should see a message like this one: `Hello from Swarm 63daead91754`.
+Let's see the results of our work first, please visit [http://localhost](http://localhost){:target="\_blank"}; you should see a message like this one: `Hello from Swarm 63daead91754`.
 
 ![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png){:.img-fluid}
 
@@ -170,7 +173,7 @@ Let's see the results of our work first, please visit [http://localhost](http://
 
 We deployed a stack to the Swarm based on the description in the Compose file. We can see our deployed stack with a simple command:
 
-```console
+```shell
 $ docker stack ls
 NAME                SERVICES            ORCHESTRATOR
 nodeapp             1                   Swarm
@@ -178,7 +181,7 @@ nodeapp             1                   Swarm
 
 The output says that we have one service running, which is in line with what we defined in the Compose file. Docker gives us more control over our stack, we can explore services in the stack in more details:
 
-```console
+```shell
 $ docker stack services nodeapp
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 og72l2onptng        nodeapp_web         replicated          1/1                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -186,7 +189,7 @@ og72l2onptng        nodeapp_web         replicated          1/1                 
 
 Now we have access to the service identifier, the service name, number of replicas, image and port information. We can go one level deeper and explore a lower level scheduling entity in the stack, called the task:
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                IMAGE                          NODE                    DESIRED STATE       CURRENT STATE               ERROR               PORTS
 nv0vu1micwh7        nodeapp_web.1       takacsmark/swarm-example:1.0   linuxkit-025000000001   Running             Running about an hour ago
@@ -198,7 +201,7 @@ As you can see, we have exactly one task running in our stack on the single node
 
 Let's scale our service to run multiple replicas.
 
-```console
+```shell
 $ docker service scale nodeapp_web=4
 nodeapp_web scaled to 4
 overall progress: 4 out of 4 tasks
@@ -211,7 +214,7 @@ verify: Service converged
 
 We used the `docker service scale` command to start more replicas of our service. Let's check the service status:
 
-```console
+```shell
 $ docker service ls
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 og72l2onptng        nodeapp_web         replicated          4/4                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -219,7 +222,7 @@ og72l2onptng        nodeapp_web         replicated          4/4                 
 
 The output says that we have 4/4 replicas running. Let's check the individual tasks:
 
-```console
+```shell
 $ docker service ps nodeapp_web
 ID                  NAME                IMAGE                          NODE                    DESIRED STATE       CURRENT STATE               ERROR               PORTS
 nv0vu1micwh7        nodeapp_web.1       takacsmark/swarm-example:1.0   linuxkit-025000000001   Running             Running about an hour ago
@@ -230,7 +233,7 @@ rbwuk4v7wqu0        nodeapp_web.4       takacsmark/swarm-example:1.0   linuxkit-
 
 Docker started four tasks automatically for our scaled service. Docker displays all tasks running on our single node in the cluster.
 
-If you go to [http://localhost](http://localhost){:target="_blank"} and refresh the page a few times, you'll get alternating host names, because your request is served from different replicated containers. (Make sure to clear the browser cache during refresh to see the results, you can easily do this with CMD+SHIFT+R on Mac or CTRL+F5 on Windows and Linux, this will work with most browsers.)
+If you go to [http://localhost](http://localhost){:target="\_blank"} and refresh the page a few times, you'll get alternating host names, because your request is served from different replicated containers. (Make sure to clear the browser cache during refresh to see the results, you can easily do this with CMD+SHIFT+R on Mac or CTRL+F5 on Windows and Linux, this will work with most browsers.)
 
 ![Docker Swarm Scaled Service Host Name 1](/assets/images/in-content/docker-swarm-host-name-1.png){:.img-fluid}
 
@@ -240,7 +243,7 @@ If you go to [http://localhost](http://localhost){:target="_blank"} and refresh 
 
 Let's step one level higher and create a cluster with multiple machines. Let's remove our stack first and leave the Swarm on the local machine.
 
-```console
+```shell
 $ docker stack rm nodeapp
 Removing service nodeapp_web
 Removing network nodeapp_mynet
@@ -249,13 +252,13 @@ $ docker swarm leave --force
 Node left the swarm.
 ```
 
-We stay on the local machine for this exercise, I hope your computer has the power to run two virtual machines in parallel. If you don't have the power, you can do this exercise on [Play with Docker](http://play-with-docker.com/){:target="_blank"}.
+We stay on the local machine for this exercise, I hope your computer has the power to run two virtual machines in parallel. If you don't have the power, you can do this exercise on [Play with Docker](http://play-with-docker.com/){:target="\_blank"}.
 
-Docker has a handy tool called Docker machine that lets us create virtual machines locally and also in the cloud. Docker machine comes bundled with Docker on Mac and Windows, and it needs to be installed on Linux. Please refer to [the official documentation](https://docs.docker.com/machine/){:target="_blank"} if you need to install Docker machine.
+Docker has a handy tool called Docker machine that lets us create virtual machines locally and also in the cloud. Docker machine comes bundled with Docker on Mac and Windows, and it needs to be installed on Linux. Please refer to [the official documentation](https://docs.docker.com/machine/){:target="\_blank"} if you need to install Docker machine.
 
-Let's start up two VMs locally. Please make sure you have [Virtualbox](https://www.virtualbox.org/){:target="_blank"} installed before proceeding. Issue the below commands in terminal, please be patient it will take a while to create the machines.
+Let's start up two VMs locally. Please make sure you have [Virtualbox](https://www.virtualbox.org/){:target="\_blank"} installed before proceeding. Issue the below commands in terminal, please be patient it will take a while to create the machines.
 
-```console
+```shell
 $ docker-machine create --driver virtualbox myvm1
 $ docker-machine create --driver virtualbox myvm2
 ```
@@ -264,7 +267,7 @@ Both machines should be up and running after creation. You can check their statu
 
 Let's `ssh` into machine 1 and start our Swarm. This machine has multiple network interfaces, so we need to fine-tune to our command to advertise the right network address in the Swarm.
 
-```console
+```shell
 $ docker-machine ssh myvm1
    ( '>')
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
@@ -282,7 +285,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 Leave the machine with the `exit` command and `ssh` into machine 2 and join the Swarm on machine 1. We can do this by using the command from the above command output `docker swarm join --token SWMTKN-1-678250sc60og59wbwf25z6xwiz5a1ufg2q6skgxh7ccu0lx7w5-4dza21v2frlv5dbali96x8mw4 192.168.99.100:2377`. Please make sure that you copy the join command from your command output.
 
-```console
+```shell
 $ docker-machine ssh myvm2
    ( '>')
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
@@ -292,15 +295,15 @@ docker@myvm2:~$ docker swarm join --token SWMTKN-1-678250sc60og59wbwf25z6xwiz5a1
 This node joined a swarm as a worker.
 ```
 
-Now we have two machines in the Swarm. In order to deploy our Node example application to the Swarm we need to make sure that our project's Docker image is available to the virtual machines. Our workflow on a real project would be to automatically build and push our tested Docker images to a central repository. So we'll do exactly this, we'll push our Docker image to the Docker Hub into a public  repository.
+Now we have two machines in the Swarm. In order to deploy our Node example application to the Swarm we need to make sure that our project's Docker image is available to the virtual machines. Our workflow on a real project would be to automatically build and push our tested Docker images to a central repository. So we'll do exactly this, we'll push our Docker image to the Docker Hub into a public repository.
 
-```console
+```shell
 $ docker-compose push
 ```
 
 Once the image is pushed, we want to find a way to use the Compose file that is stored on our host machine in the Docker machine VM. Docker machine has a feature to enable this. We just need to set our shell to talk to the Docker daemon in the VM. We use the `docker-machine env <vm_name>` command to configure the shell, and then grab the last line of the command output and execute it.
 
-```console
+```shell
 $ docker-machine env myvm1
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://192.168.99.100:2376"
@@ -310,13 +313,13 @@ export DOCKER_MACHINE_NAME="myvm1"
 # eval $(docker-machine env myvm1)
 ```
 
-```console
+```shell
 $ eval $(docker-machine env myvm1)
 ```
 
 Now we can deploy our application the usual way.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -326,7 +329,7 @@ Creating service nodeapp_web
 
 Once the deployment is done, you can access your application at the address of the virtual machines. You can find out the address with a simple command.
 
-```console
+```shell
 $ docker-machine ls
 NAME    ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER     ERRORS
 myvm1   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.09.1
@@ -339,13 +342,13 @@ You can use the IP address of any of the machines to access the application. Let
 
 Why not load the cluster with a few replicas and check out the whole thing in a nice visual representation?
 
-```console
+```shell
 $ docker service scale nodeapp_web=4
 ```
 
 We just scaled up our service, let's add another service to the Swarm to create a visualizer.
 
-```console
+```shell
 $ docker service create \
 -p 8080:8080 \
 --constraint=node.role==manager \
@@ -381,7 +384,7 @@ The `build` option, for example, is supported by Compose only and you can use it
 
 The `deploy` option, for example is only supported by Swarm. You can use the `deploy` setting to describe your deployment configuration in a Swarm. Compose does not support these settings and it will simply ignore this part of your Compose file.
 
-The [Compose file reference](https://docs.docker.com/compose/compose-file/){:target="_blank"} specifies exactly whether an option is limited to either Compose or Swarm. We use the same file reference in both cases and we always double check if the settings are applicable to Swarm or Compose only.
+The [Compose file reference](https://docs.docker.com/compose/compose-file/){:target="\_blank"} specifies exactly whether an option is limited to either Compose or Swarm. We use the same file reference in both cases and we always double check if the settings are applicable to Swarm or Compose only.
 
 ## Services, tasks and containers
 
@@ -401,7 +404,7 @@ The logical hierarchy of components is stack, service, task and container, so we
 
 To see our stack(s) we use the `docker stack ls` command.
 
-```console
+```shell
 $ docker stack ls
 NAME                SERVICES            ORCHESTRATOR
 nodeapp             1                   Swarm
@@ -411,7 +414,7 @@ Our deployed stack is displayed in the output. It has one service (visualizer wa
 
 We can list the services in our stack with `docker stack services nodeapp` or the services in the entire Swarm with `docker service ls`, let's try the latter.
 
-```console
+```shell
 $ docker service ls
 ID                  NAME                     MODE                REPLICAS            IMAGE                             PORTS
 vtj81lstp1lw        nodeapp_web              replicated          4/4                 takacsmark/swarm-example:1.0      *:80->3000/tcp
@@ -422,7 +425,7 @@ This is the overview of all the services in our Swarm cluster. We are running fo
 
 Let's look at the tasks in the `nodeapp_web` service.
 
-```console
+```shell
 $ docker service ps nodeapp_web
 4alkk6og8pae        nodeapp_web.1       takacsmark/swarm-example:1.0   myvm1               Running             Running about an hour ago
 ixjb3ztdumfw        nodeapp_web.2       takacsmark/swarm-example:1.0   myvm2               Running             Running 44 minutes ago
@@ -446,7 +449,7 @@ Use the `docker stack ls` command to list stacks in your Swarm. Remember, you ca
 
 Use the `docker stack services` command to list the services in a stack.
 
-```console
+```shell
 $ docker stack services nodeapp
 ID                  NAME                MODE                REPLICAS            IMAGE                          PORTS
 vtj81lstp1lw        nodeapp_web         replicated          4/4                 takacsmark/swarm-example:1.0   *:80->3000/tcp
@@ -456,7 +459,7 @@ vtj81lstp1lw        nodeapp_web         replicated          4/4                 
 
 Use the `docker stack ps` command to list tasks in a stack.
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                IMAGE                          NODE                DESIRED STATE       CURRENT STATE               ERROR               PORTS
 4alkk6og8pae        nodeapp_web.1       takacsmark/swarm-example:1.0   myvm1               Running             Running about an hour ago
@@ -475,7 +478,7 @@ Manage service in your Swarm with the `docker service` command and its subcomman
 
 ### Create a service
 
-We used this command before when we created the visualizer service. The command comes in the form of `docker service create` and has many options to fine-tune your service. You can explore the options with `docker service create --help` or use the [official reference](https://docs.docker.com/engine/reference/commandline/service_create/){:target="_blank"}.
+We used this command before when we created the visualizer service. The command comes in the form of `docker service create` and has many options to fine-tune your service. You can explore the options with `docker service create --help` or use the [official reference](https://docs.docker.com/engine/reference/commandline/service_create/){:target="\_blank"}.
 
 Many options are similar to the options of `docker container run` and you'll find options that are specific to Swarm mode.
 
@@ -495,7 +498,7 @@ We used the `docker service scale` command before to scale our service.
 
 Use the `docker service logs` command to see the logs of a service, the options are similar to the options of `docker container logs`.
 
-```console
+```shell
 $ docker service logs --tail 1 nodeapp_web
 nodeapp_web.1.4alkk6og8pae@myvm1    | Server is running on port 3000
 nodeapp_web.3.fyl2c8gw7rqe@myvm1    | Server is running on port 3000
@@ -527,7 +530,7 @@ Docker Swarm has dedicated commands for node management.
 
 Use the `docker node ls` command to list nodes in the Swarm.
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -541,41 +544,41 @@ You can see that both nodes are listed in the command output. It is clear that `
 Let's update our example with Swarm deployment configuration for our services. I'll add the visualizer service to the Compose file, too.
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
-    web:
-        build: .
-        image: takacsmark/swarm-example:1.0
-        ports:
-            - 80:3000
-        networks:
-            - mynet
-        deploy:
-            replicas: 6
-            update_config:
-                parallelism: 2
-                delay: 10s
-            restart_policy:
-                condition: on-failure
+  web:
+    build: .
+    image: takacsmark/swarm-example:1.0
+    ports:
+      - 80:3000
+    networks:
+      - mynet
+    deploy:
+      replicas: 6
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
 
-    visualizer:
-        image: dockersamples/visualizer:stable
-        ports:
-          - "8080:8080"
-        volumes:
-          - "/var/run/docker.sock:/var/run/docker.sock"
-        deploy:
-          placement:
-            constraints: [node.role == manager]
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
 
 networks:
-    mynet:
+  mynet:
 ```
 
 Let's update our stack! Please remove the visualizer service first, because we will recreate it with the use of the Compose file. Use the service name that you get with `docker service ls` in the `docker servicer rm` command. My looks like this:
 
-```console
+```shell
 $ docker service rm recursing_visvesvaraya
 recursing_visvesvaraya
 ```
@@ -584,11 +587,11 @@ Please note that I added deployment preferences to our Node server; we'll run 6 
 
 It's a common option to specify resources in the Compose file with the `resources` option under `deploy`. You can limit and reserve CPU and memory for your containers with the use of `resources`.
 
-In the visualizer service I have specified the placement of the container with the constraint that is should be placed on a manager node. Docker gives you further options like `node.id`, `node.hostname` to define your constraints, but in real life, you'll probably set up your own labels to be as flexible as possible with your placement. Check out the `node.labels` and `engine.labels` constraints. You can read more about this in the official [Docker documentation](https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints-constraint){:target="_blank"}.
+In the visualizer service I have specified the placement of the container with the constraint that is should be placed on a manager node. Docker gives you further options like `node.id`, `node.hostname` to define your constraints, but in real life, you'll probably set up your own labels to be as flexible as possible with your placement. Check out the `node.labels` and `engine.labels` constraints. You can read more about this in the official [Docker documentation](https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints-constraint){:target="\_blank"}.
 
 Let's re-deploy our stack.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 Ignoring unsupported options: build
 
@@ -599,7 +602,7 @@ Updating service nodeapp_web (id: vtj81lstp1lwcexhyhdr02xi1)
 
 As you can see, Docker has updated our stack automatically. Let's see what's happening in our stack.
 
-```console
+```shell
 $ docker stack ps nodeapp
 ID                  NAME                   IMAGE                             NODE                DESIRED STATE       CURRENT STATE                 ERROR               PORTS
 iimb6icg7a7j        nodeapp_web.1          takacsmark/swarm-example:1.0      myvm1               Running             Running about a minute ago
@@ -621,7 +624,7 @@ Let's see it in visualizer.
 
 ![Docker Swarm Node application visualizer scaled to 6](/assets/images/in-content/docker-swarm-visualizer-node-2.png){:.img-fluid}
 
-Docker has various options for deployment configuration, please refer to the [Compose file reference](https://docs.docker.com/compose/compose-file/){:target="_blank"} to create the right configuration for your project.
+Docker has various options for deployment configuration, please refer to the [Compose file reference](https://docs.docker.com/compose/compose-file/){:target="\_blank"} to create the right configuration for your project.
 
 ## Drain a node
 
@@ -629,7 +632,7 @@ You may want to drain a node in your Swarm to conduct maintenance activities. Wh
 
 Let's check our nodes first.
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -638,14 +641,14 @@ tsmjsfj4f9ht5fefxwy2h7nve     myvm2               Ready               Active    
 
 Both nodes are active. Let's drain `myvm2`.
 
-```console
+```shell
 $ docker node update --availability=drain myvm2
 myvm2
 ```
 
 Let's check the status of the nodes:
 
-```console
+```shell
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 yttgwlrspn5ln3ho1qffiy4op *   myvm1               Ready               Active              Leader              18.09.1
@@ -656,7 +659,7 @@ If you check the visualizer output now, you'll see that all 6 replicas of the No
 
 Let's bring the node back to life.
 
-```console
+```shell
 $ docker node update --availability=active myvm2
 myvm2
 ```
@@ -665,7 +668,7 @@ If you check visualizer now, then you'll notice that all 6 replicas are still ru
 
 Let's redistribute our containers with the following command.
 
-```console
+```shell
 $ docker service update --force nodeapp_web
 nodeapp_web
 overall progress: 6 out of 6 tasks
@@ -685,19 +688,19 @@ This command gets the job done, but if you have many services, you'll want to wr
 Let's create a new version of our Node application image. Let's update the image version in our `docker-compose.yml`.
 
 ```yaml
-        image: takacsmark/swarm-example:1.1
+image: takacsmark/swarm-example:1.1
 ```
 
 Let's build and push the new image to the Docker Hub.
 
-```console
+```shell
 $ docker-compose build
 $ docker-compose push
 ```
 
 Start the rolling update by deploying the stack.
 
-```console
+```shell
 $ docker stack deploy nodeapp -c docker-compose.yml
 ```
 
@@ -705,7 +708,7 @@ Docker will start updating the running containers in groups of 2 with 10 second 
 
 You can follow the progress regularly running the command to list the tasks in the Node service. You'll see that the containers are updated in waves as expected.
 
-```console
+```shell
 $ docker service ps nodeapp_web
 ```
 
@@ -729,9 +732,9 @@ The two machine Swarm we just set up is for demonstration purposes. Setting up a
 
 If you want to get started with a high availability Swarm setup, you'll find pre-defined templates that you can use with various cloud providers. Let's have a look at the AWS template.
 
-Docker provides a link to the [latest stable release CloudFormation template on their website](https://docs.docker.com/docker-for-aws/#docker-community-edition-ce-for-aws){:target="_blank"}.
+Docker provides a link to the [latest stable release CloudFormation template on their website](https://docs.docker.com/docker-for-aws/#docker-community-edition-ce-for-aws){:target="\_blank"}.
 
-You can move on from that page using the "Deploy Docker Community Edition (CE) for AWS (stable)" link. At the time of writing this link points to this [URL](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=Docker&templateURL=https:%2F%2Feditions-us-east-1.s3.amazonaws.com%2Faws%2Fstable%2FDocker.tmpl){:target="_blank"}.
+You can move on from that page using the "Deploy Docker Community Edition (CE) for AWS (stable)" link. At the time of writing this link points to this [URL](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=Docker&templateURL=https:%2F%2Feditions-us-east-1.s3.amazonaws.com%2Faws%2Fstable%2FDocker.tmpl){:target="\_blank"}.
 
 You can use the wizard here to set up a high availability Swarm cluster on AWS.
 
@@ -745,12 +748,12 @@ Now that we have seen the key basics of Docker Swarm, let's have a look at the b
 
 Docker Swarm is not your only option for container orchestration, it is not even to most popular solution out there. Let's see what are the main tasks of an orchestrator.
 
-* Abstract away the underlying infrastructure details.
-* Maintain the desired state of your containers in your cluster described in a descriptor file like the Compose file.
-* Scale your services in-line with your requirements.
-* Secure the communications in the cluster network.
-* Allow service discovery in the cluster.
-* Rolling update of cluster services.
+- Abstract away the underlying infrastructure details.
+- Maintain the desired state of your containers in your cluster described in a descriptor file like the Compose file.
+- Scale your services in-line with your requirements.
+- Secure the communications in the cluster network.
+- Allow service discovery in the cluster.
+- Rolling update of cluster services.
 
 Besides Swarm, there are multiple orchestrator alternatives on the market that you can choose from. The top 4 products considered by most projects are Google's Kubernetes, Docker Swarm, Mesos and HashiCorp's Nomad.
 

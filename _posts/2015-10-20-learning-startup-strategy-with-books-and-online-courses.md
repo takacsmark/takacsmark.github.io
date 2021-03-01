@@ -1,21 +1,24 @@
 ---
 layout: post
-title:  "Learning Startup Strategy With Books and Online Courses"
+title: "Learning Startup Strategy With Books and Online Courses"
 description: "In this post I give you the books and courses that are helpful when you are in the process of defining the goals and plans building your startup strategy."
 date: 2015-10-20 16:50:00 +0100
 author: Márk Takács
-categories: Education 
+category: Blog
 thumbnail: "/assets/images/post-thumbs/learning-startup-strategy-online.jpg"
 ---
+
 In this post I give you the books and courses that are helpful when you are in the process of defining the goals and plans building your startup strategy.
 
-## What is a strategy and why do I need it? 
+## What is a strategy and why do I need it?
+
 My goal is to give a helping hand to anyone who finds my experience useful. So I'll start with the absolute basics. **What the hell is strategy?**
 Strategy covers various areas around business studies, game theory and even computer science. A business strategy is usually thought of as a sequence of steps that you wanna execute to reach your goals.
 
 Strategy is a plan or roadmap to achieve your goal(s) under certain conditions.
+
 > In my vocabulary strategy has a little bit different meaning when we are talking about startups.
-In the startup sense, the startup strategy defines the DNA of a new corporation, a new kind of animal that is born to strive, succeed and survive.
+> In the startup sense, the startup strategy defines the DNA of a new corporation, a new kind of animal that is born to strive, succeed and survive.
 
 I'll show you online resources in this article that help you define the genetics, the culture, goals and plans of your own company.
 
@@ -60,22 +63,22 @@ The three circles of the model are the following:
 Ideally, you should find the intersection of the three. Let me explain how I used the model with my own startup strategy.
 
 1. What I'm really passionate about? I want to use technology in whole new ways, connecting new developments to give new, positive life experiences to people. - this statement covers my passion for tech, complexity and people.
-So, I'm building a smart shop that gathers relevant products from various sources on-line and uses it's own knowledge to present these products to customers.
+   So, I'm building a smart shop that gathers relevant products from various sources on-line and uses it's own knowledge to present these products to customers.
 2. What can I be the best in the world at? Well, this may sound like mission impossible.
-I decided to ease this point a bit and I wanna be the best in my own small world only. I believe I can have the best smart socks shop for men in the world.
-With over 7000 socks and growing smart categorization, I'm not too far.
+   I decided to ease this point a bit and I wanna be the best in my own small world only. I believe I can have the best smart socks shop for men in the world.
+   With over 7000 socks and growing smart categorization, I'm not too far.
 3. What's driving my economic engine? It was important for me to experiment with the non-linear economic models of the on-line world.
-As a corporate employee my compensation always depended on the amount of time I spent at work. This relation was linear (except for some bonuses).
-Online shopping is different and therefore exciting.
-My economic engine right now is driven by affiliate commissions. Which is the weak point of my strategy, because socks commissions are not too high. Thanks to the model it's easy for me to spot the weak point and apply changes to my strategy to fix the issue. That's why I'm in the process of starting new, more profitable domains with my smart shop.
+   As a corporate employee my compensation always depended on the amount of time I spent at work. This relation was linear (except for some bonuses).
+   Online shopping is different and therefore exciting.
+   My economic engine right now is driven by affiliate commissions. Which is the weak point of my strategy, because socks commissions are not too high. Thanks to the model it's easy for me to spot the weak point and apply changes to my strategy to fix the issue. That's why I'm in the process of starting new, more profitable domains with my smart shop.
 
 Good to Great helped me find the right intersection of the above 3 points. I feel, the Hedgehog model keeps my company rolling, and I'm getting even more excited and passionate as I'm starting to see more and more positive results.
 
 The books is built on real examples of well-known companies detailing their success and mistakes. It gives you additional personal coaching in the leadership section, plus, it gives you the FlyWheel model with examples and detailed steps that are really useful for someone starting a new business.
 
-[I'd strongly recommend reading Good to Great by Jim Collins as a first step of the journey.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FGood-Great-Some-Companies-Others%2Fdp%2F0066620996){:target="_blank"}
+[I'd strongly recommend reading Good to Great by Jim Collins as a first step of the journey.](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FGood-Great-Some-Companies-Others%2Fdp%2F0066620996){:target="\_blank"}
 
-[![Good to Great by Jim Collins cover](https://images-na.ssl-images-amazon.com/images/I/513OnP4AwTL.jpg)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FGood-Great-Some-Companies-Others%2Fdp%2F0066620996){:target="_blank"}
+[![Good to Great by Jim Collins cover](https://images-na.ssl-images-amazon.com/images/I/513OnP4AwTL.jpg)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FGood-Great-Some-Companies-Others%2Fdp%2F0066620996){:target="\_blank"}
 
 ### Blue Ocean Strategy by W. Chan Kim and Renee Mauborgne
 
@@ -86,7 +89,7 @@ Analyzing your market and your own skills and abilities with the right insight m
 The book is full of great examples, detailed case studies, in fact.
 It'll give you a step by step methodology so that you can ask the right questions and find the right market and your place in that market.
 I was very happy to read how a fellow Hungarian bus company covered 20% of the North American bus market with their smart blue ocean strategy.
-[![Blue ocean strategy](https://images-na.ssl-images-amazon.com/images/I/81IjbVUD%2B5L.jpg)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FBlue-Ocean-Strategy-Expanded-Uncontested%2Fdp%2F1625274491%2Fref%3Dsr_1_3%3Fie%3DUTF8%26qid%3D1547732780%26sr%3D8-3%26keywords%3Dblue%2Bocean%2Bstrategy){:target="_blank"}
+[![Blue ocean strategy](https://images-na.ssl-images-amazon.com/images/I/81IjbVUD%2B5L.jpg)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.amazon.com%2FBlue-Ocean-Strategy-Expanded-Uncontested%2Fdp%2F1625274491%2Fref%3Dsr_1_3%3Fie%3DUTF8%26qid%3D1547732780%26sr%3D8-3%26keywords%3Dblue%2Bocean%2Bstrategy){:target="\_blank"}
 
 **If you wanna read a few books only, read the above two before you work out your startup strategy. Both are available on Kindle, so you can start reading straight away, just click the images.**
 
@@ -98,17 +101,17 @@ My experience is that strategy is taught in academic courses provided by large u
 The bad news is that you'll face long hours of learning every week. Well, rationally speaking, the longer the better when it comes to free courses. Still, we want everything immediately these days, and strategy is something that needs time.
 I found a great course that I would recommend for startuppers, because it covers competitive analysis and decision making, it explains the key considerations of entering a market, cooperation vs. competition, R&D and product design.
 
-[The course is called Competitive Strategy by Ludwig-Maximilians-Universität München (LMU)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fcompetitive-strategy){:target="_blank"}. It's from the University of Munich, in Germany, but the course is in English and it's available on demand.
+[The course is called Competitive Strategy by Ludwig-Maximilians-Universität München (LMU)](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fcompetitive-strategy){:target="\_blank"}. It's from the University of Munich, in Germany, but the course is in English and it's available on demand.
 If you're not familiar with Coursera, please note that most courses are available via scheduled sessions. This course is different, you can join anytime, on demand, and take it in your own pace.
 
-It has a second part called [Advanced Competitive Strategy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fadvanced-competitive-strategy){:target="_blank"}. This one focuses on your customer base, pricing, partners and organic growth.
+It has a second part called [Advanced Competitive Strategy](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fadvanced-competitive-strategy){:target="\_blank"}. This one focuses on your customer base, pricing, partners and organic growth.
 
-You have the option to acquire a certificate of completion, if you wanna use that for your career. This will cost money, it's usually $49 at it's called the signature track of Coursera courses.
+You have the option to acquire a certificate of completion, if you wanna use that for your career. This will cost money, it's usually \$49 at it's called the signature track of Coursera courses.
 
 ## Advanced business strategy training plan
 
 As I sad strategy courses come from large universities. If you are looking for expert level strategy knowledge you have a great option provided by Coursera.
-[It's the Business Strategy Specialization by the University of Virginia](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fbusiness-strategy){:target="_blank"}.
+[It's the Business Strategy Specialization by the University of Virginia](http://go.takacsmark.com?id=61108X1384518&xs=1&url=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fbusiness-strategy){:target="\_blank"}.
 It consist of 4 courses, a capstone project and a certificate.
 The course uses case studies of leading companies like Disney, Microsoft and Zappos, covers competitive strategy, organizational strategy and business strategies.
 The specialization costs money if you prefer to have a certificate. The full price for all courses and the capstone project if $465 (now $418).
@@ -117,6 +120,7 @@ A more casual approach is to enroll to the courses one by one without a certific
 This won't cost you money and you can still enjoy all the videos, discussions and quizzes.
 
 ## Wrap-up
+
 In this post I gave you the books and courses that are helpful when you are in the process of defining the goals and plans of your startup.
 
 All books and courses feature several real life examples, I think examples give us the ultimate strategy learning.

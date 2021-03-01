@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Adding Bootstrap and User Authentication to Fatfree PHP MVC Project"
+title: "Adding Bootstrap and User Authentication to Fatfree PHP MVC Project"
 description: "This lesson describes how to add Bootstrap to your Fat-Free based PHP web application. Plus it describes basic user authentication based on PHP."
-date:   2015-11-09 14:58:00 +0100
+date: 2015-11-09 14:58:00 +0100
 author: Márk Takács
-categories: PHP Tutorials Bootstrap
+category: Tutorial
 thumbnail: /assets/images/post-thumbs/Adding_Bootstrap_and_User_Authentication_to_Fatfree_PHP_MVC_Project.jpg
 videothumb: "https://www.youtube.com/embed/2vNijEnRBfg"
 ---
+
 Welcome back fellow developers and beloved students! In this lesson I will share the logical first steps towards a usable web application based on Bootstrap and the Fat-Free PHP Framework.
 
 When I started my online journey I spent some time experimenting with different web technologies like nodejs, Ruby, Django and PHP.
@@ -30,13 +31,13 @@ Please make sure to follow the video, that is the only way to follow step by ste
 
 ## Bootstrap
 
-[Bootstrap](https://getbootstrap.com){:target="_blank"} is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
+[Bootstrap](https://getbootstrap.com){:target="\_blank"} is a front-end framework for web applications. It contains components that you can use on your website layout, like buttons, forms, icons and such.
 
 Most front-end frameworks feature a grid system, which is absolutely essential when laying out columns and rows on your web pages.
 
 Bootstrap has a pretty good grid system and an easy to use and easy to understand documentation and notation. Bootstrap is based on css and javascript.
 
-I checked out other alternatives, too, like [Foundation](https://foundation.zurb.com/){:target="_blank"}, [HTML5 Boilerplate](https://html5boilerplate.com/){:target="_blank"} and [Pure](https://purecss.io/){:target="_blank"}.
+I checked out other alternatives, too, like [Foundation](https://foundation.zurb.com/){:target="\_blank"}, [HTML5 Boilerplate](https://html5boilerplate.com/){:target="\_blank"} and [Pure](https://purecss.io/){:target="\_blank"}.
 
 I decided to stay with Bootstrap, because it's the most widely used framework for some good reasons. The documentation is simple and very rich. The learning curve is manageable and bootstrap is available through several methods including CDN.
 
@@ -47,16 +48,23 @@ Adding Bootstrap to your site is easy as 1-2-3. Bootstrap has a css and a js fil
 In order to add the css, just copy the below line into the `<head>` section of your html file.
 
 ```html
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
 ```
 
 In order to add Bootstrap javascript copy and paste the below code right before your closing `</body>` tag.
 
 ```html
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+  integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+  crossorigin="anonymous"
+></script>
 ```
 
-The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](https://getbootstrap.com/getting-started/){:target="_blank"}
+The above code uses Bootstrap css and js stored in the cloud on MaxCDN. If you need other installation methods, check out the [Getting Started page on the Bootstrap site.](https://getbootstrap.com/getting-started/){:target="\_blank"}
 
 ## Authentication
 
@@ -89,9 +97,9 @@ Use your favorite database management tool to create a new table called User in 
 
 Add the following structure:
 
-* id, int(11) - auto increment, primary key, not null
-* username, varchar(45) - utf8, not null
-* password, varchar(95) - utf8, not null
+- id, int(11) - auto increment, primary key, not null
+- username, varchar(45) - utf8, not null
+- password, varchar(95) - utf8, not null
 
 Please note that I set the password field to be 95 characters long. The reason for this is that we are not going to store the password as is. **We'll store an encrypted version of the password and that's gonna be longer.**
 
@@ -110,7 +118,7 @@ Let's create a user in the database with the name f3user, and let's create the e
 1. open up Terminal on your computer
 2. launch PHP in interactive shell mode by typing php -a
 3. at the php> prompt type and execute the command echo password_hash('f3password', PASSWORD_DEFAULT);
-What's just happened here? The interactive PHP shell lets you execute PHP commands in Terminal in a command line fashion.
+   What's just happened here? The interactive PHP shell lets you execute PHP commands in Terminal in a command line fashion.
 
 We used PHP's password_hash function to encrypt our password string.
 
@@ -218,44 +226,61 @@ If the password does not match, we redirect the user to the login page.
 
 ## 5 Login html based on Bootstrap
 
-Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm.  The contents should be like this:
+Copy and paste the code of the login page from the Bootstrap example to a new file called login.htm. The contents should be like this:
 
 ```html
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../favicon.ico" />
 
     <title>F3 Sample Project Login Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom styles for this template -->
-    <link href="app/css/signin.css" rel="stylesheet">
-
+    <link href="app/css/signin.css" rel="stylesheet" />
   </head>
 
   <body class="buffer-pinterest">
-
     <div class="container">
-
       <form class="form-signin" method="POST" action="/authenticate">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Username</label>
-        <input type="email" id="inputEmail" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+        <input
+          type="email"
+          id="inputEmail"
+          name="username"
+          class="form-control"
+          placeholder="Username"
+          required=""
+          autofocus=""
+        />
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <input
+          type="password"
+          id="inputPassword"
+          name="password"
+          class="form-control"
+          placeholder="Password"
+          required=""
+        />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Sign in
+        </button>
       </form>
-
-    </div> <!-- /container -->
-
-</body>
+    </div>
+    <!-- /container -->
+  </body>
 </html>
 ```
 
@@ -269,7 +294,7 @@ Copy the contents of the signin.css from the Bootstrap example using developer t
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: # eee;
+  background-color: #eee;
 }
 
 .form-signin {
@@ -288,8 +313,8 @@ body {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
 }
@@ -312,7 +337,7 @@ body {
 
 Your routes.ini should look like this, lines 6 and 7 are in charge of login and authentication:
 
-```conf
+```ini
 [routes]
 
 ;base routes

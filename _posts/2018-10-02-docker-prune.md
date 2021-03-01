@@ -5,27 +5,30 @@ description: "Docker prune is the way to clean up containers, images, volumes an
 date: 2018-10-02 07:19:00 +0100
 author: Márk Takács
 thumbnail: "/assets/images/post-thumbs/docker-prune.png"
-categories: Docker Tutorials
+category: Tutorial
 ---
+
+<!-- prettier-ignore -->
 * TOC
+<!-- prettier-ignore -->
 {:toc}
 
 Working with Docker, you'll soon find various objects on your system that are hanging around from previous activities. It is essential to learn how to clean up Docker objects safely and pragmatically during project work.
 
 **You can watch this tutorial on Youtube, too.**
 
-<div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QruAkYHCFPE" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+    <iframe  src="https://www.youtube.com/embed/QruAkYHCFPE" allowfullscreen></iframe>
 </div>
 
 ## What Docker objects need clean up
 
 The Docker objects that stay around may be of various types:
 
-* Docker containers
-* Docker images
-* Docker volumes
-* Docker networks
+- Docker containers
+- Docker images
+- Docker volumes
+- Docker networks
 
 ## Clean up Docker containers
 
@@ -33,13 +36,13 @@ Docker will not clean up stopped containers by default. Containers may exit with
 
 Before we move to the cleaning instructions, let me give you a few tips to remove containers as part of your workflow:
 
-* Starting your Docker containers with `docker container run --rm` tells Docker to remove the container when it exits. The downside of this method is that you'll not be able to access the Docker logs after the container exits.
-* Starting your containers with `docker-compose up` and stopping them with `docker-compose down` when you finished your activities, will remove all containers and networks involved with the application automatically. This is good practice because the logs will be available all along and cleanup is built into the workflow. Using Docker Compose will leave less garbage on the system.
-* Using Swarm mode's `docker service create` or `docker stack deploy` to create containers and `docker service rm` or `docker stack rm` will remove containers automatically. Your workflow and benefits are similar to Docker Compose.
+- Starting your Docker containers with `docker container run --rm` tells Docker to remove the container when it exits. The downside of this method is that you'll not be able to access the Docker logs after the container exits.
+- Starting your containers with `docker-compose up` and stopping them with `docker-compose down` when you finished your activities, will remove all containers and networks involved with the application automatically. This is good practice because the logs will be available all along and cleanup is built into the workflow. Using Docker Compose will leave less garbage on the system.
+- Using Swarm mode's `docker service create` or `docker stack deploy` to create containers and `docker service rm` or `docker stack rm` will remove containers automatically. Your workflow and benefits are similar to Docker Compose.
 
 After a while we all have something to clean up, so let's see how to do this. I started up a few Docker containers on my machine:
 
-```console
+```shell
 ~ docker container ls -a
 CONTAINER ID        IMAGE                                                   COMMAND                  CREATED             STATUS                    PORTS                                              NAMES
 b805f67ec113        nginx:1.15.1-alpine                                     "nginx -g 'daemon of…"   13 seconds ago      Up 11 seconds             0.0.0.0:8080->80/tcp                               hardcore_archimedes
@@ -50,15 +53,15 @@ df2c60b675f1        jekyll/jekyll:3.8.3                                     "/us
 
 I have 4 Docker containers on the list:
 
-* 2 Nginx containers. Please note that one of the Nginx containers is running (it's in the "Up" state) and the other container is in "Created" state. The created state means that the container was created but it's not running.
-* I have a container based on a custom Docker image called `takacsmark/takacsmark-dot-com:devtools-10.8.0-stretch`. I use this image to run gulp tasks when I build my blog. This container was created with `docker compose run` and it is in the "Exited" state now.
-* I have another container called `takacsmark-dot-com` that serves my blog in development mode. This container was started with Docker Compose.
+- 2 Nginx containers. Please note that one of the Nginx containers is running (it's in the "Up" state) and the other container is in "Created" state. The created state means that the container was created but it's not running.
+- I have a container based on a custom Docker image called `takacsmark/takacsmark-dot-com:devtools-10.8.0-stretch`. I use this image to run gulp tasks when I build my blog. This container was created with `docker compose run` and it is in the "Exited" state now.
+- I have another container called `takacsmark-dot-com` that serves my blog in development mode. This container was started with Docker Compose.
 
 We can clean up the containers with the `docker container prune` command. Docker will focus on the containers only, it won't matter which way you started them. The command will remove all stopped containers.
 
 Let's see how it works:
 
-```console
+```shell
 ~ docker container prune
 WARNING! This will remove all stopped containers.
 Are you sure you want to continue? [y/N] y
@@ -73,7 +76,7 @@ This command will ask for confirmation (that you can suppress with the `-f` flag
 
 This is the list of containers now:
 
-```console
+```shell
 ~ docker container ls -a
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                              NAMES
 b805f67ec113        nginx:1.15.1-alpine   "nginx -g 'daemon of…"   About an hour ago   Up About an hour    0.0.0.0:8080->80/tcp                               hardcore_archimedes
@@ -84,7 +87,7 @@ As you can see the containers in "Exited" or "Created" state were removed from m
 
 You can use `docker container prune` in a bit more sophisticated way with filters. You can, for example, remove containers created more than 10 hours ago like this:
 
-```console
+```shell
 ~ docker container prune --force --filter "until=10h"
 ```
 
@@ -94,8 +97,8 @@ Get more help with the command `docker container prune --help`.
 
 Yyou can use `docker image prune` to cleaning up Docker images in two modes:
 
-* Clean up dangling images. - This is the default behavior.
-* Clean up all Docker images that have no running containers associated with them.
+- Clean up dangling images. - This is the default behavior.
+- Clean up all Docker images that have no running containers associated with them.
 
 ### Cleaning dangling images
 
@@ -103,7 +106,7 @@ Dangling images are the images that are not tagged on your system. They are crea
 
 Here is an example:
 
-```console
+```shell
 ~ docker image ls
 REPOSITORY                                          TAG                       IMAGE ID            CREATED              SIZE
 takacsmark/flask-redis                              1.0                       027a4f101492        2 seconds ago        88.2MB
@@ -115,13 +118,13 @@ These images are the result of the same build process, but they have been built 
 
 You can list dangling images on your system with this command:
 
-```console
+```shell
 ~ docker image ls -f "dangling=true"
 ```
 
 You can prune dangling images with the `docker image prune` command:
 
-```console
+```shell
 ~ docker image prune
 WARNING! This will remove all dangling images.
 Are you sure you want to continue? [y/N] y
@@ -153,7 +156,7 @@ Docker volumes are not removed by Docker by default, because Docker volumes cont
 
 If you list the Docker volumes on your machine, you might be surprised:
 
-```console
+```shell
 ~ docker volume ls
 DRIVER              VOLUME NAME
 local               4760c2d78bf6de835421aed7a2dba9a3b401d874af9ccc2bf608e0d785718f1a
@@ -168,7 +171,7 @@ You'll find that you have the named volumes that you created on your system, lik
 
 You'll also have volumes with random long names. These volumes are created automatically by Docker. Most often they are created because they are defined in Docker images. Many official images define Docker volumes to store data externally. These volumes will be created, even if you do not specify any volume information when you start up your containers. In this case such volumes get a random name.
 
-The official Mariadb image defines a volume in the [Dockerfile](https://github.com/docker-library/mariadb/blob/4891ee2e3bd2dc6b07db634a39433ad579764a4b/10.3/Dockerfile){:target="_blank"} that points to `/var/lib/mysql`, for example. The official Postgres [Dockerfile](https://github.com/docker-library/postgres/blob/3f585c58df93e93b730c09a13e8904b96fa20c58/10/Dockerfile){:target="_blank"} defines an image that points to `/var/lib/postgresql/data`. This means that if you start up a container from these images, Docker will create a volume with a random name and put the data under the specific directory into that volume.
+The official Mariadb image defines a volume in the [Dockerfile](https://github.com/docker-library/mariadb/blob/4891ee2e3bd2dc6b07db634a39433ad579764a4b/10.3/Dockerfile){:target="\_blank"} that points to `/var/lib/mysql`, for example. The official Postgres [Dockerfile](https://github.com/docker-library/postgres/blob/3f585c58df93e93b730c09a13e8904b96fa20c58/10/Dockerfile){:target="\_blank"} defines an image that points to `/var/lib/postgresql/data`. This means that if you start up a container from these images, Docker will create a volume with a random name and put the data under the specific directory into that volume.
 
 You may accumulate quite many Docker volumes on your system over time. It's a good practice to check and clean your volumes regularly.
 
@@ -176,7 +179,7 @@ You may accumulate quite many Docker volumes on your system over time. It's a go
 
 The `docker volume prune` command will remove all volumes that are not used by at least one container. This may get dangerous, because you may loose some prepared data. **Therefore it is essential to set up REPEATABLE data initiation and migration tools for your projects, don't just store critical data in your Docker volumes.**
 
-```console
+```shell
 ~ docker volume prune
 WARNING! This will remove all local volumes not used by at least one container.
 Are you sure you want to continue? [y/N] y
@@ -205,7 +208,7 @@ Nonetheless, you may crate networks with `docker netwrok create` or you may end 
 
 These are the Docker networks on my machine now:
 
-```console
+```shell
 ~ docker network ls
 NETWORK ID          NAME                         DRIVER              SCOPE
 adb3e03409a4        bridge                       bridge              local
@@ -222,7 +225,7 @@ The last Docker network is custom and it is not used by containers.
 
 If I clean them, the custom network will be removed:
 
-```console
+```shell
 ~ docker network prune
 WARNING! This will remove all networks not used by at least one container.
 Are you sure you want to continue? [y/N] y
@@ -236,10 +239,10 @@ You can get more help with `docker network prune --help`.
 
 There is one command to rule them all; you can clean up your entire system with `docker system prune`:
 
-* stopped containers
-* unused networks
-* dangling images
-* build cache
+- stopped containers
+- unused networks
+- dangling images
+- build cache
 
 The command will not clean up volumes by default, you can use the `docker system prune --volumes` command to include volumes in to the cleanup.
 
