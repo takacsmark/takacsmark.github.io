@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The first 10 things to do after creating your AWS account"
-description: "Build yourself a secure account, an inventory to manage all your AWS resources, get started with cost management and budget aalerts, and set up AWS services that make your life easier. "
+description: "Build yourself a secure account, an inventory to manage all your AWS resources, get started with cost management and budget alerts, and set up AWS services that make your life easier. "
 date: 2021-03-16 07:41:00 +0100
 thumbnail: "/assets/images/post-thumbs/first-ten-things-to-do-after-creating-your-aws-account.png"
 category: Tech tip
@@ -26,7 +26,7 @@ The main reason to follow these steps is to address some of the concerns along t
 - set up a strategy to manage your AWS resources
 - get started with cost management and billing
 
-These point give a foundation to your future activities. Your account will certainly grow and even if you use the free tier and just play around, you'll find that you can create a considerable number of resources in a pretty short timeframe.
+These points give a foundation to your future activities. Your account will certainly grow and even if you use the free tier and just play around, you'll find that you can create a considerable number of resources in a pretty short timeframe.
 
 Managing AWS resources manually is tedious even in a sandbox context. Learning the ways of AWS early in the process will help you scale as your projects grow.
 
@@ -73,7 +73,7 @@ Follow the below steps to create the administrator user and user group:
 6. Create a user called `administrtor` , tick both the programmatic access (for the AWS cli) and console access.
 7. Set a strong password and click next.
 8. Add the user to the `Administrators` group. We talk about tags later, so let's skip it for now and please come back later. Review and create the user.
-9. Copy your account id into a secure vault like LasPass, you need it when you sign back in. The account id is the 12 digit numeric identifier in the `My Account` menu.
+9. Copy your account id into a secure vault like LastPass, you need it when you sign back in. The account id is the 12 digit numeric identifier in the `My Account` menu.
 10. Sign out and sign back in. Pick the IAM user option when prompted and user the administrator user credentials.
 11. Enable MFA for the administrator account same way we did for the root account.
 
@@ -186,4 +186,4 @@ I hope this list helps you get started. Moving on from here I suggest to learn m
 
 If you are new to AWS, it is essential to learn about [CloudWatch](https://aws.amazon.com/cloudwatch/){:target="\_blank"} and [CloudTrail](https://aws.amazon.com/cloudtrail/){:target="\_blank"} to be able to monitor what's going on in your account.
 
-Also check out [CloudFormation](https://aws.amazon.com/cloudformation/){:target="\_blank"}, AWS's infrastructure as code solution that lets you describe your resources in yml or Json files and manage them through the cli. You can achieve high level of automation and better quality with CloudFormation.
+Also check out [CloudFormation](https://aws.amazon.com/cloudformation/){:target="\_blank"}, AWS's infrastructure as code solution that lets you describe your resources in yml or JSON files and manage them through the cli. You can achieve high level of automation and better quality with CloudFormation.
