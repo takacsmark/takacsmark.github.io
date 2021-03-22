@@ -33,6 +33,9 @@ permalink: /get-started-with-docker-in-your-projects-through-examples/
               <p class="mt-6 text-xl text-gray-500">
                 Learn to build, ship and run highly scalable applications with Docker containers.
               </p>
+              <p class="mt-6 text-lg text-lime-500">
+                <s>$34.99</s> $15.99 - Download the book 54% OFF until April 30.
+              </p>
             </div>
             <div class="mt-6">
               <div class="inline-flex items-center0">
