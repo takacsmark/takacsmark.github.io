@@ -39,7 +39,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tap": "^1.0.1",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "postcss-import": "^14.0.0",
     "precss": "^4.0.0",
     "run-sequence": "^2.2.1",
