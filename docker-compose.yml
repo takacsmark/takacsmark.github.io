@@ -1,23 +1,19 @@
 version: '3'
 services:
     jekyll:
-        image: jekyll/jekyll:3.8.3
+        image: jekyll/jekyll:3.8.6
         container_name: takacsmark-dot-com
         environment:
             - JEKYILL_ENV=docker
         # working on one post - use incremental mode
         # command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml --watch --incremental
-
         # add new post - no incremental mode, Jekyll will regenerate dependencies on save
-        command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
-
+        # command: jekyll serve --host 0.0.0.0 --drafts --config _config.yml,_config_dev.yml
         # work on design - no incremental mode, no drafts, looks like production
-        # command: jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
-
+        command: jekyll serve --host 0.0.0.0 --config _config.yml,_config_dev.yml --watch
         volumes:
             - .:/srv/jekyll
             - ./vendor/bundle:/usr/local/bundle
-
         ports:
             - 4000:4000
             - 35729:35729
